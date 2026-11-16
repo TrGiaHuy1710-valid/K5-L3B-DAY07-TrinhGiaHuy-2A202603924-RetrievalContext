@@ -1,0 +1,288 @@
+[
+ {
+  "id": "d01",
+  "split": "dev",
+  "question": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa như thế nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 101,
+    "evidence": "Hàm số L(w) chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số θ = w.",
+    "chunk_id": "book-ml-co-ban|p101|01"
+   }
+  ],
+  "expected_answer": "L(w) = 1/(2N) Σ (yi − xi^T w)², tức trung bình bình phương sai số giữa đầu ra thật và đầu ra dự đoán; cần tìm w để L(w) nhỏ nhất."
+ },
+ {
+  "id": "d02",
+  "split": "dev",
+  "question": "Trong chương 9, khi huấn luyện thuật toán K lân cận (KNN) làm gì với dữ liệu huấn luyện?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 118,
+    "evidence": "Khi huấn luyện, thuật toán này gần như không học một điều gì từ dữ liệu huấn luyện mà ghi nhớ lại một cách máy móc toàn bộ dữ liệu đó.",
+    "chunk_id": "book-ml-co-ban|p118|00"
+   }
+  ],
+  "expected_answer": "Gần như không học gì, chỉ ghi nhớ máy móc toàn bộ dữ liệu huấn luyện; mọi tính toán thực hiện ở pha kiểm tra.",
+  "filter": {
+   "chapter_no": "9"
+  }
+ },
+ {
+  "id": "d03",
+  "split": "dev",
+  "question": "Mục đích của phân cụm K-means là gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 128,
+    "evidence": "Mục đích là làm thể nào để phân dữ liệu thành các cụm (cluster) khác nhau sao cho dữ liệu trong cùng một cụm có những tính chất giống nhau.",
+    "chunk_id": "book-ml-co-ban|p128|00"
+   }
+  ],
+  "expected_answer": "Phân dữ liệu (không có nhãn) thành các cụm sao cho dữ liệu trong cùng một cụm có tính chất giống nhau; đây là học không giám sát."
+ },
+ {
+  "id": "d04",
+  "split": "dev",
+  "question": "Trong naive Bayes, khi tập huấn luyện lớn thì xác suất p(c) của một nhãn được ước lượng như thế nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 145,
+    "evidence": "là tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện",
+    "chunk_id": "book-ml-co-ban|p145|01"
+   }
+  ],
+  "expected_answer": "Bằng MLE: tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện."
+ },
+ {
+  "id": "d05",
+  "split": "dev",
+  "question": "Thế nào là hai tập dữ liệu tách biệt tuyến tính?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 175,
+    "evidence": "Nếu hai tập dữ liệu có thể được phân chia hoàn toàn bằng một siêu phẳng, ta nói rằng hai tập đó tách biệt tuyến tính (linearly separable).",
+    "chunk_id": "book-ml-co-ban|p175|02"
+   }
+  ],
+  "expected_answer": "Hai tập có thể được phân chia hoàn toàn bằng một siêu phẳng."
+ },
+ {
+  "id": "d06",
+  "split": "dev",
+  "question": "Hàm sigmoid nhận giá trị trong khoảng nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 187,
+    "evidence": "Là các hàm số liên tục nhận giá trị thực, bị chặn trong khoảng (0, 1).",
+    "chunk_id": "book-ml-co-ban|p187|00"
+   }
+  ],
+  "expected_answer": "Là hàm liên tục, bị chặn trong khoảng (0, 1)."
+ },
+ {
+  "id": "d07",
+  "split": "dev",
+  "question": "Các đầu ra của mô hình hồi quy softmax có tính chất gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 201,
+    "evidence": "các đầu ra này liên kết với nhau qua việc chúng đều là các số dương và có tổng bằng một",
+    "chunk_id": "book-ml-co-ban|p201|01"
+   }
+  ],
+  "expected_answer": "Đều là các số dương và có tổng bằng một, nên đóng vai trò như xác suất rơi vào từng lớp."
+ },
+ {
+  "id": "d08",
+  "split": "dev",
+  "question": "Ước lượng hợp lý cực đại (MLE) đi tìm điều gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 68,
+    "evidence": "Ước lượng hợp lý cực đại là việc đi tìm bộ tham số θ để θ = argmax",
+    "chunk_id": "book-ml-co-ban|p068|00"
+   }
+  ],
+  "expected_answer": "Bộ tham số θ làm cực đại xác suất p(x1, ..., xN | θ) của dữ liệu quan sát."
+ },
+ {
+  "id": "d09",
+  "split": "dev",
+  "question": "Xác thực chéo (cross-validation) chia tập huấn luyện như thế nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 113,
+    "evidence": "Trong xác thực chéo, tập huấn luyện được chia thành k tập con có kích thước gần bằng nhau và không giao nhau.",
+    "chunk_id": "book-ml-co-ban|p113|00"
+   }
+  ],
+  "expected_answer": "Chia thành k tập con kích thước gần bằng nhau, không giao nhau; mỗi lần lấy một tập làm xác thực, k−1 tập còn lại để huấn luyện."
+ },
+ {
+  "id": "d10",
+  "split": "dev",
+  "question": "Kết thúc sớm (early stopping) giúp giảm quá khớp bằng cách nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 113,
+    "evidence": "Một giải pháp giúp giảm quá khớp là dừng thuật toán trước khi nó hội tụ.",
+    "chunk_id": "book-ml-co-ban|p113|02"
+   }
+  ],
+  "expected_answer": "Dừng thuật toán trước khi hàm mất mát hội tụ."
+ },
+ {
+  "id": "d11",
+  "split": "dev",
+  "question": "Hồi quy tuyến tính có thêm số hạng chính quy hoá L2 theo chuẩn của w còn được gọi là gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 107,
+    "evidence": "còn được gọi là hồi quy ridge",
+    "chunk_id": "book-ml-co-ban|p107|01"
+   }
+  ],
+  "expected_answer": "Hồi quy ridge, với nghiệm w = (XX^T + λI)^(-1) X y."
+ },
+ {
+  "id": "d12",
+  "split": "dev",
+  "question": "Vì sao khi vector đặc trưng rất lớn người ta dùng gradient descent thay vì giải trực tiếp nghiệm của hồi quy tuyến tính?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 107,
+    "evidence": "Gradient descent sẽ giúp tránh được việc tính ma trận nghịch đảo.",
+    "chunk_id": "book-ml-co-ban|p107|02"
+   }
+  ],
+  "expected_answer": "Vì ma trận XX^T lớn nên tính nghịch đảo tốn kém; gradient descent giúp tránh việc tính ma trận nghịch đảo."
+ },
+ {
+  "id": "d13",
+  "split": "dev",
+  "question": "Phân tích thành phần chính (PCA) là phương pháp gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 275,
+    "evidence": "là phương pháp đi tìm một phép xoay trục toạ độ để được một hệ trục toạ độ mới sao cho trong hệ mới này, thông tin của dữ liệu chủ yếu tập trung ở một vài thành phần",
+    "chunk_id": "book-ml-co-ban|p275|01"
+   }
+  ],
+  "expected_answer": "Tìm một phép xoay trục toạ độ để có hệ trục mới sao cho thông tin của dữ liệu tập trung chủ yếu ở một vài thành phần; phần còn lại ít thông tin có thể bỏ."
+ },
+ {
+  "id": "d14",
+  "split": "dev",
+  "question": "Trong phân tích giá trị suy biến (SVD), số phần tử khác không trên đường chéo của Σ bằng gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 267,
+    "evidence": "Số lượng các phần tử khác không trong Σ chính là hạng của ma trận A",
+    "chunk_id": "book-ml-co-ban|p267|01"
+   }
+  ],
+  "expected_answer": "Bằng hạng của ma trận A: r = rank(A).",
+  "filter": {
+   "chapter_no": "20"
+  }
+ },
+ {
+  "id": "d15",
+  "split": "dev",
+  "question": "Mất mát không-một (zero-one loss) trả về giá trị nào cho một điểm dữ liệu?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 369,
+    "evidence": "Hàm mất mát không-một trả về không nếu một điểm được phân loại đúng và trả về một nếu điểm đó bị phân loại sai.",
+    "chunk_id": "book-ml-co-ban|p369|01"
+   }
+  ],
+  "expected_answer": "Trả về không nếu điểm được phân loại đúng và một nếu bị phân loại sai; nó là hàm đếm số điểm bị phân loại sai."
+ },
+ {
+  "id": "t01",
+  "split": "test",
+  "question": "Với bài toán tối ưu có một ràng buộc đẳng thức, điểm tối ưu thoả mãn điều kiện nào theo phương pháp nhân tử Lagrange?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 338,
+    "evidence": "điểm tối ưu của bài toán (25.1) thoả mãn điều kiện",
+    "chunk_id": "book-ml-co-ban|p338|01"
+   }
+  ],
+  "expected_answer": "Gradient của hàm Lagrange theo cả x và λ bằng không: ∇x L = ∇f0 + λ∇f1 = 0 và f1(x) = 0 (chính là ràng buộc)."
+ },
+ {
+  "id": "t02",
+  "split": "test",
+  "question": "Hàm hạt nhân (kernel) k(x, z) trong SVM được định nghĩa như thế nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 381,
+    "evidence": "định nghĩa hàm hạt nhân k(x, z) = Φ(x)T Φ(z)",
+    "chunk_id": "book-ml-co-ban|p381|01"
+   }
+  ],
+  "expected_answer": "k(x, z) = Φ(x)^T Φ(z), cho phép tránh tính trực tiếp Φ(x) có số chiều rất lớn hoặc vô hạn."
+ },
+ {
+  "id": "t03",
+  "split": "test",
+  "question": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh như thế nào?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 220,
+    "evidence": "với các mạng sử dụng hàm kích hoạt ReLU, hàm mất mát giảm rất nhanh sau một vài epoch đầu tiên",
+    "chunk_id": "book-ml-co-ban|p220|00"
+   }
+  ],
+  "expected_answer": "Với mạng dùng ReLU, hàm mất mát giảm rất nhanh sau một vài epoch đầu tiên (hội tụ nhanh hơn tanh)."
+ },
+ {
+  "id": "t04",
+  "split": "test",
+  "question": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 220,
+    "evidence": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng chính là gradient descent (GD).",
+    "chunk_id": "book-ml-co-ban|p220|01"
+   }
+  ],
+  "expected_answer": "Gradient descent (GD), áp dụng thông qua lan truyền ngược để tính gradient theo từng ma trận trọng số và vector bias."
+ },
+ {
+  "id": "t05",
+  "split": "test",
+  "question": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra vấn đề gì?",
+  "gold": [
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 112,
+    "evidence": "Việc đánh giá trên tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch.",
+    "chunk_id": "book-ml-co-ban|p112|02"
+   }
+  ],
+  "expected_answer": "Có thể gây ra hiện tượng thiên lệch; giải pháp là xác thực chéo (cross-validation)."
+ }
+]
