@@ -2,10 +2,10 @@
 
 ## Dữ liệu và benchmark
 
-- Nguồn, quyền sử dụng, số trang và số chunk:
-- Vector store, embedding model, phiên bản và số chiều:
+- Nguồn, quyền sử dụng, số trang và số chunk: Machine Learning cơ bả (Vũ Khắc Tiệp), open source, 433 trang, số chunk là , sử dụng chiến lược C ( + fillter - metadata)
+- Vector store, embedding model, phiên bản và số chiều: pgvector, e5 mulitilingua,
 - Agent model, cách chạy và phân chia dev/test:
-- Cách xác định câu có/thiếu evidence và tiêu chí chấm:
+- Cách xác định câu có/thiếu evidence và tiêu chí chấm: không chỉ được trang nào, không highlight lên được
 
 ## Retrieval và thử nghiệm
 
