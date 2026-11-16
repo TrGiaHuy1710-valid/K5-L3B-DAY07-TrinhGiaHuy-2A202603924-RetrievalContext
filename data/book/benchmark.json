@@ -125,10 +125,17 @@
     "page": 68,
     "evidence": "Ước lượng hợp lý cực đại là việc đi tìm bộ tham số θ để θ = argmax",
     "chunk_id": "book-ml-co-ban|p068|00"
+   },
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 77,
+    "evidence": "Với MLE, việc xác định tham số θ được thực hiện bằng cách đi tìm các tham số sao cho xác suất của tập huấn luyện",
+    "chunk_id": "book-ml-co-ban|p077|00"
    }
   ],
   "answerable": true,
-  "expected_behavior": "search_and_answer"
+  "expected_behavior": "search_and_answer",
+  "label_note": "v2 (dev error analysis): mục 4.4 Tóm tắt (tr.77) nêu lại đúng định nghĩa MLE; ban đầu thiếu nhãn evidence thay thế này."
  },
  {
   "id": "d09",

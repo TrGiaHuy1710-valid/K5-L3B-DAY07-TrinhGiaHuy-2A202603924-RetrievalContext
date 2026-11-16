@@ -1,0 +1,1577 @@
+[
+ {
+  "query_id": "d01",
+  "question": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa như thế nào?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 66.3,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p101|01",
+    "page": 101,
+    "score": 0.884,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": true,
+    "text": "Hàm mất mát Điều tương tự xảy ra với tất cả các cặp dữ liệu (xi, yi), i = 1, 2, . . . , N, với N là số lượng dữ liệu trong tập huấn luyện. Việc tìm mô hình tốt nhất tương đương với việc tìm w để hàm số sau đạt giá trị nhỏ nhất: L(w) = 1 2N N X i=1 (yi − xT i w)2. (7.4) Hàm số L(w) chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số θ = w. Ta luôn mong muốn sự mất mát là nhỏ nhất, điều này có thể đạt được bằng cách tối thiểu hàm mất mát theo w: w∗ = argmin w L(w). (7.5) w∗ là nghiệm cần tìm của bài toán. Đôi khi dấu ∗ được bỏ đi và nghiệm có thể được viết gọn lại thành w = argmin w L(w). Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p166|01",
+    "page": 166,
+    "score": 0.8625,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "Ở đây, chúng ta cùng làm quen với một khái niệm quan trọng: đường đồng mức. Khái niệm này thường xuất hiện trong các bản đồ tự nhiên. Với các ngọn núi, đường đồng mức là các đường kín bao quanh đỉnh núi, bao gồm các điểm có cùng độ cao so với mực nước biển. Khái niệm tương tự cũng được sử dụng trong tối ưu. Đường đồng mức của một hàm số là tập hợp các điểm làm cho hàm số có cùng giá trị. Xét một hàm số hai biến với đồ thị là một bề mặt trong không gian ba chiều. Các đường đồng mức là giao điểm của bề mặt này với các mặt phẳng song song với đáy. Hàm mất mát của hồi quy tuyến tính với dữ liệu một chiều là một hàm bậc hai theo hai thành phần trong vector trọng số w. Đồ thị của nó là một bề mặt parabolic. Vì vậy, các đường đồng mức của hàm này là các đường ellipse có cùng tâm như trên Hình 12.7. Tâm này chính là đáy của parabolic và là giá trị nhỏ nhất của hàm mất mát. Các đường đồng mức càng gần tâm (’destination’) tương ứng với giá trị càng thấp. 166 Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p107|01",
+    "page": 107,
+    "score": 0.8606,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Lúc này, nghiệm của bài toán là y = (XXT + λI)−1Xy. Xét hàm mất mát L2(w) = 1 2N (∥y − XT w∥2 2 + λ∥w∥2 2). (7.14) Phương trình gradient theo w bằng không: ∇L2(w) ∇w = 0 ⇔ 1 N (X(XT w − y) + λw) = 0 ⇔ (XXT + λI)w = Xy (7.15) Ta thấy w = (XXT + λI)−1Xy chính là nghiệm của bài toán tối thiểu L2(w) trong (7.14). Mô hình machine learning với hàm mất mát (7.14) còn được gọi là hồi quy ridge. Ngoài việc giúp phương trình gradient theo hệ số bằng không có nghiệm duy nhất, hồi quy ridge còn giúp mô hình tránh được overfitting như sẽ thấy trong Chương 8. 7.4.4. Phương pháp tối ưu khác Hồi quy tuyến tính là một mô hình đơn giản, lời giải cho phương trình gradient bằng không cũng không phức tạp. Trong hầu hết các trường hợp, việc giải các phương trình gradient bằng không tương đối phức tạp."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p086|02",
+    "page": 86,
+    "score": 0.8587,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Điểm thưởng này không phải là điểm của trò chơi mà là điểm do chính người lập trình tạo ra. 5.5. Hàm mất mát và tham số mô hình Mỗi mô hình machine learning đượ"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p107|00",
+    "page": 107,
+    "score": 0.8573,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "quy tuyến tính với mất mát Huber được gọi là hồi quy Huber, được khẳng định là có khả năng kháng nhiễu tốt hơn. Xem thêm Huber Regressor, scikit learn (https://"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p164|01",
+    "page": 164,
+    "score": 0.8552,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "Quay lại với bài toán hồi quy tuyến tính Trong mục này, chúng ta quay lại với bài toán hồi quy tuyến tính và thử tối ưu hàm mất mát của nó bằng thuật toán GD. N"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p106|01",
+    "page": 106,
+    "score": 0.8533,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Một ví dụ về hồi quy đa thức bậc 3 được thể hiện trong Hình 7.2a. 7.4.2. Hạn chế của hồi quy tuyến tính Hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy c"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p102|01",
+    "page": 102,
+    "score": 0.8506,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Nghiệm của hồi quy tuyến tính Nhận thấy rằng hàm mất mát L(w) có gradient tại mọi w (xem Bảng 2.1). Giá trị tối ưu của w có thể tìm được thông qua việc giải phư"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p239|00",
+    "page": 239,
+    "score": 0.8502,
+    "chapter": "Hệ thống gợi ý dựa trên nội dung",
+    "hit": false,
+    "text": "như hồi quy ridge (hồi quy tuyến tính với kiểm soát l2) như sau: Ln(wn, bn) = 1 2sn X m:rmn=1 (xT mwn + bn − ymn)2 + λ 2sn ∥wn∥2 2 (17.2) trong đó, thành phần t"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p114|01",
+    "page": 114,
+    "score": 0.8501,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Số vô hướng λ thường là một số dương nhỏ, còn được gọi là tham số kiểm soát (regularization parameter). Tham số kiểm soát thường được chọn là các giá trị nhỏ để"
+   }
+  ]
+ },
+ {
+  "query_id": "d02",
+  "question": "Trong chương 9, khi huấn luyện thuật toán K lân cận (KNN) làm gì với dữ liệu huấn luyện?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 61.7,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p118|00",
+    "page": 118,
+    "score": 0.9146,
+    "chapter": "K lân cận",
+    "hit": true,
+    "text": "Chương 9 K lân cận Nếu con người có kiểu học “nước đến chân mới nhảy” thì machine learning cũng có một thuật toán như vậy. 9.1. Giới thiệu 9.1.1. K lân cận K lân cận (K-nearest neighbor hay KNN) là một trong những thuật toán học có giám sát đơn giản nhất. Khi huấn luyện, thuật toán này gần như không học một điều gì từ dữ liệu huấn luyện mà ghi nhớ lại một cách máy móc toàn bộ dữ liệu đó. Mọi tính toán được thực hiện tại pha kiểm tra. KNN có thể được áp dụng vào các bài toán phân loại và hồi quy. KNN còn được gọi là một thuật toán lười học, instance-based [AKA91], hoặc memory-based learning. KNN là thuật toán đi tìm đầu ra của một điểm dữ liệu mới chỉ dựa trên thông tin của K điểm dữ liệu gần nhất trong tập huấn luyện. Hình 9.1 mô tả một bài toán phân loại với ba nhãn: đỏ, lam, lục (xem ảnh màu trong Hình B.1)."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p127|00",
+    "page": 127,
+    "score": 0.8953,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "9.4.2. Ưu điểm của KNN • Độ phức tạp tính toán của quá trình huấn luyện gần như bằng 0. Việc tính bình phương ℓ2 norm của mỗi điểm dữ liệu huấn luyện có thể được thực hiện trước trong bước này. • Việc dự đoán kết quả của dữ liệu mới tương đối đơn giản sau khi đã xác định được các điểm lân cận. • KNN không không cần giả sử về phân phối của từng nhãn. 9.4.3. Nhược điểm của KNN • KNN nhạy cảm với nhiễu khi K nhỏ. • Khi sử dụng KNN, phần lớn tính toán nằm ở pha kiểm tra. Trong đó việc tính khoảng cách tới từng điểm dữ liệu huấn luyện tốn nhiều thời gian, đặc biệt là với các cơ sở dữ liệu có số chiều lớn và có nhiều điểm dữ liệu. K càng lớn thì độ phức tạp càng cao. Ngoài ra, việc lưu toàn bộ dữ liệu trong bộ nhớ cũng ảnh hưởng tới hiệu năng của KNN. 9.4.4. Đọc thêm a. Tutorial To Implement k-Nearest Neighbors in Python From Scratch (https: //goo.gl/J78Qso). b. Mã nguồn cho chương này có thể được tìm thấy tại https://goo.gl/asF58Q. Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p119|00",
+    "page": 119,
+    "score": 0.886,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "Hình 9.1. Ví dụ về 1NN. Các hình tròn là các điểm dữ liệu huấn luyện. Các hình khác màu thể hiện các lớp khác nhau. Các vùng nền thể hiện các điểm được phân loại vào lớp có màu tương ứng khi sử dựng 1NN (Nguồn: K-nearest neigh- bors algorithm – Wikipedia, xem ảnh màu trong Hình B.1). Mặc dù có nhiều hạn chế, KNN vẫn là giải pháp đầu tiên nên nghĩ tới khi giải quyết một bài toán machine learning. Khi làm các bài toán machine learning nói chung, không có mô hình đúng hay sai, chỉ có mô hình cho kết quả tốt hơn. Chúng ta luôn cần một mô hình đơn giản để giải quyết bài toán, sau đó mới dần tìm cách tăng chất lượng của mô hình. 9.2. Phân tích toán học Không có hàm mất mát hay bài toán tối ưu nào cần thực hiện trong quá trình huấn luyện KNN. Mọi tính toán được tiến hành ở bước kiểm tra. Vì KNN ra quyết định dựa trên các điểm gần nhất nên có hai vấn đề ta cần lưu tâm."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p126|00",
+    "page": 126,
+    "score": 0.8675,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "Hình 9.3. KNN cho bài toán hồi quy (Nguồn: Nearest neighbors regression – scikit- learn – https://goo.gl/9VyBF3). Kết quả: Accuracy of 7NN (customized weights):"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p118|01",
+    "page": 118,
+    "score": 0.8621,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "Các hình tròn nhỏ với màu khác nhau thể hiện dữ liệu huấn luyện của các nhãn khác nhau. Các vùng màu nền khác nhau thể hiện “lãnh thổ” của mỗi nhãn. Nhãn của mộ"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p081|02",
+    "page": 81,
+    "score": 0.8613,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Tập kiểm tra đại diện cho dữ liệu mà mô hình chưa từng thấy, có thể xuất hiện trong quá trình vận hành mô hình trên thực tế. Một mô hình hoạt động hiệu quả trên"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p123|00",
+    "page": 123,
+    "score": 0.8549,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "Hình 9.2. Ba loại hoa lan trong bộ cơ sở dữ liệu hoa Iris (xem ảnh màu trong Hình B.2). 9.3.2. Thí nghiệm Trong phần này, 150 điểm dữ liệu được tách thành tập h"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p125|00",
+    "page": 125,
+    "score": 0.8546,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "lớn hơn. Để thực hiện việc này, ta chỉ cần đánh trọng số khác nhau cho từng điểm trong bảy điểm gần nhất này. Cách đánh trọng số phải thoả mãn điều kiện điểm lâ"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p084|01",
+    "page": 84,
+    "score": 0.8542,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Dữ liệu này được dùng như dữ liệu huấn luyện cho mô hình phân loại. Một ví dụ khác, nếu việc xây dựng một mô hình máy dịch Anh – Việt được thực hiện dựa trên hà"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p124|00",
+    "page": 124,
+    "score": 0.8484,
+    "chapter": "K lân cận",
+    "hit": false,
+    "text": "Dòng np.random.seed(7) để đảm bảo kết quả chạy ở các lần khác nhau là giống nhau. Có thể thay 7 bằng một số tự nhiên 32 bit bất kỳ. Kết quả với 1NN Tới đây, ta "
+   }
+  ]
+ },
+ {
+  "query_id": "d03",
+  "question": "Mục đích của phân cụm K-means là gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 230.9,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p128|00",
+    "page": 128,
+    "score": 0.8847,
+    "chapter": "Phân cụm K-means",
+    "hit": true,
+    "text": "Chương 10 Phân cụm K -means 10.1. Giới thiệu Trong Chương 7 và, 9, chúng ta đã làm quen các thuật toán học có giám sát. Trong chương này, một thuật toán đơn giản của học không giám sát sẽ được trình bày. Thuật toán này có tên là phân cụm K-means (K-means clustering). Trong phân cụm K-means, ta không biết nhãn của từng điểm dữ liệu. Mục đích là làm thể nào để phân dữ liệu thành các cụm (cluster) khác nhau sao cho dữ liệu trong cùng một cụm có những tính chất giống nhau. Ví dụ: Một công ty muốn tạo ra một chính sách ưu đãi cho những nhóm khách hàng khác nhau dựa trên sự tương tác giữa mỗi khách hàng với công ty đó (số năm là khách hàng, số tiền khách hàng đã chi trả cho công ty, độ tuổi, giới tính, thành phố, nghề nghiệp,...). Giả sử công ty có dữ liệu của khách hàng nhưng phân cụm. Phân cụm K-means là một thuật toán có thể giúp thực hiện công việc này."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p141|01",
+    "page": 141,
+    "score": 0.8704,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Thuật toán phân cụm K-means không đảm bảo tìm được nghiệm tối ưu toàn cục, nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu. Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p129|01",
+    "page": 129,
+    "score": 0.8683,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Trong không gian nhiều chiều hơn, chúng ta sẽ có những siêu đa diện. 10.2. Phân tích toán học Mục đích cuối cùng của thuật toán phân cụm K-means là từ dữ liệu đầu vào và số lượng cụm cần tìm, hãy xác định tâm mỗi cụm và phân các điểm dữ liệu vào cụm tương ứng. Giả sử thêm rằng mỗi điểm dữ liệu chỉ thuộc đúng một cụm. Giả sử N điểm dữ liệu trong tập huấn luyện được ghép lại thành ma trận X = [x1, x2, . . . , xN] ∈ Rd×N và K < N là số cụm được xác định trước. Ta cần tìm các tâm cụm m1, m2, . . . , mK ∈ Rd×1 và nhãn của mỗi điểm dữ liệu. Ở đây, mỗi cụm được đại diển bởi một nhãn, thường là một số tự nhiên từ 1 đến K. Nhắc lại rằng các điểm dữ liệu trong bài toán phân cụm K-means ban đầu không có nhãn cụ thể. Với mỗi điểm dữ liệu xi, ta cần tìm nhãn yi = k của nó, ở đây k ∈ {1, 2, . . . , K}."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p143|01",
+    "page": 143,
+    "score": 0.8632,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Các ứng dụng khác của phân cụm K-means Mặc dù có những hạn chế, phân cụm K-means vẫn cực kỳ quan trọng trong machine learning và là nền tảng cho nhiều thuật toá"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p143|00",
+    "page": 143,
+    "score": 0.8589,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "chính xác. Với dữ liệu như trong ví dụ này, phân cụm spectral [VL07, NJW02] sẽ cho kết quả tốt hơn. Phân cụm spectral cũng coi các điểm gần nhau tạo thành một c"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p132|00",
+    "page": 132,
+    "score": 0.8541,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "∇mjl(mj) = 2 N N X i=1 yij(mj − xi) = 0 (10.8) ⇔ mj N X i=1 yij = N X i=1 yijxi ⇔ mj = PN i=1 yijxi PN i=1 yij (10.9) Để ý rằng mẫu số chính là tổng số điểm dữ "
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p138|00",
+    "page": 138,
+    "score": 0.8498,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Hình 10.5. Các tâm cụm (cột đầu) và 20 điểm ngẫu nhiên trong mỗi cụm. Các chữ số trên mỗi hàng thuộc vào cùng một cụm. Hình 10.6. Tâm và 20 điểm gần tâm nhất củ"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p142|02",
+    "page": 142,
+    "score": 0.8492,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Trong GMM, mỗi cụm được giả sử tuân theo một phân phối chuẩn với ma trận hiệp phương sai không nhất thiết tỉ lệ với ma trận đơn vị. Ngoài các tâm cụm, các ma tr"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p137|02",
+    "page": 137,
+    "score": 0.849,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Nhận thấy rằng các bức ảnh lấy ra ngẫu nhiên từ mỗi cụm không thực sự giống nhau. Lý do có thể vì những bức ảnh này ở xa các tâm cụm mặc dù tâm cụm đó đã là gần"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p138|01",
+    "page": 138,
+    "score": 0.8454,
+    "chapter": "Phân cụm K-means",
+    "hit": false,
+    "text": "Một kỹ thuật phân cụm thường được sử dụng là phân cụm theo tầng (hierarchical clustering [Ble08]). Có hai loại phân cụm theo tầng: • Agglomerative tức “đi từ dư"
+   }
+  ]
+ },
+ {
+  "query_id": "d04",
+  "question": "Trong naive Bayes, khi tập huấn luyện lớn thì xác suất p(c) của một nhãn được ước lượng như thế nào?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 52.1,
+  "first_hit_rank": 2,
+  "hit1": false,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p145|00",
+    "page": 145,
+    "score": 0.8877,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "Chương 11 Bộ phân loại naive Bayes 11.1. Bộ phân loại naive Bayes Xét các bài toán phân loại với C nhãn khác nhau. Thay vì tìm ra chính xác nhãn của mỗi điểm dữ liệu x ∈ Rd, ta có thể đi tìm xác suất để kết quả rơi vào mỗi nhãn: p(y = c|x), hoặc viết gọn thành p(c|x). Biểu thức này được hiểu là xác suất để đầu ra là nhãn c biết rằng đầu vào là vector x. Nếu tính được biểu thức này, ta có thể giúp xác định nhãn của mỗi điểm dữ liệu bằng cách chọn ra nhãn có xác suất rơi vào cao nhất: c = argmax c∈{1,...,C} p(c|x) (11.1) Nhìn chung, khó có cách tính trực tiếp p(c|x). Thay vào đó, quy tắc Bayes thường được sử dụng: c = argmax c p(c|x) = argmax c p(x|c)p(c) p(x) = argmax c p(x|c)p(c) (11.2) Dấu bằng thứ hai xảy ra theo quy tắc Bayes, dấu bằng thứ ba xảy ra vì p(x) ở mẫu số không phụ thuộc vào c. Tiếp tục quan sát, p(c) có thể được hiểu là xác suất để một điểm bất kỳ rơi vào nhãn c."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p145|01",
+    "page": 145,
+    "score": 0.8871,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": true,
+    "text": "Nếu tập huấn luyện lớn, p(c) có thể được xác định bằng phương pháp ước lượng hợp lý cực đại (MLE) – là tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện. Nếu tập huấn luyện nhỏ, giá trị này có thể được xác định bằng phương pháp ước lượng hậu nghiệm cực đại (MAP). Thành phần còn lại p(x|c) là phân phối của các điểm dữ liệu trong nhãn c. Thành phần này thường rất khó tính toán vì x là một biến ngẫu nhiên nhiều chiều. Để có thể ước lượng được phân phối đó, tập huấn luyện phải rất lớn. Nhằm đơn giản Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p149|01",
+    "page": 149,
+    "score": 0.8851,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "Chú ý, hai giá trị tìm được 1.5 × 10−4 và 1.75 × 10−5 không phải là hai xác suất cần tìm mà là hai đại lượng tỉ lệ thuận với hai xác suất đó. Để tính cụ thể, ta có thể làm như sau: p(B|d5) = 1.5 × 10−4 1.5 × 10−4 + 1.75 × 10−5 ≈ 0.8955, p(N|d5) = 1−p(B|d5) ≈ 0.1045. Như vậy xác suất để d5 có nhãn B là 89.55%, có nhãn N là 10.45%. Bạn đọc có thể tự tính với ví dụ khác: d6 = pho hutiu banhbo. Nếu tính toán đúng, ta sẽ thu được p(B|d6) ≈ 0.29, p(N|d6) ≈ 0.71, và suy ra d6 thuộc vào class N. 11.3.2. Bộ phân loại naive Bayes với thư viện scikit-learn Để kiểm tra lại các phép tính phía trên, chúng ta cùng giải quyết bài toán này bằng scikit-learn. Ở đây, dữ liệu huấn luyện và kiểm tra đã được đưa về dạng vector đặc trưng sử dụng BoW. Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p146|00",
+    "page": 146,
+    "score": 0.8847,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "hoá việc tính toán, người ta thường giả sử rằng các thành phần của biến ngẫu nhiên x độc lập với nhau khi đã biết c: p(x|c) = p(x1, x2, . . . , xd|c) = d Y i=1 "
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p148|00",
+    "page": 148,
+    "score": 0.8838,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "11.2.3. Bernoulli Naive Bayes Mô hình này được áp dụng cho các loại dữ liệu mà mỗi thành phần là một giá trị nhị phân – bằng 0 hoặc 1. Ví dụ, cũng với loại văn "
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p148|01",
+    "page": 148,
+    "score": 0.8755,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "Ví dụ về nội dung của các văn bản trong bài toán Bắc hay Nam Văn bản Nội dung Nhãn Dữ liệu huấn luyện d1 hanoi pho chaolong hanoi B d2 hanoi buncha pho omai B d"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p205|01",
+    "page": 205,
+    "score": 0.8685,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Với một điểm dữ liệu huấn luyện thuộc lớp thứ c, chúng ta mong muốn xác suất tương ứng với lớp này càng cao càng tốt, tức càng gần một càng tốt. Việc này kéo th"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p155|00",
+    "page": 155,
+    "score": 0.8665,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "Ta thấy rằng thậm chí khi tập huấn luyện là rất nhỏ, chỉ có tổng cộng 50 email, kết quả đạt được đã rất ấn tượng. Nếu bạn muốn tiếp tục thử mô hình BernoulliNB:"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p149|00",
+    "page": 149,
+    "score": 0.8648,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "nhãn = B hanoi pho chaolong buncha omai banhgio saigon hutiu banhbo d = |V | = 9 2 1 1 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 1 0 0 1 1 0 0 0 3 3 1 1 2 1 0 0 0 4/20 4/"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p155|01",
+    "page": 155,
+    "score": 0.8599,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "• Nếu giả sử về tính độc lập được thoả mãn (dựa vào bản chất của dữ liệu), NBC được cho là sẽ có kết quả tốt hơn so với SVM (Phần VIII) và hồi quy logistic (Chư"
+   }
+  ]
+ },
+ {
+  "query_id": "d05",
+  "question": "Thế nào là hai tập dữ liệu tách biệt tuyến tính?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 69.6,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p175|02",
+    "page": 175,
+    "score": 0.8733,
+    "chapter": "Thuật toán học perceptron",
+    "hit": true,
+    "text": "Nếu hai tập dữ liệu có thể được phân chia hoàn toàn bằng một siêu phẳng, ta nói rằng hai tập đó tách biệt tuyến tính (linearly separable). Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p351|00",
+    "page": 351,
+    "score": 0.8507,
+    "chapter": "Máy vector hỗ trợ",
+    "hit": false,
+    "text": "x1 x2 Hình 26.1. Hai lớp dữ liệu vuông và tròn là tách biệt tuyến tính. Có vô số đường thằng có thể phân loại chính xác hai lớp dữ liệu này (xem thêm Chương 13). Các công thức này có thể được tổng quát lên cho trường hợp không gian d chiều. Khoảng cách từ một điểm (vector) có toạ độ (x10, x20, . . . , xd0) tới siêu phẳng w1x1 + w2x2 + · · · + wdxd + b = 0 được xác định bởi |w1x10 + w2x20 + · · · + wdxd0 + b| p w2 1 + w2 2 + · · · + w2 d = |wT x0 + b| ∥w∥2 với x0 = [x10, x20, . . . , xd0]T , w = [w1, w2, . . . , wd]T . 26.1.2. Nhắc lại bài toán phân loại hai lớp dữ liệu Xin nhắc lại bài toán phân loại đã đề cập trong Chương 13 (PLA). Giả sử có hai lớp dữ liệu được mô tả bởi các vector đặc trưng trong không gian nhiều chiều. Hơn nữa, hai lớp dữ liệu này là tách biệt tuyến tính, tức tồn tại một siêu phẳng phân chia chính xác hai lớp đó."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p290|02",
+    "page": 290,
+    "score": 0.8473,
+    "chapter": "Phân tích biệt thức tuyến tính",
+    "hit": false,
+    "text": "Bình phương khoảng cách giữa hai trung bình (m1 − m2)2 còn được gọi là phương sai liên lớp (between-class variance). Ở đây bình phương của hiệu hai trung bình được lấy để có cùng thứ nguyên với phương sai. Hai lớp dữ liệu được gọi là tách biệt (discriminative) nếu hai lớp đó cách xa nhau (phương sai liên lớp lớn) và dữ liệu trong mỗi lớp có xu hướng giống nhau (phương sai nội lớp nhỏ). LDA là thuật toán đi tìm một phép chiếu sao cho tỉ lệ giữa phương sai liên lớp và phương sai nội lớp trở nên lớn nhất có thể. 22.2.2. Hàm mục tiêu của phân tích biệt thức tuyến tính Giả sử có N điểm dữ liệu x1, x2, . . . , xN ∈ RD trong đó N1 < N điểm đầu tiên thuộc lớp thứ nhất, N2 = N − N1 điểm còn lại thuộc lớp thứ hai. Ký 56 độ lệch chuẩn là căn bậc hai của phương sai 290 Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p183|00",
+    "page": 183,
+    "score": 0.8456,
+    "chapter": "Thuật toán học perceptron",
+    "hit": false,
+    "text": "x1 x2 (a) x1 x2 (b) Hình 13.6. Với bài toán phân loại nhị phân, PLA có thể (a) cho vô số nghiệm, hoặc (b) vô nghiệm thậm chí khi có nhiễu nhỏ. 13.5. Thảo Luận P"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p379|00",
+    "page": 379,
+    "score": 0.8442,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "text": "(a) (b) (c) Hình 28.1. Ví dụ về SVM hạt nhân. (a) Dữ liệu hai lớp không tách biệt tuyến tính trong không gian hai chiều. (b) Nếu xét thêm chiều thứ ba là một hà"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p199|00",
+    "page": 199,
+    "score": 0.8399,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "1 vs 2 1 vs 3 1 vs 4 2 vs 3 2 vs 4 3 vs 4 one-vs-one 1,2 vs 3,4 1 vs 2 3 vs 4 Phân tầng bit 0 vs bit 1 bit 0 vs bit 1 class 1 = ’00’ class 2 = ’01’ class 3 = ’1"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p299|00",
+    "page": 299,
+    "score": 0.8393,
+    "chapter": "Phân tích biệt thức tuyến tính",
+    "hit": false,
+    "text": "22.5. Thảo luận • LDA là một phương pháp giảm chiều dữ liệu có sử dụng thông tin về label của dữ liệu. Vì vậy, LDA là một thuật toán học có giám sát. • Ý tưởng "
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p378|01",
+    "page": 378,
+    "score": 0.8385,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "text": "Sự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic "
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p380|01",
+    "page": 380,
+    "score": 0.835,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "text": "0 < λn} là tập hợp các vector nằm trên hai đường hỗ trợ hoặc nằm giữa chúng; NM là số phần tử của M. Rất hiếm khi dữ liệu thực tế gần tách biệt tuyến tính, vì v"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p361|01",
+    "page": 361,
+    "score": 0.8347,
+    "chapter": "Máy vector hỗ trợ lề mềm",
+    "hit": false,
+    "text": "Dữ liệu gần tách biệt tuyến tính như trong Hình 27.1b. Trong trường hợp này, không tồn tại đường thẳng nào hoàn toàn phân chia hai lớp dữ liệu, vì vậy bài toán "
+   }
+  ]
+ },
+ {
+  "query_id": "d06",
+  "question": "Hàm sigmoid nhận giá trị trong khoảng nào?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 71.9,
+  "first_hit_rank": 3,
+  "hit1": false,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p187|01",
+    "page": 187,
+    "score": 0.8765,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Chúng ta sẽ sớm thấy hàm sigmoid được khám phá ra như thế nào. Ngoài ra, hàm tanh cũng hay được sử dụng: tanh(s) = es − e−s es + e−s = 2σ(2s) − 1. (14.4) Hàm số này nhận giá trị trong khoảng (−1, 1). Hàm sigmoid có thể được thực hiện trên Python như sau: def sigmoid(S): \"\"\" S: an numpy array return sigmoid function of each element of S \"\"\" return 1/(1 + np.exp(-S)) Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p192|01",
+    "page": 192,
+    "score": 0.856,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Với dữ liệu đầu vào nằm trong không gian hai chiều, hàm sigmoid có dạng thác nước như trong Hình 14.4b. Kết quả dự đoán xác suất đầu ra khi áp dụng mô hình hồi quy logistic được minh họa như Hình 14.5 với độ sáng của nền thể hiện xác suất điểm đó có nhãn tròn. Màu đen đậm thể hiện giá trị gần bằng không, màu trắng thể hiện giá trị rất gần bằng một. 192 Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p187|00",
+    "page": 187,
+    "score": 0.8553,
+    "chapter": "Hồi quy logistic",
+    "hit": true,
+    "text": "• Các đường nét chấm và chấm gạch phù hợp với bài toán đang xét hơn. Chúng có một vài tính chất quan trọng: – Là các hàm số liên tục nhận giá trị thực, bị chặn trong khoảng (0, 1). – Nếu coi điểm có tung độ bằng 0.5 là ngưỡng, các điểm càng xa ngưỡng về bên trái có giá trị càng gần không, các điểm càng xa ngưỡng về bên phải có giá trị càng gần một. Điều này phù hợp với nhận xét rằng học càng nhiều thì xác suất đỗ càng cao và ngược lại. – Hai hàm này có đạo hàm mọi nơi, điều này có thể có ích trong tối ưu. Hàm sigmoid và tanh Trong các hàm số có ba tính chất nói trên, hàm sigmoid: f(s) = 1 1 + e−s ≜ σ(s) (14.1) được sử dụng nhiều nhất, vì nó bị chặn trong khoảng (0, 1) và: lim s→−∞ σ(s) = 0; lim s→+∞ σ(s) = 1. (14.2) Thú vị hơn: σ′(s) = e−s (1 + e−s)2 = 1 1 + e−s e−s 1 + e−s = σ(s)(1 − σ(s)) (14.3) Với đạo hàm đơn giản, hàm sigmoid được sử dụng rộng rãi trong mạng neuron."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p219|01",
+    "page": 219,
+    "score": 0.8541,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "text": "Hàm số này có tính chất đầu ra chạy từ -1 đến 1, khiến cho nó có tính chất tâm không (zero-centered) thay vì chỉ dương như hàm sigmoid. Gần đây, hàm sigmoid chỉ"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p189|01",
+    "page": 189,
+    "score": 0.838,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Thật vậy, (14.14) tương đương với ∂a a(1 − a) = ∂z ⇔ 1 a + 1 1 − a ∂a = ∂z ⇔ log a − log(1 − a) = z + C ⇔ log a 1 − a = z + C ⇔ a 1 − a = ez+C ⇔ a = ez+C(1 − a)"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p219|00",
+    "page": 219,
+    "score": 0.8289,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "text": "−5 0 5 z 0.0 0.2 0.4 0.6 0.8 1.0 a = 1/(1 + e−z) sigmoid function (a) −5 0 5 z −1.0 −0.5 0.0 0.5 1.0 a = (ez −e−z/(ez + e−z) tanh function (b) Hình 16.5. Ví dụ "
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p192|00",
+    "page": 192,
+    "score": 0.827,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "0 1 2 3 4 5 6 studying hours −0.50 −0.25 0.00 0.25 0.50 0.75 1.00 1.25 1.50 predicted probability of pass (a) 0 100 200 300 400 500 number of iterations 0.4 0.5"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p384|01",
+    "page": 384,
+    "score": 0.8263,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "text": "import numpy as np import matplotlib.pyplot as plt from sklearn import svm # XOR dataset and targets X = np.array([[0, 0], [1, 1], [1, 0], [0, 1]]) y = np.array"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p086|03",
+    "page": 86,
+    "score": 0.8257,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Hàm số này thường có giá trị nhỏ khi phép đánh giá cho kết quả tốt và ngược lại. Việc đi tìm các tham số mô hình sao cho phép đánh giá trả về kết quả tốt tương "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p384|00",
+    "page": 384,
+    "score": 0.8249,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "text": "sigmoid (a) hạt nhân sigmoid poly (b) hạt nhân đa thức rbf (c) hạt nhân rbf Hình 28.2. Sử dụng SVM hạt nhân để giải quyết bài toán XOR: (a) hạt nhân sigmoid, (b"
+   }
+  ]
+ },
+ {
+  "query_id": "d07",
+  "question": "Các đầu ra của mô hình hồi quy softmax có tính chất gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 63.8,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p201|01",
+    "page": 201,
+    "score": 0.8732,
+    "chapter": "Hồi quy softmax",
+    "hit": true,
+    "text": "Ý tưởng này cũng có thể mở rộng cho bài toán phân loại đa lớp, ở đó có C nút ở tầng đầu ra và giá trị mỗi nút đóng vai trò như xác suất để đầu vào rơi vào lớp tương ứng. Như vậy, các đầu ra này liên kết với nhau qua việc chúng đều là các số dương và có tổng bằng một. Mô hình hồi quy softmax thảo luận trong chương này đảm bảo tính chất đó. Nhắc lại biểu diễn dưới dạng mạng neural của kỹ thuật one-vs-rest như trong Hình 15.1. Tầng đầu ra có thể tách thành hai tầng con z và a. Mỗi thành phần của tầng con thứ hai ai chỉ phụ thuộc vào thành phần tương ứng ở tầng con thứ nhất zi thông qua hàm sigmoid ai = σ(zi). Các giá trị đầu ra ai đều là các số dương nhưng vì không có ràng buộc giữa chúng, tổng các xác suất này không đảm bảo bằng một. Các mô hình hồi quy tuyến tính, PLA, và hồi quy logistic chỉ có một nút ở tầng đầu ra. Trong các trường hợp đó, tham số mô hình chỉ là một vector w. Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p213|00",
+    "page": 213,
+    "score": 0.8693,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "15.5. Thảo luận 15.5.1. Hồi quy logistic là trường hợp đặc biệt của hồi quy softmax Khi C = 2, hồi quy softmax và hồi quy logistic là hai mô hình giống nhau. Thật vậy, với C = 2, đầu ra của hàm softmax cho một đầu vào x là: a1 = exp(xT w1) exp(xT w1) + exp(xT w2) = 1 1 + exp(xT (w2 − w1)); a2 = 1 − a1 (15.15) Từ đây ta thấy rằng, a1 có dạng là một hàm sigmoid với vector trọng số có dạng w = −(w2 − w1). Khi C = 2, bạn đọc cũng có thể thấy rằng hàm mất mát của hồi quy logistic và hồi quy softmax là như nhau. Hơn nữa, mặc dù có hai đầu ra, hồi quy softmax có thể biểu diễn bởi một đầu ra vì tổng của chúng bằng một. Giống như hồi quy logistic, hồi quy softmax được sử dụng trong các bài toán phân loại. Các tên gọi này được giữ lại vì vấn đề lịch sử. 15.5.2."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p203|00",
+    "page": 203,
+    "score": 0.8662,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "1 x0 x1 x2 xd x W Σ Σ Σ Σ z1 z2 zC z a1 a2 aC a xi Σ zj wij w0j: hệ số điều chỉnh d: số chiều dữ liệu C: số lớp dữ liệu x ∈ Rd+1 W ∈ R(d+1)×C zi = wT i x z = WT x ∈ RC a = softmax(z) ∈ RC ai > 0, C X i=1 ai = 1 x a z = softmax(WT x) dạng đơn giản Hình 15.2. Mô hình hồi quy softmax dưới dạng neural network. Trong đó, p(y = i|x; W) được hiểu là xác suất để một điểm dữ liệu x rơi vào lớp thứ i nếu biết tham số mô hình là ma trận trọng số W. Hình 15.2 thể hiện mô hình hồi quy softmax dưới dạng mạng neural. Mô hình này khác one-vs-rest nằm ở chỗ nó có các liên kết giữa mọi nút của hai tầng con z và a. 15.2.2. Xây dựng hàm softmax trong Python Dưới đây là một đoạn code thực hiện hàm softmax. Đầu vào là một ma trận với mỗi hàng là một vector z, đầu ra cũng là một ma trận mà mỗi hàng có giá trị là a = softmax(z). Các giá trị của z còn được gọi là score: import numpy as np def softmax(Z):"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p213|01",
+    "page": 213,
+    "score": 0.8632,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Ranh giới tạo bởi hồi quy softmax là các mặt tuyến tính Thật vậy, dựa vào hàm softmax thì một điểm dữ liệu x được dự đoán là rơi vào class j nếu aj ≥ ak, ∀k̸ = "
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p201|00",
+    "page": 201,
+    "score": 0.8558,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Chương 15 Hồi quy softmax Các bài toán phân loại thực tế thường có nhiều lớp dữ liệu. Như đã thảo luận trong Chương 14, các bộ phân loại nhị phân tuy có thể kết"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p205|01",
+    "page": 205,
+    "score": 0.8496,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Với một điểm dữ liệu huấn luyện thuộc lớp thứ c, chúng ta mong muốn xác suất tương ứng với lớp này càng cao càng tốt, tức càng gần một càng tốt. Việc này kéo th"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p097|03",
+    "page": 97,
+    "score": 0.8489,
+    "chapter": "Các kỹ thuật xây dựng đặc trưng",
+    "hit": false,
+    "text": "Vì vậy, khi có dữ liệu mới, ta chỉ cần huấn luyện mạng neuron để trích chọn các đặc trưng mức cao phù hợp với dữ liệu mới này. Dựa trên kích thước và sự giống n"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p097|00",
+    "page": 97,
+    "score": 0.8432,
+    "chapter": "Các kỹ thuật xây dựng đặc trưng",
+    "hit": false,
+    "text": "cơ sở dữ liệu thường được dùng nhất là ImageNet (https://www.image-net.org) với 1.2 triệu ảnh cho 1000 nhãn khác nhau. Rất nhiều mô hình deep learning đã giành "
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p212|00",
+    "page": 212,
+    "score": 0.8421,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "MNIST với hồi quy softmax trong scikit-learn Trong scikit-learn, hồi quy softmax được tích hợp trong class sklearn.linear_model .LogisticRegression. Như sẽ thấy"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p211|02",
+    "page": 211,
+    "score": 0.8416,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Các điểm dữ liệu huấn luyện của mỗi lớp là các điểm có hình dạng khác nhau trong Hình 15.5b. Các phần có nền khác nhau thể hiện vùng của mỗi lớp dữ liệu tìm đượ"
+   }
+  ]
+ },
+ {
+  "query_id": "d08",
+  "question": "Ước lượng hợp lý cực đại (MLE) đi tìm điều gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 58.9,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p077|00",
+    "page": 77,
+    "score": 0.8631,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": true,
+    "text": "4.4. Tóm tắt • Khi sử dụng các mô hình thống kê machine learning, chúng ta thường xuyên phải ước lượng các tham số của mô hình θ. Có hai phương pháp phổ biến được sử dụng để ước lượng θ là ước lượng hợp lý cực đại (MLE) và ước lượng hậu nghiệ cực đại (MAP). • Với MLE, việc xác định tham số θ được thực hiện bằng cách đi tìm các tham số sao cho xác suất của tập huấn luyện, được xác định bằng hàm hợp lý, là lớn nhất: θ = argmax θ p(x1, . . . , xN|θ). (4.41) • Để giải bài toán tối ưu này, giả thiết các dữ liệu xi độc lập thường được sử dụng. Và bài toán MLE trở thành θ = argmax θ N Y i=1 p(xi|θ). (4.42) • Với MAP, các tham số được đánh giá bằng cách tối đa hậu nghiệm: θ = argmax θ p(θ|x1, . . . , xN) (4.43) • Quy tắc Bayes và giả thiết về sự độc lập của dữ liệu thường được sử dụng: θ = argmax θ \" N Y i=1 p(xi|θ)p(θ) # (4.44) Hàm mục tiêu ở đây chính là tích của hàm hợp lý và tiên nghiệm."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p145|01",
+    "page": 145,
+    "score": 0.8593,
+    "chapter": "Bộ phân loại naive Bayes",
+    "hit": false,
+    "text": "Nếu tập huấn luyện lớn, p(c) có thể được xác định bằng phương pháp ước lượng hợp lý cực đại (MLE) – là tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện. Nếu tập huấn luyện nhỏ, giá trị này có thể được xác định bằng phương pháp ước lượng hậu nghiệm cực đại (MAP). Thành phần còn lại p(x|c) là phân phối của các điểm dữ liệu trong nhãn c. Thành phần này thường rất khó tính toán vì x là một biến ngẫu nhiên nhiều chiều. Để có thể ước lượng được phân phối đó, tập huấn luyện phải rất lớn. Nhằm đơn giản Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p071|01",
+    "page": 71,
+    "score": 0.8561,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "text": "Chiều dài của vật có thể được coi là giá trị mà hàm mật độ xác suất đạt giá trị cao nhất. Trong phân phối chuẩn, ta biết rằng hàm mật độ xác suất đạt giá trị lớn nhất tại kỳ vọng của phân phối đó. Chú ý rằng kỳ vọng của phân phối và kỳ vọng của dữ liệu quan sát được có thể không bằng nhau, nhưng rất gần nhau. Nếu ước lượng kỳ vọng của phân phối bằng MLE, ta sẽ thấy rằng kỳ vọng của dữ liệu chính là đánh giá tốt nhất cho kỳ vọng của phân phối. Thật vậy, giả sử các kích thước quan sát được là x1, x2, . . . , xN. Ta cần đi tìm một phân phối chuẩn, được mô tả bởi giá trị kỳ vọng µ và phương sai σ2, sao cho các giá trị x1, x2, . . . , xN là hợp lý nhất. Ta đã biết rằng, hàm mật độ xác suất tại xi của môt phân phối chuẩn có kỳ vọng µ và phương sai σ2 là p(xi|µ, σ2) = 1 √ 2πσ2 exp −(xi − µ)2 2σ2 . (4.20) Để đánh giá µ và σ, ta sử dụng MLE với giả thiết rằng kết quả các phép đo là độc lập: Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p067|00",
+    "page": 67,
+    "score": 0.8551,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "text": "Chương 4 Ước lượng tham số mô hình 4.1. Giới thiệu Có rất nhiều mô hình machine learning được xây dựng dựa trên các mô hình thống kê. Các mô hình thống kê thườn"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p076|01",
+    "page": 76,
+    "score": 0.8551,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "text": "Thực chất, nếu ta thay α = β = 1 vào (4.40) ta sẽ thu được λ = n/N, đây chính là ước lượng thu được bằng MLE. MLE là một trường hợp đặc biệt của MAP khi prior l"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p303|02",
+    "page": 303,
+    "score": 0.8483,
+    "chapter": "Tập lồi và hàm lồi",
+    "hit": false,
+    "text": "Trong nhiều trường hợp, các cực trị địa phương cũng mang lại những kết quả tốt. Để bắt đầu nghiên cứu về tối ưu, chúng ta cần biết tới một mảng rất quan trọng c"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p068|00",
+    "page": 68,
+    "score": 0.8433,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": true,
+    "text": "4.2.1. Ý tưởng Giả sử có các điểm dữ liệu x1, x2, . . . , xN tuân theo một phân phối nào đó được mô tả bởi bộ tham số θ. Ước lượng hợp lý cực đại là việc đi tìm"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p073|01",
+    "page": 73,
+    "score": 0.8397,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "text": "Trong ví dụ này, một giả thiết hợp lý là xác suất nhận được mặt ngửa gần với 1/2. Ước lượng hậu nghiệm cực đại (maximum a posteriori, MAP) ra đời nhằm giải quyế"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p073|00",
+    "page": 73,
+    "score": 0.8386,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "text": "p(x|µ, Σ) = 1 (2π)D/2|Σ|1/2 exp −1 2(x − µ)T Σ−1(x − µ) . (4.29) Chú ý rằng ma trận hiệp phương sai Σ là xác định dương nên có nghịch đảo. • Một vài đạo hàm the"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p327|02",
+    "page": 327,
+    "score": 0.833,
+    "chapter": "Bài toán tối ưu lồi",
+    "hit": false,
+    "text": "Sự mâu thuẫn này chỉ ra rằng với một bài toán tối ưu lồi, điểm cực tiểu địa phương phải là điểm cực tiểu toàn cục. 24.3.3. Điều kiện tối ưu cho hàm mục tiêu khả"
+   }
+  ]
+ },
+ {
+  "query_id": "d09",
+  "question": "Xác thực chéo (cross-validation) chia tập huấn luyện như thế nào?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 98.8,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p113|00",
+    "page": 113,
+    "score": 0.9055,
+    "chapter": "Quá khớp",
+    "hit": true,
+    "text": "Trong xác thực chéo, tập huấn luyện được chia thành k tập con có kích thước gần bằng nhau và không giao nhau. Tại mỗi lần thử, một trong k tập con đó được lấy ra làm tập xác thực, k − 1 tập con còn lại được coi là tập huấn luyện. Như vậy, với mỗi bộ tham số mô hình, ta có k mô hình khác nhau. Sai số huấn luyện và sai số xác thực được tính là trung bình cộng của các giá trị tương ứng trong k mô hình đó. Cách làm này có tên gọi là xác thực chéo k-fold (k-fold cross validation). Khi k bằng với số lượng phần tử trong tập huấn luyện ban đầu, tức mỗi tập con có đúng một phần tử, ta gọi kỹ thuật này là leave-one-out. Thư viện scikit-learn hỗ trợ rất nhiều phương pháp phân chia dữ liệu để xây dựng mô hình. Bạn đọc có thể xem thêm Cross-validation: evaluating estimator performance (https://goo.gl/Ars2cr). 8.3."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p112|01",
+    "page": 112,
+    "score": 0.8854,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Cả tập huấn luyện và tập xác thực đều đóng vai trò xây dựng mô hình. Nhắc lại rằng hai tập hợp này được tách ra từ tập huấn luyện ban đầu. Trong ví dụ trên, ta vẫn thu được kết quả khả quan trên tập kiểm tra mặc dù không sử dụng tập này trong việc huấn luyện. Việc này xảy ra vì ta đã giả sử rằng dữ liệu xác thực và dữ liệu kiểm tra có chung một đặc điểm nào đó (chung phân phối và đều chưa được mô hình nhìn thấy khi huấn luyện). Để ý rằng, khi bậc nhỏ bằng một hoặc hai, cả ba sai số đều cao, khi đó chưa khớp xảy ra. 8.2.2. Xác thực chéo Trong nhiều trường hợp, lượng dữ liệu để xây dựng mô hình là hạn chế. Nếu lấy quá nhiều dữ liệu huấn luyện ra làm dữ liệu xác thực, phần dữ liệu còn lại không đủ để xây dựng mô hình. Lúc này, tập xác thực phải thật nhỏ để giữ được lượng dữ liệu huấn luyện đủ lớn. Tuy nhiên, một vấn đề khác nảy sinh."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p112|02",
+    "page": 112,
+    "score": 0.8521,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Việc đánh giá trên tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Có giải pháp nào cho tình huống này không? Câu trả lời là xác thực chéo (cross-validation). 112 Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p111|00",
+    "page": 111,
+    "score": 0.8521,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Một mô hình được coi là tốt nếu cả sai số huấn luyện và test error đều thấp. Nếu sai số huấn luyện thấp nhưng sai số kiểm tra cao, ta nói mô hình bị quá khớp. N"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p085|01",
+    "page": 85,
+    "score": 0.8495,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Có những thuật toán mà tập huấn luyện bao gồm các cặp (đầu vào, đầu ra) và dữ liệu khác chỉ có đầu vào. Những thuật toán này được gọi là học bán giám sát (semi-"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p111|01",
+    "page": 111,
+    "score": 0.8482,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Lúc này, tập huấn luyện mới là phần còn lại của tập huấn luyện ban đầu. Việc này khá giống với việc chúng ta ôn thi. Giả sử đề thi của các năm trước là tập huấn"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p113|01",
+    "page": 113,
+    "score": 0.8448,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Cơ chế kiểm soát Một nhược điểm lớn của xác thực chéo là số lượng mô hình cần huấn luyện tỉ lệ thuận với k. Điều đáng nói là mô hình hồi quy đa thức như trên ch"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p205|01",
+    "page": 205,
+    "score": 0.8446,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Với một điểm dữ liệu huấn luyện thuộc lớp thứ c, chúng ta mong muốn xác suất tương ứng với lớp này càng cao càng tốt, tức càng gần một càng tốt. Việc này kéo th"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p081|02",
+    "page": 81,
+    "score": 0.8444,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "text": "Tập kiểm tra đại diện cho dữ liệu mà mô hình chưa từng thấy, có thể xuất hiện trong quá trình vận hành mô hình trên thực tế. Một mô hình hoạt động hiệu quả trên"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p226|00",
+    "page": 226,
+    "score": 0.8432,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "text": "Vì lượng dữ liệu huấn luyện nhỏ chỉ với 100 điểm cho mỗi lớp, ta có thể dùng batch GD để cập nhật các ma trận trọng số và vector điều chỉnh. Trước hết, ta cần t"
+   }
+  ]
+ },
+ {
+  "query_id": "d10",
+  "question": "Kết thúc sớm (early stopping) giúp giảm quá khớp bằng cách nào?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 92.3,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p113|02",
+    "page": 113,
+    "score": 0.8952,
+    "chapter": "Quá khớp",
+    "hit": true,
+    "text": "Kết thúc sớm Các mô hình machine learning phần lớn được xây dựng thông qua lặp đi lặp lại một quy trình tới khi hàm mất mát hội tụ. Nhìn chung, giá trị hàm mất mát giảm dần khi số vòng lặp tăng lên. Một giải pháp giúp giảm quá khớp là dừng thuật toán trước khi nó hội tụ. Giải pháp này có tên là kết thúc sớm (early stopping). Vậy kết thúc khi nào là phù hợp? Kỹ thuật thường dùng là tách từ tập huấn luyện ra một tập xác thực. Khi huấn luyện, ta tính toán cả sai số huấn luyện và sai số xác thực, nếu sai số huấn luyện vẫn có xu hướng giảm nhưng sai số xác thực có xu hướng tăng lên thì ta kết thúc thuật toán. Hình 8.3 mô tả cách tìm điểm kết thúc. Chúng ta thấy rằng phương pháp này tương tự phương pháp tìm bậc của đa thức ở đầu chương, với độ phức tạp của Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p230|00",
+    "page": 230,
+    "score": 0.8493,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "text": "mô hình quá phức tạp, nó có thể biểu diễn rất tốt dữ liệu huấn luyện, nhưng có thể không biểu diễn tốt dữ liệu kiểm tra. Đây chính là hiện tượng quá khớp. Vậy có các kỹ thuật nào giúp tránh quá khớp cho mạng neuron đa tầng? Ngoài kỹ thuật xác thực chéo, chúng ta quan tâm hơn tới các phương pháp kiểm soát. Kỹ thuật phổ biến nhất được dùng để tránh quá khớp là suy giảm trọng số (weight decay) hoặc dropout. 16.6. Suy giảm trọng số Với suy giảm trọng số, hàm mất mát sẽ được cộng thêm một đại lượng kiểm soát có dạng: λR(W) = λ L X l=1 ∥W(l)∥2 F tức tổng bình phương Frobenius norm của tất cả các ma trận trọng số. Chú ý rằng khi làm việc với mạng neuron đa tầng, hệ số điều chỉnh hiếm khi được kiểm soát. Đây cũng là lý do vì sao nên tách rời ma trận trọng số và vector điều chỉnh khi làm việc với mạng neuron đa tầng."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p174|00",
+    "page": 174,
+    "score": 0.8468,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "d. Vừa chạy GD, vừa kiểm tra kết quả. Một kỹ thuật khác thường được sử dụng là cho thuật toán chạy với số lượng vòng lặp lớn. Trong quá trình chạy, chương trình thường xuyên kiểm tra chất lượng mô hình trên tập huấn luyện và tập xác thực. Đồng thời, mô hình sau một vài vòng lặp được lưu lại trong bộ nhớ. Nếu ta thấy chất lượng mô hình bắt đầu giảm trên tập xác thực thì dừng lại. Đây chính là kỹ thuật early stoping đã đề cập trong Chương 8. 12.7.2. Đọc thêm Mã nguồn trong chương này có thể được tìm thấy tại https://goo.gl/RJrRv7. Ngoài các thuật toán đã đề cập trong chương này, có nhiều thuật toán khác giúp cải thiện GD được đề xuất gần đây [Rud16]. Bạn đọc có thể tham khảo thêm AdaGrad [DHS11], RMSProp [TH12], Adam [KB14],... Các trang web và video dưới đây cũng là các tài liệu tốt về GD. a. An overview of gradient descent optimization algorithms (https://goo.gl/ AGwbbg). b."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p110|00",
+    "page": 110,
+    "score": 0.8348,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "các đường dự đoán không được tự nhiên. Khi bậc của đa thức tăng lên, độ phức tạp của nó cũng tăng theo và hiện tượng quá khớp xảy ra nghiêm trọng hơn. Với d = 4"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p108|00",
+    "page": 108,
+    "score": 0.8341,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Chương 8 Quá khớp Quá khớp (overfitting) là một hiện tượng không mong muốn thường gặp, người xây dựng mô hình machine learning cần nắm được các kỹ thuật để trán"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p114|00",
+    "page": 114,
+    "score": 0.8232,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Hình 8.3. Kết thúc sớm. Thuật toán huấn luyện dừng lại tại vòng lặp mà sai số xác thực đạt giá trị nhỏ nhất. mô hình có thể được coi là số vòng lặp cần chạy. Số"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p113|01",
+    "page": 113,
+    "score": 0.8203,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Cơ chế kiểm soát Một nhược điểm lớn của xác thực chéo là số lượng mô hình cần huấn luyện tỉ lệ thuận với k. Điều đáng nói là mô hình hồi quy đa thức như trên ch"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p111|00",
+    "page": 111,
+    "score": 0.8196,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "text": "Một mô hình được coi là tốt nếu cả sai số huấn luyện và test error đều thấp. Nếu sai số huấn luyện thấp nhưng sai số kiểm tra cao, ta nói mô hình bị quá khớp. N"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p173|01",
+    "page": 173,
+    "score": 0.8193,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "Mặc dù giá trị của hàm mất mát sau các vòng lặp không luôn luôn giảm, nhìn chung giá trị này có xu hướng giảm và hội tụ. 12.7. Thảo luận 12.7.1. Điều kiện dừng "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p205|01",
+    "page": 205,
+    "score": 0.8148,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Với một điểm dữ liệu huấn luyện thuộc lớp thứ c, chúng ta mong muốn xác suất tương ứng với lớp này càng cao càng tốt, tức càng gần một càng tốt. Việc này kéo th"
+   }
+  ]
+ },
+ {
+  "query_id": "d11",
+  "question": "Hồi quy tuyến tính có thêm số hạng chính quy hoá L2 theo chuẩn của w còn được gọi là gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 86.7,
+  "first_hit_rank": null,
+  "hit1": false,
+  "hit3": false,
+  "hit10": false,
+  "ctx800": false,
+  "ctx2400": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p185|00",
+    "page": 185,
+    "score": 0.8505,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Chương 14 Hồi quy logistic 14.1. Giới thiệu 14.1.1. Nhắc lại hai mô hình tuyến tính Hai mô hình tuyến tính đã thảo luận trong cuốn sách này, hồi quy tuyến tính và PLA, đều có thể viết chung dưới dạng y = f(xT w) trong đó f(s) là một hàm kích hoạt. Trong hồi quy tuyến tính f(s) = s, tích vô hướng xT w được trực tiếp sử dụng để dự đoán đầu ra y. Mô hình này phù hợp nếu ta cần dự đoán một đầu ra không bị chặn. PLA có đầu ra chỉ nhận một trong hai giá trị 1 hoặc −1 với hàm kích hoạt f(s) = sgn(s) phù hợp với các bài toán phân loại nhị phân. Trong chương này, chúng ta sẽ thảo luận một mô hình tuyến tính với một hàm kích hoạt khác, thường được áp dụng cho các bài toán phân loại nhị phân. Trong mô hình này, đầu ra có thể được biểu diễn dưới dạng xác suất. Ví dụ, xác suất thi đỗ nếu biết thời gian ôn thi, xác suất ngày mai có mưa dựa trên những thông tin đo được trong ngày hôm nay,..."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p106|00",
+    "page": 106,
+    "score": 0.8464,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "(a) (b) Hình 7.2. (a) Hồi quy đa thức bậc ba (b) Hồi quy tuyến tính nhạy cảm với nhiễu. 7.4. Thảo luận 7.4.1. Các bài toán có thể giải bằng hồi quy tuyến tính Hàm số y ≈ f(x) = xT w + b là một hàm tuyến tính theo cả w và x. Hồi quy tuyến tính có thể áp dụng cho các mô hình chỉ cần tuyến tính theo w. Ví dụ y ≈ w1x1 + w2x2 + w3x2 1 + w4 sin(x2) + w5x1x2 + w0 (7.13) là một hàm tuyến tính theo w nhưng không tuyến tính theo x. Bài toán này vẫn có thể được giải bằng hồi quy tuyến tính. Với mỗi vector đặc trưng x = [x1, x2]T , ta tính vector đặc trưng mới ˜x = [x1, x2, x2 1, sin(x2), x1x2]T rồi áp dụng hồi quy tuyến tính với dữ liệu mới này. Tuy nhiên, việc tìm ra các hàm số sin(x2) hay x1x2 là tương đối không tự nhiên. Hồi quy đa thức (polynomial regression) thường được sử dụng nhiều hơn với các vector đặc trưng mới có dạng [1, x1, x2 1, . . . ]T ."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p100|01",
+    "page": 100,
+    "score": 0.8409,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "y ≈ ˆy = f(x) = w1x1 + w2x2 + w3x3 = xT w, (7.1) trong đó w = [w1, w2, w3]T là vector trọng số (weight vector) cần tìm. Mối quan hệ y ≈ f(x) như trong (7.1) là một mối quan hệ tuyến tính. Bài toán trên đây là bài toán dự đoán giá trị của đầu ra dựa trên vector đặc trưng đầu vào. Ngoài ra, giá trị của đầu ra có thể nhận rất nhiều giá trị thực dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan hệ ˆy = xT w là một mối quan hệ tuyến tính. Tên gọi hồi quy tuyến tính xuất phát từ đây. 100 Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p194|00",
+    "page": 194,
+    "score": 0.8399,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Hồi quy tuyến tính PLA Hồi quy logistic Hình 14.6. Biểu diễn hồi quy tuyến tính, PLA, và hồi quy logistic dưới dạng neural network. c. Hồi quy logistic không yê"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p213|00",
+    "page": 213,
+    "score": 0.8388,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "15.5. Thảo luận 15.5.1. Hồi quy logistic là trường hợp đặc biệt của hồi quy softmax Khi C = 2, hồi quy softmax và hồi quy logistic là hai mô hình giống nhau. Th"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p100|00",
+    "page": 100,
+    "score": 0.8365,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Chương 7 Hồi quy tuyến tính Hồi quy tuyến tính (linear regression) là một thuật toán hồi quy mà đầu ra là một hàm số tuyến tính của đầu vào. Đây là thuật toán đ"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p201|00",
+    "page": 201,
+    "score": 0.8342,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Chương 15 Hồi quy softmax Các bài toán phân loại thực tế thường có nhiều lớp dữ liệu. Như đã thảo luận trong Chương 14, các bộ phân loại nhị phân tuy có thể kết"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p107|00",
+    "page": 107,
+    "score": 0.8337,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "quy tuyến tính với mất mát Huber được gọi là hồi quy Huber, được khẳng định là có khả năng kháng nhiễu tốt hơn. Xem thêm Huber Regressor, scikit learn (https://"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p193|00",
+    "page": 193,
+    "score": 0.8319,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "x1 x2 Hình 14.5. Ví dụ về hồi quy logis- tic với dữ liệu hai chiều. Vùng màu càng đen thể hiện xác suất thuộc nhãn hình vuông càng cao. Vùng màu càng trắng thể "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p103|00",
+    "page": 103,
+    "score": 0.8276,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "đó không vuông. Khi ma trận là vuông và khả nghịch, giả nghịch đảo chính là nghịch đảo. Tổng quát, nghiệm của bài toán tối ưu (7.5) là w = (XXT )†Xy (7.9) Hàm s"
+   }
+  ]
+ },
+ {
+  "query_id": "d12",
+  "question": "Vì sao khi vector đặc trưng rất lớn người ta dùng gradient descent thay vì giải trực tiếp nghiệm của hồi quy tuyến tính?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 89.2,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p107|02",
+    "page": 107,
+    "score": 0.8809,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": true,
+    "text": "Tuy nhiên, nếu ta tính được đạo hàm của hàm mất mát, các tham số mô hình có thể được giải bằng một phương pháp hữu dụng có tên gradient descent. Trên thực tế, một vector đặc trưng có thể có kích thước rất lớn, dẫn đến ma trận XXT cũng có kích thước lớn và việc tính ma trận nghịch đảo có thể không lợi về mặt tính toán. Gradient descent sẽ giúp tránh được việc tính ma trận nghịch đảo. Chúng ta sẽ hiểu kỹ hơn về phương pháp này trong Chương 12. Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p106|01",
+    "page": 106,
+    "score": 0.8719,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Một ví dụ về hồi quy đa thức bậc 3 được thể hiện trong Hình 7.2a. 7.4.2. Hạn chế của hồi quy tuyến tính Hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise). Trong ví dụ về mối quan hệ giữa chiều cao và cân nặng bên trên, nếu có chỉ một cặp dữ liệu nhiễu (150 cm, 90kg) thì kết quả sẽ sai khác đi rất nhiều (xem Hình 7.2b). Một kỹ thuật giúp tránh hiện tượng này là loại bỏ các nhiễu trong quá trình tìm nghiệm. Việc làm này có thể phức tạp và tương đối tốn thời gian. Có một cách khác giúp tránh công việc loại bỏ nhiễu là sử dụng mất mát Huber 22. Hồi 22 Huber loss (https://goo.gl/TBUWzg) 106 Machine Learning cơ bản"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p171|00",
+    "page": 171,
+    "score": 0.8693,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "2 3 4 5 6 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 start 83 iterations (a) GD với momentum. 2 3 4 5 6 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 start 27 iterations (b) GD với NAG. Hình 12.12. Đường đi của nghiệm cho bài toán hồi quy tuyến tính với hai phương pháp gradient descent khác nhau. NAG cho nghiệm mượt hơn và nhanh hơn. 12.5.2. Ví dụ minh họa Chúng ta cùng áp dụng cả GD với momentum và GD với NAG cho bài toán hồi quy tuyến tính. Hình 12.12a thể hiện đường đi của nghiệm với phương pháp momentum. Nghiệm đi khá zigzag và mất nhiều vòng lặp hơn. Hình 12.12b thể hiện đường đi của nghiệm với phương pháp NAG, nghiệm hội tụ nhanh hơn và đường đi ít zigzag hơn. 12.6. Stochastic gradient descent 12.6.1. Batch gradient descent Thuật toán GD được đề cập từ đầu chương còn được gọi là batch gradient desenct. Batch ở đây được hiểu là tất cả, tức sử dụng tất cả các điểm dữ liệu xi để cập nhật bộ tham số θ."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p106|00",
+    "page": 106,
+    "score": 0.868,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "(a) (b) Hình 7.2. (a) Hồi quy đa thức bậc ba (b) Hồi quy tuyến tính nhạy cảm với nhiễu. 7.4. Thảo luận 7.4.1. Các bài toán có thể giải bằng hồi quy tuyến tính H"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p164|01",
+    "page": 164,
+    "score": 0.8645,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "Quay lại với bài toán hồi quy tuyến tính Trong mục này, chúng ta quay lại với bài toán hồi quy tuyến tính và thử tối ưu hàm mất mát của nó bằng thuật toán GD. N"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p103|01",
+    "page": 103,
+    "score": 0.864,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": ", ¯xN], ta có nghiệm của bài toán tối thiểu hàm mất mát ¯w = argmin w 1 2N ∥y − ¯XT ¯w∥2 2 = ( ¯X ¯XT )† ¯Xy (7.12) Kỹ thuật thêm một đặc trưng x0 = 1 vào vecto"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p165|00",
+    "page": 165,
+    "score": 0.8621,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "0.0 0.2 0.4 0.6 0.8 1.0 0 2 4 6 8 10 Hình 12.6. Nghiệm của bài toán hồi quy tuyến tính (đường thằng màu đen) tìm được bằng thư viện scikit-learn. Các điểm dữ li"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p166|00",
+    "page": 166,
+    "score": 0.8602,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "text": "2 3 4 5 6 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 start destination 47 iterations (a) η = 1. 2 3 4 5 6 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 start destination 101 ite"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p107|00",
+    "page": 107,
+    "score": 0.8596,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "quy tuyến tính với mất mát Huber được gọi là hồi quy Huber, được khẳng định là có khả năng kháng nhiễu tốt hơn. Xem thêm Huber Regressor, scikit learn (https://"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p186|02",
+    "page": 186,
+    "score": 0.8592,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "text": "Nhắc lại rằng hồi quy tuyến tính rất nhạy cảm với nhiễu, ở đây là bạn sinh viên tiêu biểu đó. • Đường nét liền tương tự với hàm kích hoạt của PLA38. Ngưỡng dự đ"
+   }
+  ]
+ },
+ {
+  "query_id": "d13",
+  "question": "Phân tích thành phần chính (PCA) là phương pháp gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 73.2,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p275|01",
+    "page": 275,
+    "score": 0.9063,
+    "chapter": "Phân tích thành phần chính",
+    "hit": true,
+    "text": "Phân tích thành phần chính (principle component analysis, PCA) là phương pháp đi tìm một phép xoay trục toạ độ để được một hệ trục toạ độ mới sao cho trong hệ mới này, thông tin của dữ liệu chủ yếu tập trung ở một vài thành phần. Phần còn lại chứa ít thông tin hơn có thể được lược bỏ. Phép xoay trục toạ độ có liên hệ chặt chẽ tới hệ trực chuẩn và ma trận trực giao (xem Mục 1.9 và 1.10). Giả sử hệ cơ sở trực chuẩn mới là U (mỗi cột của U là một vector đơn vị cho một chiều) và ta muốn giữ lại K toạ độ trong hệ cơ sở mới này. Không mất tính tổng quát, giả sử đó là K thành phần đầu tiên. Quan sát Hình 21.2 với cơ sở mới U = [UK, bUK] là một hệ trực chuẩn với UK là ma trận Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p279|01",
+    "page": 279,
+    "score": 0.8804,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "Vì vậy, PCA còn được coi là phương pháp giảm số chiều dữ liệu sao tổng phương sai còn lại là lớn nhất. 21.2. Các bước thực hiện phân tích thành phần chính Từ các suy luận trên, ta có thể tóm tắt lại các bước trong PCA như sau: 1) Tính vector trung bình của toàn bộ dữ liệu: ¯x = 1 N PN n=1 xn. 2) Trừ mỗi điểm dữ liệu đi vector trung bình của toàn bộ dữ liệu để được dữ liệu chuẩn hoá: ˆxn = xn − ¯x (21.15) 3) Đặt bX = [bx1, bx2, . . . , bxD] là ma trận dữ liệu chuẩn hoá, tính ma trận hiệp phương sai: S = 1 N bX bXT (21.16) 4) Tính các trị riêng và vector riêng tương ứng có ℓ2 norm bằng 1 của ma trận này, sắp xếp chúng theo thứ tự giảm dần của trị riêng. 5) Chọn K vector riêng ứng với K trị riêng lớn nhất để xây dựng ma trận UK có các cột tạo thành một hệ trực giao. K vector này được gọi là các thành phần chính, tạo thành một không gian con gần với phân bố của dữ liệu ban đầu đã chuẩn hoá."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p288|00",
+    "page": 288,
+    "score": 0.8707,
+    "chapter": "Phân tích biệt thức tuyến tính",
+    "hit": false,
+    "text": "Chương 22 Phân tích biệt thức tuyến tính 22.1. Giới thiệu Trong chương trước, chúng ta đã làm quen với một thuật toán giảm chiều dữ liệu phổ biến nhất – phân tích thành phần chính (PCA). Như đã đề cập, PCA là một thuật toán học không giám sát, tức chỉ sử dụng các vector dữ liệu mà không cần tới nhãn. Tuy nhiên, trong bài toán phân loại, việc khai thác mối liên quan giữa dữ liệu và nhãn sẽ mang lại kết quả phân loại tốt hơn. Nhắc lại rằng PCA là phương pháp giảm chiều dữ liệu sao cho lượng thông tin về dữ liệu giữ lại, thể hiện ở tổng phương sai của các thành phần giữ lại, là nhiều nhất. Tuy nhiên, trong nhiều bài toán, ta không cần giữ lại lượng thông tin lớn nhất mà chỉ cần giữ lại thông tin cần thiết cho riêng bài toán đó. Xét ví dụ bài toán phân loại nhị phân được minh họa trong Hình 22.1."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p285|02",
+    "page": 285,
+    "score": 0.8604,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "Từ chính được dùng vì nó đi kèm với văn cảnh của phân tích thành phần chính. Để xem mức độ hiệu quả của phương pháp này, chúng ta minh hoạ các bức ảnh gốc và cá"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p285|01",
+    "page": 285,
+    "score": 0.8561,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "fn = path + prefix + str(person_id).zfill(2) + ’.’ + state + surfix X[:, cnt] = misc.imread(fn).reshape(D) cnt += 1 # Doing PCA, note that each row is a datapoi"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p287|01",
+    "page": 287,
+    "score": 0.8554,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "Hình 21.8 minh hoạ cho việc xác định các sự kiện bất thường bằng PCA. 21.7. Thảo luận • PCA là phương pháp giảm chiều dữ liệu dựa trên việc tối đa lượng thông t"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p287|00",
+    "page": 287,
+    "score": 0.8551,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "u2 u1 Hình 21.8. PCA cho bài toán dò tìm điểm bất thường. Giả sử các sự kiện bình thường chiếm đa số và nằm gần một không gian con nào đó. Khi đó, nếu làm PCA t"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p265|01",
+    "page": 265,
+    "score": 0.8515,
+    "chapter": "Lọc cộng tác phân tích ma trận",
+    "hit": false,
+    "text": "Trong phần này, chúng ta sẽ xem xét các phương pháp giảm chiều dữ liệu phổ biến nhất: phân tích thành phần chính (principle component analysis) cho bài toán giả"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p278|01",
+    "page": 278,
+    "score": 0.8503,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "Khẳng định này có thể được chứng minh bằng quy nạp55. Trị riêng lớn nhất λ1 của ma trận hiệp phương sai S còn được gọi là thành phần chính thứ nhất (the first p"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p282|01",
+    "page": 282,
+    "score": 0.846,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "Khi dữ liệu phân bố quanh một không gian con, các giá trị phương sai lớn nhất ứng với các λi đầu tiên cao gấp nhiều lần các phương sai còn lại. Khi đó, ta có th"
+   }
+  ]
+ },
+ {
+  "query_id": "d14",
+  "question": "Trong phân tích giá trị suy biến (SVD), số phần tử khác không trên đường chéo của Σ bằng gì?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 62.3,
+  "first_hit_rank": 3,
+  "hit1": false,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p268|00",
+    "page": 268,
+    "score": 0.8798,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "Am×n = × Um×m ... Σm×n × VT n×n (a) (m < n) (b) (m > n) Am×n = × Um×m ... Σm×n × VT n×n Hình 20.1. SVD cho ma trận A khi: (a) m < n, và (b) m > n. Σ là một ma trận đường chéo với các phần tử trên đó giảm dần và không âm. Màu xám càng đậm thể hiện giá trị càng cao. Các ô màu trắng trên ma trận Σ thể hiện giá trị bằng không. Quan sát thấy rằng ΣΣT là một ma trận đường chéo với các phần tử trên đường chéo là σ2 1, σ2 2, . . . Vậy (20.7) chính là một phân tích riêng của AAT và σ2 1, σ2 2, . . . là các trị riêng của ma trận này. Ma trận AAT luôn là nửa xác định dương nên các trị riêng của nó là không âm. Căn bậc hai các trị riêng của AAT , σi, còn được gọi là giá trị suy biến (singular value) của A. Tên gọi phân tích giá trị suy biến xuất phát từ đây. Cũng theo đó, mỗi cột của U là một vector riêng của AAT . Ta gọi mỗi cột này là một vector suy biến trái (left-singular vector) của A."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p270|00",
+    "page": 270,
+    "score": 0.8736,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "20.2.5. Phân tích giá trị suy biến cắt ngọn Nhắc lại rằng các giá trị trên đường chéo chính của Σ là không âm và giảm dần σ1 ≥ σ2 ≥ · · · ≥ σr ≥ 0 = 0 = · · · = 0. Thông thường, chỉ một lượng nhỏ các σi mang giá trị lớn, các giá trị còn lại nhỏ và gần không. Khi đó ta có thể xấp xỉ ma trận A bằng tổng của k < r ma trận có hạng bằng một: A ≈ Ak = UkΣk(Vk)T = σ1u1vT 1 + σ2u2vT 2 + · · · + σkukvT k (20.11) Việc bỏ đi r − k giá trị suy biến khác không nhỏ nhất được gọi là SVD cắt ngọn (truncated SVD). Dưới đây là một định lý thú vị. Định lý này nói rằng sai số do cách xấp xỉ SVD cắt ngọn bằng căn bậc hai tổng bình phương của các giá trị suy biến bị cắt đi. Ở đây sai số được định nghĩa là Frobineous norm của hiệu hai ma trận. Định lý 20.1:"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p267|01",
+    "page": 267,
+    "score": 0.8624,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": true,
+    "text": "Các phần tử trên đường chéo chính của Σ là không âm và được sắp xếp theo thứ tự giảm dần σ1 ≥ σ2 ≥ · · · ≥ σr ≥ 0 = 0 = · · · = 0. Số lượng các phần tử khác không trong Σ chính là hạng của ma trận A: r = rank(A). SVD của một ma trận bất kỳ luôn tồn tại51. Cách biểu diễn (20.4) không là duy nhất vì ta chỉ cần đổi dấu của cả U và V thì (20.4) vẫn thoả mãn. Hình 20.1 mô tả SVD của ma trận Am×n trong hai trường hợp: m < n và m > n. Trường hợp m = n có thể xếp vào một trong hai trường hợp trên. 20.2.2. Nguồn gốc tên gọi Tạm bỏ qua chiều của mỗi ma trận, từ (20.4) ta có: AAT = UΣVT (UΣVT )T (20.5) = UΣVT VΣT UT (20.6) = UΣΣT UT = UΣΣT U−1 (20.7) Dấu bằng ở (20.6) xảy ra vì VT V = I do V là một ma trận trực giao. Dấu bằng ở (20.7) xảy ra vì U là một ma trận trực giao. 51 Bạn đọc có thể tìm thấy chứng minh cho việc này tại https://goo.gl/TdtWDQ. Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p267|00",
+    "page": 267,
+    "score": 0.8531,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "dữ liệu, tìm hiểu các đặc tính của dữ liệu, giải các hệ phương trình tuyến tính, phân cụm và nhiều ứng dụng khác. Trong chương này, chúng ta sẽ làm quen với một"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p266|00",
+    "page": 266,
+    "score": 0.8507,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "Chương 20 Phân tích giá trị suy biến 20.1. Giới thiệu Nhắc lại bài toán chéo hoá ma trận: Một ma trận vuông A ∈ Rn×n gọi là chéo hoá được nếu tồn tại ma trận đư"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p269|01",
+    "page": 269,
+    "score": 0.8415,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "Phân tích giá trị suy biến giản lược Viết lại biểu thức (20.4) dưới dạng tổng của các ma trận có hạng bằng môt: A = σ1u1vT 1 + σ2u2vT 2 + · · · + σrurvT r (20.9"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p270|01",
+    "page": 270,
+    "score": 0.8405,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "Sai số do xấp xỉ bởi SVD cắt ngọn Sai số do xấp xỉ một ma trận A có hạng r bởi SVD cắt ngọn với k < r phần tử là ∥A − Ak∥2 F = r X i=k+1 σ2 i (20.12) Chứng minh"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p277|00",
+    "page": 277,
+    "score": 0.8381,
+    "chapter": "Phân tích thành phần chính",
+    "hit": false,
+    "text": "J(U) = 1 N ∥ bUT K bX∥2 F = 1 N ∥ bXT bUK∥2 F = 1 N D X i=K+1 ∥ bXT ui∥2 2 (21.8) = 1 N D X i=K+1 uT i bX bXT ui = D X i=K+1 uT i Sui (21.9) với S = 1 N bX bXT "
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p269|00",
+    "page": 269,
+    "score": 0.8373,
+    "chapter": "Phân tích giá trị suy biến",
+    "hit": false,
+    "text": "A = Ur Σr (Vr)T σ1u1 vT 1 + = σ2u2 vT 2 Hình 20.2. Biểu diễn compact SVD dưới dạng tổng các ma trận có rank bằng 1. Các khối ma trận đặt cạnh nhau thể hiện phép"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p393|00",
+    "page": 393,
+    "score": 0.8364,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "text": "29.2.3. Hàm mất mát của SVM đa lớp Có hai siêu tham số trong hàm mất mát (29.4) là ∆ và λ, câu hỏi đặt ra là làm thế nào để chọn ra cặp giá trị hợp lý nhất cho "
+   }
+  ]
+ },
+ {
+  "query_id": "d15",
+  "question": "Mất mát không-một (zero-one loss) trả về giá trị nào cho một điểm dữ liệu?",
+  "filter": null,
+  "method": "dense",
+  "elapsed_ms": 86.3,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p369|01",
+    "page": 369,
+    "score": 0.8628,
+    "chapter": "Máy vector hỗ trợ lề mềm",
+    "hit": true,
+    "text": "Trong đó, zn = wT xn + b còn được gọi là điểm số (score) của xn ứng với cặp hệ số (w, b), yn = ±1 là nhãn của xn. Hình 27.3 mô tả đồ thị hàm mất mát bản lề68 f(yz) = max(0, 1 − yz) và so sánh với hàm mất mát không-một (zero-one loss). Hàm mất mát không-một trả về không nếu một điểm được phân loại đúng và trả về một nếu điểm đó bị phân loại sai. Như vậy, mất mát không-một là hàm đếm số điểm bị phân loại sai của tập huấn luyện. Trong Hình 27.5, biến số là yz là tích của đầu ra mong muốn y và điểm số z. Những điểm ở phía phải của trục tung ứng với những điểm được phân loại đúng, tức z tìm được cùng dấu với y. Những điểm ở phía trái của trục tung ứng với các điểm bị phân loại sai. Ta có các nhận xét sau đây:"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p369|00",
+    "page": 369,
+    "score": 0.8609,
+    "chapter": "Máy vector hỗ trợ lề mềm",
+    "hit": false,
+    "text": "-3 -2 -1 0 1 2 3 -1 1 2 3 yz h(yz) Hình 27.3. Mất mát bản lề (nét liền) và mất mát không-một (nét đứt). Với mất mát không-một, những điểm nằm xa đường hỗ trợ (hoành độ bằng 1) và đường phân chia (hoành độ bằng 0) đều mang lại mất mát bằng một. Trong khi đó, với mất mát bản lề, những điểm ở xa về phía trái gây ra mất mát nhiều hơn. 27.4.2. Mất mát bản lề Nhắc lại hàm entropy chéo: Với mỗi cặp hệ số (w, b) và dữ liệu (xn, yn), đặt an = σ(wT xn + b) (hàm sigmoid). Hàm entropy chéo được định nghĩa là: J1 n(w, b) = −(yn log(an) + (1 − yn) log(1 − an)) (27.28) Hàm số này đạt giá trị nhỏ nếu xác suất an gần với yn (0 < an < 1, yn ∈ {0, 1}). Ở đây, chúng ta làm quen với một hàm số khác cũng được sử dụng nhiều trong các hệ thống phân loại. Hàm số này có dạng Jn(w, b) = max(0, 1 − ynzn) Hàm này có tên là mất mát bản lề (hinge loss)."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p205|01",
+    "page": 205,
+    "score": 0.8561,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Với một điểm dữ liệu huấn luyện thuộc lớp thứ c, chúng ta mong muốn xác suất tương ứng với lớp này càng cao càng tốt, tức càng gần một càng tốt. Việc này kéo theo các phần tử còn lại gần với không. Một cách tự nhiên, đầu ra thực sự y là một vector có tất cả các phần tử bằng không trừ phần từ ở vị trí thứ c bằng một. Cách biểu diễn nhãn dưới dạng vector này được gọi là mã hoá one-hot. Hàm mất mát của hồi quy softmax được xây dựng dựa trên bài toán tối thiểu sự khác nhau giữa đầu ra dự đoán a và đầu ra thực sự y ở dạng one-hot. Khi cả hai là các vector thể hiện xác suất, khoảng cách giữa chúng thường được đo bằng một hàm số được gọi là entropy chéo H(y, a). Đặc điểm nổi bật của hàm số Một đặc điểm nổi bật là nếu cố định y, hàm số sẽ đạt giá trị nhỏ nhất khi a = y, và càng lớn nếu a càng khác y."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p369|02",
+    "page": 369,
+    "score": 0.8539,
+    "chapter": "Máy vector hỗ trợ lề mềm",
+    "hit": false,
+    "text": "• Với mất mát không-một, các điểm dữ liệu có điểm số ngược dấu với đầu ra mong muốn (yz < 0) sẽ gây ra mất mát như nhau và đều bằng một, bất kể chúng ở gần hay "
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p391|00",
+    "page": 391,
+    "score": 0.8527,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "text": ".3 1 -0.1 2 -1.1 1.5 -2 0.7 -0.1 .05 -0.3 0.1 -1.2 1.5 0.7 WT × -12 45 -50 120 1 x = 285.3 -154.5 248.8 vector điểm số z điểm cat điểm frog điểm dog ảnh (màu) đ"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p392|00",
+    "page": 392,
+    "score": 0.8492,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "text": "Để mô tả các mức vi phạm này dưới dạng toán học, trước hết ta giả sử rằng các thành phần của vector điểm số và các lớp dữ liệu được đánh số thứ tự từ một thay v"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p390|02",
+    "page": 390,
+    "score": 0.8472,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "text": "X -= img_mean # zero-centered N = X.shape[0] # number of data point X = X.reshape(N, -1) # vectorization return np.concatenate((X, np.ones((N, 1))), axis = 1) #"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p207|01",
+    "page": 207,
+    "score": 0.843,
+    "chapter": "Hồi quy softmax",
+    "hit": false,
+    "text": "Biểu thức này đạt giá trị nhỏ nhất nếu qc = 1, điều này không xảy ra vì nghiệm này không thuộc miền xác định của bài toán. Tuy nhiên, giá trị entropy chéo tiệm "
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p102|00",
+    "page": 102,
+    "score": 0.8429,
+    "chapter": "Hồi quy tuyến tính",
+    "hit": false,
+    "text": "Trung bình sai số Trong machine learning, hàm mất mát thường là trung bình cộng của sai số tại mỗi điểm. Về mặt toán học, hệ số 1 2N không ảnh hưởng tới nghiệm "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p395|02",
+    "page": 395,
+    "score": 0.8425,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "text": "Vì biểu thức hàm mất mát cho một điểm dữ liệu không chứa thành phần j = yn nên ta không cần tính các ô có nền màu xám. Sau khi tính được giá trị của từng ô, ta "
+   }
+  ]
+ }
+]

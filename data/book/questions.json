@@ -110,6 +110,12 @@
     "page": 68,
     "evidence": "Ước lượng hợp lý cực đại là việc đi tìm bộ tham số θ để θ = argmax",
     "chunk_id": "book-ml-co-ban|p068|00"
+   },
+   {
+    "source_id": "book-ml-co-ban",
+    "page": 77,
+    "evidence": "Với MLE, việc xác định tham số θ được thực hiện bằng cách đi tìm các tham số sao cho xác suất của tập huấn luyện",
+    "chunk_id": "book-ml-co-ban|p077|00"
    }
   ],
   "expected_answer": "Bộ tham số θ làm cực đại xác suất p(x1, ..., xN | θ) của dữ liệu quan sát."

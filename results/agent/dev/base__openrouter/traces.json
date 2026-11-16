@@ -1,0 +1,398 @@
+[
+ {
+  "query_id": "d01",
+  "question": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa là: L(w) = 1/(2N) * Σ(yi − xTiw)², với N là số lượng dữ liệu trong tập huấn luyện. Mục tiêu là tìm w để hàm L(w) đạt giá trị nhỏ nhất, tức là tối thiểu hóa hàm mất mát theo w: w∗ = argmin w L(w).",
+  "citations": [
+   "book-ml-co-ban|p101|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 3,
+    "prompt_tokens": 717,
+    "completion_tokens": 22,
+    "cost_usd": 0.00012075,
+    "latency_s": 31.88,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hàm mất mát hồi quy tuyến tính",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 718.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p164|01",
+      "page": 164,
+      "rank": 1,
+      "score": 0.879
+     },
+     {
+      "id": "book-ml-co-ban|p101|01",
+      "page": 101,
+      "rank": 2,
+      "score": 0.8783
+     },
+     {
+      "id": "book-ml-co-ban|p186|02",
+      "page": 186,
+      "rank": 3,
+      "score": 0.8759
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p101|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p164|01",
+     "book-ml-co-ban|p186|02"
+    ],
+    "context_chars": 689
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1041,
+    "completion_tokens": 125,
+    "cost_usd": 0.00023115,
+    "latency_s": 3.05,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p101|01"
+  ],
+  "context": "[book-ml-co-ban|p101|01 | trang 101 | Hồi quy tuyến tính]\nHàm mất mát Điều tương tự xảy ra với tất cả các cặp dữ liệu (xi, yi), i = 1, 2, . . . , N, với N là số lượng dữ liệu trong tập huấn luyện. Việc tìm mô hình tốt nhất tương đương với việc tìm w để hàm số sau đạt giá trị nhỏ nhất: L(w) = 1 2N N X i=1 (yi − xT i w)2. (7.4) Hàm số L(w) chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số θ = w. Ta luôn mong muốn sự mất mát là nhỏ nhất, điều này có thể đạt được bằng cách tối thiểu hàm mất mát theo w: w∗ = argmin w L(w). (7.5) w∗ là nghiệm cần tìm của bài toán. Đôi khi dấu ∗ được bỏ đi và nghiệm có thể được viết gọn lại thành w = argmin w L(w). Machine Learning cơ bản",
+  "context_chars": 689,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1758,
+  "completion_tokens": 147,
+  "cost_usd": 0.000352,
+  "latency_s": 35.65,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "d02",
+  "question": "Trong chương 9, khi huấn luyện thuật toán K lân cận (KNN) làm gì với dữ liệu huấn luyện?",
+  "filter": {
+   "chapter_no": "9"
+  },
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Trong thuật toán K lân cận (KNN), dữ liệu huấn luyện được sử dụng để xác định nhãn cho các điểm mới. Cụ thể, nhãn của một điểm bất kỳ được xác định dựa trên nhãn của điểm gần nhất trong tập huấn luyện. Mỗi điểm trong tập huấn luyện đều được mô hình mô tả một cách chính xác, điều này có thể dẫn đến hiện tượng overfitting dễ xảy ra với KNN. [book-ml-co-ban|p118|01]",
+  "citations": [
+   "book-ml-co-ban|p118|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 745,
+    "completion_tokens": 20,
+    "cost_usd": 0.00012375,
+    "latency_s": 2.32,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "KNN dữ liệu huấn luyện",
+    "filter": {
+     "chapter_no": "9"
+    },
+    "top_k": 3,
+    "elapsed_ms": 64.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p127|00",
+      "page": 127,
+      "rank": 1,
+      "score": 0.8847
+     },
+     {
+      "id": "book-ml-co-ban|p118|01",
+      "page": 118,
+      "rank": 2,
+      "score": 0.8752
+     },
+     {
+      "id": "book-ml-co-ban|p119|00",
+      "page": 119,
+      "rank": 3,
+      "score": 0.8715
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p118|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p127|00",
+     "book-ml-co-ban|p119|00"
+    ],
+    "context_chars": 639
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1009,
+    "completion_tokens": 145,
+    "cost_usd": 0.00023835,
+    "latency_s": 3.17,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p118|01"
+  ],
+  "context": "[book-ml-co-ban|p118|01 | trang 118 | K lân cận]\nCác hình tròn nhỏ với màu khác nhau thể hiện dữ liệu huấn luyện của các nhãn khác nhau. Các vùng màu nền khác nhau thể hiện “lãnh thổ” của mỗi nhãn. Nhãn của một điểm bất kỳ được xác định dựa trên nhãn của điểm gần nó nhất trong tập huấn luyện. Trong hình này, có một vài vùng nhỏ xem lẫn vào các vùng lớn hơn khác màu. Điểm này rất có thể là nhiễu. Các điểm dữ liệu kiểm tra gần khu vực điểm này nhiều khả năng sẽ bị phân loại sai. Với KNN, mọi điểm trong tập huấn luyện đều được mô hình mô tả một cách chính xác. Việc này khiến overfitting dễ xảy ra với KNN. 118 Machine Learning cơ bản",
+  "context_chars": 639,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1754,
+  "completion_tokens": 165,
+  "cost_usd": 0.000362,
+  "latency_s": 5.55,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d16",
+  "question": "Thuật toán gradient boosting (ví dụ XGBoost) xây dựng các mô hình yếu tuần tự như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cách xây dựng các mô hình yếu tuần tự trong thuật toán gradient boosting như XGBoost.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 1,
+    "prompt_tokens": 722,
+    "completion_tokens": 18,
+    "cost_usd": 0.0001191,
+    "latency_s": 2.57,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "gradient boosting XGBoost",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 89.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p262|00",
+      "page": 262,
+      "rank": 1,
+      "score": 0.8203
+     },
+     {
+      "id": "book-ml-co-ban|p262|01",
+      "page": 262,
+      "rank": 2,
+      "score": 0.82
+     },
+     {
+      "id": "book-ml-co-ban|p374|00",
+      "page": 374,
+      "rank": 3,
+      "score": 0.8151
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p262|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p262|01",
+     "book-ml-co-ban|p374|00"
+    ],
+    "context_chars": 799
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1061,
+    "completion_tokens": 15,
+    "cost_usd": 0.00016815,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "gradient boosting",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 92.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p208|02",
+      "page": 208,
+      "rank": 1,
+      "score": 0.8128
+     },
+     {
+      "id": "book-ml-co-ban|p209|01",
+      "page": 209,
+      "rank": 2,
+      "score": 0.8071
+     },
+     {
+      "id": "book-ml-co-ban|p047|01",
+      "page": 47,
+      "rank": 3,
+      "score": 0.8056
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p208|02",
+     "book-ml-co-ban|p209|01",
+     "book-ml-co-ban|p047|01"
+    ],
+    "context_chars": 799
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1136,
+    "completion_tokens": 51,
+    "cost_usd": 0.0001242,
+    "latency_s": 1.78,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p262|00"
+  ],
+  "context": "[book-ml-co-ban|p262|00 | trang 262 | Lọc cộng tác phân tích ma trận]\nTiếp theo, chúng ta viết các phương thức loss, updateXb, updateWd cho class MF. def loss(self): L = 0 for i in range(self.n_ratings): # user_id, item_id, rating n, m, rating = int(self.Y[i,0]), int(self.Y[i,1]), self.Y[i,2] L += 0.5*(self.X[m].dot(self.W[:, n])\\ + self.b[m] + self.d[n] - rating)**2 L /= self.n_ratings # regularization, don’t ever forget this return L + 0.5*self.lam*(np.sum(self.X**2) + np.sum(self.W**2)) def updateXb(self): for m in range(self.n_items): # get all users who rated item m and corresponding ratings ids = np.where(self.Y[:, 1] == m)[0] # row indices of items m user_ids, ratings=self.Y[ids, 0].astype(np.int32),self.Y[ids, 2] Wm, dm = self.W[:, user_ids], self.d[user_ids] for i in range(30):",
+  "context_chars": 799,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 2919,
+  "completion_tokens": 84,
+  "cost_usd": 0.000411,
+  "latency_s": 5.48
+ }
+]
