@@ -1,0 +1,406 @@
+[
+ {
+  "id": "n01",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong ma trận tiện ích của ví dụ hệ thống gợi ý bài hát (đánh giá 0–5 sao), có bao nhiêu ô còn thiếu dữ liệu (dấu '?') và người dùng E đánh giá bài 'Con cò bé bé' mấy sao?",
+  "expected": "12 ô còn thiếu (1 + 4 + 3 + 1 + 3 theo năm bài hát); người dùng E đánh giá 'Con cò bé bé' 4 sao.",
+  "answer": "Trong ma trận tiện ích của ví dụ hệ thống gợi ý bài hát (Hình 17.1), có tổng cộng 12 ô còn thiếu dữ liệu (ký hiệu dấu '?') và người dùng E đánh giá bài 'Con cò bé bé' 4 sao [book-ml-co-ban|p236|v00].",
+  "citations": [
+   "book-ml-co-ban|p236|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n02",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong ma trận tiện ích dựa trên số sao người dùng đánh giá sản phẩm (chương lọc cộng tác lân cận), người dùng u3 đánh giá sản phẩm i3 mấy sao và hàng của sản phẩm i4 có bao nhiêu ô còn thiếu?",
+  "expected": "u3 đánh giá i3 = 4 sao; hàng i4 có 3 ô còn thiếu (u3, u4, u5).",
+  "answer": "Dựa vào ma trận tiện ích (Hình 18.1) trong chương lọc cộng tác lân cận [book-ml-co-ban|p247|v00]:\n- Người dùng $u_3$ đánh giá sản phẩm $i_3$ là **4** sao [book-ml-co-ban|p247|v00].\n- Hàng của sản phẩm $i_4$ có **3** ô còn thiếu (dấu \"?\", tương ứng với các cột $u_3$, $u_4$, và $u_5$) [book-ml-co-ban|p247|v00].",
+  "citations": [
+   "book-ml-co-ban|p247|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n03",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên ôn từ 4 giờ trở lên và trong số đó bao nhiêu người trượt?",
+  "expected": "7 sinh viên ôn từ 4 giờ trở lên (4, 4, 4.25, 4.5, 4.75, 5, 5.5); 1 người trượt (một sinh viên ôn 4 giờ).",
+  "answer": "Theo Bảng 14.1 trong sách, có tổng cộng 6 sinh viên ôn từ 4 giờ trở lên (gồm các mức: 4, 4.25, 4.5, 4.75, 5, và 5.5 giờ) [book-ml-co-ban|p185|v00]. Trong số đó, có 1 sinh viên trượt (sinh viên ôn 4 giờ với kết quả là 0) [book-ml-co-ban|p185|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n04",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của 3 người cao nhất là bao nhiêu?",
+  "expected": "67 kg (178 cm -> 66, 180 cm -> 67, 183 cm -> 68; (66 + 67 + 68)/3).",
+  "answer": "Dựa vào Bảng 7.1 về chiều cao và cân nặng của 15 người [book-ml-co-ban|p104|v00], ba người cao nhất có chiều cao và cân nặng lần lượt là:\n1. Chiều cao 183 cm, cân nặng 68 kg [book-ml-co-ban|p104|v00]\n2. Chiều cao 180 cm, cân nặng 67 kg [book-ml-co-ban|p104|v00]\n3. Chiều cao 178 cm, cân nặng 66 kg [book-ml-co-ban|p104|v00]\n\nCân nặng trung bình của 3 người này là:\n$$\\frac{68 + 67 + 66}{3} = 67 \\text{ (kg)}$$",
+  "citations": [
+   "book-ml-co-ban|p104|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n05",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các gradient cơ bản, gradient theo ma trận X của hàm trace(AᵀXB) là gì?",
+  "expected": "ABᵀ.",
+  "answer": "Theo Bảng 2.1 (Bảng các gradient cơ bản) trong sách Machine Learning cơ bản, gradient theo ma trận $\\mathbf{X}$ của hàm $\\text{trace}(\\mathbf{A}^T\\mathbf{X}\\mathbf{B})$ là $\\mathbf{A}\\mathbf{B}^T$ [book-ml-co-ban|p049|01].",
+  "citations": [
+   "book-ml-co-ban|p049|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n06",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'sigmoid' có công thức gì và những hệ số nào cần thiết lập?",
+  "expected": "tanh(γ xᵀz + r); hệ số γ: gamma, r: coef0.",
+  "answer": "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'sigmoid' có công thức và thiết lập hệ số như sau:\n- **Công thức:** $\\tanh(\\gamma\\mathbf{x}^T\\mathbf{z} + r)$ [book-ml-co-ban|p383|01]\n- **Thiết lập hệ số:** $\\gamma$: `gamma`, $r$: `coef0` [book-ml-co-ban|p383|01]",
+  "citations": [
+   "book-ml-co-ban|p383|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n07",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình ví dụ cách tính vector điểm số của SVM đa lớp (ảnh con mèo đầu vào), điểm số của các lớp cat, frog, dog là bao nhiêu và ảnh được gán nhãn lớp nào?",
+  "expected": "cat 285.3, frog −154.5, dog 248.8; nhãn là cat (điểm cao nhất).",
+  "answer": "Dựa vào Hình 29.3 trong sách, vector điểm số cho các lớp là:\n- Điểm của lớp **cat**: $285.3$ [book-ml-co-ban|p391|v00]\n- Điểm của lớp **frog**: $-154.5$ [book-ml-co-ban|p391|v00]\n- Điểm của lớp **dog**: $248.8$ [book-ml-co-ban|p391|v00]\n\nẢnh được gán nhãn là lớp **cat** vì có điểm số cao nhất ($285.3$) [book-ml-co-ban|p391|00, book-ml-co-ban|p391|v00].",
+  "citations": [
+   "book-ml-co-ban|p391|00",
+   "book-ml-co-ban|p391|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n08",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình mô phỏng cách tính hàm mất mát và gradient trong SVM đa lớp, vector nhãn y là gì và L_data bằng bao nhiêu (gồm các thành phần nào)?",
+  "expected": "y = [1, 3, 2]; L_data = 0.5 + 0.7 + 0.3 + 1.5 = 3.0.",
+  "answer": "Trong hình mô phỏng cách tính hàm mất mát và gradient trong SVM đa lớp (Hình 29.5):\n\n- **Vector nhãn $\\mathbf{y}$** là: $\\mathbf{y} = [1, 3, 2]$ [book-ml-co-ban|p396|v00].\n- **$\\mathcal{L}_{\\text{data}}$** bằng **$3.0$**, bao gồm tổng các thành phần mất mát vi phạm từ các hàng trong bảng tính loss: \n  $$\\mathcal{L}_{\\text{data}} = 0.5 + 0.7 + 0.3 + 1.5 = 3.0$$ [book-ml-co-ban|p396|v00] (tính toán qua tool: 3 [calculated]).",
+  "citations": [
+   "book-ml-co-ban|p396|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n09",
+  "group": "image",
+  "status": "answered",
+  "question": "Mạng neuron đa tầng dùng cho ví dụ dữ liệu giả hai chiều (một tầng ẩn ReLU) được vẽ với bao nhiêu nút ở tầng đầu vào, tầng ẩn và tầng đầu ra, và tầng đầu ra là mô hình gì?",
+  "expected": "Tầng vào 2 nút, tầng ẩn vẽ 4 nút (số nút ẩn tuỳ ý), tầng ra 3 nút là hồi quy softmax (ba lớp).",
+  "answer": "Trong ví dụ dữ liệu giả hai chiều, mạng neuron đa tầng được vẽ với tầng đầu vào có hai nút, một tầng ẩn sử dụng hàm kích hoạt ReLU (với số lượng nút ẩn tùy ý), và tầng đầu ra là mô hình hồi quy softmax với ba phần tử đại diện cho ba lớp dữ liệu [book-ml-co-ban|p225|00].",
+  "citations": [
+   "book-ml-co-ban|p225|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n10",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình chất lượng nén ảnh với số lượng cluster khác nhau (K-means), những giá trị K nào được so sánh?",
+  "expected": "K = 5, 10, 15 và 20.",
+  "answer": "Trong hình chất lượng nén ảnh với số lượng cluster khác nhau (Hình 10.9), các giá trị $K$ được so sánh là: $5, 10, 15$ và $20$ [book-ml-co-ban|p141|v00, book-ml-co-ban|p141|00].",
+  "citations": [
+   "book-ml-co-ban|p141|00",
+   "book-ml-co-ban|p141|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n11",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình dữ liệu giả trong không gian hai chiều và ví dụ về các ranh giới tốt, ranh giới ở hình (b) dùng bao nhiêu nút ẩn và đạt độ chính xác bao nhiêu?",
+  "expected": "100 nút ẩn; độ chính xác ≈ 99.33% (99.333…%).",
+  "answer": "Trong hình kết quả với số lượng nút ẩn khác nhau (Hình 16.10), ranh giới ở hình (b) dùng 5 nút ẩn và đạt độ chính xác 74.0% [book-ml-co-ban|p229|00].",
+  "citations": [
+   "book-ml-co-ban|p229|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n12",
+  "group": "chart",
+  "status": "abstain",
+  "question": "Trong hình kết quả gradient descent với x0 = −5 và η = 0.01, gradient tại vòng lặp 50/100 và 100/100 bằng bao nhiêu?",
+  "expected": "iter 50/100: grad = −1.476; iter 100/100: grad = −0.049.",
+  "answer": "Sách Machine Learning cơ bản có đề cập đến tốc độ học $\\eta = 0.01$ (Hình 12.4), nhưng không cung cấp giá trị gradient cụ thể tại vòng lặp 50/100 và 100/100 [book-ml-co-ban|p162|01].",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n13",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình minh hoạ chưa khớp và quá khớp trong hồi quy đa thức, bốn hình con dùng những bậc đa thức nào và mỗi bậc được nhận xét thế nào?",
+  "expected": "Bậc 2: chưa khớp; bậc 4: mô hình tốt; bậc 8: quá khớp; bậc 16: quá khớp.",
+  "answer": "Trong hình minh hoạ chưa khớp và quá khớp trong hồi quy đa thức (Hình 8.1), bốn hình con sử dụng các bậc đa thức và nhận xét tương ứng như sau:\n\n1. **Hình (a) — Bậc = 2:** Mô hình bị **chưa khớp (underfitting)**; mô hình dự đoán (đường nét liền) quá khác so với mô hình thực, thậm chí có xu hướng đi xuống khi dữ liệu đang có hướng đi lên [book-ml-co-ban|p109|00, book-ml-co-ban|p109|v00].\n2. **Hình (b) — Bậc = 4:** Là **mô hình tốt**; mô hình dự đoán khá giống với mô hình thực, hệ số bậc cao nhất tìm được rất gần với không nên đa thức bậc bốn này khá gần với đa thức bậc ba ban đầu [book-ml-co-ban|p109|v00, book-ml-co-ban|p110|00].\n3. **Hình (c) — Bậc = 8:** Bị **quá khớp (overfitting)**; với các điểm dữ liệu trong tập huấn luyện, mô hình dự đoán và mô hình thực khá giống nhau, nhưng đa thức bậc 8 lại cho kết quả hoàn toàn ngược với xu hướng của dữ liệu ở phía phải [book-ml-co-ban|p109|00, book-ml-co-ban|p109|v01, book-ml-co-ban|p109|01].\n4. **Hình (d) — Bậc = 16:** Bị **quá khớp (overfitting)** nghiêm trọng; đa thức bậc 16 quá khớp với tập huấn luyện, độ phức tạp của đồ thị lớn (dao động mạnh, tạo thành các đường thẳng đứng và đỉnh nhọn), mô hình có thể đang cố gắng mô tả nhiễu thay vì dữ liệu [book-ml-co-ban|p109|v01, book-ml-co-ban|p109|01].",
+  "citations": [
+   "book-ml-co-ban|p109|00",
+   "book-ml-co-ban|p109|01",
+   "book-ml-co-ban|p109|v00",
+   "book-ml-co-ban|p109|v01",
+   "book-ml-co-ban|p110|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n14",
+  "group": "chart",
+  "status": "answered",
+  "question": "Theo đồ thị ví dụ của hàm sigmoid và tanh trong chương mạng neuron đa tầng, mỗi hàm nhận giá trị trong khoảng nào và giá trị tại z = 0 là bao nhiêu?",
+  "expected": "sigmoid: (0, 1), tại z = 0 bằng 0.5; tanh: (−1, 1), tại z = 0 bằng 0.",
+  "answer": "Theo đồ thị ví dụ của hàm sigmoid và hàm tanh trong chương mạng neuron đa tầng (Hình 16.5):\n1. **Hàm sigmoid:** Nhận giá trị trong khoảng từ $0.0$ đến $1.0$ [book-ml-co-ban|p219|v00]; giá trị tại $z = 0$ là $0.5$ [book-ml-co-ban|p219|v00].\n2. **Hàm tanh:** Nhận giá trị trong khoảng từ $-1.0$ đến $1.0$ [book-ml-co-ban|p219|01, book-ml-co-ban|p219|v00]; giá trị tại $z = 0$ là $0.0$ [book-ml-co-ban|p219|v00].",
+  "citations": [
+   "book-ml-co-ban|p219|01",
+   "book-ml-co-ban|p219|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n15",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị hàm mật độ của phân phối chuẩn một chiều ở chương ôn tập xác suất, đường có đỉnh cao nhất ứng với tham số nào và đỉnh cao khoảng bao nhiêu?",
+  "expected": "μ = 0.5, σ² = 0.5; đỉnh khoảng 0.56.",
+  "answer": "Trong đồ thị hàm mật độ xác suất của phân phối chuẩn một chiều (Hình 3.3a):\n- Đường có đỉnh cao nhất ứng với bộ tham số: **$\\mu = .5, \\sigma^2 = .5$** [book-ml-co-ban|p064|v00].\n- Giá trị đỉnh của đường này trên trục tung $p(x)$ là khoảng **$0.56$** (tính chính xác theo công thức hàm mật độ tại kỳ vọng là $\\frac{1}{\\sqrt{2\\pi\\sigma^2}} \\approx 0.564$) [book-ml-co-ban|p063|01, book-ml-co-ban|p064|v00].",
+  "citations": [
+   "book-ml-co-ban|p063|01",
+   "book-ml-co-ban|p064|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n16",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình ảnh hưởng của C lên nghiệm của SVM lề mềm, ba hình con đầu tiên (hàng trên trái, hàng trên phải, hàng dưới trái) dùng giá trị C nào, và theo chú thích C càng lớn thì biên thế nào?",
+  "expected": "C = 0.1, C = 1, C = 10; C càng lớn thì biên càng nhỏ (và ngược lại).",
+  "answer": "Trong Hình 27.5 về ảnh hưởng của $C$ lên nghiệm của SVM lề mềm [book-ml-co-ban|p376|00]:\n- Ba hình con đầu tiên sử dụng các giá trị $C$ lần lượt là [book-ml-co-ban|p376|v00]:\n  + Hàng trên trái: $C = 0.1$ ($C = 0.100000$) [book-ml-co-ban|p376|v00]\n  + Hàng trên phải: $C = 1$ ($C = 1.000000$) [book-ml-co-ban|p376|v00]\n  + Hàng dưới trái: $C = 10$ ($C = 10.000000$) [book-ml-co-ban|p376|v00]\n- Theo chú thích trong sách, $C$ càng lớn thì biên càng nhỏ (và ngược lại) [book-ml-co-ban|p376|00].",
+  "citations": [
+   "book-ml-co-ban|p376|00",
+   "book-ml-co-ban|p376|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n17",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Trong ví dụ phân loại Bắc hay Nam, từ xuất hiện nhiều lần nhất trong văn bản kiểm tra là từ nào, và theo hình minh hoạ NBC với Multinomial naive Bayes, ước lượng λ̂ của từ đó cho nhãn B và nhãn N là bao nhiêu?",
+  "expected": "'hanoi' (2 lần trong d5); λ̂_B = 4/20, λ̂_N = 1/13.",
+  "answer": "Trong ví dụ phân loại Bắc hay Nam, văn bản kiểm tra là $d_5$ với nội dung: `hanoi hanoi buncha hutiu` hay vector đặc trưng $\\mathbf{x}_5 = [2, 0, 0, 1, 0, 0, 0, 1, 0]$ [book-ml-co-ban|p148|01, book-ml-co-ban|p149|v00]. \n\n- **Từ xuất hiện nhiều lần nhất trong văn bản kiểm tra $d_5$:** Từ `hanoi` (xuất hiện 2 lần, trong khi các từ khác xuất hiện 0 hoặc 1 lần) [book-ml-co-ban|p149|v00].\n- **Ước lượng $\\hat{\\lambda}$ của từ đó (`hanoi`) theo hình minh họa 11.1 (Multinomial naive Bayes với làm mềm Laplace $\\alpha = 1$):**\n  - Cho nhãn B: $\\hat{\\lambda}_{\\text{B}} = \\frac{4}{20}$ [book-ml-co-ban|p149|00, book-ml-co-ban|p149|v00]\n  - Cho nhãn N: $\\hat{\\lambda}_{\\text{N}} = \\frac{1}{13}$ [book-ml-co-ban|p149|00, book-ml-co-ban|p149|v00]",
+  "citations": [
+   "book-ml-co-ban|p148|01",
+   "book-ml-co-ban|p149|00",
+   "book-ml-co-ban|p149|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n18",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Độ chính xác của mạng có 100 nút ẩn trong ví dụ ranh giới tốt cao hơn mạng có 30 nút ẩn trong hình so sánh số nút ẩn bao nhiêu điểm phần trăm?",
+  "expected": "99.33% − 95.33% = 4.0 điểm phần trăm.",
+  "answer": "Độ chính xác của mạng có 100 nút ẩn là 99.33% [book-ml-co-ban|p225|00] và của mạng có 30 nút ẩn là 95.33% [book-ml-co-ban|p229|00]. Mạng có 100 nút ẩn cao hơn mạng có 30 nút ẩn là 4 điểm phần trăm [book-ml-co-ban|p225|00, book-ml-co-ban|p229|00].",
+  "citations": [
+   "book-ml-co-ban|p225|00",
+   "book-ml-co-ban|p229|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n19",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo công thức xác suất thi đỗ của hồi quy logistic ở chương 14, số giờ ôn mà tại đó xác suất đỗ bằng 0.5 là khoảng bao nhiêu, và theo bảng thời gian ôn thi có bao nhiêu sinh viên ôn nhiều hơn mức đó nhưng vẫn trượt?",
+  "expected": "≈ 2.64 giờ (1.54·h − 4.06 = 0 ⇒ h = 4.06/1.54); có 2 sinh viên trượt dù ôn nhiều hơn (3.5 giờ và 4 giờ).",
+  "answer": "Theo chương 14 của sách \"Machine Learning cơ bản\":\n1. Số giờ ôn mà tại đó xác suất đỗ bằng 0.5 (ngưỡng xác suất 0.5 trên đường cong xác suất ở Hình 14.3a) là **khoảng 2.65 - 2.7 giờ** [book-ml-co-ban|p192|00, book-ml-co-ban|p192|v00].\n2. Dựa vào Bảng 14.1 (Thời gian ôn thi và kết quả thi của 20 sinh viên), với mức thời gian ôn lớn hơn khoảng 2.7 giờ, có **2 sinh viên** trượt (kết quả `0`), đó là các sinh viên ôn **3.5 giờ** và **4 giờ** [book-ml-co-ban|p185|01, book-ml-co-ban|p185|v00, book-ml-co-ban|p192|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|01",
+   "book-ml-co-ban|p185|v00",
+   "book-ml-co-ban|p192|00",
+   "book-ml-co-ban|p192|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n20",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng sự tương đồng giữa mạng neuron và SVM, mạng neuron đa tầng tương ứng với loại SVM nào, và theo sách hàm hạt nhân nào được dùng nhiều nhất và là lựa chọn mặc định trong sklearn.svm.SVC?",
+  "expected": "SVM hạt nhân (bài toán phân loại hai lớp không tách biệt tuyến tính); hạt nhân rbf.",
+  "answer": "Theo bảng sự tương đồng giữa mạng neuron và máy vector hỗ trợ (Bảng 28.1), mạng neuron đa tầng tương ứng với **SVM hạt nhân** (dùng cho bài toán phân loại hai lớp không tách biệt tuyến tính) [book-ml-co-ban|p378|01 | trang 378 | Máy vector hỗ trợ hạt nhân], [book-ml-co-ban|p378|v00 | trang 378 | Máy vector hỗ trợ hạt nhân].\n\nTheo sách, hàm hạt nhân được sử dụng nhiều nhất trong thực tế và là lựa chọn mặc định trong `sklearn.svm.SVC` là **hạt nhân RBF** (hàm cơ sở radial hay hạt nhân Gauss) [book-ml-co-ban|p385|00 | trang 385 | Máy vector hỗ trợ hạt nhân], [book-ml-co-ban|p383|00 | trang 383 | Máy vector hỗ trợ hạt nhân].",
+  "citations": [
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p378|v00",
+   "book-ml-co-ban|p383|00",
+   "book-ml-co-ban|p385|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n21",
+  "group": "text",
+  "status": "answered",
+  "question": "Trong stochastic gradient descent, sau mỗi epoch cần làm gì với thứ tự dữ liệu, và đó là lý do gì cho chữ 'stochastic' trong tên thuật toán?",
+  "expected": "Xáo trộn thứ tự lấy dữ liệu sau mỗi epoch để đảm bảo tính ngẫu nhiên; chính sự ngẫu nhiên này là lý do có từ 'stochastic' (cũng ảnh hưởng tới hiệu năng SGD).",
+  "answer": "Sách \"Machine Learning cơ bản\" trình bày về Stochastic Gradient Descent (SGD) như sau: trong SGD, tại mỗi thời điểm, thuật toán tính gradient dựa trên chỉ một điểm dữ liệu $\\mathbf{x}_i$ để cập nhật $\\theta$ [book-ml-co-ban|p172|00]. Sách không đề cập cụ thể việc có phải xáo trộn ngẫu nhiên thứ tự dữ liệu sau mỗi epoch hay không, nhưng từ \"stochastic\" trong tên thuật toán xuất phát từ việc tính toán gradient dựa trên ngẫu nhiên từng điểm dữ liệu (hoặc ngẫu nhiên một mini-batch) thay vì toàn bộ tập dữ liệu. [book-ml-co-ban|p172|00] [book-ml-co-ban|p172|02]",
+  "citations": [
+   "book-ml-co-ban|p172|00",
+   "book-ml-co-ban|p172|02"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n22",
+  "group": "text",
+  "status": "answered",
+  "question": "Vì sao thuật toán phân cụm K-means được đảm bảo hội tụ sau một số hữu hạn vòng lặp?",
+  "expected": "Giá trị hàm mất mát sau mỗi bước là dãy không tăng và bị chặn dưới nên hội tụ; thêm nữa số cách phân cụm toàn bộ dữ liệu là hữu hạn (khi K cố định).",
+  "answer": "Thuật toán phân cụm K-means được đảm bảo hội tụ sau một số hữu hạn vòng lặp vì các lý do sau:\n\n1. **Hàm mất mát không tăng và bị chặn dưới:** Dãy số biểu diễn giá trị của hàm mất mát sau mỗi bước là một đại lượng không tăng và bị chặn dưới, điều này chỉ ra rằng dãy số này phải hội tụ [book-ml-co-ban|p132|01].\n2. **Số lượng cách phân cụm hữu hạn:** Số lượng cách phân cụm cho toàn bộ dữ liệu là hữu hạn (khi số cụm $K$ là cố định), do đó đến một lúc nào đó, hàm mất mát sẽ không thể thay đổi và thuật toán dừng lại [book-ml-co-ban|p132|01].",
+  "citations": [
+   "book-ml-co-ban|p132|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n23",
+  "group": "text",
+  "status": "answered",
+  "question": "Theo phần thảo luận hạn chế của K-means, nếu không biết trước số cụm K thì sách gợi ý tham khảo phương pháp nào, và nghiệm cuối cùng phụ thuộc vào yếu tố gì?",
+  "expected": "Phương pháp elbow; nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu.",
+  "answer": "Theo phần thảo luận hạn chế của K-means trong sách:\n- Khi không biết trước số cụm $K$, sách gợi ý tham khảo **phương pháp elbow** để xác định giá trị $K$ [book-ml-co-ban|p141|00].\n- Nghiệm cuối cùng phụ thuộc vào **các tâm cụm được khởi tạo ban đầu** [book-ml-co-ban|p141|01].",
+  "citations": [
+   "book-ml-co-ban|p141|00",
+   "book-ml-co-ban|p141|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n24",
+  "group": "text",
+  "status": "answered",
+  "question": "Vì sao hàm mất mát của hồi quy tuyến tính lấy trung bình trên N điểm dữ liệu thay vì lấy tổng?",
+  "expected": "Số điểm dữ liệu trong tập huấn luyện có thể thay đổi nên mất mát trên từng điểm hữu ích hơn để đánh giá mô hình; lấy trung bình cũng tránh tràn số khi số điểm dữ liệu lớn.",
+  "answer": "Trong machine learning, hàm mất mát thường lấy trung bình cộng của sai số tại mỗi điểm dữ liệu thay vì lấy tổng vì các lý do sau:\n- Số lượng điểm dữ liệu trong tập huấn luyện có thể thay đổi, việc lấy trung bình giúp việc đánh giá chất lượng mô hình trở nên hữu ích và độc lập hơn với quy mô tập dữ liệu [book-ml-co-ban|p102|00].\n- Việc lấy trung bình giúp tránh hiện tượng tràn số (overflow) khi số lượng điểm dữ liệu ($N$) rất lớn [book-ml-co-ban|p102|00].\n- Về mặt toán học, hệ số tỉ lệ (như $\\frac{1}{2N}$) không làm thay đổi vị trí nghiệm tối ưu của bài toán [book-ml-co-ban|p102|00].",
+  "citations": [
+   "book-ml-co-ban|p102|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n25",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Trong ví dụ ma trận tiện ích của hệ thống gợi ý bài hát, ca sĩ thể hiện bài 'Mưa nửa đêm' là ai?",
+  "expected": "abstain",
+  "answer": "Trong ví dụ về ma trận tiện ích của hệ thống gợi ý bài hát trong sách, bài hát 'Mưa nửa đêm' chỉ được đưa ra làm ví dụ tên bài hát [book-ml-co-ban|p236|v00], sách không đề cập ca sĩ thể hiện bài hát này [book-ml-co-ban|p236|v00].",
+  "citations": [
+   "book-ml-co-ban|p236|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n26",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, các sinh viên này học ngành gì?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến thông tin các sinh viên trong bảng ôn thi học ngành gì [book-ml-co-ban|p185|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n27",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong hình chất lượng nén ảnh K-means, dung lượng file (KB) của ảnh nén với K = 20 là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến thông tin về dung lượng file (KB) của ảnh nén với $K = 20$ [book-ml-co-ban|p141|00].",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n28",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong hình ảnh hưởng của C lên nghiệm SVM lề mềm, độ chính xác phân loại khi C = 10 là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến giá trị độ chính xác phân loại khi C = 10 trong Hình 27.5 hoặc phần nội dung liên quan [book-ml-co-ban|p376|00].",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n29",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Trong ma trận tiện ích dựa trên số sao (chương lọc cộng tác), người dùng u0 có tên thật là gì?",
+  "expected": "abstain",
+  "answer": "Trong sách \"Machine Learning cơ bản\", ký hiệu $u_0$ trong ma trận tiện ích (lọc cộng tác) chỉ là một ký hiệu đại diện cho người dùng trong ví dụ giả định, sách không đề cập đến tên thật cụ thể của $u_0$ [book-ml-co-ban|p247|v00].",
+  "citations": [
+   "book-ml-co-ban|p247|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "n30",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Con mèo trong ảnh đầu vào của ví dụ tính vector điểm số SVM đa lớp thuộc giống mèo nào?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến giống cụ thể của con mèo trong ảnh đầu vào của ví dụ tính vector điểm số SVM đa lớp; ảnh chỉ được chú thích chung là \"ảnh (màu) đầu vào\" với nhãn lớp chung là \"cat\" [book-ml-co-ban|p391|v00].",
+  "citations": [
+   "book-ml-co-ban|p391|v00"
+  ],
+  "pass": null,
+  "reason": ""
+ }
+]

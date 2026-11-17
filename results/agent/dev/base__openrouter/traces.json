@@ -18,7 +18,7 @@
   "provider": "openrouter",
   "model": "openai/gpt-4o-mini",
   "status": "answered",
-  "answer": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa là: L(w) = 1/(2N) * Σ(yi − xTiw)², với N là số lượng dữ liệu trong tập huấn luyện. Mục tiêu là tìm w để hàm L(w) đạt giá trị nhỏ nhất, tức là tối thiểu hóa hàm mất mát theo w: w∗ = argmin w L(w).",
+  "answer": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa là: L(w) = 1/(2N) * Σ(yi − xTiw)², với N là số lượng dữ liệu trong tập huấn luyện. Mục tiêu là tìm w để hàm mất mát này đạt giá trị nhỏ nhất, tức là tối thiểu hóa L(w).",
   "citations": [
    "book-ml-co-ban|p101|01"
   ],
@@ -33,11 +33,11 @@
    {
     "event": "llm",
     "step": 0,
-    "retries": 3,
+    "retries": 0,
     "prompt_tokens": 717,
     "completion_tokens": 22,
     "cost_usd": 0.00012075,
-    "latency_s": 31.88,
+    "latency_s": 14.0,
     "tool_calls": [
      "search_book"
     ],
@@ -50,7 +50,7 @@
     "query": "hàm mất mát hồi quy tuyến tính",
     "filter": null,
     "top_k": 3,
-    "elapsed_ms": 718.0,
+    "elapsed_ms": 566.9,
     "results": [
      {
       "id": "book-ml-co-ban|p164|01",
@@ -86,9 +86,9 @@
     "step": 1,
     "retries": 0,
     "prompt_tokens": 1041,
-    "completion_tokens": 125,
-    "cost_usd": 0.00023115,
-    "latency_s": 3.05,
+    "completion_tokens": 115,
+    "cost_usd": 0.00022515,
+    "latency_s": 2.26,
     "tool_calls": [
      "final_answer"
     ],
@@ -107,9 +107,9 @@
   "n_book_searches": 1,
   "n_external_calls": 0,
   "prompt_tokens": 1758,
-  "completion_tokens": 147,
-  "cost_usd": 0.000352,
-  "latency_s": 35.65,
+  "completion_tokens": 137,
+  "cost_usd": 0.000346,
+  "latency_s": 16.82,
   "auto": {
    "context_has_gold": true,
    "cites_gold": true
@@ -136,7 +136,7 @@
   "provider": "openrouter",
   "model": "openai/gpt-4o-mini",
   "status": "answered",
-  "answer": "Trong thuật toán K lân cận (KNN), dữ liệu huấn luyện được sử dụng để xác định nhãn cho các điểm mới. Cụ thể, nhãn của một điểm bất kỳ được xác định dựa trên nhãn của điểm gần nhất trong tập huấn luyện. Mỗi điểm trong tập huấn luyện đều được mô hình mô tả một cách chính xác, điều này có thể dẫn đến hiện tượng overfitting dễ xảy ra với KNN. [book-ml-co-ban|p118|01]",
+  "answer": "Trong thuật toán K lân cận (KNN), dữ liệu huấn luyện được sử dụng để xác định nhãn cho các điểm mới. Cụ thể, nhãn của một điểm bất kỳ được xác định dựa trên nhãn của điểm gần nó nhất trong tập huấn luyện. Mỗi điểm trong tập huấn luyện đều được mô hình mô tả một cách chính xác, điều này có thể dẫn đến hiện tượng overfitting dễ xảy ra với KNN [book-ml-co-ban|p118|01].",
   "citations": [
    "book-ml-co-ban|p118|01"
   ],
@@ -155,7 +155,7 @@
     "prompt_tokens": 745,
     "completion_tokens": 20,
     "cost_usd": 0.00012375,
-    "latency_s": 2.32,
+    "latency_s": 0.93,
     "tool_calls": [
      "search_book"
     ],
@@ -170,7 +170,7 @@
      "chapter_no": "9"
     },
     "top_k": 3,
-    "elapsed_ms": 64.8,
+    "elapsed_ms": 78.1,
     "results": [
      {
       "id": "book-ml-co-ban|p127|00",
@@ -208,7 +208,7 @@
     "prompt_tokens": 1009,
     "completion_tokens": 145,
     "cost_usd": 0.00023835,
-    "latency_s": 3.17,
+    "latency_s": 3.5,
     "tool_calls": [
      "final_answer"
     ],
@@ -229,7 +229,2077 @@
   "prompt_tokens": 1754,
   "completion_tokens": 165,
   "cost_usd": 0.000362,
-  "latency_s": 5.55,
+  "latency_s": 4.51,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d03",
+  "question": "Mục đích của phân cụm K-means là gì?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập cụ thể về mục đích của phân cụm K-means.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 712,
+    "completion_tokens": 20,
+    "cost_usd": 0.0001188,
+    "latency_s": 1.17,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "phân cụm K-means",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 74.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p128|00",
+      "page": 128,
+      "rank": 1,
+      "score": 0.8935
+     },
+     {
+      "id": "book-ml-co-ban|p141|01",
+      "page": 141,
+      "rank": 2,
+      "score": 0.8879
+     },
+     {
+      "id": "book-ml-co-ban|p143|00",
+      "page": 143,
+      "rank": 3,
+      "score": 0.8796
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p141|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p128|00",
+     "book-ml-co-ban|p143|00"
+    ],
+    "context_chars": 222
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 857,
+    "completion_tokens": 17,
+    "cost_usd": 0.00013875,
+    "latency_s": 1.34,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "K-means clustering",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 87.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p144|01",
+      "page": 144,
+      "rank": 1,
+      "score": 0.8406
+     },
+     {
+      "id": "book-ml-co-ban|p128|00",
+      "page": 128,
+      "rank": 2,
+      "score": 0.8316
+     },
+     {
+      "id": "book-ml-co-ban|p144|00",
+      "page": 144,
+      "rank": 3,
+      "score": 0.8296
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p144|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p128|00",
+     "book-ml-co-ban|p144|00"
+    ],
+    "context_chars": 434
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1000,
+    "completion_tokens": 23,
+    "cost_usd": 0.0001638,
+    "latency_s": 1.03,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "mục đích phân cụm K-means",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 62.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p128|00",
+      "page": 128,
+      "rank": 1,
+      "score": 0.8953
+     },
+     {
+      "id": "book-ml-co-ban|p129|01",
+      "page": 129,
+      "rank": 2,
+      "score": 0.8826
+     },
+     {
+      "id": "book-ml-co-ban|p141|01",
+      "page": 141,
+      "rank": 3,
+      "score": 0.8792
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p141|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p128|00",
+     "book-ml-co-ban|p129|01"
+    ],
+    "context_chars": 434
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 1110,
+    "completion_tokens": 45,
+    "cost_usd": 0.0001935,
+    "latency_s": 1.7,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p141|01",
+   "book-ml-co-ban|p144|01"
+  ],
+  "context": "[book-ml-co-ban|p141|01 | trang 141 | Phân cụm K-means]\nThuật toán phân cụm K-means không đảm bảo tìm được nghiệm tối ưu toàn cục, nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu. Machine Learning cơ bản\n\n[book-ml-co-ban|p144|01 | trang 144 | Phân cụm K-means]\nVisualizing K-Means Clustering (https://goo.gl/ULbpUM). e. Visualizing K-Means Clustering – Standford (https://goo.gl/idzR2i). 144 Machine Learning cơ bản",
+  "context_chars": 434,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 3679,
+  "completion_tokens": 105,
+  "cost_usd": 0.000615,
+  "latency_s": 5.46,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d04",
+  "question": "Trong naive Bayes, khi tập huấn luyện lớn thì xác suất p(c) của một nhãn được ước lượng như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cách ước lượng xác suất p(c) trong naive Bayes khi tập huấn luyện lớn.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 727,
+    "completion_tokens": 23,
+    "cost_usd": 0.00012285,
+    "latency_s": 1.24,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "naive Bayes p(c) ước lượng",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 83.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p145|00",
+      "page": 145,
+      "rank": 1,
+      "score": 0.8849
+     },
+     {
+      "id": "book-ml-co-ban|p146|00",
+      "page": 146,
+      "rank": 2,
+      "score": 0.8794
+     },
+     {
+      "id": "book-ml-co-ban|p146|02",
+      "page": 146,
+      "rank": 3,
+      "score": 0.8756
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p146|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p145|00",
+     "book-ml-co-ban|p146|00"
+    ],
+    "context_chars": 410
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 929,
+    "completion_tokens": 20,
+    "cost_usd": 0.00015135,
+    "latency_s": 1.8,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "naive Bayes p(c)",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 59.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p146|02",
+      "page": 146,
+      "rank": 1,
+      "score": 0.8608
+     },
+     {
+      "id": "book-ml-co-ban|p145|00",
+      "page": 145,
+      "rank": 2,
+      "score": 0.8578
+     },
+     {
+      "id": "book-ml-co-ban|p146|00",
+      "page": 146,
+      "rank": 3,
+      "score": 0.8504
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p146|02"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p145|00",
+     "book-ml-co-ban|p146|00"
+    ],
+    "context_chars": 410
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1032,
+    "completion_tokens": 52,
+    "cost_usd": 0.000186,
+    "latency_s": 1.41,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p146|02"
+  ],
+  "context": "[book-ml-co-ban|p146|02 | trang 146 | Bộ phân loại naive Bayes]\nViệc giả sử các thành phần trong dữ liệu là độc lập với nhau khiến cho việc tính toán mỗi phân phối p(xi|c) trở nên đơn giản. Việc tính toán p(xi|c) phụ thuộc vào loại dữ liệu. Có ba loại phân bố xác suất phổ biến là Gaussian naive Bayes, multinomial naive Bayes, và Bernoulli Naive. Chúng ta cùng xem xét từng loại. 146 Machine Learning cơ bản",
+  "context_chars": 410,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 2688,
+  "completion_tokens": 95,
+  "cost_usd": 0.00046,
+  "latency_s": 4.6,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d05",
+  "question": "Thế nào là hai tập dữ liệu tách biệt tuyến tính?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Hai tập dữ liệu tách biệt tuyến tính là hai tập dữ liệu có thể được phân chia hoàn toàn bằng một siêu phẳng. Điều này có nghĩa là tồn tại một đường thẳng (trong không gian 2 chiều) hoặc một siêu phẳng (trong không gian nhiều chiều) mà có thể phân tách các điểm dữ liệu của hai tập này mà không có điểm nào của tập này nằm trong vùng của tập kia. [book-ml-co-ban|p175|02]",
+  "citations": [
+   "book-ml-co-ban|p175|02"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 712,
+    "completion_tokens": 22,
+    "cost_usd": 0.00012,
+    "latency_s": 1.09,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hai tập dữ liệu tách biệt tuyến tính",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 64.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p175|02",
+      "page": 175,
+      "rank": 1,
+      "score": 0.8835
+     },
+     {
+      "id": "book-ml-co-ban|p351|00",
+      "page": 351,
+      "rank": 2,
+      "score": 0.8646
+     },
+     {
+      "id": "book-ml-co-ban|p290|02",
+      "page": 290,
+      "rank": 3,
+      "score": 0.8614
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p175|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p351|00",
+     "book-ml-co-ban|p290|02"
+    ],
+    "context_chars": 229
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 859,
+    "completion_tokens": 139,
+    "cost_usd": 0.00021225,
+    "latency_s": 2.39,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p175|02"
+  ],
+  "context": "[book-ml-co-ban|p175|02 | trang 175 | Thuật toán học perceptron]\nNếu hai tập dữ liệu có thể được phân chia hoàn toàn bằng một siêu phẳng, ta nói rằng hai tập đó tách biệt tuyến tính (linearly separable). Machine Learning cơ bản",
+  "context_chars": 229,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1571,
+  "completion_tokens": 161,
+  "cost_usd": 0.000332,
+  "latency_s": 3.55,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "d06",
+  "question": "Hàm sigmoid nhận giá trị trong khoảng nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Hàm sigmoid nhận giá trị trong khoảng (0, 1).",
+  "citations": [
+   "book-ml-co-ban|p187|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 708,
+    "completion_tokens": 16,
+    "cost_usd": 0.0001158,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hàm sigmoid",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 78.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p187|01",
+      "page": 187,
+      "rank": 1,
+      "score": 0.8898
+     },
+     {
+      "id": "book-ml-co-ban|p192|01",
+      "page": 192,
+      "rank": 2,
+      "score": 0.8795
+     },
+     {
+      "id": "book-ml-co-ban|p187|00",
+      "page": 187,
+      "rank": 3,
+      "score": 0.8756
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p187|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p192|01",
+     "book-ml-co-ban|p187|00"
+    ],
+    "context_chars": 449
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 927,
+    "completion_tokens": 50,
+    "cost_usd": 0.00016905,
+    "latency_s": 1.36,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p187|01"
+  ],
+  "context": "[book-ml-co-ban|p187|01 | trang 187 | Hồi quy logistic]\nChúng ta sẽ sớm thấy hàm sigmoid được khám phá ra như thế nào. Ngoài ra, hàm tanh cũng hay được sử dụng: tanh(s) = es − e−s es + e−s = 2σ(2s) − 1. (14.4) Hàm số này nhận giá trị trong khoảng (−1, 1). Hàm sigmoid có thể được thực hiện trên Python như sau: def sigmoid(S): \"\"\" S: an numpy array return sigmoid function of each element of S \"\"\" return 1/(1 + np.exp(-S)) Machine Learning cơ bản",
+  "context_chars": 449,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1635,
+  "completion_tokens": 66,
+  "cost_usd": 0.000285,
+  "latency_s": 2.39,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d07",
+  "question": "Các đầu ra của mô hình hồi quy softmax có tính chất gì?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến các tính chất của đầu ra mô hình hồi quy softmax.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 713,
+    "completion_tokens": 22,
+    "cost_usd": 0.00012015,
+    "latency_s": 1.5,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "đầu ra mô hình hồi quy softmax",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 74.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p203|00",
+      "page": 203,
+      "rank": 1,
+      "score": 0.8748
+     },
+     {
+      "id": "book-ml-co-ban|p213|00",
+      "page": 213,
+      "rank": 2,
+      "score": 0.8664
+     },
+     {
+      "id": "book-ml-co-ban|p097|03",
+      "page": 97,
+      "rank": 3,
+      "score": 0.8625
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p097|03"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p203|00",
+     "book-ml-co-ban|p213|00"
+    ],
+    "context_chars": 522
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 951,
+    "completion_tokens": 18,
+    "cost_usd": 0.00015345,
+    "latency_s": 1.0,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "softmax regression output properties",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 61.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p203|01",
+      "page": 203,
+      "rank": 1,
+      "score": 0.8334
+     },
+     {
+      "id": "book-ml-co-ban|p227|00",
+      "page": 227,
+      "rank": 2,
+      "score": 0.824
+     },
+     {
+      "id": "book-ml-co-ban|p210|00",
+      "page": 210,
+      "rank": 3,
+      "score": 0.824
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p203|01",
+     "book-ml-co-ban|p227|00",
+     "book-ml-co-ban|p210|00"
+    ],
+    "context_chars": 522
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1032,
+    "completion_tokens": 45,
+    "cost_usd": 0.0001818,
+    "latency_s": 1.38,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p097|03"
+  ],
+  "context": "[book-ml-co-ban|p097|03 | trang 97 | Các kỹ thuật xây dựng đặc trưng]\nVì vậy, khi có dữ liệu mới, ta chỉ cần huấn luyện mạng neuron để trích chọn các đặc trưng mức cao phù hợp với dữ liệu mới này. Dựa trên kích thước và sự giống nhau giữa CSDL mới và CSDL gốc (dùng để huấn luyện mạng neuron ban đầu), có một vài quy tắc để huấn luyện mạng neuron mới20: 19 hồi quy softmax là một thuật toán phân loại, tên gọi hồi quy của nó mang tính lịch sử. 20 Transfer Learning, CS231n (https://goo.gl/VN1g7F) Machine Learning cơ bản",
+  "context_chars": 522,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 2696,
+  "completion_tokens": 85,
+  "cost_usd": 0.000455,
+  "latency_s": 4.02,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d08",
+  "question": "Ước lượng hợp lý cực đại (MLE) đi tìm điều gì?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Ước lượng hợp lý cực đại (MLE) đi tìm tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện, nhằm xác định xác suất a priori p(c) trong mô hình. Nếu tập huấn luyện lớn, MLE có thể được sử dụng để ước lượng các tham số của mô hình một cách chính xác hơn.",
+  "citations": [
+   "book-ml-co-ban|p145|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 714,
+    "completion_tokens": 21,
+    "cost_usd": 0.0001197,
+    "latency_s": 1.28,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "ước lượng hợp lý cực đại MLE",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 59.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p077|00",
+      "page": 77,
+      "rank": 1,
+      "score": 0.8806
+     },
+     {
+      "id": "book-ml-co-ban|p145|01",
+      "page": 145,
+      "rank": 2,
+      "score": 0.8776
+     },
+     {
+      "id": "book-ml-co-ban|p076|01",
+      "page": 76,
+      "rank": 3,
+      "score": 0.8711
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p145|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p077|00",
+     "book-ml-co-ban|p076|01"
+    ],
+    "context_chars": 604
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 964,
+    "completion_tokens": 111,
+    "cost_usd": 0.0002112,
+    "latency_s": 2.29,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p145|01"
+  ],
+  "context": "[book-ml-co-ban|p145|01 | trang 145 | Bộ phân loại naive Bayes]\nNếu tập huấn luyện lớn, p(c) có thể được xác định bằng phương pháp ước lượng hợp lý cực đại (MLE) – là tỉ lệ giữa số điểm thuộc nhãn c và số điểm trong tập huấn luyện. Nếu tập huấn luyện nhỏ, giá trị này có thể được xác định bằng phương pháp ước lượng hậu nghiệm cực đại (MAP). Thành phần còn lại p(x|c) là phân phối của các điểm dữ liệu trong nhãn c. Thành phần này thường rất khó tính toán vì x là một biến ngẫu nhiên nhiều chiều. Để có thể ước lượng được phân phối đó, tập huấn luyện phải rất lớn. Nhằm đơn giản Machine Learning cơ bản",
+  "context_chars": 604,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1678,
+  "completion_tokens": 132,
+  "cost_usd": 0.000331,
+  "latency_s": 3.63,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d09",
+  "question": "Xác thực chéo (cross-validation) chia tập huấn luyện như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập cụ thể về cách chia tập huấn luyện trong xác thực chéo (cross-validation).",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 716,
+    "completion_tokens": 20,
+    "cost_usd": 0.0001194,
+    "latency_s": 0.96,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "xác thực chéo cross-validation",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 76.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p113|00",
+      "page": 113,
+      "rank": 1,
+      "score": 0.8784
+     },
+     {
+      "id": "book-ml-co-ban|p112|02",
+      "page": 112,
+      "rank": 2,
+      "score": 0.8751
+     },
+     {
+      "id": "book-ml-co-ban|p112|01",
+      "page": 112,
+      "rank": 3,
+      "score": 0.8389
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p112|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p113|00",
+     "book-ml-co-ban|p112|01"
+    ],
+    "context_chars": 246
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 867,
+    "completion_tokens": 20,
+    "cost_usd": 0.00014205,
+    "latency_s": 1.19,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "cross-validation chia tập huấn luyện",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 68.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p113|00",
+      "page": 113,
+      "rank": 1,
+      "score": 0.8922
+     },
+     {
+      "id": "book-ml-co-ban|p112|01",
+      "page": 112,
+      "rank": 2,
+      "score": 0.8479
+     },
+     {
+      "id": "book-ml-co-ban|p155|00",
+      "page": 155,
+      "rank": 3,
+      "score": 0.8453
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p113|00",
+     "book-ml-co-ban|p112|01",
+     "book-ml-co-ban|p155|00"
+    ],
+    "context_chars": 246
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 952,
+    "completion_tokens": 50,
+    "cost_usd": 0.0001728,
+    "latency_s": 1.43,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p112|02"
+  ],
+  "context": "[book-ml-co-ban|p112|02 | trang 112 | Quá khớp]\nViệc đánh giá trên tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Có giải pháp nào cho tình huống này không? Câu trả lời là xác thực chéo (cross-validation). 112 Machine Learning cơ bản",
+  "context_chars": 246,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 2535,
+  "completion_tokens": 90,
+  "cost_usd": 0.000434,
+  "latency_s": 3.73,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d10",
+  "question": "Kết thúc sớm (early stopping) giúp giảm quá khớp bằng cách nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cách mà kết thúc sớm (early stopping) giúp giảm quá khớp.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 717,
+    "completion_tokens": 20,
+    "cost_usd": 0.00011955,
+    "latency_s": 1.17,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "kết thúc sớm early stopping",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 78.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p113|02",
+      "page": 113,
+      "rank": 1,
+      "score": 0.8858
+     },
+     {
+      "id": "book-ml-co-ban|p174|00",
+      "page": 174,
+      "rank": 2,
+      "score": 0.8478
+     },
+     {
+      "id": "book-ml-co-ban|p173|01",
+      "page": 173,
+      "rank": 3,
+      "score": 0.8133
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p113|02",
+     "book-ml-co-ban|p174|00",
+     "book-ml-co-ban|p173|01"
+    ],
+    "context_chars": 0
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 802,
+    "completion_tokens": 49,
+    "cost_usd": 0.0001497,
+    "latency_s": 2.68,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [],
+  "context": "",
+  "context_chars": 0,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1519,
+  "completion_tokens": 69,
+  "cost_usd": 0.000269,
+  "latency_s": 3.93,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d11",
+  "question": "Hồi quy tuyến tính có thêm số hạng chính quy hoá L2 theo chuẩn của w còn được gọi là gì?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến tên gọi của hồi quy tuyến tính có thêm số hạng chính quy hoá L2.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 724,
+    "completion_tokens": 24,
+    "cost_usd": 0.000123,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hồi quy tuyến tính chính quy hoá L2",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 62.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 1,
+      "score": 0.8701
+     },
+     {
+      "id": "book-ml-co-ban|p213|00",
+      "page": 213,
+      "rank": 2,
+      "score": 0.8612
+     },
+     {
+      "id": "book-ml-co-ban|p106|00",
+      "page": 106,
+      "rank": 3,
+      "score": 0.8599
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p185|00",
+     "book-ml-co-ban|p213|00",
+     "book-ml-co-ban|p106|00"
+    ],
+    "context_chars": 0
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 817,
+    "completion_tokens": 22,
+    "cost_usd": 0.00013575,
+    "latency_s": 1.26,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hồi quy tuyến tính regularization L2",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 80.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p114|01",
+      "page": 114,
+      "rank": 1,
+      "score": 0.8753
+     },
+     {
+      "id": "book-ml-co-ban|p107|00",
+      "page": 107,
+      "rank": 2,
+      "score": 0.8715
+     },
+     {
+      "id": "book-ml-co-ban|p106|00",
+      "page": 106,
+      "rank": 3,
+      "score": 0.871
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p114|01",
+     "book-ml-co-ban|p107|00",
+     "book-ml-co-ban|p106|00"
+    ],
+    "context_chars": 0
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 906,
+    "completion_tokens": 18,
+    "cost_usd": 0.0001467,
+    "latency_s": 1.36,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hồi quy tuyến tính",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 89.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p186|02",
+      "page": 186,
+      "rank": 1,
+      "score": 0.868
+     },
+     {
+      "id": "book-ml-co-ban|p107|00",
+      "page": 107,
+      "rank": 2,
+      "score": 0.8663
+     },
+     {
+      "id": "book-ml-co-ban|p106|00",
+      "page": 106,
+      "rank": 3,
+      "score": 0.8662
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p186|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p107|00",
+     "book-ml-co-ban|p106|00"
+    ],
+    "context_chars": 399
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 1113,
+    "completion_tokens": 15,
+    "cost_usd": 0.00017595,
+    "latency_s": 1.03,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "regularization"
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 1157,
+    "completion_tokens": 51,
+    "cost_usd": 0.00012735,
+    "latency_s": 1.96,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p186|02"
+  ],
+  "context": "[book-ml-co-ban|p186|02 | trang 186 | Hồi quy logistic]\nNhắc lại rằng hồi quy tuyến tính rất nhạy cảm với nhiễu, ở đây là bạn sinh viên tiêu biểu đó. • Đường nét liền tương tự với hàm kích hoạt của PLA38. Ngưỡng dự đoán đỗ/trượt tại vị trí hàm số đổi dấu còn được gọi là ngưỡng cứng. 38 Đường này chỉ khác hàm kích hoạt của PLA ở chỗ hai nhãn là 0 và 1 thay vì -1 và 1. 186 Machine Learning cơ bản",
+  "context_chars": 399,
+  "n_llm_calls": 5,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 4717,
+  "completion_tokens": 130,
+  "cost_usd": 0.000709,
+  "latency_s": 6.83,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d12",
+  "question": "Vì sao khi vector đặc trưng rất lớn người ta dùng gradient descent thay vì giải trực tiếp nghiệm của hồi quy tuyến tính?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến lý do sử dụng gradient descent thay vì giải trực tiếp nghiệm của hồi quy tuyến tính khi vector đặc trưng rất lớn.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 725,
+    "completion_tokens": 19,
+    "cost_usd": 0.00012015,
+    "latency_s": 1.07,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "gradient descent hồi quy tuyến tính",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 65.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p171|00",
+      "page": 171,
+      "rank": 1,
+      "score": 0.8853
+     },
+     {
+      "id": "book-ml-co-ban|p164|01",
+      "page": 164,
+      "rank": 2,
+      "score": 0.8799
+     },
+     {
+      "id": "book-ml-co-ban|p165|00",
+      "page": 165,
+      "rank": 3,
+      "score": 0.8756
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p171|00",
+     "book-ml-co-ban|p164|01",
+     "book-ml-co-ban|p165|00"
+    ],
+    "context_chars": 0
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 808,
+    "completion_tokens": 15,
+    "cost_usd": 0.0001302,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "gradient descent",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 73.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p174|01",
+      "page": 174,
+      "rank": 1,
+      "score": 0.85
+     },
+     {
+      "id": "book-ml-co-ban|p208|02",
+      "page": 208,
+      "rank": 2,
+      "score": 0.8479
+     },
+     {
+      "id": "book-ml-co-ban|p107|02",
+      "page": 107,
+      "rank": 3,
+      "score": 0.8309
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p174|01",
+     "book-ml-co-ban|p208|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p107|02"
+    ],
+    "context_chars": 713
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1085,
+    "completion_tokens": 18,
+    "cost_usd": 0.00017355,
+    "latency_s": 1.89,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "hồi quy tuyến tính",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 80.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p186|02",
+      "page": 186,
+      "rank": 1,
+      "score": 0.868
+     },
+     {
+      "id": "book-ml-co-ban|p107|00",
+      "page": 107,
+      "rank": 2,
+      "score": 0.8663
+     },
+     {
+      "id": "book-ml-co-ban|p106|00",
+      "page": 106,
+      "rank": 3,
+      "score": 0.8662
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p186|02",
+     "book-ml-co-ban|p107|00",
+     "book-ml-co-ban|p106|00"
+    ],
+    "context_chars": 713
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 1166,
+    "completion_tokens": 57,
+    "cost_usd": 0.0002091,
+    "latency_s": 3.24,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p174|01",
+   "book-ml-co-ban|p208|02"
+  ],
+  "context": "[book-ml-co-ban|p174|01 | trang 174 | Gradient descent]\nStochastic Gradient descent – Wikipedia (https://goo.gl/pmuLzk). c. Stochastic gradient descent – Andrew Ng (https://goo.gl/jgBf2N). d. An Interactive Tutorial on Numerical Optimization (https://goo.gl/t85mvA). e. Machine Learning cơ bản, Bài 7, 8 (https://goo.gl/US17PP). 174 Machine Learning cơ bản\n\n[book-ml-co-ban|p208|02 | trang 208 | Hồi quy softmax]\nTối ưu hàm mất mát Hàm mất mát sẽ được tối ưu bằng gradient descent, cụ thể là mini-batch gradient descent. Mỗi lần cập nhật của mini-batch gradient descent được thực hiện trên 41 Truy cập vào nhiều phần tử của mảng hai chiều trong numpy - FundaML https://goo.gl/SzLDxa. 208 Machine Learning cơ bản",
+  "context_chars": 713,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 3784,
+  "completion_tokens": 109,
+  "cost_usd": 0.000633,
+  "latency_s": 7.4,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d13",
+  "question": "Phân tích thành phần chính (PCA) là phương pháp gì?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Phân tích thành phần chính (PCA) là phương pháp tìm kiếm một phép xoay trục tọa độ để tạo ra một hệ trục tọa độ mới, trong đó thông tin của dữ liệu chủ yếu tập trung ở một vài thành phần. Phần còn lại chứa ít thông tin hơn có thể được lược bỏ. Phép xoay trục này liên quan chặt chẽ tới hệ trực chuẩn và ma trận trực giao. PCA giúp giữ lại các thành phần quan trọng nhất trong dữ liệu, giảm thiểu số chiều mà vẫn bảo toàn thông tin cần thiết.",
+  "citations": [
+   "book-ml-co-ban|p275|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 713,
+    "completion_tokens": 20,
+    "cost_usd": 0.00011895,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "Phân tích thành phần chính PCA",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 78.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p275|01",
+      "page": 275,
+      "rank": 1,
+      "score": 0.9089
+     },
+     {
+      "id": "book-ml-co-ban|p279|01",
+      "page": 279,
+      "rank": 2,
+      "score": 0.8955
+     },
+     {
+      "id": "book-ml-co-ban|p288|00",
+      "page": 288,
+      "rank": 3,
+      "score": 0.883
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p275|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p279|01",
+     "book-ml-co-ban|p288|00"
+    ],
+    "context_chars": 768
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1025,
+    "completion_tokens": 151,
+    "cost_usd": 0.00024435,
+    "latency_s": 2.72,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p275|01"
+  ],
+  "context": "[book-ml-co-ban|p275|01 | trang 275 | Phân tích thành phần chính]\nPhân tích thành phần chính (principle component analysis, PCA) là phương pháp đi tìm một phép xoay trục toạ độ để được một hệ trục toạ độ mới sao cho trong hệ mới này, thông tin của dữ liệu chủ yếu tập trung ở một vài thành phần. Phần còn lại chứa ít thông tin hơn có thể được lược bỏ. Phép xoay trục toạ độ có liên hệ chặt chẽ tới hệ trực chuẩn và ma trận trực giao (xem Mục 1.9 và 1.10). Giả sử hệ cơ sở trực chuẩn mới là U (mỗi cột của U là một vector đơn vị cho một chiều) và ta muốn giữ lại K toạ độ trong hệ cơ sở mới này. Không mất tính tổng quát, giả sử đó là K thành phần đầu tiên. Quan sát Hình 21.2 với cơ sở mới U = [UK, bUK] là một hệ trực chuẩn với UK là ma trận Machine Learning cơ bản",
+  "context_chars": 768,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1738,
+  "completion_tokens": 171,
+  "cost_usd": 0.000363,
+  "latency_s": 3.78,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "d14",
+  "question": "Trong phân tích giá trị suy biến (SVD), số phần tử khác không trên đường chéo của Σ bằng gì?",
+  "filter": {
+   "chapter_no": "20"
+  },
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến số phần tử khác không trên đường chéo của Σ trong phân tích giá trị suy biến (SVD).",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 741,
+    "completion_tokens": 31,
+    "cost_usd": 0.00012975,
+    "latency_s": 1.29,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "giá trị suy biến SVD số phần tử khác không trên đường chéo của Σ",
+    "filter": {
+     "chapter_no": "20"
+    },
+    "top_k": 3,
+    "elapsed_ms": 72.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p268|00",
+      "page": 268,
+      "rank": 1,
+      "score": 0.8854
+     },
+     {
+      "id": "book-ml-co-ban|p270|00",
+      "page": 270,
+      "rank": 2,
+      "score": 0.8848
+     },
+     {
+      "id": "book-ml-co-ban|p267|01",
+      "page": 267,
+      "rank": 3,
+      "score": 0.8661
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p268|00",
+     "book-ml-co-ban|p270|00",
+     "book-ml-co-ban|p267|01"
+    ],
+    "context_chars": 0
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 848,
+    "completion_tokens": 15,
+    "cost_usd": 0.0001362,
+    "latency_s": 1.54,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "SVD",
+    "filter": {
+     "chapter_no": "20"
+    },
+    "top_k": 3,
+    "elapsed_ms": 132.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p267|00",
+      "page": 267,
+      "rank": 1,
+      "score": 0.7836
+     },
+     {
+      "id": "book-ml-co-ban|p268|01",
+      "page": 268,
+      "rank": 2,
+      "score": 0.7832
+     },
+     {
+      "id": "book-ml-co-ban|p273|01",
+      "page": 273,
+      "rank": 3,
+      "score": 0.7811
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p268|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p267|00",
+     "book-ml-co-ban|p273|01"
+    ],
+    "context_chars": 733
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1154,
+    "completion_tokens": 18,
+    "cost_usd": 0.0001839,
+    "latency_s": 1.02,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "giá trị suy biến",
+    "filter": {
+     "chapter_no": "20"
+    },
+    "top_k": 3,
+    "elapsed_ms": 63.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p269|00",
+      "page": 269,
+      "rank": 1,
+      "score": 0.8637
+     },
+     {
+      "id": "book-ml-co-ban|p270|00",
+      "page": 270,
+      "rank": 2,
+      "score": 0.8602
+     },
+     {
+      "id": "book-ml-co-ban|p268|00",
+      "page": 268,
+      "rank": 3,
+      "score": 0.8496
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p269|00",
+     "book-ml-co-ban|p270|00",
+     "book-ml-co-ban|p268|00"
+    ],
+    "context_chars": 733
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 1235,
+    "completion_tokens": 55,
+    "cost_usd": 0.00013185,
+    "latency_s": 1.42,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p268|01"
+  ],
+  "context": "[book-ml-co-ban|p268|01 | trang 268 | Phân tích giá trị suy biến]\nTương tự, AT A = VΣT ΣVT và các cột của V được gọi là các vector suy biến phải (right-singular vectors) của A. Trong Python, để tính SVD của một ma trận, chúng ta sử dụng module linalg của numpy: from __future__ import print_function import numpy as np from numpy import linalg as LA m, n = 3, 4 A = np.random.rand(m, n) U, S, V = LA.svd(A) # A = U*S*V (no V transpose here) # checking if U, V are orthogonal and S is a diagonal matrix with # nonnegative decreasing elements print(’Frobenius norm of (UU^T - I) =’, LA.norm(U.dot(U.T) - np.eye(m))) print(’S = ’, S) print(’Frobenius norm of (VV^T - I) =’, LA.norm(V.dot(V.T) - np.eye(n))) 268 Machine Learning cơ bản",
+  "context_chars": 733,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 3978,
+  "completion_tokens": 119,
+  "cost_usd": 0.000582,
+  "latency_s": 5.53,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "d15",
+  "question": "Mất mát không-một (zero-one loss) trả về giá trị nào cho một điểm dữ liệu?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Mất mát không-một (zero-one loss) trả về giá trị 1 cho các điểm dữ liệu có điểm số ngược dấu với đầu ra mong muốn (yz < 0), bất kể chúng ở gần hay xa đường ranh giới. Điều này có nghĩa là tất cả các lỗi đều được tính như nhau, không phân biệt mức độ sai lệch. Đây là một hàm rời rạc, khó tối ưu và không đo đếm sự hy sinh nếu một điểm nằm quá xa so với đường hỗ trợ.",
+  "citations": [
+   "book-ml-co-ban|p369|02"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 721,
+    "completion_tokens": 23,
+    "cost_usd": 0.00012195,
+    "latency_s": 1.13,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "mất mát không-một zero-one loss",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 63.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p369|02",
+      "page": 369,
+      "rank": 1,
+      "score": 0.8573
+     },
+     {
+      "id": "book-ml-co-ban|p369|01",
+      "page": 369,
+      "rank": 2,
+      "score": 0.8566
+     },
+     {
+      "id": "book-ml-co-ban|p369|00",
+      "page": 369,
+      "rank": 3,
+      "score": 0.8461
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p369|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p369|01",
+     "book-ml-co-ban|p369|00"
+    ],
+    "context_chars": 444
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 945,
+    "completion_tokens": 140,
+    "cost_usd": 0.00022575,
+    "latency_s": 3.53,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p369|02"
+  ],
+  "context": "[book-ml-co-ban|p369|02 | trang 369 | Máy vector hỗ trợ lề mềm]\n• Với mất mát không-một, các điểm dữ liệu có điểm số ngược dấu với đầu ra mong muốn (yz < 0) sẽ gây ra mất mát như nhau và đều bằng một, bất kể chúng ở gần hay xa đường ranh giới (trục tung). Đây là một hàm rời rạc, rất khó tối ưu và không giúp đo đếm sự hy sinh nếu một điểm nằm quá xa so với đường hỗ trợ. 68 Đồ thị của hàm số này có dạng chiếc bản lề. Machine Learning cơ bản",
+  "context_chars": 444,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 1666,
+  "completion_tokens": 163,
+  "cost_usd": 0.000348,
+  "latency_s": 4.73,
   "auto": {
    "context_has_gold": false,
    "cites_gold": false
@@ -254,7 +2324,7 @@
   "provider": "openrouter",
   "model": "openai/gpt-4o-mini",
   "status": "abstain",
-  "answer": "Sách không đề cập đến cách xây dựng các mô hình yếu tuần tự trong thuật toán gradient boosting như XGBoost.",
+  "answer": "Sách không đề cập đến cách xây dựng mô hình yếu tuần tự của thuật toán gradient boosting như XGBoost.",
   "citations": [],
   "external_refs": [],
   "validation": {
@@ -267,11 +2337,11 @@
    {
     "event": "llm",
     "step": 0,
-    "retries": 1,
+    "retries": 0,
     "prompt_tokens": 722,
     "completion_tokens": 18,
     "cost_usd": 0.0001191,
-    "latency_s": 2.57,
+    "latency_s": 1.22,
     "tool_calls": [
      "search_book"
     ],
@@ -284,7 +2354,7 @@
     "query": "gradient boosting XGBoost",
     "filter": null,
     "top_k": 3,
-    "elapsed_ms": 89.0,
+    "elapsed_ms": 86.3,
     "results": [
      {
       "id": "book-ml-co-ban|p262|00",
@@ -322,7 +2392,7 @@
     "prompt_tokens": 1061,
     "completion_tokens": 15,
     "cost_usd": 0.00016815,
-    "latency_s": 0.95,
+    "latency_s": 0.91,
     "tool_calls": [
      "search_book"
     ],
@@ -335,7 +2405,7 @@
     "query": "gradient boosting",
     "filter": null,
     "top_k": 3,
-    "elapsed_ms": 92.0,
+    "elapsed_ms": 71.7,
     "results": [
      {
       "id": "book-ml-co-ban|p208|02",
@@ -370,9 +2440,9 @@
     "step": 2,
     "retries": 0,
     "prompt_tokens": 1136,
-    "completion_tokens": 51,
-    "cost_usd": 0.0001242,
-    "latency_s": 1.78,
+    "completion_tokens": 50,
+    "cost_usd": 0.0001236,
+    "latency_s": 1.49,
     "tool_calls": [
      "final_answer"
     ],
@@ -391,8 +2461,168 @@
   "n_book_searches": 2,
   "n_external_calls": 0,
   "prompt_tokens": 2919,
-  "completion_tokens": 84,
+  "completion_tokens": 83,
   "cost_usd": 0.000411,
-  "latency_s": 5.48
+  "latency_s": 3.78
+ },
+ {
+  "query_id": "d17",
+  "question": "Mạng LSTM giải quyết vấn đề biến mất gradient trong mạng hồi tiếp (RNN) như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "base",
+   "retriever": "dense",
+   "top_k": 3,
+   "budget_chars": 800,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cách mà mạng LSTM giải quyết vấn đề biến mất gradient trong mạng hồi tiếp (RNN).",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 721,
+    "completion_tokens": 18,
+    "cost_usd": 0.00011895,
+    "latency_s": 1.01,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "LSTM gradient vanishing",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 72.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p394|01",
+      "page": 394,
+      "rank": 1,
+      "score": 0.841
+     },
+     {
+      "id": "book-ml-co-ban|p221|01",
+      "page": 221,
+      "rank": 2,
+      "score": 0.8208
+     },
+     {
+      "id": "book-ml-co-ban|p107|02",
+      "page": 107,
+      "rank": 3,
+      "score": 0.8181
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p394|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p221|01",
+     "book-ml-co-ban|p107|02"
+    ],
+    "context_chars": 624
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 995,
+    "completion_tokens": 15,
+    "cost_usd": 0.00015825,
+    "latency_s": 0.98,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "dense",
+    "query": "LSTM",
+    "filter": null,
+    "top_k": 3,
+    "elapsed_ms": 70.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p377|00",
+      "page": 377,
+      "rank": 1,
+      "score": 0.79
+     },
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 2,
+      "score": 0.7888
+     },
+     {
+      "id": "book-ml-co-ban|p356|02",
+      "page": 356,
+      "rank": 3,
+      "score": 0.7866
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p377|00",
+     "book-ml-co-ban|p378|01",
+     "book-ml-co-ban|p356|02"
+    ],
+    "context_chars": 624
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1070,
+    "completion_tokens": 53,
+    "cost_usd": 0.0001923,
+    "latency_s": 1.64,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p394|01"
+  ],
+  "context": "[book-ml-co-ban|p394|01 | trang 394 | Máy vector hỗ trợ đa lớp]\ndef svm_loss_naive(W, X, y, reg): ’’’ calculate loss and gradient of the loss function at W. Naive way W: 2d numpy array of shape (d, C). The weight matrix. X: 2d numpy array of shape (N, d). The training data y: 1d numpy array of shape (N,). The training label reg: a positive number. The regularization parameter ’’’ d, C = W.shape # data dim, No. classes N = X.shape[0] # No. points loss = 0 dW = np.zeros_like(W) for n in xrange(N): xn = X[n] score = xn.dot(W) for j in xrange(C): if j == y[n]: continue margin = 1 - score[y[n]] + score[j] if margin > 0:",
+  "context_chars": 624,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 2786,
+  "completion_tokens": 86,
+  "cost_usd": 0.00047,
+  "latency_s": 3.77
  }
 ]

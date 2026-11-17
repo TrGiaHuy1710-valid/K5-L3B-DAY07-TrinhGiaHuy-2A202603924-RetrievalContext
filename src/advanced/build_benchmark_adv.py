@@ -103,6 +103,15 @@ B = [
       "Bảng 28.2 chỉ có linear, poly, sigmoid, rbf; sách không có hạt nhân Laplacian (chỉ có 'làm mềm Laplace' trong naive Bayes, tr.147/149/155 — bẫy gần chủ đề).",
       [{"pattern": r"laplacian|hạt nhân laplace|laplace kernel"}], "Đã xem Bảng 28.2: 4 hàng."),
 
+    # dev additions (after test-v1 analysis) so the calculation fix of config v3 is validated on DEV, not on test
+    A("ad19", "dev", "table", "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của những người cao không quá 155 cm là bao nhiêu?",
+      "50.5 kg (147→49, 150→50, 153→51, 155→52; (49+50+51+52)/4).",
+      [V(104, "table", "Bảng 7.1", "4 hàng đầu cột trái", "p104|v00")], "Lọc theo điều kiện + trung bình", calc="(49+50+51+52)/4 = 50.5"),
+    A("ad20", "dev", "multihop", "Theo công thức xác suất thi đỗ tìm được bằng hồi quy logistic ở chương 14, xác suất đỗ dự đoán cho sinh viên ôn 1.75 giờ là bao nhiêu, và trong bảng thời gian ôn thi các sinh viên ôn 1.75 giờ có kết quả thế nào?",
+      "≈ 0.20 (sigmoid(1.54×1.75 − 4.06) = sigmoid(−1.365)); trong Bảng 14.1 có hai sinh viên ôn 1.75 giờ: một trượt (0), một đỗ (1).",
+      [T(191, "probability_of_pass ≈ sigmoid(1.54 * hours_of_studying - 4.06)"), V(185, "table", "Bảng 14.1", "hai ô 1.75: Đậu 0 và 1", "p185|v00")],
+      "Công thức + bảng + tính", calc="1/(1+e^1.365) ≈ 0.203", tolerance="0.19–0.21"),
+
     # =============================== TEST (24 answerable + 6 unanswerable) ===============================
     A("at01", "test", "table", "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên thi đỗ?",
       "10 sinh viên đỗ (và 10 trượt).",
@@ -207,6 +216,108 @@ B = [
 ]
 
 
+# =============================== TEST_V2 (split "test2", written AFTER config v3 was frozen) ===============================
+# New, independent test set: no question/answer reused from dev or test v1. Absence checks use scope "all":
+# every text chunk + every figure caption + every vision description (the v1 gold error at26 came from a page-range check).
+B += [
+    A("n01", "test2", "table", "Trong ma trận tiện ích của ví dụ hệ thống gợi ý bài hát (đánh giá 0–5 sao), có bao nhiêu ô còn thiếu dữ liệu (dấu '?') và người dùng E đánh giá bài 'Con cò bé bé' mấy sao?",
+      "12 ô còn thiếu (1 + 4 + 3 + 1 + 3 theo năm bài hát); người dùng E đánh giá 'Con cò bé bé' 4 sao.",
+      [V(236, "table", "Hình 17.1", "ma trận 5 bài × 6 người dùng A–F; đếm ô '?' theo hàng: 1, 4, 3, 1, 3; hàng 'Con cò bé bé' cột E = 4", "p236|v00")],
+      "Đếm ô + tra ô", calc="1+4+3+1+3 = 12"),
+    A("n02", "test2", "table", "Trong ma trận tiện ích dựa trên số sao người dùng đánh giá sản phẩm (chương lọc cộng tác lân cận), người dùng u3 đánh giá sản phẩm i3 mấy sao và hàng của sản phẩm i4 có bao nhiêu ô còn thiếu?",
+      "u3 đánh giá i3 = 4 sao; hàng i4 có 3 ô còn thiếu (u3, u4, u5).",
+      [V(247, "table", "Hình 18.1", "hàng i3: 2 2 3 4 4 ? 4 (u3 = 4); hàng i4: 2 0 4 ? ? ? 5", "p247|v00")], "Tra ô + đếm"),
+    A("n03", "test2", "table", "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên ôn từ 4 giờ trở lên và trong số đó bao nhiêu người trượt?",
+      "7 sinh viên ôn từ 4 giờ trở lên (4, 4, 4.25, 4.5, 4.75, 5, 5.5); 1 người trượt (một sinh viên ôn 4 giờ).",
+      [V(185, "table", "Bảng 14.1", "các ô >= 4: 4.5->1, 4.75->1, 4->1, 5->1, 4->0, 4.25->1, 5.5->1", "p185|v00")], "Lọc theo điều kiện + đếm"),
+    A("n04", "test2", "table", "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của 3 người cao nhất là bao nhiêu?",
+      "67 kg (178 cm -> 66, 180 cm -> 67, 183 cm -> 68; (66 + 67 + 68)/3).",
+      [V(104, "table", "Bảng 7.1", "ba hàng cuối cột phải", "p104|v00")], "Sắp xếp + trung bình", calc="(66+67+68)/3 = 67"),
+    A("n05", "test2", "table", "Theo bảng các gradient cơ bản, gradient theo ma trận X của hàm trace(AᵀXB) là gì?",
+      "ABᵀ.", [V(49, "table", "Bảng 2.1", "hàng trace(AᵀXB) -> ABᵀ", "p049|v00")], "Tra ô bảng"),
+    A("n06", "test2", "table", "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'sigmoid' có công thức gì và những hệ số nào cần thiết lập?",
+      "tanh(γ xᵀz + r); hệ số γ: gamma, r: coef0.", [V(383, "table", "Bảng 28.2", "hàng 'sigmoid'", "p383|v00")], "Tra một hàng"),
+    A("n07", "test2", "image", "Trong hình ví dụ cách tính vector điểm số của SVM đa lớp (ảnh con mèo đầu vào), điểm số của các lớp cat, frog, dog là bao nhiêu và ảnh được gán nhãn lớp nào?",
+      "cat 285.3, frog −154.5, dog 248.8; nhãn là cat (điểm cao nhất).",
+      [V(391, "figure", "Hình 29.3", "vector điểm số z: 285.3 (cat), −154.5 (frog), 248.8 (dog)", "p391|v00")], "Đọc số trong sơ đồ + so sánh"),
+    A("n08", "test2", "image", "Trong hình mô phỏng cách tính hàm mất mát và gradient trong SVM đa lớp, vector nhãn y là gì và L_data bằng bao nhiêu (gồm các thành phần nào)?",
+      "y = [1, 3, 2]; L_data = 0.5 + 0.7 + 0.3 + 1.5 = 3.0.",
+      [V(396, "figure", "Hình 29.5", "dòng 'y = [1, 3, 2]' và 'L_data = 0.5 + 0.7 + 0.3 + 1.5 = 3.0'", "p396|v00")], "Đọc sơ đồ có số"),
+    A("n09", "test2", "image", "Mạng neuron đa tầng dùng cho ví dụ dữ liệu giả hai chiều (một tầng ẩn ReLU) được vẽ với bao nhiêu nút ở tầng đầu vào, tầng ẩn và tầng đầu ra, và tầng đầu ra là mô hình gì?",
+      "Tầng vào 2 nút, tầng ẩn vẽ 4 nút (số nút ẩn tuỳ ý), tầng ra 3 nút là hồi quy softmax (ba lớp).",
+      [V(225, "figure", "Hình 16.9", "đếm vòng tròn 2 | 4 | 3; nhãn 'Tầng đầu ra Hồi quy softmax'; chú thích 'ba phần tử đại diện cho ba lớp'", "p225|v01")], "Đếm thành phần sơ đồ"),
+    A("n10", "test2", "image", "Trong hình chất lượng nén ảnh với số lượng cluster khác nhau (K-means), những giá trị K nào được so sánh?",
+      "K = 5, 10, 15 và 20.", [V(141, "figure", "Hình 10.9", "4 ảnh với nhãn k = 5, K = 10, K = 15, K = 20", "p141|v00")], "Đọc nhãn ảnh"),
+    A("n11", "test2", "image", "Trong hình dữ liệu giả trong không gian hai chiều và ví dụ về các ranh giới tốt, ranh giới ở hình (b) dùng bao nhiêu nút ẩn và đạt độ chính xác bao nhiêu?",
+      "100 nút ẩn; độ chính xác ≈ 99.33% (99.333…%).",
+      [V(225, "figure", "Hình 16.8", "(b) tiêu đề '#hidden units = 100, accuracy = 99.33333333333333%'", "p225|v00")], "Đọc chữ trên ảnh"),
+    A("n12", "test2", "chart", "Trong hình kết quả gradient descent với x0 = −5 và η = 0.01, gradient tại vòng lặp 50/100 và 100/100 bằng bao nhiêu?",
+      "iter 50/100: grad = −1.476; iter 100/100: grad = −0.049.",
+      [V(163, "chart", "Hình 12.4", "tiêu đề hình con 'iter 50/100, grad = -1.476' và 'iter 100/100, grad = -0.049'", "p163|v00")], "Đọc chữ trên biểu đồ"),
+    A("n13", "test2", "chart", "Trong hình minh hoạ chưa khớp và quá khớp trong hồi quy đa thức, bốn hình con dùng những bậc đa thức nào và mỗi bậc được nhận xét thế nào?",
+      "Bậc 2: chưa khớp; bậc 4: mô hình tốt; bậc 8: quá khớp; bậc 16: quá khớp.",
+      [V(109, "chart", "Hình 8.1", "tiêu đề (a) 'Bậc = 2: Chưa khớp', (b) 'Bậc = 4: Mô hình tốt', (c) 'Bậc = 8: Quá khớp', (d) 'Bậc = 16: Quá khớp'", "p109|v00 + p109|v01")],
+      "Đọc tiêu đề các biểu đồ con"),
+    A("n14", "test2", "chart", "Theo đồ thị ví dụ của hàm sigmoid và tanh trong chương mạng neuron đa tầng, mỗi hàm nhận giá trị trong khoảng nào và giá trị tại z = 0 là bao nhiêu?",
+      "sigmoid: (0, 1), tại z = 0 bằng 0.5; tanh: (−1, 1), tại z = 0 bằng 0.",
+      [V(219, "chart", "Hình 16.5", "(a) tiệm cận 0 và 1, tại z = 0 bằng 0.5; (b) tiệm cận −1 và 1, đi qua 0", "p219|v00")], "Đọc trục và giá trị"),
+    A("n15", "test2", "chart", "Trong đồ thị hàm mật độ của phân phối chuẩn một chiều ở chương ôn tập xác suất, đường có đỉnh cao nhất ứng với tham số nào và đỉnh cao khoảng bao nhiêu?",
+      "μ = 0.5, σ² = 0.5; đỉnh khoảng 0.56.",
+      [V(64, "chart", "Hình 3.3", "(a) ba đường: (μ=.5, σ²=.5) đỉnh ≈0.56; (μ=0, σ²=1) ≈0.40; (μ=−1, σ²=2) ≈0.28", "p064|v00")],
+      "Đọc nhãn + trục", tolerance="0.53–0.58"),
+    A("n16", "test2", "chart", "Trong hình ảnh hưởng của C lên nghiệm của SVM lề mềm, ba hình con đầu tiên (hàng trên trái, hàng trên phải, hàng dưới trái) dùng giá trị C nào, và theo chú thích C càng lớn thì biên thế nào?",
+      "C = 0.1, C = 1, C = 10; C càng lớn thì biên càng nhỏ (và ngược lại).",
+      [V(376, "chart", "Hình 27.5", "tiêu đề 'C = 0.100000', 'C = 1.000000', 'C = 10.000000'; chú thích", "p376|v00")], "Đọc tiêu đề + chú thích"),
+    A("n17", "test2", "multihop", "Trong ví dụ phân loại Bắc hay Nam, từ xuất hiện nhiều lần nhất trong văn bản kiểm tra là từ nào, và theo hình minh hoạ NBC với Multinomial naive Bayes, ước lượng λ̂ của từ đó cho nhãn B và nhãn N là bao nhiêu?",
+      "'hanoi' (2 lần trong d5); λ̂_B = 4/20, λ̂_N = 1/13.",
+      [V(148, "table", "Bảng 11.1", "d5 = 'hanoi hanoi buncha hutiu'", "p148|v00"), V(149, "figure", "Hình 11.1", "cột 'hanoi': λ̂_B = 4/20, λ̂_N = 1/13", "p149|v00")],
+      "Bảng + hình"),
+    A("n18", "test2", "multihop", "Độ chính xác của mạng có 100 nút ẩn trong ví dụ ranh giới tốt cao hơn mạng có 30 nút ẩn trong hình so sánh số nút ẩn bao nhiêu điểm phần trăm?",
+      "99.33% − 95.33% = 4.0 điểm phần trăm.",
+      [V(225, "figure", "Hình 16.8", "(b) 100 nút: 99.333…%", "p225|v00"), V(229, "figure", "Hình 16.10", "(d) 30 nút: 95.333…%", "p229|v01")],
+      "Hai hình ở hai trang + phép trừ", calc="99.3333 − 95.3333 = 4.0"),
+    A("n19", "test2", "multihop", "Theo công thức xác suất thi đỗ của hồi quy logistic ở chương 14, số giờ ôn mà tại đó xác suất đỗ bằng 0.5 là khoảng bao nhiêu, và theo bảng thời gian ôn thi có bao nhiêu sinh viên ôn nhiều hơn mức đó nhưng vẫn trượt?",
+      "≈ 2.64 giờ (1.54·h − 4.06 = 0 ⇒ h = 4.06/1.54); có 2 sinh viên trượt dù ôn nhiều hơn (3.5 giờ và 4 giờ).",
+      [T(191, "probability_of_pass ≈ sigmoid(1.54 * hours_of_studying - 4.06)"), V(185, "table", "Bảng 14.1", "ô > 2.64 có Đậu = 0: 3.5 và 4", "p185|v00")],
+      "Công thức + bảng + tính", calc="4.06/1.54 ≈ 2.636", tolerance="2.6–2.7"),
+    A("n20", "test2", "multihop", "Theo bảng sự tương đồng giữa mạng neuron và SVM, mạng neuron đa tầng tương ứng với loại SVM nào, và theo sách hàm hạt nhân nào được dùng nhiều nhất và là lựa chọn mặc định trong sklearn.svm.SVC?",
+      "SVM hạt nhân (bài toán phân loại hai lớp không tách biệt tuyến tính); hạt nhân rbf.",
+      [V(378, "table", "Bảng 28.1", "hàng Mạng neuron đa tầng | SVM hạt nhân", "p378|v00"),
+       T(385, "các rbf kernel được sử dụng nhiều nhất và cũng là lựa chọn mặc định trong sklearn.svm.SVC")], "Bảng + đoạn văn trang khác"),
+    A("n21", "test2", "text", "Trong stochastic gradient descent, sau mỗi epoch cần làm gì với thứ tự dữ liệu, và đó là lý do gì cho chữ 'stochastic' trong tên thuật toán?",
+      "Xáo trộn thứ tự lấy dữ liệu sau mỗi epoch để đảm bảo tính ngẫu nhiên; chính sự ngẫu nhiên này là lý do có từ 'stochastic' (cũng ảnh hưởng tới hiệu năng SGD).",
+      [T(172, "sau mỗi epoch, thứ tự lấy các dữ liệu cần được xáo trộn để đảm bảo tính ngẫu nhiên"), T(172, "Đây cũng chính là lý do thuật toán này có chứa từ stochastic")], "Tra đoạn văn"),
+    A("n22", "test2", "text", "Vì sao thuật toán phân cụm K-means được đảm bảo hội tụ sau một số hữu hạn vòng lặp?",
+      "Giá trị hàm mất mát sau mỗi bước là dãy không tăng và bị chặn dưới nên hội tụ; thêm nữa số cách phân cụm toàn bộ dữ liệu là hữu hạn (khi K cố định).",
+      [T(132, "Thuật toán này sẽ hội tụ sau một số hữu hạn vòng lặp."), T(132, "là một đại lượng không tăng và bị chặn dưới")], "Lập luận từ đoạn văn"),
+    A("n23", "test2", "text", "Theo phần thảo luận hạn chế của K-means, nếu không biết trước số cụm K thì sách gợi ý tham khảo phương pháp nào, và nghiệm cuối cùng phụ thuộc vào yếu tố gì?",
+      "Phương pháp elbow; nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu.",
+      [T(141, "Bạn đọc có thể tham khảo phương pháp elbow giúp xác định giá trị K này"), T(141, "Nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu.")], "Tra điều kiện"),
+    A("n24", "test2", "text", "Vì sao hàm mất mát của hồi quy tuyến tính lấy trung bình trên N điểm dữ liệu thay vì lấy tổng?",
+      "Số điểm dữ liệu trong tập huấn luyện có thể thay đổi nên mất mát trên từng điểm hữu ích hơn để đánh giá mô hình; lấy trung bình cũng tránh tràn số khi số điểm dữ liệu lớn.",
+      [T(102, "Việc tính toán mất mát trên từng điểm dữ liệu sẽ hữu ích hơn trong việc đánh giá chất lượng mô hình."),
+       T(102, "việc lấy trung bình cũng giúp tránh hiện tượng tràn số khi số lượng điểm dữ liệu lớn")], "Tổng hợp lý do"),
+    U("n25", "test2", "Trong ví dụ ma trận tiện ích của hệ thống gợi ý bài hát, ca sĩ thể hiện bài 'Mưa nửa đêm' là ai?",
+      "Sách chỉ nêu tên bài hát và điểm đánh giá; 'ca sĩ' chỉ xuất hiện ở ví dụ chung (Bích Phương, tr.235) không gắn với bài nào trong ma trận.",
+      [{"pattern": r"Mưa nửa đêm.{0,300}ca sĩ|ca sĩ.{0,300}Mưa nửa đêm", "scope": "all"}], "Đã xem Hình 17.1/17.2: chỉ tên bài và số sao."),
+    U("n26", "test2", "Theo bảng thời gian ôn thi của 20 sinh viên, các sinh viên này học ngành gì?",
+      "Bảng 14.1 chỉ có số giờ ôn và Đậu?; sách không nêu ngành học.",
+      [{"pattern": r"ngành học|chuyên ngành", "scope": "all"}], "Đã xem Bảng 14.1."),
+    U("n27", "test2", "Trong hình chất lượng nén ảnh K-means, dung lượng file (KB) của ảnh nén với K = 20 là bao nhiêu?",
+      "Hình 10.9 chỉ so sánh trực quan theo K; không có dung lượng file.",
+      [{"pattern": r"kilobyte|dung lượng|(?-i:\bKB\b)", "scope": "all"}], "Đã xem Hình 10.9: chỉ nhãn K. ('kb' trong công thức tr.353 là k·b, không phải KB)"),
+    U("n28", "test2", "Trong hình ảnh hưởng của C lên nghiệm SVM lề mềm, độ chính xác phân loại khi C = 10 là bao nhiêu?",
+      "Chương 27 không báo độ chính xác cho các giá trị C; Hình 27.5 chỉ vẽ đường phân chia.",
+      [{"pattern": r"accuracy|độ chính xác\s*(là|=|đạt|bằng)", "pages": list(range(360, 378))}], "Đã xem Hình 27.5 và chương 27."),
+    U("n29", "test2", "Trong ma trận tiện ích dựa trên số sao (chương lọc cộng tác), người dùng u0 có tên thật là gì?",
+      "Người dùng chỉ được ký hiệu u0–u6; không có tên.",
+      [{"pattern": r"tên (thật|của) người dùng", "scope": "all"}], "Đã xem Hình 18.1."),
+    U("n30", "test2", "Con mèo trong ảnh đầu vào của ví dụ tính vector điểm số SVM đa lớp thuộc giống mèo nào?",
+      "Sách không nêu giống mèo.",
+      [{"pattern": r"giống mèo|Persian|Siamese|mèo Anh|mèo Ba Tư|mèo Xiêm", "scope": "all"}], "Đã xem Hình 29.3."),
+]
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     chunks = json.loads((DAY7 / "data" / "book" / "chunks.json").read_text(encoding="utf-8"))
@@ -218,6 +329,10 @@ def main() -> int:
     for r in regions:
         for lab in filter(None, r["caption_label"].split("; ")):
             caps.setdefault(r["page"], set()).add(lab)
+    desc = json.loads((DAY7 / "data" / "advanced" / "descriptions.json").read_text(encoding="utf-8"))
+    everything = {f"text p{p}": t for p, t in by_page.items()}
+    everything.update({f"caption {r['id']}": r["caption"] for r in regions})
+    everything.update({f"desc {k}": v.get("content", "") for k, v in desc.items()})
     errors = []
     ids = [q["id"] for q in B]
     if len(set(ids)) != len(ids):
@@ -231,17 +346,21 @@ def main() -> int:
                     errors.append(f"{q['id']}: caption {ev['ref']} not found on page {ev['page']} (have {caps.get(ev['page'])})")
         else:
             for chk in q["absence_check"]:
-                pages = chk.get("pages") or sorted(by_page)
-                hits = [p for p in pages if re.search(chk["pattern"], by_page.get(p, ""), re.I)]
+                if chk.get("scope") == "all":  # whole book text + every caption + every vision description
+                    hits = [k for k, txt in everything.items() if re.search(chk["pattern"], txt, re.I | re.S)]
+                else:
+                    pages = chk.get("pages") or sorted(by_page)
+                    hits = [p for p in pages if re.search(chk["pattern"], by_page.get(p, ""), re.I)]
                 chk["hits"] = hits
                 if hits:
                     errors.append(f"{q['id']}: absence pattern {chk['pattern']!r} found on pages {hits}")
     from collections import Counter
-    counts = {s: Counter(q["group"] for q in B if q["split"] == s) for s in ("dev", "test")}
+    counts = {s: Counter(q["group"] for q in B if q["split"] == s) for s in ("dev", "test", "test2")}
     need_test = {"table": 6, "image": 5, "chart": 5, "multihop": 4, "text": 4, "unanswerable": 6}
-    for g, n in need_test.items():
-        if counts["test"][g] < n:
-            errors.append(f"test needs {n} {g}, has {counts['test'][g]}")
+    for split in ("test", "test2"):
+        for g, n in need_test.items():
+            if counts[split][g] < n:
+                errors.append(f"{split} needs {n} {g}, has {counts[split][g]}")
     if sum(counts["dev"][g] for g in counts["dev"] if g != "unanswerable") < 15 or counts["dev"]["unanswerable"] < 3:
         errors.append("dev needs >=15 answerable + >=3 unanswerable")
     if errors:

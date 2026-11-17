@@ -1,0 +1,723 @@
+[
+ {
+  "query_id": "t01",
+  "question": "Với bài toán tối ưu có một ràng buộc đẳng thức, điểm tối ưu thoả mãn điều kiện nào theo phương pháp nhân tử Lagrange?",
+  "filter": null,
+  "method": "hybrid_2gram",
+  "elapsed_ms": 63.9,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p338|01",
+    "page": 338,
+    "score": 0.0328,
+    "chapter": "Đối ngẫu",
+    "hit": true,
+    "components": {
+     "dense": 1,
+     "lexical": 1
+    },
+    "text": "Người ta đã chứng minh được rằng, điểm tối ưu của bài toán (25.1) thoả mãn điều kiện ∇x,λL(x, λ) = 0. Tức là: ∇xL(x, λ) = ∇xf0(x) + λ∇xf1(x) = 0 (25.3) ∇λL(x, λ) = f1(x) = 0 (25.4) Để ý rằng điều kiện thứ hai chính là phương trình ràng buộc trong bài toán (25.1). Trong nhiều trường hợp, việc giải hệ phương trình (25.3) - (25.4) đơn giản hơn việc trực tiếp đi tìm optimal value của bài toán (25.1). Một số ví dụ về phương pháp nhân tử Lagrange có thể được tìm thấy tại Phụ Lục A. 338 Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p402|00",
+    "page": 402,
+    "score": 0.032,
+    "chapter": "Phương pháp nhân tử Lagrange",
+    "hit": false,
+    "components": {
+     "dense": 2,
+     "lexical": 3
+    },
+    "text": "Phụ lục A Phương pháp nhân tử Lagrange Việc tối ưu hàm số một biến liên tục và khả vi trên miền xác định là một tập mở1 thường được thực hiện dựa trên việc giải phương trình đạo hàm bằng không. Gọi hàm mục tiêu là f(x) : R → R, cực trị toàn cục nếu có thường được tìm bằng cách giải phương trình f ′(x) = 0. Chú ý rằng điều ngược lại không đúng, tức một điểm thoả mãn đạo hàm bằng không chưa chắc đã là cực trị của hàm số. Ví dụ hàm f(x) = x3 có đạo hàm bằng không tại x = 0 nhưng điểm này không là một điểm cực trị. Với hàm nhiều biến, ta cũng có thể áp dụng quan sát này: giải phương trình gradient bằng không. Cách làm trên đây được áp dụng vào các bài toán tối ưu không ràng buộc. Các bài toán có ràng buộc là một phương trình: x = arg minx f0(x) thoả mãn: f1(x) = 0, (A.1) cũng có thể được đưa về bài toán không ràng buộc bằng phương pháp nhân tử Lagrange."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p338|00",
+    "page": 338,
+    "score": 0.0315,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 5,
+     "lexical": 2
+    },
+    "text": "Chương 25 Đối ngẫu 25.1. Giới thiệu Trong Chương 23 và Chương 24, chúng ta đã thảo luận về tập lồi, hàm lồi và các bài toán tối ưu lồi. Trong chương này, chúng ta sẽ tiếp tục tìm hiểu sâu hơn scác điều kiện về nghiệm của các bài toán tối ưu, cả lồi và không lồi; bài toán đối ngẫu (dual problem) và điều kiện KKT. Trước tiên chúng ta xét bài toán tối ưu chỉ có một phương trình ràng buộc: x = arg min x f0(x) thoả mãn: f1(x) = 0 (25.1) Bài toán này không nhất thiết là bài toán tối ưu lồi. Tức hàm mục tiêu và hàm ràng buộc không nhất thiết phải lồi. Bài toán này có thể được giải bằng phương pháp nhân tử Lagrange (xem Phụ Lục A). Cụ thể, xét hàm số: L(x, λ) = f0(x) + λf1(x) (25.2) Hàm số L(x, λ) được gọi là hàm Lagrange (the Lagrangian) của bài toán tối ưu (25.1). Trong hàm số này, chúng ta có thêm một biến λ được gọi là nhân tử Lagrange (Lagrange multiplier)."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p346|00",
+    "page": 346,
+    "score": 0.031,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 4,
+     "lexical": 5
+    },
+    "text": "Với bài toán lồi và đối ngẫu mạnh xảy ra, các điều kiện KKT vừa đề cập cũng là điều kiện đủ. Vậy với các bài toán tối ưu lồi có hàm mục tiêu và hàm ràng buộc là"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p402|01",
+    "page": 402,
+    "score": 0.0306,
+    "chapter": "Phương pháp nhân tử Lagrange",
+    "hit": false,
+    "components": {
+     "dense": 7,
+     "lexical": 4
+    },
+    "text": "Xét hàm số L(x, λ) = f0(x) + λf1(x) với biến λ được gọi là nhân tử Lagrange (Lagrange multiplier). Hàm số L(x, λ) được gọi là hàm Lagrange của bài toán. Người t"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p346|01",
+    "page": 346,
+    "score": 0.0296,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 9,
+     "lexical": 6
+    },
+    "text": "Ax∗ = b (25.26) Px∗ + q + AT ν∗ = 0 (25.27) Phương trình thứ hai chính là phương trình đạo hàm của hàm Lagrange tại x∗ bằng 0. Hệ phương trình này có thể được v"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p347|00",
+    "page": 347,
+    "score": 0.0294,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 8,
+     "lexical": 8
+    },
+    "text": "• g(λ, ν) ≤ p∗ với mọi (λ, ν). • Hàm đối ngẫu Lagrange là lõm bất kể bài toán tối ưu chính có lồi hay không. • Bài toán đi tìm giá trị lớn nhất của hàm đối ngẫu"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p340|01",
+    "page": 340,
+    "score": 0.0292,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 3,
+     "lexical": 15
+    },
+    "text": "g(λ, ν) = inf x∈D L(x, λ, ν) ≤ L(x0, λ, ν) ≤ f0(x0). Khi x0 = x∗ (điểm tối ưu), f0(x0) = p∗, ta suy ra bất đẳng thức (25.7). Bất đẳng thức quan trọng này chỉ ra"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p339|00",
+    "page": 339,
+    "score": 0.0286,
+    "chapter": "Đối ngẫu",
+    "hit": false,
+    "components": {
+     "dense": 10,
+     "lexical": 10
+    },
+    "text": "25.2. Hàm đối ngẫu Lagrange 25.2.1. Hàm Lagrange của bài toán tối ưu Xét bài toán tối ưu tổng quát: x∗ = arg min x f0(x) thoả mãn: fi(x) ≤ 0, i = 1, 2, . . . , "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p070|01",
+    "page": 70,
+    "score": 0.0281,
+    "chapter": "Ước lượng tham số mô hình",
+    "hit": false,
+    "components": {
+     "dense": 16,
+     "lexical": 7
+    },
+    "text": "Với các tham số λ, xác suất để sự kiện xi xảy ra là p(xi|λ) = 6 Y j=1 λ xj i j (4.11) Khi đó, vẫn với giả sử về sự độc lập giữa các lần tung xúc xắc, ước lượng "
+   }
+  ]
+ },
+ {
+  "query_id": "t02",
+  "question": "Hàm hạt nhân (kernel) k(x, z) trong SVM được định nghĩa như thế nào?",
+  "filter": null,
+  "method": "hybrid_2gram",
+  "elapsed_ms": 84.9,
+  "first_hit_rank": null,
+  "hit1": false,
+  "hit3": false,
+  "hit10": false,
+  "ctx800": false,
+  "ctx2400": false,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p382|01",
+    "page": 382,
+    "score": 0.0323,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 2,
+     "lexical": 2
+    },
+    "text": "Điều kiện này giúp bài toán được giải một cách hiệu quả. • Trong thực hành, một vài hàm số k() không thỏa mãn điều kiện Mercer vẫn cho kết quả chấp nhận được. Những hàm số này vẫn được gọi là hạt nhân. Trong chương này, chúng ta chỉ quan tâm tới các hàm hạt nhân thông dụng có sẵn trong các thư viện. Việc giải quyết bài toán (28.5) hoàn toàn tương tự như bài toán đối ngẫu trong SVM lề mềm. Chúng ta sẽ không đi sâu vào việc tính nghiệm này. Thay vào đó, chúng ta sẽ thảo luận các hàm hạt nhân thông dụng và hiệu năng của chúng trong các bài toán. 28.3.2. Một số hàm hạt nhân thông dụng Tuyến tính Đây là trường hợp đơn giản với hàm hạt nhân chính là tích vô hướng của hai vector: k(x, z) = xT z. Như đã chứng minh trong Chương 26, hàm số thỏa mãn điều kiện (28.7). Khi sử dụng sklearn.svm.SVC, hàm này được chọn bằng cách gán kernel = ’linear’. 69 Xem Kernel method – Wikipedia (https://goo.gl/YXct7F) 382 Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p386|01",
+    "page": 386,
+    "score": 0.0315,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 3,
+     "lexical": 4
+    },
+    "text": "Như đã đề cập trong Chương 14, one-vs-rest có nhiều hạn chế vì phải huấn luyện nhiều bộ phân loại. Hơn nữa, với SVM hạt nhân, việc tính toán các hàm hạt nhân cũng trở nên phức tạp khi lượng dữ liệu và số chiều dữ liệu tăng lên. 28.5. Tóm tắt • Trong bài toán phân loại nhị phân, nếu dữ liệu hai lớp không tách biệt tuyến tính, chúng ta có thể tìm cách biến đổi dữ liệu sao cho chúng (gần) tách biệt tuyến tính trong không gian mới. • Việc tính toán trực tiếp hàm Φ() đôi khi phức tạp và tốn nhiều bộ nhớ. Thay vào đó, ta có thể sử dụng thủ thuật hạt nhân. Trong cách tiếp cận này, ta chỉ cần tính tích vô hướng của hai vector bất kỳ trong không gian mới: k(x, z) = Φ(x)T Φ(z). Thông thường, các hàm k(., .) thỏa mãn điều kiện Mercer, và được gọi là hàm hạt nhân. Cách giải bài toán SVM với hàm hạt nhân hoàn toàn giống cách giải bài toán tối ưu trong SVM lề mềm. • Có bốn hàm hạt nhân thông dụng:"
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p379|01",
+    "page": 379,
+    "score": 0.0309,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 1,
+     "lexical": 9
+    },
+    "text": "Nhìn từ góc độ toán học, SVM hạt nhân là phương pháp đi tìm một hàm số Φ(x) biến đổi dữ liệu x từ không gian đặc trưng ban đầu thành dữ liệu trong một không gian mới. Trong không gian mới, ta mong muốn dữ liệu giữa hai lớp là (gần) tách biệt tuyến tính. Khi đó, ta có thể dùng các bộ phân loại tuyến tính thông thường như hồi quy logistic/softmax hoặc SVM lề cứng/mềm. Các hàm Φ(x) thường tạo ra dữ liệu mới có số chiều lớn, thậm chí có thể vô hạn chiều. Nếu tính toán các hàm này trực tiếp, chắc chắn chúng ta sẽ gặp các vấn đề về bộ nhớ và hiệu năng tính toán. Có một cách tiếp cận khác là sử dụng các hàm số hạt nhân (kernel function) mô tả quan hệ giữa hai vector trong không gian mới thay vì tính toán trực tiếp biến đổi của từng vector. Kỹ thuật này được xây dựng dựa trên việc giải bài toán đối ngẫu trong SVM lề cứng/mềm."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p378|01",
+    "page": 378,
+    "score": 0.0306,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 4,
+     "lexical": 7
+    },
+    "text": "Sự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic "
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p383|01",
+    "page": 383,
+    "score": 0.0296,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 9,
+     "lexical": 6
+    },
+    "text": "Bảng các hàm hạt nhân thông dụng Tên Công thức Thiết lập hệ số ’linear’ xT z không có hệ số ’poly’ (r + γxT z)d d: degree, γ: gamma, r: coef0 ’sigmoid’ tanh(γxT"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p384|01",
+    "page": 384,
+    "score": 0.0293,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 5,
+     "lexical": 12
+    },
+    "text": "import numpy as np import matplotlib.pyplot as plt from sklearn import svm # XOR dataset and targets X = np.array([[0, 0], [1, 1], [1, 0], [0, 1]]) y = np.array"
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p383|00",
+    "page": 383,
+    "score": 0.0289,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 20,
+     "lexical": 1
+    },
+    "text": "Đa thức Hàm hạt nhân đa thức có dạng k(x, z) = (r + γxT z)d (28.9) Với d là một số thực dương. Khi d là một số tự nhiên, hạt nhân đa thức có thể mô tả hầu hết c"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p381|00",
+    "page": 381,
+    "score": 0.0286,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 12,
+     "lexical": 8
+    },
+    "text": "wT Φ(x) + b = X m∈S λmymΦ(xm)T Φ(x) + 1 NM X n∈M yn − X m∈S λmymΦ(xm)T Φ(xn) ! (28.4) Như đã đề cập, việc tính toán trực tiếp Φ(x) cho mỗi điểm dữ liệu có thể s"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p382|00",
+    "page": 382,
+    "score": 0.0285,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 16,
+     "lexical": 5
+    },
+    "text": "28.3. Hàm số hạt nhân 28.3.1. Tính chất của các hàm hạt nhân Không phải hàm k() nào cũng có thể được sử dụng. Các hàm hạt nhân cần có các tính chất: • Đối xứng:"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p400|01",
+    "page": 400,
+    "score": 0.0281,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "components": {
+     "dense": 6,
+     "lexical": 17
+    },
+    "text": "Xin nhắc lại, nhãn của mỗi điểm dữ liệu được xác định bởi vị trí của thành phần có giá trị cao nhất trong vector điểm số z = WT x: class(x) = arg max i=1,2,...,"
+   }
+  ]
+ },
+ {
+  "query_id": "t03",
+  "question": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh như thế nào?",
+  "filter": null,
+  "method": "hybrid_2gram",
+  "elapsed_ms": 53.7,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p220|00",
+    "page": 220,
+    "score": 0.0328,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": true,
+    "components": {
+     "dense": 1,
+     "lexical": 1
+    },
+    "text": "−3 −2 −1 0 1 2 3 z 0.0 0.5 1.0 1.5 2.0 2.5 3.0 a = max(z, 0) ReLU function (a) (b) Hình 16.6. Hàm ReLU và tốc độ hội tụ khi so sánh với hàm tanh. so với hàm tanh [KSH12]. Hình 16.6b so sánh sự hội tụ của hàm mất mát khi sử dụng hai hàm kích ReLU hoặc tanh. Ta thấy rằng với các mạng sử dụng hàm kích hoạt ReLU, hàm mất mát giảm rất nhanh sau một vài epoch đầu tiên. Mặc dù cũng có nhược điểm đạo hàm bằng 0 với các giá trị đầu vào âm, ReLU được chứng minh bằng thực nghiệm rằng có thể khắc phục việc này bằng việc tăng số nút ẩn46. Khi xây dựng một mạng neuron đa tầng, hàm kích hoạt ReLU nên được thử đầu tiên vì nó nhanh cho kết quả và thường hiệu quả trong nhiều trường hợp. Hầu hết các mạng neuron sâu đều có hàm kích hoạt là ReLU trong các tầng ẩn, trừ hàm kích hoạt ở tầng đầu ra vì nó phụ thuộc vào từng bài toán."
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p219|01",
+    "page": 219,
+    "score": 0.031,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 5,
+     "lexical": 4
+    },
+    "text": "Hàm số này có tính chất đầu ra chạy từ -1 đến 1, khiến cho nó có tính chất tâm không (zero-centered) thay vì chỉ dương như hàm sigmoid. Gần đây, hàm sigmoid chỉ được sử dụng ở tầng đầu ra khi đầu ra là các giá trị nhị phân hoặc biểu diễn các xác suất. Một nhược điểm dễ nhận thấy là khi đầu vào có trị tuyệt đối lớn, đạo hàm của cả sigmoid và tanh rất gần với không. Điều này đồng nghĩa với việc các hệ số tương ứng với nút đang xét sẽ gần như không được cập nhật khi sử dụng công thức cập nhật gradient desent. Thêm nữa, khi khởi tạo các hệ số cho mạng neuron đa tầng với hàm kích hoạt sigmoid, chúng cần tránh trường hợp đầu vào một tầng ẩn nào đó quá lớn, vì khi đó đầu ra của tầng đó rất gần không hoặc một, dẫn đến đạo hàm bằng không và gradient desent hoạt động không hiệu quả. 16.3.3. ReLU ReLU (Rectified Linear Unit) gần đây được sử dụng rộng rãi vì tính đơn giản của nó."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p229|01",
+    "page": 229,
+    "score": 0.031,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 4,
+     "lexical": 5
+    },
+    "text": "Có thể chứng minh được rằng với một hàm số liên tục bất kỳ f(x) và một số ε > 0, luôn luôn tồn tại một mạng neuron mà đầu ra có dạng g(x) chỉ với một tầng ẩn (với số nút ẩn đủ lớn và hàm kích hoạt phi tuyến phù hợp) sao cho với mọi x, |f(x) − g(x)| < ε. Nói cách khác, mạng neuron có khả năng xấp xỉ hầu hết các hàm liên tục [Cyb89]. Trên thực tế, việc tìm ra số lượng nút ẩn và hàm kích hoạt nói trên gần như bất khả thi. Thay vào đó, thực nghiệm chứng minh rằng mạng neuron với nhiều tầng ẩn kết hợp cùng các hàm kích hoạt đơn giản, ví dụ ReLU, có khả năng xấp xỉ dữ liệu tốt hơn. Tuy nhiên, khi số lượng tầng ẩn lớn lên, số lượng trọng số cần tối ưu cũng lớn theo và mô hình trở nên phức tạp. Sự phức tạp này ảnh hưởng tới hai khía cạnh. Thứ nhất, tốc độ tính toán sẽ chậm đi rất nhiều. Thứ hai, nếu Machine Learning cơ bản"
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p219|02",
+    "page": 219,
+    "score": 0.0304,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 2,
+     "lexical": 10
+    },
+    "text": "Đồ thị của hàm ReLU được minh họa trên Hình 16.6a. Hàm ReLU có công thức toán học f(z) = max(0, z) – rất đơn giản trong tính toán. Đạo hàm của nó bằng không tại"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p225|01",
+    "page": 225,
+    "score": 0.0302,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 10,
+     "lexical": 3
+    },
+    "text": "Ta thấy rõ ràng rằng đường ranh giới giữa các lớp dữ liệu không thể là các đường thẳng. Hình 16.8b là một ví dụ về các đường ranh giới được coi là tốt với hầu h"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p218|01",
+    "page": 218,
+    "score": 0.028,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 18,
+     "lexical": 6
+    },
+    "text": "Khi tối ưu một mạng neuron đa tầng cho một công việc nào đó, chúng ta cần đi tìm các trọng số và hệ số điều chỉnh này. Tập hợp các trọng số và hệ số điều chỉnh "
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p379|02",
+    "page": 379,
+    "score": 0.0272,
+    "chapter": "Máy vector hỗ trợ hạt nhân",
+    "hit": false,
+    "components": {
+     "dense": 19,
+     "lexical": 9
+    },
+    "text": "Nếu phải so sánh, ta thấy rằng hàm hạt nhân có chức năng tương tự như hàm kích hoạt trong mạng neuron vì chúng đều tạo ra các quan hệ phi tuyến. Machine Learnin"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p229|00",
+    "page": 229,
+    "score": 0.0265,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 16,
+     "lexical": 15
+    },
+    "text": "#hidden units = 2, accuracy =59.66666666666667% (a) #hidden units = 5, accuracy =74.0% (b) #hidden units = 15, accuracy =94.33333333333334% (c) #hidden units = "
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p219|00",
+    "page": 219,
+    "score": 0.0161,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "lexical": 2
+    },
+    "text": "−5 0 5 z 0.0 0.2 0.4 0.6 0.8 1.0 a = 1/(1 + e−z) sigmoid function (a) −5 0 5 z −1.0 −0.5 0.0 0.5 1.0 a = (ez −e−z/(ez + e−z) tanh function (b) Hình 16.5. Ví dụ "
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p114|00",
+    "page": 114,
+    "score": 0.0159,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 3
+    },
+    "text": "Hình 8.3. Kết thúc sớm. Thuật toán huấn luyện dừng lại tại vòng lặp mà sai số xác thực đạt giá trị nhỏ nhất. mô hình có thể được coi là số vòng lặp cần chạy. Số"
+   }
+  ]
+ },
+ {
+  "query_id": "t04",
+  "question": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gì?",
+  "filter": null,
+  "method": "hybrid_2gram",
+  "elapsed_ms": 53.8,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": false,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p220|01",
+    "page": 220,
+    "score": 0.0325,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": true,
+    "components": {
+     "dense": 2,
+     "lexical": 1
+    },
+    "text": "Ngoài ra, các biến thể của ReLU như leaky rectified linear unit (Leaky ReLU), parametric rectified linear unit (PReLU) và randomized leaky rectified linear units (RReLU) [XWCL15] cũng được sử dụng và cho kết quả tốt. 16.4. Lan truyền ngược Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng chính là gradient descent (GD). Để áp dụng GD, chúng ta cần tính được gradient của hàm mất mát theo từng ma trận trọng số W(l) và vector điều chỉnh b(l). Giả sử J(W, b, X, Y) là một hàm mất mát của bài toán, trong đó W, b là tập hợp tất cả các ma trận trọng số và vector điều chỉnh. X, Y là cặp dữ liệu huấn luyện với mỗi cột tương ứng với một điểm dữ liệu. Để có thể áp dụng các phương pháp gradient descent, chúng ta cần tính được các ∇W(l)J; ∇b(l)J, ∀l = 1, 2, . . . , L. Nhắc lại quá trình lan truyền thuận: 46 Neural Networks and Deep Learning – Activation function (https://goo.gl/QGjKmU). 220 Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p216|01",
+    "page": 216,
+    "score": 0.0323,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 1,
+     "lexical": 3
+    },
+    "text": "Một mạng neuron với nhiều hơn hai tầng còn được gọi là mạng neuron đa tầng (multi-layer neural network) hoặc perceptron đa tầng(multilayer perceptron – MLP). Tên gọi perceptron ở đây có thể gây nhầm lẫn44, vì cụm từ này để chỉ mạng neuron nhiều tầng và mỗi tầng không nhất thiết là một hoặc nhiều percep- tron. Thực chất, perceptron rất hiếm khi được sử dụng trong các mạng neuron đa tầng. Hàm kích hoạt thường là các hàm phi tuyến khác thay vì hàm sgn. Một mạng neuron đa tầng có thể xấp xỉ mối quan hệ giữa các cặp quan hệ (x, y) trong tập huấn luyện bằng một hàm số có dạng y ≈ g(L) g(L−1) . . . (g(2)(g(1)(x))) . (16.1) Trong đó, tầng thứ nhất đóng vai trò như hàm a(1) ≜ g(1)(x); tầng thứ hai đóng vai trò như hàm a(2) ≜ g(2)(g(1)(x)) = f (2)(a(1)),..."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p230|00",
+    "page": 230,
+    "score": 0.032,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 3,
+     "lexical": 2
+    },
+    "text": "mô hình quá phức tạp, nó có thể biểu diễn rất tốt dữ liệu huấn luyện, nhưng có thể không biểu diễn tốt dữ liệu kiểm tra. Đây chính là hiện tượng quá khớp. Vậy có các kỹ thuật nào giúp tránh quá khớp cho mạng neuron đa tầng? Ngoài kỹ thuật xác thực chéo, chúng ta quan tâm hơn tới các phương pháp kiểm soát. Kỹ thuật phổ biến nhất được dùng để tránh quá khớp là suy giảm trọng số (weight decay) hoặc dropout. 16.6. Suy giảm trọng số Với suy giảm trọng số, hàm mất mát sẽ được cộng thêm một đại lượng kiểm soát có dạng: λR(W) = λ L X l=1 ∥W(l)∥2 F tức tổng bình phương Frobenius norm của tất cả các ma trận trọng số. Chú ý rằng khi làm việc với mạng neuron đa tầng, hệ số điều chỉnh hiếm khi được kiểm soát. Đây cũng là lý do vì sao nên tách rời ma trận trọng số và vector điều chỉnh khi làm việc với mạng neuron đa tầng."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p401|00",
+    "page": 401,
+    "score": 0.031,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "components": {
+     "dense": 4,
+     "lexical": 5
+    },
+    "text": "các bài toán với dữ liệu lớn. Ngoài ra, SVM đa lớp có thể được kết hợp với các mạng neuron đa tầng trong trường hợp dữ liệu không tách biệt tuyến tính. • Trên t"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p199|01",
+    "page": 199,
+    "score": 0.0303,
+    "chapter": "Hồi quy logistic",
+    "hit": false,
+    "components": {
+     "dense": 8,
+     "lexical": 4
+    },
+    "text": "Ví dụ, dùng one-vs-rest để tách nhãn ở hàng trên ra khỏi ba nhãn thẳng hàng ở dưới. Ba nhãn còn lại có thể tiếp tục được phân loại bằng các phương pháp khác. Tu"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p218|01",
+    "page": 218,
+    "score": 0.0303,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 5,
+     "lexical": 7
+    },
+    "text": "Khi tối ưu một mạng neuron đa tầng cho một công việc nào đó, chúng ta cần đi tìm các trọng số và hệ số điều chỉnh này. Tập hợp các trọng số và hệ số điều chỉnh "
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p388|01",
+    "page": 388,
+    "score": 0.029,
+    "chapter": "Máy vector hỗ trợ đa lớp",
+    "hit": false,
+    "components": {
+     "dense": 6,
+     "lexical": 12
+    },
+    "text": "Thuật toán tốt nhất hiện nay cho bài toán này đã đạt được độ chính xác trên 96% (https://goo.gl/w1sgK4), sử dụng một mạng neuron tích chập đa tầng kết hợp với m"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p019|01",
+    "page": 19,
+    "score": 0.0286,
+    "chapter": "Các lưu ý về ký hiệu",
+    "hit": false,
+    "components": {
+     "dense": 12,
+     "lexical": 8
+    },
+    "text": "Phần IV đề cập tới một nhóm các thuật toán ML phổ biến nhất – mạng neuron nhân tạo, là nền tảng cho các mô hình DL phức tạp hiện nay. Phần này cũng giới thiệu m"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p217|00",
+    "page": 217,
+    "score": 0.0286,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 9,
+     "lexical": 11
+    },
+    "text": "Input W(1) Hidden 1 W(2) Hidden 2 W(3) Output Hình 16.3. MLP với hai tầng ẩn (các hệ số điều chỉnh đã được ẩn đi). Đầu ra của mạng neuron đa tầng ở dạng này ứng"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p217|01",
+    "page": 217,
+    "score": 0.028,
+    "chapter": "Mạng neuron đa tầng và lan truyền ngược",
+    "hit": false,
+    "components": {
+     "dense": 18,
+     "lexical": 6
+    },
+    "text": "Hình 16.3 là một ví dụ về một mạng neuron đa tầng với hai tầng ẩn. Số lượng tầng trong một mạng neuron đa tầng, được ký hiệu là L, được tính bằng số tầng ẩn cộn"
+   }
+  ]
+ },
+ {
+  "query_id": "t05",
+  "question": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra vấn đề gì?",
+  "filter": null,
+  "method": "hybrid_2gram",
+  "elapsed_ms": 91.9,
+  "first_hit_rank": 1,
+  "hit1": true,
+  "hit3": true,
+  "hit10": true,
+  "ctx800": true,
+  "ctx2400": true,
+  "results": [
+   {
+    "rank": 1,
+    "id": "book-ml-co-ban|p112|02",
+    "page": 112,
+    "score": 0.0328,
+    "chapter": "Quá khớp",
+    "hit": true,
+    "components": {
+     "dense": 1,
+     "lexical": 1
+    },
+    "text": "Việc đánh giá trên tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Có giải pháp nào cho tình huống này không? Câu trả lời là xác thực chéo (cross-validation). 112 Machine Learning cơ bản"
+   },
+   {
+    "rank": 2,
+    "id": "book-ml-co-ban|p111|00",
+    "page": 111,
+    "score": 0.0323,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 2,
+     "lexical": 2
+    },
+    "text": "Một mô hình được coi là tốt nếu cả sai số huấn luyện và test error đều thấp. Nếu sai số huấn luyện thấp nhưng sai số kiểm tra cao, ta nói mô hình bị quá khớp. Nếu sai số huấn luyện cao và sai số kiểm tra cao, ta nói mô hình bị chưa khớp. Xác suất để xảy ra việc sai số huấn luyện cao nhưng sai số kiểm tra thấp là rất nhỏ. Trong chương này, chúng ta sẽ làm quen với hai kỹ thuật phổ biến giúp tránh quá khớp là xác thực và cơ chế kiểm soát. 8.2. Xác thực 8.2.1. Xác thực Một mô hình được coi là tốt nếu cả sai số huấn luyện và sai số kiểm tra đều nhỏ. Tuy nhiên, nếu xây dựng một mô hình chỉ dựa trên tập huấn luyện, làm thế nào để biết được chất lượng của nó trên tập kiểm tra? Phương pháp đơn giản nhất là trích từ tập huấn luyện ra một tập con nhỏ và thực hiện việc đánh giá mô hình trên tập dữ liệu này. Tập dữ liệu này được gọi là tập xác thực (validation set)."
+   },
+   {
+    "rank": 3,
+    "id": "book-ml-co-ban|p112|01",
+    "page": 112,
+    "score": 0.0315,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 4,
+     "lexical": 3
+    },
+    "text": "Cả tập huấn luyện và tập xác thực đều đóng vai trò xây dựng mô hình. Nhắc lại rằng hai tập hợp này được tách ra từ tập huấn luyện ban đầu. Trong ví dụ trên, ta vẫn thu được kết quả khả quan trên tập kiểm tra mặc dù không sử dụng tập này trong việc huấn luyện. Việc này xảy ra vì ta đã giả sử rằng dữ liệu xác thực và dữ liệu kiểm tra có chung một đặc điểm nào đó (chung phân phối và đều chưa được mô hình nhìn thấy khi huấn luyện). Để ý rằng, khi bậc nhỏ bằng một hoặc hai, cả ba sai số đều cao, khi đó chưa khớp xảy ra. 8.2.2. Xác thực chéo Trong nhiều trường hợp, lượng dữ liệu để xây dựng mô hình là hạn chế. Nếu lấy quá nhiều dữ liệu huấn luyện ra làm dữ liệu xác thực, phần dữ liệu còn lại không đủ để xây dựng mô hình. Lúc này, tập xác thực phải thật nhỏ để giữ được lượng dữ liệu huấn luyện đủ lớn. Tuy nhiên, một vấn đề khác nảy sinh."
+   },
+   {
+    "rank": 4,
+    "id": "book-ml-co-ban|p081|02",
+    "page": 81,
+    "score": 0.0308,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "components": {
+     "dense": 5,
+     "lexical": 5
+    },
+    "text": "Tập kiểm tra đại diện cho dữ liệu mà mô hình chưa từng thấy, có thể xuất hiện trong quá trình vận hành mô hình trên thực tế. Một mô hình hoạt động hiệu quả trên"
+   },
+   {
+    "rank": 5,
+    "id": "book-ml-co-ban|p110|00",
+    "page": 110,
+    "score": 0.0303,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 8,
+     "lexical": 4
+    },
+    "text": "các đường dự đoán không được tự nhiên. Khi bậc của đa thức tăng lên, độ phức tạp của nó cũng tăng theo và hiện tượng quá khớp xảy ra nghiêm trọng hơn. Với d = 4"
+   },
+   {
+    "rank": 6,
+    "id": "book-ml-co-ban|p111|02",
+    "page": 111,
+    "score": 0.0302,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 3,
+     "lexical": 10
+    },
+    "text": "Với khái niệm mới này, ta tìm mô hình sao cho cả sai số huấn luyện và sai số xác thực đều nhỏ, qua đó có thể dự đoán được rằng sai số kiểm tra cũng nhỏ. Để làm "
+   },
+   {
+    "rank": 7,
+    "id": "book-ml-co-ban|p112|00",
+    "page": 112,
+    "score": 0.0289,
+    "chapter": "Quá khớp",
+    "hit": false,
+    "components": {
+     "dense": 6,
+     "lexical": 13
+    },
+    "text": "Hình 8.2. Lựa chọn mô hình dựa trên sai số xác thực xu hướng giảm. Điều này dễ hiểu vì đa thức bậc càng cao, việc xấp xỉ càng chính xác. Quan sát đường nét đứt,"
+   },
+   {
+    "rank": 8,
+    "id": "book-ml-co-ban|p243|01",
+    "page": 243,
+    "score": 0.0257,
+    "chapter": "Hệ thống gợi ý dựa trên nội dung",
+    "hit": false,
+    "components": {
+     "dense": 16,
+     "lexical": 20
+    },
+    "text": "[3.18 3.13 3.42 3.09 3.35 5.2 4.01 3.35 3.42 3.72] 17.4.4. Đánh giá mô hình Để đánh giá mô hình tìm được, chúng ta sẽ sử dụng căn bậc hai sai số trung bình bình"
+   },
+   {
+    "rank": 9,
+    "id": "book-ml-co-ban|p174|00",
+    "page": 174,
+    "score": 0.0152,
+    "chapter": "Gradient descent",
+    "hit": false,
+    "components": {
+     "lexical": 6
+    },
+    "text": "d. Vừa chạy GD, vừa kiểm tra kết quả. Một kỹ thuật khác thường được sử dụng là cho thuật toán chạy với số lượng vòng lặp lớn. Trong quá trình chạy, chương trình"
+   },
+   {
+    "rank": 10,
+    "id": "book-ml-co-ban|p081|01",
+    "page": 81,
+    "score": 0.0149,
+    "chapter": "Các khái niệm cơ bản",
+    "hit": false,
+    "components": {
+     "lexical": 7
+    },
+    "text": "Vector đặc trưng của một điểm dữ liệu thường được ký hiệu là x ∈ Rd trong đó d là số lượng đặc trưng. Các mảng nhiều chiều được hiểu là đã bị vector hoá (vector"
+   }
+  ]
+ }
+]

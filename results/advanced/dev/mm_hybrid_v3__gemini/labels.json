@@ -1,0 +1,286 @@
+[
+ {
+  "id": "ad01",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các thuật ngữ trong bài toán tối ưu (chương 24), ký hiệu nào biểu diễn đẳng thức ràng buộc và thuật ngữ tiếng Anh tương ứng là gì?",
+  "expected": "Ký hiệu h_j(x) = 0; tiếng Anh: equality constraint.",
+  "answer": "Theo Bảng 24.1 (chương 24) trong sách, ký hiệu biểu diễn đẳng thức ràng buộc là $h_j(\\mathbf{x}) = 0$ và thuật ngữ tiếng Anh tương ứng là **equality constraint** [book-ml-co-ban|p325|00].",
+  "citations": [
+   "book-ml-co-ban|p325|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad02",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng quy ước ký hiệu của sách, ký hiệu ⊙ có nghĩa là gì?",
+  "expected": "Hadamard product (elementwise product): phép nhân từng phần tử của hai vector hoặc ma trận cùng kích thước.",
+  "answer": "Trong bảng quy ước ký hiệu của sách, ký hiệu $\\odot$ có nghĩa là Hadamard product (elementwise product) – phép nhân từng phần tử của hai vector hoặc ma trận cùng kích thước [book-ml-co-ban|p022|v00].",
+  "citations": [
+   "book-ml-co-ban|p022|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad03",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng ở chương hồi quy tuyến tính, có bao nhiêu người cao từ 170 cm trở lên?",
+  "expected": "6 người (170, 173, 175, 178, 180, 183 cm).",
+  "answer": "Trong Bảng 7.1 về dữ liệu chiều cao và cân nặng của 15 người ở chương Hồi quy tuyến tính, danh sách chiều cao (cm) của 15 người là: 147, 150, 153, 155, 158, 160, 163, 165, 168, 170, 173, 175, 178, 180 và 183 [book-ml-co-ban|p104|00, book-ml-co-ban|p104|v00].\n\nCác mức chiều cao từ 170 cm trở lên bao gồm: 170, 173, 175, 178, 180 và 183.\nVậy có tổng cộng **6 người** cao từ 170 cm trở lên [book-ml-co-ban|p104|00, book-ml-co-ban|p104|v00].",
+  "citations": [
+   "book-ml-co-ban|p104|00",
+   "book-ml-co-ban|p104|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad04",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình minh hoạ bài toán phân loại nhị phân ở đầu chương perceptron, điểm tam giác được phân vào tập nào?",
+  "expected": "Được phân vào tập các điểm hình tròn (Hình 13.1b).",
+  "answer": "Trong hình minh họa bài toán phân loại nhị phân ở đầu chương perceptron (Hình 13.1), điểm tam giác được phân vào tập các điểm hình tròn [book-ml-co-ban|p176|v00].",
+  "citations": [
+   "book-ml-co-ban|p176|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad05",
+  "group": "image",
+  "status": "answered",
+  "question": "Theo chú giải của hình so sánh các hàm kích hoạt ở chương hồi quy logistic, những hàm nào được vẽ?",
+  "expected": "4 hàm: hard threshold, f(s) = 1/(1+e^{-s}) (sigmoid), f(s) = e^s/(e^s + e^{-s}), và linear.",
+  "answer": "Theo chú giải của Hình 14.2 (chương hồi quy logistic), các hàm kích hoạt được vẽ bao gồm:\n1. Hàm ngưỡng cứng (`hard threshold`, đường nét liền) [book-ml-co-ban|p186|v01, book-ml-co-ban|p186|02].\n2. Hàm sigmoid ($f(s) = \\frac{1}{1+e^{-s}}$, đường chấm chấm) [book-ml-co-ban|p186|v01].\n3. Hàm tanh dạng dịch chuyển ($f(s) = \\frac{e^s}{e^s+e^{-s}}$, đường gạch chấm đứt đoạn) [book-ml-co-ban|p186|v01].\n4. Hàm tuyến tính (`linear`, đường gạch đứt dài) [book-ml-co-ban|p186|v01].",
+  "citations": [
+   "book-ml-co-ban|p186|v01",
+   "book-ml-co-ban|p186|02"
+  ],
+  "pass": true,
+  "reason": "Đủ 4 hàm đúng công thức; gọi hàm thứ ba là 'tanh dạng dịch chuyển' — nhãn không có trong chú giải nhưng đúng toán học (e^s/(e^s+e^-s) = (1+tanh s)/2).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad06",
+  "group": "image",
+  "status": "answered",
+  "question": "Ảnh khuôn mặt sau khi phân cụm K-means trong chương 10 được chia thành bao nhiêu cụm màu, là những màu nào?",
+  "expected": "3 cụm, tương ứng ba màu đỏ, hồng, đen (ảnh màu ở Hình B.4).",
+  "answer": "Ảnh khuôn mặt sau khi phân cụm K-means trong bài toán tách vật thể ở Chương 10 được chia thành **3** cụm màu, đó là các màu: **đỏ, hồng, đen** [book-ml-co-ban|p140|v00].",
+  "citations": [
+   "book-ml-co-ban|p140|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad07",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp, giá trị mất mát ban đầu khoảng bao nhiêu và trục hoành kéo dài tới khoảng bao nhiêu vòng lặp?",
+  "expected": "Bắt đầu khoảng 9; trục số vòng lặp tới khoảng 2500 (mất mát giảm về khoảng 4.5–5).",
+  "answer": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp (Hình 29.6):\n- Giá trị mất mát ban đầu (tại vòng lặp 0) là khoảng **9** [book-ml-co-ban|p398|v00].\n- Trục hoành (số vòng lặp - number of iterations) kéo dài tới khoảng **2500** vòng lặp [book-ml-co-ban|p398|v00].",
+  "citations": [
+   "book-ml-co-ban|p398|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad08",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị hàm mất mát của ví dụ hồi quy softmax năm lớp, giá trị mất mát ở epoch đầu khoảng bao nhiêu và huấn luyện bao nhiêu epoch?",
+  "expected": "Khoảng 15–16 ở epoch đầu, giảm gần 0 rất nhanh; trục epoch tới 100.",
+  "answer": "Trong đồ thị hàm mất mát của ví dụ hồi quy softmax năm lớp (Hình 15.5a):\n- Giá trị mất mát ở epoch đầu (epoch 0) là khoảng **15,4** [book-ml-co-ban|p211|v00].\n- Số epoch huấn luyện là **100** epoch (trục hoành biểu diễn số epoch từ 0 đến 100) [book-ml-co-ban|p211|00].",
+  "citations": [
+   "book-ml-co-ban|p211|00",
+   "book-ml-co-ban|p211|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad09",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị giá trị hàm mất mát của hồi quy logistic (bài toán dự đoán đỗ/trượt), mất mát bắt đầu khoảng bao nhiêu và hội tụ quanh giá trị nào?",
+  "expected": "Bắt đầu khoảng 1.1, hội tụ quanh khoảng 0.4 (trước khoảng 100 vòng lặp; trục tới 500).",
+  "answer": "Trong đồ thị giá trị hàm mất mát qua các vòng lặp (Hình 14.3b) của bài toán hồi quy logistic dự đoán đỗ/trượt, giá trị hàm mất mát bắt đầu từ **khoảng trên 1.1** ở vòng lặp 0 và hội tụ ổn định quanh mức **khoảng 0.4** [book-ml-co-ban|p192|v00].",
+  "citations": [
+   "book-ml-co-ban|p192|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad10",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm, bộ phân loại dùng hàm hạt nhân nào với gamma bao nhiêu, công thức của hàm đó theo bảng hàm hạt nhân thông dụng là gì, và đạt độ chính xác bao nhiêu?",
+  "expected": "Hạt nhân rbf, gamma = 0.1 (coef0 = 0); công thức exp(−γ‖x − z‖²₂); độ chính xác 94.22%.",
+  "answer": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm (Mục 28.4.3), bộ phân loại sử dụng hàm hạt nhân RBF (`kernel='rbf'`) [book-ml-co-ban|p386|00] với tham số gamma bằng $0.1$ (`gamma=.1`) [book-ml-co-ban|p386|00] và coef0 bằng $0$ [book-ml-co-ban|p386|00].\n\nTheo Bảng các hàm hạt nhân thông dụng (Bảng 28.2), công thức của hàm hạt nhân RBF (hạt nhân cơ sở radial hay hạt nhân Gauss) là:\n$$k(\\mathbf{x}, \\mathbf{z}) = \\exp(-\\gamma\\|\\mathbf{x} - \\mathbf{z}\\|_2^2), \\quad \\gamma > 0$$\n[book-ml-co-ban|p383|00, book-ml-co-ban|p383|v00]\n\nMô hình đạt độ chính xác khoảng 94.22% (khoảng 94%) trên tập kiểm tra [book-ml-co-ban|p386|00].",
+  "citations": [
+   "book-ml-co-ban|p383|00",
+   "book-ml-co-ban|p383|v00",
+   "book-ml-co-ban|p386|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad11",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, có bao nhiêu sinh viên ôn dưới 2 giờ mà vẫn thi đỗ, và trong đồ thị kết quả thi theo số giờ ôn tập các sinh viên đỗ được biểu diễn bằng ký hiệu gì?",
+  "expected": "1 sinh viên (1.75 giờ); sinh viên đỗ được biểu diễn bằng hình vuông.",
+  "answer": "Theo bảng thời gian ôn thi của 20 sinh viên, có 1 sinh viên ôn dưới 2 giờ (cụ thể là 1.75 giờ) mà vẫn thi đỗ [book-ml-co-ban|p185|v00]. Trong đồ thị kết quả thi theo số giờ ôn tập (Hình 14.1), các sinh viên đỗ được biểu diễn bằng ký hiệu hình vuông [book-ml-co-ban|p186|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00",
+   "book-ml-co-ban|p186|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad12",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng so sánh mạng neuron và SVM, SVM lề cứng tương đồng với thuật toán nào, và hình minh hoạ ở đầu chương SVM cho thấy điều kiện gì của dữ liệu cùng với bao nhiêu đường phân chia được vẽ?",
+  "expected": "Tương đồng với PLA (perceptron); dữ liệu hai lớp tách biệt tuyến tính, có vô số đường thẳng phân chia; hình vẽ 3 đường.",
+  "answer": "Dựa theo bảng so sánh giữa mạng neuron và máy vector hỗ trợ (Bảng 28.1):\n- **SVM lề cứng** có sự tương đồng với thuật toán **PLA** (Perceptron Learning Algorithm) trong điều kiện dữ liệu của hai lớp **tách biệt tuyến tính** [book-ml-co-ban|p378|01].\n\nVề hình minh họa ở đầu chương SVM, nội dung sách không đề cập chi tiết đến số lượng đường phân chia được vẽ hoặc điều kiện cụ thể của dữ liệu trong hình đầu tiên của chương này [book-ml-co-ban|p351|02].",
+  "citations": [
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p351|02"
+  ],
+  "pass": false,
+  "reason": "Không tìm ra Hình 26.1; nói sách 'không đề cập' số đường phân chia -> thiếu nửa câu (câu dev mơ hồ, như các lần trước).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad13",
+  "group": "text",
+  "status": "answered",
+  "question": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là gì và ví dụ cặp dữ liệu nhiễu nào được dùng để minh hoạ?",
+  "expected": "Rất nhạy cảm với nhiễu; ví dụ chỉ một cặp nhiễu (150 cm, 90 kg) làm kết quả sai khác rất nhiều.",
+  "answer": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise) [book-ml-co-ban|p106|01]. Ví dụ cặp dữ liệu nhiễu được dùng để minh họa trong bài toán quan hệ giữa chiều cao và cân nặng là (150 cm, 90 kg) [book-ml-co-ban|p106|01].",
+  "citations": [
+   "book-ml-co-ban|p106|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad14",
+  "group": "text",
+  "status": "answered",
+  "question": "Trong phân cụm theo tầng kiểu agglomerative dựa trên K-means, ban đầu K được chọn như thế nào?",
+  "expected": "Chọn K là một số lớn gần bằng số điểm dữ liệu, sau đó ghép các cụm gần nhau.",
+  "answer": "Trong phân cụm theo tầng kiểu agglomerative dựa trên K-means, ban đầu $K$ được chọn là một số lớn gần bằng số điểm dữ liệu [book-ml-co-ban|p138|01].",
+  "citations": [
+   "book-ml-co-ban|p138|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad15",
+  "group": "text",
+  "status": "answered",
+  "question": "Theo phần tóm tắt chương ước lượng tham số, MAP có thể được coi như phương pháp giúp ích trong trường hợp nào?",
+  "expected": "Giúp tránh thiên lệch khi có ít dữ liệu huấn luyện.",
+  "answer": "Theo phần tóm tắt chương ước lượng tham số, MAP có thể được coi như một phương pháp giúp tránh thiên lệch khi có ít dữ liệu huấn luyện [book-ml-co-ban|p077|01].",
+  "citations": [
+   "book-ml-co-ban|p077|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad16",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Theo bảng dữ liệu chiều cao và cân nặng của 15 người, tuổi trung bình của nhóm người này là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến thông tin về tuổi của nhóm người trong bảng dữ liệu (Bảng 7.1 chỉ cung cấp chiều cao và cân nặng của 15 người) [book-ml-co-ban|p104|v00].",
+  "citations": [],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad17",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số kiểm tra khi bậc đa thức bằng 10 là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến giá trị sai số kiểm tra khi bậc đa thức bằng 10; trong hình 8.2, bậc của đa thức chỉ được xét và hiển thị từ một đến tám [book-ml-co-ban|p112|03, book-ml-co-ban|p112|v00].",
+  "citations": [],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad18",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Theo bảng các hàm hạt nhân thông dụng, công thức của hạt nhân Laplacian là gì?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến công thức của hạt nhân Laplacian trong bảng các hàm hạt nhân thông dụng (sách chỉ đề cập đến các hàm tuyến tính, đa thức, sigmoid và rbf).",
+  "citations": [
+   "book-ml-co-ban|p383|v00"
+  ],
+  "pass": true,
+  "reason": "Nêu rõ không có hạt nhân Laplacian (status answered).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad19",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của những người cao không quá 155 cm là bao nhiêu?",
+  "expected": "50.5 kg (147→49, 150→50, 153→51, 155→52; (49+50+51+52)/4).",
+  "answer": "Dựa vào Bảng 7.1, những người có chiều cao không quá 155 cm gồm 4 người với các mức cân nặng lần lượt là 49 kg, 50 kg, 51 kg và 52 kg [book-ml-co-ban|p104|v00]. Cân nặng trung bình của những người này là (49 + 50 + 51 + 52) / 4 = 50,5 kg.",
+  "citations": [
+   "book-ml-co-ban|p104|v00"
+  ],
+  "pass": true,
+  "reason": "50.5 kg, dùng calculate.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "id": "ad20",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo công thức xác suất thi đỗ tìm được bằng hồi quy logistic ở chương 14, xác suất đỗ dự đoán cho sinh viên ôn 1.75 giờ là bao nhiêu, và trong bảng thời gian ôn thi các sinh viên ôn 1.75 giờ có kết quả thế nào?",
+  "expected": "≈ 0.20 (sigmoid(1.54×1.75 − 4.06) = sigmoid(−1.365)); trong Bảng 14.1 có hai sinh viên ôn 1.75 giờ: một trượt (0), một đỗ (1).",
+  "answer": "Theo chương 14 (Hồi quy logistic), nghiệm của mô hình hồi quy logistic cho bài toán dự đoán kết quả thi dựa trên thời gian học là:\n$\\text{probability\\_of\\_pass} \\approx \\text{sigmoid}(1.54 \\times \\text{hours\\_of\\_studying} - 4.06)$ [book-ml-co-ban|p191|01].\n\nVới thời gian ôn thi là $1.75$ giờ, xác suất đỗ dự đoán tính được là khoảng $0.2036$ (hoặc khoảng $20.36\\%$) [book-ml-co-ban|p191|01].\n\nTrong bảng thời gian ôn thi (Bảng 14.1), có hai sinh viên ôn thi $1.75$ giờ, trong đó có một sinh viên trượt ($0$) và một sinh viên đỗ ($1$) [book-ml-co-ban|p185|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00",
+   "book-ml-co-ban|p191|01"
+  ],
+  "pass": true,
+  "reason": "≈0.2036 (calculate) + hai sinh viên 1.75 giờ: 1 trượt, 1 đỗ.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ }
+]

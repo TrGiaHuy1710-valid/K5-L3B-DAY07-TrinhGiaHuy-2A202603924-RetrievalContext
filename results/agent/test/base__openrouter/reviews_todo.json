@@ -1,0 +1,98 @@
+[
+ {
+  "query_id": "t01",
+  "answerable": true,
+  "status": "answered",
+  "question": "Với bài toán tối ưu có một ràng buộc đẳng thức, điểm tối ưu thoả mãn điều kiện nào theo phương pháp nhân tử Lagrange?",
+  "answer": "Theo phương pháp nhân tử Lagrange, điểm tối ưu của bài toán với một ràng buộc đẳng thức thoả mãn điều kiện sau:\n\n1. ∇xL(x, λ) = ∇xf0(x) + λ∇xf1(x) = 0\n2. f1(x) = 0\n\nTrong đó, ∇xL(x, λ) là gradient của hàm Lagrange, và f1(x) là ràng buộc trong bài toán.",
+  "citations": [
+   "book-ml-co-ban|p402|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t02",
+  "answerable": true,
+  "status": "abstain",
+  "question": "Hàm hạt nhân (kernel) k(x, z) trong SVM được định nghĩa như thế nào?",
+  "answer": "Sách không đề cập đến định nghĩa của hàm hạt nhân trong SVM.",
+  "citations": [],
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t03",
+  "answerable": true,
+  "status": "answered",
+  "question": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh như thế nào?",
+  "answer": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh nhờ vào tính đơn giản trong tính toán và khả năng giúp việc huấn luyện các mạng neuron đa tầng nhanh hơn rất nhiều. Cụ thể, đạo hàm của ReLU bằng không tại các điểm âm và bằng một tại các điểm dương, điều này giúp giảm thiểu vấn đề vanishing gradient mà thường gặp ở hàm tanh. [book-ml-co-ban|p219|02]",
+  "citations": [
+   "book-ml-co-ban|p219|02"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t04",
+  "answerable": true,
+  "status": "abstain",
+  "question": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gì?",
+  "answer": "Sách không đề cập đến phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng.",
+  "citations": [],
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t05",
+  "answerable": true,
+  "status": "answered",
+  "question": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra vấn đề gì?",
+  "answer": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch trong kết quả đánh giá. Để khắc phục tình trạng này, một giải pháp là sử dụng xác thực chéo (cross-validation) để có được đánh giá chính xác hơn.",
+  "citations": [
+   "book-ml-co-ban|p112|02"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t06",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Cơ chế self-attention trong kiến trúc Transformer/BERT tính trọng số chú ý giữa các từ như thế nào?",
+  "answer": "Sách không đề cập đến cơ chế self-attention trong kiến trúc Transformer/BERT và cách tính trọng số chú ý giữa các từ.",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ },
+ {
+  "query_id": "t07",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Thuật toán cây quyết định ID3 chọn thuộc tính để chia nút dựa trên information gain như thế nào?",
+  "answer": "Sách không đề cập đến cách thuật toán cây quyết định ID3 chọn thuộc tính để chia nút dựa trên information gain.",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ }
+]

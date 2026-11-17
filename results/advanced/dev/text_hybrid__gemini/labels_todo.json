@@ -1,0 +1,236 @@
+[
+ {
+  "id": "ad01",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các thuật ngữ trong bài toán tối ưu (chương 24), ký hiệu nào biểu diễn đẳng thức ràng buộc và thuật ngữ tiếng Anh tương ứng là gì?",
+  "expected": "Ký hiệu h_j(x) = 0; tiếng Anh: equality constraint.",
+  "answer": "Theo bảng các thuật ngữ trong bài toán tối ưu (Bảng 24.1, chương 24), ký hiệu biểu diễn đẳng thức ràng buộc là $h_j(x) = 0$ và thuật ngữ tiếng Anh tương ứng là **equality constraint** [book-ml-co-ban|p325|00].",
+  "citations": [
+   "book-ml-co-ban|p325|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad02",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng quy ước ký hiệu của sách, ký hiệu ⊙ có nghĩa là gì?",
+  "expected": "Hadamard product (elementwise product): phép nhân từng phần tử của hai vector hoặc ma trận cùng kích thước.",
+  "answer": "Trong sách \"Machine Learning cơ bản\", ký hiệu $\\odot$ được dùng để chỉ phép nhân từng thành phần hay còn gọi là tích Hadamard (Hadamard product) của hai ma trận cùng kích thước (hoặc vector), với công thức $C = A \\odot B$ nghĩa là các phần tử $c_{ij} = a_{ij}b_{ij}$ [book-ml-co-ban|p026|01].",
+  "citations": [
+   "book-ml-co-ban|p026|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad03",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng ở chương hồi quy tuyến tính, có bao nhiêu người cao từ 170 cm trở lên?",
+  "expected": "6 người (170, 173, 175, 178, 180, 183 cm).",
+  "answer": "Trong bảng dữ liệu về chiều cao và cân nặng ở chương hồi quy tuyến tính (Bảng 7.1), dữ liệu huấn luyện và kiểm tra bao gồm các mức chiều cao là: 147, 150, 153, 155, 158, 160, 163, 165, 168, 170, 173, 175, 178, 180 và 183 cm [book-ml-co-ban|p103|01, book-ml-co-ban|p104|00]. \n\nCác mức chiều cao từ 170 cm trở lên bao gồm: 170, 173, 175, 178, 180 và 183 cm [book-ml-co-ban|p104|00]. Tổng cộng có 6 người có chiều cao từ 170 cm trở lên [book-ml-co-ban|p104|00].",
+  "citations": [
+   "book-ml-co-ban|p103|01",
+   "book-ml-co-ban|p104|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad04",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình minh hoạ bài toán phân loại nhị phân ở đầu chương perceptron, điểm tam giác được phân vào tập nào?",
+  "expected": "Được phân vào tập các điểm hình tròn (Hình 13.1b).",
+  "answer": "Trong hình minh họa bài toán phân loại nhị phân ở đầu chương Perceptron (Hình 13.1), điểm tam giác được phân vào tập các điểm hình tròn [book-ml-co-ban|p176|00].",
+  "citations": [
+   "book-ml-co-ban|p176|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad05",
+  "group": "image",
+  "status": "answered",
+  "question": "Theo chú giải của hình so sánh các hàm kích hoạt ở chương hồi quy logistic, những hàm nào được vẽ?",
+  "expected": "4 hàm: hard threshold, f(s) = 1/(1+e^{-s}) (sigmoid), f(s) = e^s/(e^s + e^{-s}), và linear.",
+  "answer": "Trong chương hồi quy logistic, sách đề cập đến Hình 14.2 với các hàm kích hoạt khác nhau, trong đó có hàm kích hoạt tuyến tính (được biểu diễn bằng đường nét đứt) [book-ml-co-ban|p186|01] và hàm sigmoid (hồi quy logistic sử dụng hàm kích hoạt là hàm sigmoid) [book-ml-co-ban|p189|01].",
+  "citations": [
+   "book-ml-co-ban|p186|01",
+   "book-ml-co-ban|p189|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad06",
+  "group": "image",
+  "status": "answered",
+  "question": "Ảnh khuôn mặt sau khi phân cụm K-means trong chương 10 được chia thành bao nhiêu cụm màu, là những màu nào?",
+  "expected": "3 cụm, tương ứng ba màu đỏ, hồng, đen (ảnh màu ở Hình B.4).",
+  "answer": "Trong chương 10, bài toán tách vật thể trong ảnh sử dụng phân cụm K-means chia các điểm ảnh thành **3 cụm màu** [book-ml-co-ban|p139|00]. \n\nTùy theo từng đoạn trong sách, các màu này được mô tả như sau:\n- Ban đầu, bức ảnh được mô tả là có ba màu chủ đạo gồm: màu hồng (ở khăn và môi), màu đen (ở mắt, tóc và hậu cảnh), và màu da (ở vùng còn lại của khuôn mặt) [book-ml-co-ban|p139|00].\n- Khi thực hiện phân cụm K-means xong, kết quả nhận được tương ứng với ba màu: đỏ, hồng, đen [book-ml-co-ban|p140|00] (hoặc ba màu đỏ, đen và màu da) [book-ml-co-ban|p140|00].",
+  "citations": [
+   "book-ml-co-ban|p139|00",
+   "book-ml-co-ban|p140|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad07",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp, giá trị mất mát ban đầu khoảng bao nhiêu và trục hoành kéo dài tới khoảng bao nhiêu vòng lặp?",
+  "expected": "Bắt đầu khoảng 9; trục số vòng lặp tới khoảng 2500 (mất mát giảm về khoảng 4.5–5).",
+  "answer": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp (Hình 29.6), trục hoành biểu diễn số vòng lặp (number of iterations) kéo dài tới khoảng 2500 vòng lặp, và giá trị mất mát ban đầu nằm ở khoảng trên 9 [book-ml-co-ban|p398|00].",
+  "citations": [
+   "book-ml-co-ban|p398|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad08",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị hàm mất mát của ví dụ hồi quy softmax năm lớp, giá trị mất mát ở epoch đầu khoảng bao nhiêu và huấn luyện bao nhiêu epoch?",
+  "expected": "Khoảng 15–16 ở epoch đầu, giảm gần 0 rất nhanh; trục epoch tới 100.",
+  "answer": "Trong ví dụ hồi quy softmax năm lớp (Hình 15.5), đồ thị hàm mất mát qua các epoch cho thấy số lượng epoch huấn luyện là khoảng 16 epoch [book-ml-co-ban|p211|00]. Tuy nhiên, sách không cung cấp con số cụ thể bằng chữ cho giá trị mất mát ở epoch đầu tiên mà chỉ minh họa qua đồ thị (a) của Hình 15.5 [book-ml-co-ban|p211|00].",
+  "citations": [
+   "book-ml-co-ban|p211|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad09",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị giá trị hàm mất mát của hồi quy logistic (bài toán dự đoán đỗ/trượt), mất mát bắt đầu khoảng bao nhiêu và hội tụ quanh giá trị nào?",
+  "expected": "Bắt đầu khoảng 1.1, hội tụ quanh khoảng 0.4 (trước khoảng 100 vòng lặp; trục tới 500).",
+  "answer": "Dựa trên đồ thị giá trị hàm mất mát qua các vòng lặp trong bài toán hồi quy logistic (Hình 14.3b), giá trị mất mát bắt đầu từ khoảng 1.1 và sau khi giảm nhanh qua các vòng lặp, nó hội tụ sớm quanh giá trị khoảng 0.4 [book-ml-co-ban|p192|00].",
+  "citations": [
+   "book-ml-co-ban|p192|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad10",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm, bộ phân loại dùng hàm hạt nhân nào với gamma bao nhiêu, công thức của hàm đó theo bảng hàm hạt nhân thông dụng là gì, và đạt độ chính xác bao nhiêu?",
+  "expected": "Hạt nhân rbf, gamma = 0.1 (coef0 = 0); công thức exp(−γ‖x − z‖²₂); độ chính xác 94.22%.",
+  "answer": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm:\n- Bộ phân loại sử dụng hàm hạt nhân **rbf** (hạt nhân RBF hay hạt nhân Gauss) với tham số **$\\gamma = 0.1$** [book-ml-co-ban|p386|00].\n- Công thức của hàm hạt nhân RBF theo bảng hàm hạt nhân thông dụng là: \n  $$k(x, z) = \\exp(-\\gamma \\|x - z\\|_2^2), \\quad \\gamma > 0$$ [book-ml-co-ban|p383|00]\n- Mô hình đạt độ chính xác là **94.22%** [book-ml-co-ban|p386|00].",
+  "citations": [
+   "book-ml-co-ban|p383|00",
+   "book-ml-co-ban|p386|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad11",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, có bao nhiêu sinh viên ôn dưới 2 giờ mà vẫn thi đỗ, và trong đồ thị kết quả thi theo số giờ ôn tập các sinh viên đỗ được biểu diễn bằng ký hiệu gì?",
+  "expected": "1 sinh viên (1.75 giờ); sinh viên đỗ được biểu diễn bằng hình vuông.",
+  "answer": "Dựa trên bảng dữ liệu về 20 sinh viên trong sách:\n- Có **1** sinh viên ôn dưới 2 giờ (cụ thể là 1.75 giờ) mà vẫn thi đỗ (đạt giá trị 1) [book-ml-co-ban|p185|01].\n- Trong đồ thị kết quả thi theo số giờ ôn tập (Hình 14.1), các sinh viên đỗ (giá trị 1/pass) được biểu diễn bằng **các điểm hình vuông** [book-ml-co-ban|p186|00].",
+  "citations": [
+   "book-ml-co-ban|p185|01",
+   "book-ml-co-ban|p186|00"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad12",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng so sánh mạng neuron và SVM, SVM lề cứng tương đồng với thuật toán nào, và hình minh hoạ ở đầu chương SVM cho thấy điều kiện gì của dữ liệu cùng với bao nhiêu đường phân chia được vẽ?",
+  "expected": "Tương đồng với PLA (perceptron); dữ liệu hai lớp tách biệt tuyến tính, có vô số đường thẳng phân chia; hình vẽ 3 đường.",
+  "answer": "Theo bảng so sánh giữa mạng neuron và máy vector hỗ trợ (SVM), SVM lề cứng tương đồng với thuật toán **PLA** (Perceptron Learning Algorithm) trong trường hợp hai lớp tách biệt tuyến tính [book-ml-co-ban|p378|01]. \n\nTuy nhiên, sách không cung cấp đủ chi tiết về hình minh hoạ ở đầu chương SVM (ngoài thông tin về bài toán tìm đường phân chia với lề rộng nhất và các đường biên) để xác định chính xác điều kiện dữ liệu cụ thể và số lượng đường phân chia được vẽ [book-ml-co-ban|p351|02].",
+  "citations": [
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p351|02"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad13",
+  "group": "text",
+  "status": "answered",
+  "question": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là gì và ví dụ cặp dữ liệu nhiễu nào được dùng để minh hoạ?",
+  "expected": "Rất nhạy cảm với nhiễu; ví dụ chỉ một cặp nhiễu (150 cm, 90 kg) làm kết quả sai khác rất nhiều.",
+  "answer": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise) [book-ml-co-ban|p106|01]. \n\nCặp dữ liệu nhiễu được dùng để minh hoạ trong ví dụ về mối quan hệ giữa chiều cao và cân nặng là: (150 cm, 90kg) [book-ml-co-ban|p106|01].",
+  "citations": [
+   "book-ml-co-ban|p106|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad14",
+  "group": "text",
+  "status": "answered",
+  "question": "Trong phân cụm theo tầng kiểu agglomerative dựa trên K-means, ban đầu K được chọn như thế nào?",
+  "expected": "Chọn K là một số lớn gần bằng số điểm dữ liệu, sau đó ghép các cụm gần nhau.",
+  "answer": "Trong phương pháp phân cụm theo tầng kiểu agglomerative (đi từ dưới lên) dựa trên K-means, ban đầu ta chọn $K$ là một số lớn gần bằng số điểm dữ liệu [book-ml-co-ban|p138|01].",
+  "citations": [
+   "book-ml-co-ban|p138|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad15",
+  "group": "text",
+  "status": "answered",
+  "question": "Theo phần tóm tắt chương ước lượng tham số, MAP có thể được coi như phương pháp giúp ích trong trường hợp nào?",
+  "expected": "Giúp tránh thiên lệch khi có ít dữ liệu huấn luyện.",
+  "answer": "Theo phần tóm tắt của chương ước lượng tham số, MAP (ước lượng hậu nghiệm cực đại) có thể được coi như một phương pháp giúp tránh thiên lệch khi có ít dữ liệu huấn luyện [book-ml-co-ban|p077|01].",
+  "citations": [
+   "book-ml-co-ban|p077|01"
+  ],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad16",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Theo bảng dữ liệu chiều cao và cân nặng của 15 người, tuổi trung bình của nhóm người này là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách chỉ cung cấp bảng dữ liệu về chiều cao và cân nặng của 15 người [book-ml-co-ban|p104|00] chứ không đề cập đến thông tin về độ tuổi hay tuổi trung bình của nhóm người này.",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad17",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số kiểm tra khi bậc đa thức bằng 10 là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến giá trị cụ thể của sai số kiểm tra khi bậc đa thức bằng 10 trong Hình 8.2 (sách chỉ mô tả bậc của đa thức tăng từ một đến tám) [book-ml-co-ban|p111|03].",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ },
+ {
+  "id": "ad18",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Theo bảng các hàm hạt nhân thông dụng, công thức của hạt nhân Laplacian là gì?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến công thức của hạt nhân Laplacian trong bảng các hàm hạt nhân thông dụng [book-ml-co-ban|p383|01].",
+  "citations": [],
+  "pass": null,
+  "reason": ""
+ }
+]

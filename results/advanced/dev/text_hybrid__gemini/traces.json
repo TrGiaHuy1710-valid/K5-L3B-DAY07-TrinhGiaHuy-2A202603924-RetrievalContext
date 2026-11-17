@@ -1,0 +1,5229 @@
+[
+ {
+  "query_id": "ad01",
+  "question": "Theo bảng các thuật ngữ trong bài toán tối ưu (chương 24), ký hiệu nào biểu diễn đẳng thức ràng buộc và thuật ngữ tiếng Anh tương ứng là gì?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Theo bảng các thuật ngữ trong bài toán tối ưu (Bảng 24.1, chương 24), ký hiệu biểu diễn đẳng thức ràng buộc là $h_j(x) = 0$ và thuật ngữ tiếng Anh tương ứng là **equality constraint** [book-ml-co-ban|p325|00].",
+  "citations": [
+   "book-ml-co-ban|p325|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 691,
+    "completion_tokens": 33,
+    "cost_usd": null,
+    "latency_s": 22.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "bảng các thuật ngữ trong bài toán tối ưu chương 24 đẳng thức ràng buộc",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 482.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p325|00",
+      "page": 325,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p324|01",
+      "page": 324,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p326|01",
+      "page": 326,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p338|00",
+      "page": 338,
+      "rank": 4,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p326|00",
+      "page": 326,
+      "rank": 5,
+      "score": 0.0302
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p325|00",
+     "book-ml-co-ban|p324|01",
+     "book-ml-co-ban|p326|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p338|00",
+     "book-ml-co-ban|p326|00"
+    ],
+    "context_chars": 2226
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1557,
+    "completion_tokens": 119,
+    "cost_usd": null,
+    "latency_s": 1.12,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p325|00",
+   "book-ml-co-ban|p324|01",
+   "book-ml-co-ban|p326|01"
+  ],
+  "context": "[book-ml-co-ban|p325|00 | trang 325 | Bài toán tối ưu lồi]\nBảng 24.1: Bảng các thuật ngữ và ký hiệu trong bài toán tối ưu. Ký hiệu Tiếng Anh Tiếng Việt x ∈ Rn optimization variable biến tối ưu f0 : Rn → R objective/loss/cost/function hàm mục tiêu fi(x) ≤ 0 inequality constraint bất đẳng thức ràng buộc fi : Rn → R inequality constraint function hàm bất đẳng thức ràng buộc hj(x) = 0 equality constraint đẳng thức ràng buộc hj : Rn → R equality constraint function hàm đẳng thức ràng buộc D = Tm i=0 domfi ∩ Tp j=1 domhj domain tập xác định một tập con của D được gọi là tập khả khi (feasible set). Khi tập khả thi là một tập rỗng thì bài toán tối ưu (24.4) bất khả thi (infeasible). Một điểm nằm trong tập khả thi được gọi là điểm khả thi (feasible point). • Giá trị tối ưu (optimal value) của bài toán tối ưu (24.4) được định nghĩa là: p∗ = inf {f0(x)|fi(x) ≤ 0, i = 1, . . . , m; hj(x) = 0, j = 1, . . . , p} p∗ có thể nhận các giá trị ±∞.\n\n[book-ml-co-ban|p324|01 | trang 324 | Bài toán tối ưu lồi]\nTrước hết, chúng ta cần hiểu các khái niệm cơ bản trong một bài toán tối ưu. 24.2. Nhắc lại bài toán tối ưu 24.2.1. Các khái niệm cơ bản Bài toán tối ưu ở dạng tổng quát: x∗ = arg min x f0(x) thoả mãn: fi(x) ≤ 0, i = 1, 2, . . . , m hj(x) = 0, j = 1, 2, . . . , p (24.4) Phát biểu bằng lời: Tìm giá trị của biến x để tối thiểu hàm f0(x) trong số những giá trị x thoả mãn các điệu kiện ràng buộc. Ta có bảng khái niệm song ngữ và ký hiệu của bài toán tối ưu được trình bày trong Bảng 24.1. Ngoài ra: • Khi m = p = 0, bài toán (24.4) được gọi là bài toán tối ưu không ràng buộc (unconstrained optimization problem). • D là tập xác định, tức giao của tất cả các tập xác định của mọi hàm số xuất hiện trong bài toán. Tập hợp các điểm thoả mãn mọi điều kiện ràng buộc là 324 Machine Learning cơ bản\n\n[book-ml-co-ban|p326|01 | trang 326 | Bài toán tối ưu lồi]\n. . , (24.6) trong đó f0, f1, . . . , fm là các hàm lồi. So với bài toán tối ưu (24.4), bài toán tối ưu lồi (24.6) có thêm ba điều kiện: • Hàm mục tiêu là một hàm lồi. • Các hàm bất đẳng thức ràng buộc fi là các hàm lồi. • Hàm đẳng thức ràng buộc hj là hàm affine. Trong toán tối ưu, chúng ta đặc biệt quan tâm tới các bài toán tôi ưu lồi. 326 Machine Learning cơ bản",
+  "context_chars": 2226,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 2248,
+  "completion_tokens": 152,
+  "cost_usd": null,
+  "latency_s": 24.6,
+  "group": "table"
+ },
+ {
+  "query_id": "ad02",
+  "question": "Trong bảng quy ước ký hiệu của sách, ký hiệu ⊙ có nghĩa là gì?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong sách \"Machine Learning cơ bản\", ký hiệu $\\odot$ được dùng để chỉ phép nhân từng thành phần hay còn gọi là tích Hadamard (Hadamard product) của hai ma trận cùng kích thước (hoặc vector), với công thức $C = A \\odot B$ nghĩa là các phần tử $c_{ij} = a_{ij}b_{ij}$ [book-ml-co-ban|p026|01].",
+  "citations": [
+   "book-ml-co-ban|p026|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 673,
+    "completion_tokens": 23,
+    "cost_usd": null,
+    "latency_s": 0.92,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "⊙ ký hiệu bảng quy ước ký hiệu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 77.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p022|00",
+      "page": 22,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p325|00",
+      "page": 325,
+      "rank": 3,
+      "score": 0.0298
+     },
+     {
+      "id": "book-ml-co-ban|p019|01",
+      "page": 19,
+      "rank": 4,
+      "score": 0.029
+     },
+     {
+      "id": "book-ml-co-ban|p207|02",
+      "page": 207,
+      "rank": 5,
+      "score": 0.0288
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p022|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p325|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p019|01",
+     "book-ml-co-ban|p207|02"
+    ],
+    "context_chars": 2455
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1533,
+    "completion_tokens": 22,
+    "cost_usd": null,
+    "latency_s": 1.05,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "⊙ Hadamard product element-wise multiplication",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 141.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p026|01",
+      "page": 26,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p374|00",
+      "page": 374,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p022|01",
+      "page": 22,
+      "rank": 3,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p223|01",
+      "page": 223,
+      "rank": 4,
+      "score": 0.0292
+     },
+     {
+      "id": "book-ml-co-ban|p022|02",
+      "page": 22,
+      "rank": 5,
+      "score": 0.0291
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p026|01",
+     "book-ml-co-ban|p374|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p022|01",
+     "book-ml-co-ban|p223|01",
+     "book-ml-co-ban|p022|02"
+    ],
+    "context_chars": 3813
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2177,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 0.93,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 0.1 các quy ước ký hiệu ⊙",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 74.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p022|00",
+      "page": 22,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p325|00",
+      "page": 325,
+      "rank": 3,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p218|00",
+      "page": 218,
+      "rank": 4,
+      "score": 0.0285
+     },
+     {
+      "id": "book-ml-co-ban|p177|00",
+      "page": 177,
+      "rank": 5,
+      "score": 0.0272
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p022|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p325|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p218|00",
+     "book-ml-co-ban|p177|00"
+    ],
+    "context_chars": 3813
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2344,
+    "completion_tokens": 31,
+    "cost_usd": null,
+    "latency_s": 1.24,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "trang 23 Bảng 0.1 các quy ước ký hiệu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 87.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p022|00",
+      "page": 22,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p019|01",
+      "page": 19,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p325|00",
+      "page": 325,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p304|00",
+      "page": 304,
+      "rank": 5,
+      "score": 0.0297
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p022|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p325|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p019|01",
+     "book-ml-co-ban|p304|00"
+    ],
+    "context_chars": 3813
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2517,
+    "completion_tokens": 31,
+    "cost_usd": null,
+    "latency_s": 1.02,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "trang 24 Bảng 0.1 các quy ước ký hiệu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 62.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p022|00",
+      "page": 22,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p325|00",
+      "page": 325,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p019|01",
+      "page": 19,
+      "rank": 4,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p329|00",
+      "page": 329,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p022|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p325|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p019|01",
+     "book-ml-co-ban|p329|00"
+    ],
+    "context_chars": 3813
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2690,
+    "completion_tokens": 31,
+    "cost_usd": null,
+    "latency_s": 0.9,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "trang 25 Bảng 0.1 các quy ước ký hiệu"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 2755,
+    "completion_tokens": 139,
+    "cost_usd": null,
+    "latency_s": 1.21,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p022|00",
+   "book-ml-co-ban|p021|02",
+   "book-ml-co-ban|p325|00",
+   "book-ml-co-ban|p026|01",
+   "book-ml-co-ban|p374|00"
+  ],
+  "context": "[book-ml-co-ban|p022|00 | trang 22 | Bảng các ký hiệu]\nBảng 0.1: Các quy ước ký hiệu và tên gọi được sử dụng trong sách Ký hiệu Ý nghĩa x, y, N, k in nghiêng, thường hoặc hoa, là các số vô hướng x, y in đậm, chữ thường, là các vector X, Y in đậm, chữ hoa, là các ma trận R tập hợp các số thực N tập hợp các số tự nhiên C tập hợp các số phức Rm tập hợp các vector thực có m phần tử Rm×n tập hợp các ma trận thực có m hàng, n cột Sn tập hợp các ma trận vuông đối xứng bậc n Sn + tập hợp các ma trận nửa xác định dương bậc n Sn ++ tập hợp các ma trận xác định dương bậc n ∈ phần tử thuộc tập hợp ∃ tồn tại ∀ mọi ≜ ký hiệu là/bởi. Ví dụ a ≜ f(x) nghĩa là “ký hiệu f(x) bởi a”. xi phần tử thứ i (tính từ 1) của vector x sgn(x) hàm xác định dấu. Bằng 1 nếu x ≥ 0, bằng -1 nếu x < 0.\n\n[book-ml-co-ban|p021|02 | trang 21 | Bảng các ký hiệu]\nNgoài ta, cũng xin cảm ơn những người bạn thân của tôi tại Penn State (ĐH bang Pennsylvania) đã luôn bên cạnh tôi trong thời gian tôi thực hiện dự án, bao gồm gia đình anh Triệu Thanh Quang, gia đình anh Trần Quốc Long, bạn thân Nguyễn Phương Chi, và các đồng nghiệp tại Phòng nghiên cứu Xử lý Thông tin và Thuật toán (Information Processing and Algorithm Laboratory, iPAL). Cuối cùng và quan trọng nhất, xin gửi lời cảm ơn sâu sắc nhất tới gia đình tôi, những người luôn ủng hộ vô điều kiện và hỗ trợ tôi hết mình trong quá trình thực hiện dự án này. 0.11. Bảng các ký hiệu Các ký hiệu sử dụng trong sách được liệt kê trong Bảng 0.1 ở trang tiếp theo. Machine Learning cơ bản\n\n[book-ml-co-ban|p325|00 | trang 325 | Bài toán tối ưu lồi]\nBảng 24.1: Bảng các thuật ngữ và ký hiệu trong bài toán tối ưu. Ký hiệu Tiếng Anh Tiếng Việt x ∈ Rn optimization variable biến tối ưu f0 : Rn → R objective/loss/cost/function hàm mục tiêu fi(x) ≤ 0 inequality constraint bất đẳng thức ràng buộc fi : Rn → R inequality constraint function hàm bất đẳng thức ràng buộc hj(x) = 0 equality constraint đẳng thức ràng buộc hj : Rn → R equality constraint function hàm đẳng thức ràng buộc D = Tm i=0 domfi ∩ Tp j=1 domhj domain tập xác định một tập con của D được gọi là tập khả khi (feasible set). Khi tập khả thi là một tập rỗng thì bài toán tối ưu (24.4) bất khả thi (infeasible). Một điểm nằm trong tập khả thi được gọi là điểm khả thi (feasible point). • Giá trị tối ưu (optimal value) của bài toán tối ưu (24.4) được định nghĩa là: p∗ = inf {f0(x)|fi(x) ≤ 0, i = 1, . . . , m; hj(x) = 0, j = 1, . . . , p} p∗ có thể nhận các giá trị ±∞.\n\n[book-ml-co-ban|p026|01 | trang 26 | Ôn tập Đại số tuyến tính]\nxHx ≥ 0, ∀x ∈ Cn vì tích của một số phức với liên hiệp của nó luôn là một số không âm. Phép nhân của một ma trận A ∈ Rm×n với một vector x ∈ Rn là một vector b ∈ Rm: Ax = b, với bi = Ai,:x (1.5) với Ai,: là vector hàng thứ i của A. Ngoài ra, có một phép nhân khác được gọi là phép nhân từng thành phần hay tích Hadamard (Hadamard product) thường xuyên được sử dụng trong machine learning. Tích Hadamard của hai ma trận cùng kích thước A, B ∈ Rm×n, được ký hiệu là C = A ⊙ B ∈ Rm×n, trong đó: cij = aijbij (1.6) 1.4. Ma trận đơn vị và ma trận nghịch đảo 26 Machine Learning cơ bản\n\n[book-ml-co-ban|p374|00 | trang 374 | Máy vector hỗ trợ lề mềm]\nlam = 1./C def loss(X, y, w, b): \"\"\" X.shape = (2N, d), y.shape = (2N,), w.shape = (d,), b is a scalar \"\"\" z = X.dot(w) + b # shape (2N,) yz = y*z return (np.sum(np.maximum(0, 1 - yz)) + .5*lam*w.dot(w))/X.shape[0] def grad(X, y, w, b): z = X.dot(w) + b # shape (2N,) yz = y*z # element wise product, shape (2N,) active_set = np.where(yz <= 1)[0] # consider 1 - yz >= 0 only _yX = - X*y[:, np.newaxis] # each row is y_n*x_n grad_w = (np.sum(_yX[active_set], axis = 0) + lam*w)/X.shape[0] grad_b = (-np.sum(y[active_set]))/X.shape[0] return (grad_w, grad_b) def num_grad(X, y, w, b): eps = 1e-10 gw = np.zeros_like(w) gb = 0 for i in xrange(len(w)):",
+  "context_chars": 3813,
+  "n_llm_calls": 7,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 14689,
+  "completion_tokens": 305,
+  "cost_usd": null,
+  "latency_s": 7.71,
+  "group": "table"
+ },
+ {
+  "query_id": "ad03",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng ở chương hồi quy tuyến tính, có bao nhiêu người cao từ 170 cm trở lên?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong bảng dữ liệu về chiều cao và cân nặng ở chương hồi quy tuyến tính (Bảng 7.1), dữ liệu huấn luyện và kiểm tra bao gồm các mức chiều cao là: 147, 150, 153, 155, 158, 160, 163, 165, 168, 170, 173, 175, 178, 180 và 183 cm [book-ml-co-ban|p103|01, book-ml-co-ban|p104|00]. \n\nCác mức chiều cao từ 170 cm trở lên bao gồm: 170, 173, 175, 178, 180 và 183 cm [book-ml-co-ban|p104|00]. Tổng cộng có 6 người có chiều cao từ 170 cm trở lên [book-ml-co-ban|p104|00].",
+  "citations": [
+   "book-ml-co-ban|p103|01",
+   "book-ml-co-ban|p104|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": false
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 685,
+    "completion_tokens": 32,
+    "cost_usd": null,
+    "latency_s": 1.16,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "bảng dữ liệu chiều cao cân nặng hồi quy tuyến tính 170 cm",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 68.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p103|01",
+      "page": 103,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p106|01",
+      "page": 106,
+      "rank": 3,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p100|00",
+      "page": 100,
+      "rank": 4,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p100|01",
+      "page": 100,
+      "rank": 5,
+      "score": 0.0297
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p104|00",
+     "book-ml-co-ban|p103|01",
+     "book-ml-co-ban|p106|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p100|00",
+     "book-ml-co-ban|p100|01"
+    ],
+    "context_chars": 2724
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1831,
+    "completion_tokens": 90,
+    "cost_usd": null,
+    "latency_s": 1.4,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "15 người Chiều cao (cm) Cân nặng (kg) 147 150 153 155 158 160 163 165 168 170 173 175 178 180 183",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 87.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p103|01",
+      "page": 103,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p284|01",
+      "page": 284,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p105|00",
+      "page": 105,
+      "rank": 4,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p202|00",
+      "page": 202,
+      "rank": 5,
+      "score": 0.029
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p284|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p104|00",
+     "book-ml-co-ban|p103|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p105|00",
+     "book-ml-co-ban|p202|00"
+    ],
+    "context_chars": 3442
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2347,
+    "completion_tokens": 37,
+    "cost_usd": null,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 7.1: Bảng dữ liệu về chiều cao và cân nặng của 15 người",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 78.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p103|01",
+      "page": 103,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p284|01",
+      "page": 284,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p202|00",
+      "page": 202,
+      "rank": 4,
+      "score": 0.0277
+     },
+     {
+      "id": "book-ml-co-ban|p106|01",
+      "page": 106,
+      "rank": 5,
+      "score": 0.0159
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p104|00",
+     "book-ml-co-ban|p103|01",
+     "book-ml-co-ban|p284|01",
+     "book-ml-co-ban|p106|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p202|00"
+    ],
+    "context_chars": 3442
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2548,
+    "completion_tokens": 85,
+    "cost_usd": null,
+    "latency_s": 0.8,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]])",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 94.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p211|01",
+      "page": 211,
+      "rank": 2,
+      "score": 0.0289
+     },
+     {
+      "id": "book-ml-co-ban|p384|01",
+      "page": 384,
+      "rank": 3,
+      "score": 0.0284
+     },
+     {
+      "id": "book-ml-co-ban|p373|01",
+      "page": 373,
+      "rank": 4,
+      "score": 0.0278
+     },
+     {
+      "id": "book-ml-co-ban|p262|00",
+      "page": 262,
+      "rank": 5,
+      "score": 0.0164
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p104|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p211|01",
+     "book-ml-co-ban|p384|01",
+     "book-ml-co-ban|p373|01",
+     "book-ml-co-ban|p262|00"
+    ],
+    "context_chars": 3442
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2797,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 1.03,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 7.1 chiều cao cân nặng",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 59.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p103|01",
+      "page": 103,
+      "rank": 2,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p105|00",
+      "page": 105,
+      "rank": 3,
+      "score": 0.0293
+     },
+     {
+      "id": "book-ml-co-ban|p100|01",
+      "page": 100,
+      "rank": 4,
+      "score": 0.028
+     },
+     {
+      "id": "book-ml-co-ban|p125|01",
+      "page": 125,
+      "rank": 5,
+      "score": 0.0161
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p104|00",
+     "book-ml-co-ban|p103|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p105|00",
+     "book-ml-co-ban|p100|01",
+     "book-ml-co-ban|p125|01"
+    ],
+    "context_chars": 3442
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2942,
+    "completion_tokens": 56,
+    "cost_usd": null,
+    "latency_s": 0.77,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "147 49 168 60 150 50 170 72 153 51 173 63"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 3032,
+    "completion_tokens": 304,
+    "cost_usd": null,
+    "latency_s": 1.64,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p104|00",
+   "book-ml-co-ban|p103|01",
+   "book-ml-co-ban|p106|01",
+   "book-ml-co-ban|p284|01"
+  ],
+  "context": "[book-ml-co-ban|p104|00 | trang 104 | Hồi quy tuyến tính]\nBảng 7.1: Bảng dữ liệu về chiều cao và cân nặng của 15 người Chiều cao (cm) Cân nặng (kg) Chiều cao (cm) Cân nặng (kg) 147 49 168 60 150 50 170 72 153 51 173 63 155 52 175 64 158 54 178 66 160 56 180 67 163 58 183 68 165 59 7.3.2. Hiển thị dữ liệu trên đồ thị Trước tiên, ta khai báo dữ liệu huấn luyện. from __future__ import print_function import numpy as np import matplotlib.pyplot as plt X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]]).T # height (cm), input data, each row is a data point # weight (kg) y = np.array([ 49, 50, 51, 54, 58, 59, 60, 62, 63, 64, 66, 67, 68]) Các điểm dữ liệu được minh hoạ bởi các điểm hình tròn trong Hình 7.1. Ta thấy rằng dữ liệu được sắp xếp gần như theo một đường thẳng, vậy mô hình hồi quy tuyến tính sau đây có khả năng cho kết quả tốt, với w_0 là hệ số điều chỉnh b: (cân nặng) = w_1*(chiều cao) + w_0 7.3.3.\n\n[book-ml-co-ban|p103|01 | trang 103 | Hồi quy tuyến tính]\n, ¯xN], ta có nghiệm của bài toán tối thiểu hàm mất mát ¯w = argmin w 1 2N ∥y − ¯XT ¯w∥2 2 = ( ¯X ¯XT )† ¯Xy (7.12) Kỹ thuật thêm một đặc trưng x0 = 1 vào vector đặc trưng và ghép hệ số điều chỉnh b vào vector trọng số w như trên còn được gọi là thủ thuật gộp hệ số điều chỉnh (bias trick). Chúng ta sẽ gặp lại kỹ thuật đó nhiều lần trong cuốn sách này. 7.3. Ví dụ trên Python 7.3.1. Bài toán Xét một ví dụ đơn giản có thể áp dụng hồi quy tuyến tính. Chúng ta sẽ so sánh nghiệm của bài toán khi giải theo phương trình (7.12) và nghiệm tìm được khi dùng thư viện scikit-learn của Python. Giả sử có dữ liệu cân nặng và chiều cao của 15 người trong Bảng 7.1. Dữ liệu của hai người có chiều cao 155 cm và 160 cm được tách ra làm tập kiểm tra, phần còn lại tạo thành tập huấn luyện. Bài toán đặt ra là liệu có thể dự đoán cân nặng của một người dựa vào chiều cao của họ không? Có thể thấy là cân nặng thường tỉ lệ thuận với chiều cao, vì vậy hồi quy tuyến tính là một mô hình phù hợp. Machine Learning cơ bản\n\n[book-ml-co-ban|p106|01 | trang 106 | Hồi quy tuyến tính]\nMột ví dụ về hồi quy đa thức bậc 3 được thể hiện trong Hình 7.2a. 7.4.2. Hạn chế của hồi quy tuyến tính Hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise). Trong ví dụ về mối quan hệ giữa chiều cao và cân nặng bên trên, nếu có chỉ một cặp dữ liệu nhiễu (150 cm, 90kg) thì kết quả sẽ sai khác đi rất nhiều (xem Hình 7.2b). Một kỹ thuật giúp tránh hiện tượng này là loại bỏ các nhiễu trong quá trình tìm nghiệm. Việc làm này có thể phức tạp và tương đối tốn thời gian. Có một cách khác giúp tránh công việc loại bỏ nhiễu là sử dụng mất mát Huber 22. Hồi 22 Huber loss (https://goo.gl/TBUWzg) 106 Machine Learning cơ bản\n\n[book-ml-co-ban|p284|01 | trang 284 | Phân tích thành phần chính]\nCó tất cả 15 người khác nhau, mỗi người có 11 bức ảnh được chụp ở các điều kiện ánh sáng và cảm xúc khác nhau, bao gồm ’centerlight’, ’glasses’, ’happy’, ’leftlight’, ’noglasses’, ’normal’ , ’rightlight’,’sad’, ’sleepy’, ’surprised’, và ’wink’. Hình 21.5 minh hoạ các bức ảnh của người có id là 10. Ta thấy rằng số chiều dữ liệu 116 × 98 = 11368 là một số khá lớn. Tuy nhiên, vì chỉ có tổng cộng 15 × 11 = 165 bức ảnh nên ta có thể nén các bức ảnh này về dữ liệu mới có chiều nhỏ hơn 165. Trong ví dụ này, chúng ta chọn K = 100. Dưới đây là đoạn code thực hiện PCA cho toàn bộ dữ liệu. Ở đây, A trong sklearn được sử dụng: 284 Machine Learning cơ bản",
+  "context_chars": 3442,
+  "n_llm_calls": 7,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 16182,
+  "completion_tokens": 629,
+  "cost_usd": null,
+  "latency_s": 8.17,
+  "group": "table"
+ },
+ {
+  "query_id": "ad04",
+  "question": "Trong hình minh hoạ bài toán phân loại nhị phân ở đầu chương perceptron, điểm tam giác được phân vào tập nào?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong hình minh họa bài toán phân loại nhị phân ở đầu chương Perceptron (Hình 13.1), điểm tam giác được phân vào tập các điểm hình tròn [book-ml-co-ban|p176|00].",
+  "citations": [
+   "book-ml-co-ban|p176|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 682,
+    "completion_tokens": 23,
+    "cost_usd": null,
+    "latency_s": 0.86,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "perceptron phân loại nhị phân tam giác",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 61.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p175|00",
+      "page": 175,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p176|00",
+      "page": 176,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p197|02",
+      "page": 197,
+      "rank": 3,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p183|00",
+      "page": 183,
+      "rank": 4,
+      "score": 0.0296
+     },
+     {
+      "id": "book-ml-co-ban|p199|01",
+      "page": 199,
+      "rank": 5,
+      "score": 0.0295
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p175|00",
+     "book-ml-co-ban|p176|00",
+     "book-ml-co-ban|p197|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p183|00",
+     "book-ml-co-ban|p199|01"
+    ],
+    "context_chars": 2358
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1535,
+    "completion_tokens": 98,
+    "cost_usd": null,
+    "latency_s": 1.06,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p175|00",
+   "book-ml-co-ban|p176|00",
+   "book-ml-co-ban|p197|02"
+  ],
+  "context": "[book-ml-co-ban|p175|00 | trang 175 | Thuật toán học perceptron]\nChương 13 Thuật toán học perceptron 13.1. Giới thiệu Trong chương này, chúng ta cùng tìm hiểu một trong các thuật toán xuất hiện đầu tiên trong lịch sử machine learning. Đây là một phương pháp phân loại đơn giản có tên là thuật toán học perceptron (perceptron learning algorithm – PLA [Ros57]). Thuật toán này được thiết kế cho bài toán phân loại nhị phân khi dữ liệu chỉ thuộc một trong hai nhãn. Đây là nền tảng cho các thuật toán liên quan tới mạng neuron nhân tạo và gần đây là deep learning. Giả sử có hai tập dữ liệu hình vuông và tròn như được minh hoạ trong Hình 13.1a. Bài toán đặt ra là từ dữ liệu của hai tập được gán nhãn cho trước, hãy xây dựng một bộ phân loại có khả năng dự đoán nhãn của một điểm dữ liệu mới, chẳng hạn điểm hình tam giác màu xám.\n\n[book-ml-co-ban|p176|00 | trang 176 | Thuật toán học perceptron]\nx1 x2 ? (a) x1 x2 (b) Hình 13.1. Bài toán phân loại nhị phân trong không gian hai chiều. (a) Cho hai tập dữ liệu được gán nhãn vuông và tròn, hãy xác định nhãn của điểm tam giác. (b) Ví dụ về một ranh giới phẳng phân chia hai tập hợp. Điểm tam giác được phân vào tập các điểm hình tròn. 13.2. Thuật toán học perceptron 13.2.1. Quy tắc phân loại Giả sử X = [x1, x2, . . . , xN] ∈ Rd×N là ma trận chứa tập huấn luyện mà mỗi cột xi là một điểm dữ liệu trong không gian d chiều. Các nhãn được lưu trong một vector hàng y = [y1, y2, . . . , yN] ∈ R1×N với yi = 1 nếu xi mang nhãn vuông và yi = −1 nếu xi mang nhãn tròn. Tại một thời điểm, giả sử ranh giới là một siêu phẳng có phương trình fw(x) = w1x1 + · · · + wdxd + w0 = xT w + w0 = 0 (13.1) với w ∈ Rd là vector trọng số và w0 là hệ số điều chỉnh.\n\n[book-ml-co-ban|p197|02 | trang 197 | Hồi quy logistic]\nVí dụ, nếu có bốn nhãn thì chúng được mã hoá bởi 00, 01, 10, và 11. Số bộ phân loại nhị phân cần xây dựng chỉ là m = ⌈log2(C)⌉ trong đó C là số nhãn, ⌈a⌉ là số nguyên nhỏ nhất không nhỏ hơn a. Bộ phân loại đầu tiên giúp xác định bit đầu tiên của nhãn, bộ thứ hai xác định bit tiếp theo,.... Cách làm này sử dụng một số lượng nhỏ nhất các bộ phân loại nhị phân. Tuy nhiên, một điểm dữ liệu chỉ được phân loại đúng khi mọi bộ phân loại nhị phân dự đoán đúng bit tương ứng. Hơn nữa, nếu số nhãn không phải là lũy thừa của hai, mã nhị phân nhận được có thể không tương ứng với nhãn nào. Machine Learning cơ bản",
+  "context_chars": 2358,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 2217,
+  "completion_tokens": 121,
+  "cost_usd": null,
+  "latency_s": 1.97,
+  "group": "image"
+ },
+ {
+  "query_id": "ad05",
+  "question": "Theo chú giải của hình so sánh các hàm kích hoạt ở chương hồi quy logistic, những hàm nào được vẽ?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong chương hồi quy logistic, sách đề cập đến Hình 14.2 với các hàm kích hoạt khác nhau, trong đó có hàm kích hoạt tuyến tính (được biểu diễn bằng đường nét đứt) [book-ml-co-ban|p186|01] và hàm sigmoid (hồi quy logistic sử dụng hàm kích hoạt là hàm sigmoid) [book-ml-co-ban|p189|01].",
+  "citations": [
+   "book-ml-co-ban|p186|01",
+   "book-ml-co-ban|p189|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 678,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 0.92,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hàm kích hoạt hồi quy logistic hình chú giải",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 62.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p189|01",
+      "page": 189,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 3,
+      "score": 0.0305
+     },
+     {
+      "id": "book-ml-co-ban|p186|02",
+      "page": 186,
+      "rank": 4,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p194|00",
+      "page": 194,
+      "rank": 5,
+      "score": 0.03
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p189|01",
+     "book-ml-co-ban|p185|00",
+     "book-ml-co-ban|p186|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p186|02",
+     "book-ml-co-ban|p194|00"
+    ],
+    "context_chars": 2547
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1640,
+    "completion_tokens": 29,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.2 hàm kích hoạt đường nét đứt sigmoid",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 66.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 1,
+      "score": 0.0309
+     },
+     {
+      "id": "book-ml-co-ban|p189|01",
+      "page": 189,
+      "rank": 2,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p341|01",
+      "page": 341,
+      "rank": 3,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p384|00",
+      "page": 384,
+      "rank": 4,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p219|00",
+      "page": 219,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p341|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p186|01",
+     "book-ml-co-ban|p189|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p384|00",
+     "book-ml-co-ban|p219|00"
+    ],
+    "context_chars": 3207
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2015,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 1.04,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.2 hàm kích hoạt f(s)",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 61.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p218|01",
+      "page": 218,
+      "rank": 1,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 2,
+      "score": 0.03
+     },
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 3,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p189|01",
+      "page": 189,
+      "rank": 4,
+      "score": 0.0296
+     },
+     {
+      "id": "book-ml-co-ban|p220|00",
+      "page": 220,
+      "rank": 5,
+      "score": 0.0294
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p186|01",
+     "book-ml-co-ban|p185|00",
+     "book-ml-co-ban|p189|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p218|01",
+     "book-ml-co-ban|p220|00"
+    ],
+    "context_chars": 3207
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2181,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.2 các hàm kích hoạt",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 64.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p218|01",
+      "page": 218,
+      "rank": 1,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p220|00",
+      "page": 220,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 3,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p216|02",
+      "page": 216,
+      "rank": 4,
+      "score": 0.0297
+     },
+     {
+      "id": "book-ml-co-ban|p182|01",
+      "page": 182,
+      "rank": 5,
+      "score": 0.0297
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p182|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p186|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p218|01",
+     "book-ml-co-ban|p220|00",
+     "book-ml-co-ban|p216|02"
+    ],
+    "context_chars": 3977
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2521,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 0.91,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hàm kích hoạt sigmoid tuyến tính Hình 14.2",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 60.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p189|01",
+      "page": 189,
+      "rank": 1,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p218|01",
+      "page": 218,
+      "rank": 2,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p219|01",
+      "page": 219,
+      "rank": 3,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 4,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p219|00",
+      "page": 219,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p189|01",
+     "book-ml-co-ban|p185|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p218|01",
+     "book-ml-co-ban|p219|01",
+     "book-ml-co-ban|p219|00"
+    ],
+    "context_chars": 3977
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2672,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 0.91,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "Đường nét đứt biểu diễn một hàm kích hoạt tuyến tính"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 2734,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 0.92,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "hồi quy logistic Hình 14.2"
+   },
+   {
+    "event": "llm",
+    "step": 7,
+    "retries": 0,
+    "prompt_tokens": 2793,
+    "completion_tokens": 158,
+    "cost_usd": null,
+    "latency_s": 1.29,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p189|01",
+   "book-ml-co-ban|p185|00",
+   "book-ml-co-ban|p186|01",
+   "book-ml-co-ban|p341|01",
+   "book-ml-co-ban|p182|01"
+  ],
+  "context": "[book-ml-co-ban|p189|01 | trang 189 | Hồi quy logistic]\nThật vậy, (14.14) tương đương với ∂a a(1 − a) = ∂z ⇔ 1 a + 1 1 − a ∂a = ∂z ⇔ log a − log(1 − a) = z + C ⇔ log a 1 − a = z + C ⇔ a 1 − a = ez+C ⇔ a = ez+C(1 − a) ⇔ a = ez+C 1 + ez+C = 1 1 + e−z−C = σ(z + C) với C là một hằng số. Chọn C = 0, ta được a = f(xT w) = σ(z). Đây chính là hàm sigmoid. Hồi quy logistic với hàm kích hoạt là hàm sigmoid được sử dụng phổ biến nhất. Mô hình này còn có tên là hồi quy logistic sigmoid. Khi nói hồi quy logistic, ta ngầm hiểu rằng đó chính là hồi quy logistic sigmoid. Thay (14.13) và (14.14) vào (14.12) ta thu được ∇wJ(w; xi, yi) = (ai − yi)xi = (σ(xT i w) − yi)xi. (14.15) Machine Learning cơ bản\n\n[book-ml-co-ban|p185|00 | trang 185 | Hồi quy logistic]\nChương 14 Hồi quy logistic 14.1. Giới thiệu 14.1.1. Nhắc lại hai mô hình tuyến tính Hai mô hình tuyến tính đã thảo luận trong cuốn sách này, hồi quy tuyến tính và PLA, đều có thể viết chung dưới dạng y = f(xT w) trong đó f(s) là một hàm kích hoạt. Trong hồi quy tuyến tính f(s) = s, tích vô hướng xT w được trực tiếp sử dụng để dự đoán đầu ra y. Mô hình này phù hợp nếu ta cần dự đoán một đầu ra không bị chặn. PLA có đầu ra chỉ nhận một trong hai giá trị 1 hoặc −1 với hàm kích hoạt f(s) = sgn(s) phù hợp với các bài toán phân loại nhị phân. Trong chương này, chúng ta sẽ thảo luận một mô hình tuyến tính với một hàm kích hoạt khác, thường được áp dụng cho các bài toán phân loại nhị phân. Trong mô hình này, đầu ra có thể được biểu diễn dưới dạng xác suất. Ví dụ, xác suất thi đỗ nếu biết thời gian ôn thi, xác suất ngày mai có mưa dựa trên những thông tin đo được trong ngày hôm nay,...\n\n[book-ml-co-ban|p186|01 | trang 186 | Hồi quy logistic]\nTuy nhiên, thay vì dự đoán chính xác hai giá trị đỗ/trượt, ta có thể dự đoán xác suất để một sinh viên thi đỗ dựa trên thời gian ôn thi. 14.1.3. Mô hình hồi quy logistic Quan sát Hình 14.2 với các hàm kích hoạt f(s) khác nhau. • Đường nét đứt biểu diễn một hàm kích hoạt tuyến tính không phù hợp vì đầu ra không bị chặn. Có một cách đơn giản để đưa đầu ra về dạng bị chặn: nếu đầu ra nhỏ hơn không thì thay bằng không, nếu đầu ra lớn hơn một thì thay bằng một. Điểm phân chia, còn gọi là ngưỡng, được chọn là điểm có tung độ 0.5 trên đường thằng này. Đây cũng không phải là một lựa chọn tốt. Giả sử có thêm một bạn sinh viên tiêu biểu ôn tập đến 20 giờ hoặc hơn thi đỗ. Lúc này ngưỡng tương ứng với mốc tung độ bằng 0.5 sẽ dịch nhiều về phía phải. Kéo theo đó, rất nhiều sinh viên thi đỗ được dự đoán là trượt. Rõ ràng đây là một mô hình không tốt.\n\n[book-ml-co-ban|p341|01 | trang 341 | Đối ngẫu]\nTừ Hình 25.1a, có thể thấy rằng với các λ khác nhau, hàm g(λ) đạt giá trị nhỏ nhất tại điểm có hoành độ bằng 0 của đường nét liền hoặc tại một điểm thấp hơn điểm đó. Trong Hình 25.1b, đường nét liền thể hiện đồ thị của hàm g(λ), đường nét đứt thể hiện giá trị tối ưu của bài toán tối ưu chính. Ta có thể thấy hai điều: • Đường nét liền luôn nằm phía dưới (hoặc có đoạn trùng) đường nét đứt. • Hàm g(λ) là một hàm lõm. Mã nguồn cho Hình 25.1 có thể được tìm thấy tại https://goo.gl/jZiRCp. Ví dụ 2 : Xét một bài toán quy hoạch tuyến tính: x = arg min x cT x thoả mãn: Ax = b x ⪰ 0 (25.9) Machine Learning cơ bản\n\n[book-ml-co-ban|p182|01 | trang 182 | Thuật toán học perceptron]\nĐể ý rằng nếu thay hàm kích hoạt bởi hàm đồng nhất y = z, ta sẽ có một mạng neuron mô tả mô hình hồi quy tuyến tính như Hình 13.4c. Đường thẳng chéo trong nút đầu ra thể hiện đồ thị hàm số y = z. Các trục tọa độ đã được lược bỏ. Mô hình perceptron ở trên khá giống với một thành phần nhỏ của mạng thần kinh sinh học như Hình 13.5. Dữ liệu từ nhiều dây thần kinh đầu vào đi về một nhân tế bào. Nhân tế bào tổng hợp thông tin và đưa ra quyết định ở tín hiệu đầu ra. Trong mạng neuron nhận tạo của perceptron, mỗi giá trị xi đóng vai trò một tín hiệu đầu vào, hàm tính tổng và hàm kích hoạt có chức năng tương tự nhân tế bào. Tên gọi mạng neuron nhân tạo được khởi nguồn từ đây. 182 Machine Learning cơ bản",
+  "context_chars": 3977,
+  "n_llm_calls": 8,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 17234,
+  "completion_tokens": 346,
+  "cost_usd": null,
+  "latency_s": 8.21,
+  "group": "image"
+ },
+ {
+  "query_id": "ad06",
+  "question": "Ảnh khuôn mặt sau khi phân cụm K-means trong chương 10 được chia thành bao nhiêu cụm màu, là những màu nào?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong chương 10, bài toán tách vật thể trong ảnh sử dụng phân cụm K-means chia các điểm ảnh thành **3 cụm màu** [book-ml-co-ban|p139|00]. \n\nTùy theo từng đoạn trong sách, các màu này được mô tả như sau:\n- Ban đầu, bức ảnh được mô tả là có ba màu chủ đạo gồm: màu hồng (ở khăn và môi), màu đen (ở mắt, tóc và hậu cảnh), và màu da (ở vùng còn lại của khuôn mặt) [book-ml-co-ban|p139|00].\n- Khi thực hiện phân cụm K-means xong, kết quả nhận được tương ứng với ba màu: đỏ, hồng, đen [book-ml-co-ban|p140|00] (hoặc ba màu đỏ, đen và màu da) [book-ml-co-ban|p140|00].",
+  "citations": [
+   "book-ml-co-ban|p139|00",
+   "book-ml-co-ban|p140|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 685,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 1.2,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "K-means khuôn mặt cụm màu chương 10",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 93.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p139|00",
+      "page": 139,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p140|00",
+      "page": 140,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p128|00",
+      "page": 128,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p142|02",
+      "page": 142,
+      "rank": 4,
+      "score": 0.0304
+     },
+     {
+      "id": "book-ml-co-ban|p138|00",
+      "page": 138,
+      "rank": 5,
+      "score": 0.0301
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p139|00",
+     "book-ml-co-ban|p140|00",
+     "book-ml-co-ban|p128|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p142|02",
+     "book-ml-co-ban|p138|00"
+    ],
+    "context_chars": 2682
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1633,
+    "completion_tokens": 31,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 10.8 ba màu đỏ hồng đen màu da K-means",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 73.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p140|00",
+      "page": 140,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p139|00",
+      "page": 139,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p139|01",
+      "page": 139,
+      "rank": 3,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p094|01",
+      "page": 94,
+      "rank": 4,
+      "score": 0.0305
+     },
+     {
+      "id": "book-ml-co-ban|p135|00",
+      "page": 135,
+      "rank": 5,
+      "score": 0.0303
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p139|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p140|00",
+     "book-ml-co-ban|p139|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p094|01",
+     "book-ml-co-ban|p135|00"
+    ],
+    "context_chars": 3338
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1981,
+    "completion_tokens": 273,
+    "cost_usd": null,
+    "latency_s": 1.56,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p139|00",
+   "book-ml-co-ban|p140|00",
+   "book-ml-co-ban|p128|00",
+   "book-ml-co-ban|p139|01"
+  ],
+  "context": "[book-ml-co-ban|p139|00 | trang 139 | Phân cụm K-means]\nHình 10.7. Ảnh:Trọng Vũ (https: //goo.gl/9D8aXW, xem ảnh màu trong Hình B.3) . • Divisive tức “đi từ trên xuống”. Ban đầu, thực hiện phân cụm K-means với K nhỏ để được các cụm lớn. Sau đó tiếp tục áp dụng phân cụm K-means vào mỗi cụm lớn đến khi kết quả chấp nhận được. 10.5. Tách vật thể trong ảnh Phân cụm K-means cũng được áp dụng vào bài toán tách vật thể trong ảnh (object segmentation). Cho bức ảnh như trong Hình 10.7, hãy xây dựng một thuật toán tự động nhận diện và tách rời vùng khuôn mặt. Bức ảnh có ba màu chủ đạo: hồng ở khăn và môi; đen ở mắt, tóc, và hậu cảnh; màu da ở vùng còn lại của khuôn mặt. Ảnh này khá rõ nét và các vùng được phân biệt rõ ràng bởi màu sắc nên chúng ta có thể áp dụng thuật toán phân cụm K-means. Thuật toán này sẽ phân các điểm ảnh thành ba cụm, cụm chứa phần khuôn mặt có thể được chọn tự động hoặc bằng tay.\n\n[book-ml-co-ban|p140|00 | trang 140 | Phân cụm K-means]\nHình 10.8. Kết quả nhận được sau khi thực hiện phân cụm K- means. Có ba cụm tương ứng với ba màu đỏ, hồng, đen (xem ảnh màu trong Hình B.4). Biến đổi bức ảnh thành một ma trận mà mỗi hàng là ba giá trị màu của một điểm ảnh: X = img.reshape((img.shape[0]*img.shape[1], img.shape[2])) Phần còn lại của mã nguồn có thể được tìm thấy tại https://goo.gl/Tn6Gec. Sau khi tìm được các cụm, giá trị của mỗi pixel được thay bằng giá trị của tâm tương ứng. Kết quả được minh hoạ trên Hình 10.8. Ba màu đỏ, đen, và màu da (xem ảnh màu trong Hình B.4) đã được phân nhóm khá thành công. Khuôn mặt có thể được tách ra từ phần có màu da và vùng bên trong nó. Như vậy, phân cụm K-means tạo ra một kết quả chấp nhận được cho bài toán này. 10.6. Nén ảnh Trước hết, xét đoạn code dưới đây: for K in [5, 10, 15, 20]:\n\n[book-ml-co-ban|p128|00 | trang 128 | Phân cụm K-means]\nChương 10 Phân cụm K -means 10.1. Giới thiệu Trong Chương 7 và, 9, chúng ta đã làm quen các thuật toán học có giám sát. Trong chương này, một thuật toán đơn giản của học không giám sát sẽ được trình bày. Thuật toán này có tên là phân cụm K-means (K-means clustering). Trong phân cụm K-means, ta không biết nhãn của từng điểm dữ liệu. Mục đích là làm thể nào để phân dữ liệu thành các cụm (cluster) khác nhau sao cho dữ liệu trong cùng một cụm có những tính chất giống nhau. Ví dụ: Một công ty muốn tạo ra một chính sách ưu đãi cho những nhóm khách hàng khác nhau dựa trên sự tương tác giữa mỗi khách hàng với công ty đó (số năm là khách hàng, số tiền khách hàng đã chi trả cho công ty, độ tuổi, giới tính, thành phố, nghề nghiệp,...). Giả sử công ty có dữ liệu của khách hàng nhưng phân cụm. Phân cụm K-means là một thuật toán có thể giúp thực hiện công việc này.\n\n[book-ml-co-ban|p139|01 | trang 139 | Phân cụm K-means]\nĐây là một bức ảnh màu, mỗi điểm ảnh được biểu diễn bởi ba giá trị tương ứng với màu đỏ, lục, và lam (RGB). Nếu coi mỗi điểm ảnh là một điểm dữ liệu được mô tả bởi một vector ba chiều chứa các giá trị này, sau đó áp dụng phân cụm K-means, chúng ta có thể đạt được kết quả như mong muốn. 10.5.1. Làm việc trên Python Khai báo thư viện và hiển thị bức ảnh: import matplotlib.image as mpimg import matplotlib.pyplot as plt import numpy as np from sklearn.cluster import KMeans img = mpimg.imread(’girl3.jpg’) plt.imshow(img) imgplot = plt.imshow(img) plt.axis(’off’) plt.show() Machine Learning cơ bản",
+  "context_chars": 3338,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 4299,
+  "completion_tokens": 331,
+  "cost_usd": null,
+  "latency_s": 3.89,
+  "group": "image"
+ },
+ {
+  "query_id": "ad07",
+  "question": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp, giá trị mất mát ban đầu khoảng bao nhiêu và trục hoành kéo dài tới khoảng bao nhiêu vòng lặp?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp (Hình 29.6), trục hoành biểu diễn số vòng lặp (number of iterations) kéo dài tới khoảng 2500 vòng lặp, và giá trị mất mát ban đầu nằm ở khoảng trên 9 [book-ml-co-ban|p398|00].",
+  "citations": [
+   "book-ml-co-ban|p398|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 691,
+    "completion_tokens": 30,
+    "cost_usd": null,
+    "latency_s": 1.19,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "SVM đa lớp lịch sử hàm mất mát vòng lặp giá trị ban đầu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 98.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p393|01",
+      "page": 393,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p387|01",
+      "page": 387,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p173|00",
+      "page": 173,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p390|02",
+      "page": 390,
+      "rank": 5,
+      "score": 0.0306
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p393|01",
+     "book-ml-co-ban|p387|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p173|00",
+     "book-ml-co-ban|p390|02"
+    ],
+    "context_chars": 2523
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1765,
+    "completion_tokens": 34,
+    "cost_usd": null,
+    "latency_s": 1.1,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 29.6 Lịch sử giá trị hàm mất mát qua các vòng lặp",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 79.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p173|00",
+      "page": 173,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p173|01",
+      "page": 173,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 4,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p114|00",
+      "page": 114,
+      "rank": 5,
+      "score": 0.031
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p173|00"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p398|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p173|01",
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p114|00"
+    ],
+    "context_chars": 3453
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2195,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 0.96,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 29.6 loss function 9",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 62.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 2,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p114|00",
+      "page": 114,
+      "rank": 3,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p395|00",
+      "page": 395,
+      "rank": 4,
+      "score": 0.0288
+     },
+     {
+      "id": "book-ml-co-ban|p173|00",
+      "page": 173,
+      "rank": 5,
+      "score": 0.0159
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p173|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p114|00",
+     "book-ml-co-ban|p395|00"
+    ],
+    "context_chars": 3453
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2340,
+    "completion_tokens": 24,
+    "cost_usd": null,
+    "latency_s": 1.05,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "multiclass_svm_GD loss_history",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 79.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p397|01",
+      "page": 397,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p399|00",
+      "page": 399,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p394|01",
+      "page": 394,
+      "rank": 4,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p387|01",
+      "page": 387,
+      "rank": 5,
+      "score": 0.0154
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p387|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p397|01",
+     "book-ml-co-ban|p399|00",
+     "book-ml-co-ban|p394|01"
+    ],
+    "context_chars": 3453
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2483,
+    "completion_tokens": 123,
+    "cost_usd": null,
+    "latency_s": 1.11,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p398|00",
+   "book-ml-co-ban|p393|01",
+   "book-ml-co-ban|p387|01",
+   "book-ml-co-ban|p173|00"
+  ],
+  "context": "[book-ml-co-ban|p398|00 | trang 398 | Máy vector hỗ trợ đa lớp]\n0 500 1000 1500 2000 2500 number of iterations 4 5 6 7 8 9 loss function Hình 29.6. Lịch sử giá trị hàm mất mát qua các vòng lặp. Ta thấy rằng mất mát có xu hướng giảm và hội tụ khá nhanh. d, C = X_train.shape[1], 10 reg = .1 W = 0.00001*np.random.randn(d, C) W, loss_history = multiclass_svm_GD(X_train, y_train, W, reg, lr = 1e-8, num_iters = 50, print_every = 5) Kết quả: epoch 5/50, loss = 5.482782 epoch 10/50, loss = 5.204365 epoch 15/50, loss = 4.885159 epoch 20/50, loss = 5.051539 epoch 25/50, loss = 5.060423 epoch 30/50, loss = 4.691241 epoch 35/50, loss = 4.841132 epoch 40/50, loss = 4.643097 epoch 45/50, loss = 4.691177 Ta thấy rằng giá trị hàm mất mát có xu hướng giảm và hội tụ nhanh. Giá trị hàm mất mát sau mỗi vòng lặp được minh hoạ trong Hình 29.6.\n\n[book-ml-co-ban|p393|01 | trang 393 | Máy vector hỗ trợ đa lớp]\nSVM lề mềm là một trường hợp đặc biệt của SVM đa lớp (Hồi quy logistic là một trường hợp đặc biệt của hồi quy softmax.) Khi số lớp dữ liệu C = 2, tạm bỏ qua mất mát kiểm soát, hàm mất mát tại mỗi điểm dữ liệu trở thành Ln = X j̸=yn max(0, 1 − wT ynxn + wT j xn) (29.6) Xét hai trường hợp: • yn = 1 ⇒ Ln = max(0, 1 − wT 1 xn + wT 2 xn) = max(0, 1 − (1)(w1 − w2)T x) • yn = 2 ⇒ Ln = max(0, 1 − wT 2 xn + wT 1 xn) = max(0, 1 − (−1)(w1 − w2)T x) Nếu ta thay yn = −1 cho dữ liệu thuộc lớp có nhãn bằng 2 và đặt ¯w = w1 − w2, hai trường hợp trên có thể được viết gọn thành Ln = max(0, 1 − yn ¯wT xn) Đây chính là mất mát bản lề trong SVM lề mềm. Như vậy, SVM lề mềm là trường hợp đặc biệt của SVM đa lớp khi số lớp dữ liệu C = 2. 29.3. Tính toán giá trị và gradient của hàm mất mát Với những hàm số phức tạp, việc tính toán gradient rất dễ gây ra kết quả không chính xác.\n\n[book-ml-co-ban|p387|01 | trang 387 | Máy vector hỗ trợ đa lớp]\nĐể tìm xác suất mỗi điểm dữ liệu rơi vào từng lớp, vector điểm số được đưa qua hàm softmax. Trong chương này, chúng ta sẽ thảo luận một mô hình khác cũng được áp dụng cho các bài toán phân loại đa lớp – mô hình SVM đa lớp (multi-class SVM). Trong đó, ma trận trọng số W và vector điều chỉnh b cần được tìm sao cho thành phần cao nhất của vector điểm số nằm tại vị trí ứng với nhãn của dữ liệu đầu vào. Tuy nhiên, hàm mất mát được xây dựng dựa trên ý tưởng của hàm mất mát bản lề thay vì entropy chéo. Hàm mất mát này cũng được tối ưu bởi gradient descent. SVM đa lớp cũng có thể thay thế tầng softmax trong các mạng neuron sâu để tạo ra các bộ phân loại khá hiệu quả. Machine Learning cơ bản\n\n[book-ml-co-ban|p173|00 | trang 173 | Gradient descent]\n0 500 1000 1500 2000 2500 number of iterations 4 5 6 7 8 9 loss function Hình 12.13. Ví dụ về giá trị hàm mất mát sau mỗi vòng lặp khi sử dụng mini-batch gradient descent. Hàm mất mát dao động sau mỗi lần cập nhật nhưng nhìn chung giảm dần và có xu hướng hội tụ. xáo trộn ngẫu nhiên dữ liệu rồi chia toàn bộ dữ liệu thành các mini-batch, mỗi mini-batch có k điểm dữ liệu (trừ mini-batch cuối có thể có ít hơn nếu N không chia hết cho k). Ở mỗi vòng lặp, một mini-batch được lấy ra để tính toán gradient rồi cập nhật θ. Khi thuật toán chạy hết dữ liệu một lượt cũng là khi kết thúc một epoch. Như vậy, một epoch bao gồm xấp xỉ N/k vòng lặp. Giá trị k được gọi là kích thước batch (không phải kích thước mini-batch) được chọn trong khoảng khoảng từ vài chục đến vài trăm. Hình 12.13 là ví dụ về giá trị của hàm mất mát của một mô hình phức tạp hơn khi sử dụng mini-batch GD.",
+  "context_chars": 3453,
+  "n_llm_calls": 5,
+  "n_book_searches": 4,
+  "n_external_calls": 0,
+  "prompt_tokens": 9474,
+  "completion_tokens": 236,
+  "cost_usd": null,
+  "latency_s": 5.73,
+  "group": "chart"
+ },
+ {
+  "query_id": "ad08",
+  "question": "Trong đồ thị hàm mất mát của ví dụ hồi quy softmax năm lớp, giá trị mất mát ở epoch đầu khoảng bao nhiêu và huấn luyện bao nhiêu epoch?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong ví dụ hồi quy softmax năm lớp (Hình 15.5), đồ thị hàm mất mát qua các epoch cho thấy số lượng epoch huấn luyện là khoảng 16 epoch [book-ml-co-ban|p211|00]. Tuy nhiên, sách không cung cấp con số cụ thể bằng chữ cho giá trị mất mát ở epoch đầu tiên mà chỉ minh họa qua đồ thị (a) của Hình 15.5 [book-ml-co-ban|p211|00].",
+  "citations": [
+   "book-ml-co-ban|p211|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 687,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 1.07,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hồi quy softmax năm lớp hàm mất mát epoch",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 64.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p211|00",
+      "page": 211,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p207|02",
+      "page": 207,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p213|00",
+      "page": 213,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p390|02",
+      "page": 390,
+      "rank": 4,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 5,
+      "score": 0.0304
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p211|00",
+     "book-ml-co-ban|p207|02",
+     "book-ml-co-ban|p213|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p390|02",
+     "book-ml-co-ban|p398|00"
+    ],
+    "context_chars": 1565
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1356,
+    "completion_tokens": 23,
+    "cost_usd": null,
+    "latency_s": 0.69,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 15.5 loss epoch",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 67.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p211|00",
+      "page": 211,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p211|01",
+      "page": 211,
+      "rank": 3,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p173|00",
+      "page": 173,
+      "rank": 4,
+      "score": 0.0301
+     },
+     {
+      "id": "book-ml-co-ban|p207|01",
+      "page": 207,
+      "rank": 5,
+      "score": 0.0288
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p211|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p211|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p173|00",
+     "book-ml-co-ban|p207|01"
+    ],
+    "context_chars": 3291
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2257,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 0.96,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "softmax_fit lr 0.05 num_iters epoch",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 75.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p210|00",
+      "page": 210,
+      "rank": 1,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p211|01",
+      "page": 211,
+      "rank": 2,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 3,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p399|01",
+      "page": 399,
+      "rank": 4,
+      "score": 0.0297
+     },
+     {
+      "id": "book-ml-co-ban|p191|00",
+      "page": 191,
+      "rank": 5,
+      "score": 0.0292
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p211|01",
+     "book-ml-co-ban|p398|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p210|00",
+     "book-ml-co-ban|p399|01",
+     "book-ml-co-ban|p191|00"
+    ],
+    "context_chars": 3291
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2408,
+    "completion_tokens": 21,
+    "cost_usd": null,
+    "latency_s": 1.02,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "softmax_fit loss_hist",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 58.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p210|00",
+      "page": 210,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p227|01",
+      "page": 227,
+      "rank": 2,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p211|01",
+      "page": 211,
+      "rank": 3,
+      "score": 0.0309
+     },
+     {
+      "id": "book-ml-co-ban|p210|01",
+      "page": 210,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p228|01",
+      "page": 228,
+      "rank": 5,
+      "score": 0.028
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p211|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p210|00",
+     "book-ml-co-ban|p227|01",
+     "book-ml-co-ban|p210|01",
+     "book-ml-co-ban|p228|01"
+    ],
+    "context_chars": 3291
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2529,
+    "completion_tokens": 26,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 15.5 loss epoch 16",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 60.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p211|00",
+      "page": 211,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p211|01",
+      "page": 211,
+      "rank": 3,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p207|01",
+      "page": 207,
+      "rank": 4,
+      "score": 0.0279
+     },
+     {
+      "id": "book-ml-co-ban|p221|02",
+      "page": 221,
+      "rank": 5,
+      "score": 0.0276
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p221|02"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p211|00",
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p211|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p207|01"
+    ],
+    "context_chars": 3817
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2906,
+    "completion_tokens": 25,
+    "cost_usd": null,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "number of epoches loss 15.5"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 2965,
+    "completion_tokens": 156,
+    "cost_usd": null,
+    "latency_s": 1.25,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p211|00",
+   "book-ml-co-ban|p207|02",
+   "book-ml-co-ban|p213|00",
+   "book-ml-co-ban|p398|00",
+   "book-ml-co-ban|p211|01",
+   "book-ml-co-ban|p221|02"
+  ],
+  "context": "[book-ml-co-ban|p211|00 | trang 211 | Hồi quy softmax]\n0 20 40 60 80 100 number of epoches 0 2 4 6 8 10 12 14 16 loss (a) (b) Hình 15.5. Ví dụ về sử dụng hồi quy softmax cho năm lớp dữ liệu. (a) Giá trị hàm mất mát qua các epoch. (b) Kết quả phân loại cuối cùng. 15.4. Ví dụ trên Python Để minh hoạ ranh giới của các lớp dữ liệu khi sử dụng hồi quy softmax, chúng ta cùng làm một ví dụ nhỏ trong không gian hai chiều với năm lớp dữ liệu:\n\n[book-ml-co-ban|p207|02 | trang 207 | Hồi quy softmax]\nSau khi có ký hiệu này, ta có thể viết lại Ji(W) = − log(ayi,i) (15.6) với ayi,i là phần tử thứ yi của vector ai. Khi sử dụng toàn bộ tập huấn luyện xi, yi, i = 1, 2, . . . , N, hàm mất mát của hồi quy softmax được xác định bởi Machine Learning cơ bản\n\n[book-ml-co-ban|p213|00 | trang 213 | Hồi quy softmax]\n15.5. Thảo luận 15.5.1. Hồi quy logistic là trường hợp đặc biệt của hồi quy softmax Khi C = 2, hồi quy softmax và hồi quy logistic là hai mô hình giống nhau. Thật vậy, với C = 2, đầu ra của hàm softmax cho một đầu vào x là: a1 = exp(xT w1) exp(xT w1) + exp(xT w2) = 1 1 + exp(xT (w2 − w1)); a2 = 1 − a1 (15.15) Từ đây ta thấy rằng, a1 có dạng là một hàm sigmoid với vector trọng số có dạng w = −(w2 − w1). Khi C = 2, bạn đọc cũng có thể thấy rằng hàm mất mát của hồi quy logistic và hồi quy softmax là như nhau. Hơn nữa, mặc dù có hai đầu ra, hồi quy softmax có thể biểu diễn bởi một đầu ra vì tổng của chúng bằng một. Giống như hồi quy logistic, hồi quy softmax được sử dụng trong các bài toán phân loại. Các tên gọi này được giữ lại vì vấn đề lịch sử. 15.5.2.\n\n[book-ml-co-ban|p398|00 | trang 398 | Máy vector hỗ trợ đa lớp]\n0 500 1000 1500 2000 2500 number of iterations 4 5 6 7 8 9 loss function Hình 29.6. Lịch sử giá trị hàm mất mát qua các vòng lặp. Ta thấy rằng mất mát có xu hướng giảm và hội tụ khá nhanh. d, C = X_train.shape[1], 10 reg = .1 W = 0.00001*np.random.randn(d, C) W, loss_history = multiclass_svm_GD(X_train, y_train, W, reg, lr = 1e-8, num_iters = 50, print_every = 5) Kết quả: epoch 5/50, loss = 5.482782 epoch 10/50, loss = 5.204365 epoch 15/50, loss = 4.885159 epoch 20/50, loss = 5.051539 epoch 25/50, loss = 5.060423 epoch 30/50, loss = 4.691241 epoch 35/50, loss = 4.841132 epoch 40/50, loss = 4.643097 epoch 45/50, loss = 4.691177 Ta thấy rằng giá trị hàm mất mát có xu hướng giảm và hội tụ nhanh. Giá trị hàm mất mát sau mỗi vòng lặp được minh hoạ trong Hình 29.6.\n\n[book-ml-co-ban|p211|01 | trang 211 | Hồi quy softmax]\nC, N = 5, 500 # number of classes and number of points per class means = [[2, 2], [8, 3], [3, 6], [14, 2], [12, 8]] cov = [[1, 0], [0, 1]] X0 = np.random.multivariate_normal(means[0], cov, N) X1 = np.random.multivariate_normal(means[1], cov, N) X2 = np.random.multivariate_normal(means[2], cov, N) X3 = np.random.multivariate_normal(means[3], cov, N) X4 = np.random.multivariate_normal(means[4], cov, N) X = np.concatenate((X0, X1, X2, X3, X4), axis = 0) # each row is a datapoint Xbar = np.concatenate((X, np.ones((X.shape[0], 1))), axis = 1) # bias trick y = np.asarray([0]*N + [1]*N + [2]*N+ [3]*N + [4]*N) # label W_init = np.random.randn(Xbar.shape[1], C) W, loss_hist = softmax_fit(Xbar, y, W_init, lr = 0.05) Giá trị của hàm mất mát qua các epoch được cho trên Hình 15.5a. Ta thấy rằng hàm mất mát giảm rất nhanh sau đó hội tụ.\n\n[book-ml-co-ban|p221|02 | trang 221 | Mạng neuron đa tầng và lan truyền ngược]\nTương tự, gradient của hàm mất mát theo hệ số tự do của tầng cuối cùng là ∂J ∂b(L) j = ∂J ∂z(L) j .∂z(L) j ∂b(L) j = e(L) j (16.14) Với đạo hàm riêng theo trọng số ở các tầng l < L, hãy quan sát Hình 16.7. Ở đây, tại mỗi nút, đầu vào z và đầu ra a được viết riêng để tiện theo dõi. Dựa vào Hình 16.7, bằng quy nạp ngược từ cuối, ta có thể tính được: ∂J ∂w(l) ij = ∂J ∂z(l) j . ∂z(l) j ∂w(l) ij = e(l) j a(l−1) i . (16.15) Machine Learning cơ bản",
+  "context_chars": 3817,
+  "n_llm_calls": 7,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 15108,
+  "completion_tokens": 304,
+  "cost_usd": null,
+  "latency_s": 7.25,
+  "group": "chart"
+ },
+ {
+  "query_id": "ad09",
+  "question": "Trong đồ thị giá trị hàm mất mát của hồi quy logistic (bài toán dự đoán đỗ/trượt), mất mát bắt đầu khoảng bao nhiêu và hội tụ quanh giá trị nào?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Dựa trên đồ thị giá trị hàm mất mát qua các vòng lặp trong bài toán hồi quy logistic (Hình 14.3b), giá trị mất mát bắt đầu từ khoảng 1.1 và sau khi giảm nhanh qua các vòng lặp, nó hội tụ sớm quanh giá trị khoảng 0.4 [book-ml-co-ban|p192|00].",
+  "citations": [
+   "book-ml-co-ban|p192|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 694,
+    "completion_tokens": 30,
+    "cost_usd": null,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hồi quy logistic đồ thị giá trị hàm mất mát đỗ trượt",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 72.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p190|00",
+      "page": 190,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p189|00",
+      "page": 189,
+      "rank": 4,
+      "score": 0.0304
+     },
+     {
+      "id": "book-ml-co-ban|p191|01",
+      "page": 191,
+      "rank": 5,
+      "score": 0.0303
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p186|01",
+     "book-ml-co-ban|p190|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p189|00",
+     "book-ml-co-ban|p191|01"
+    ],
+    "context_chars": 2809
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1765,
+    "completion_tokens": 32,
+    "cost_usd": null,
+    "latency_s": 0.82,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.3 b loss function vòng lặp hội tụ khoảng bao nhiêu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 62.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 2,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p173|00",
+      "page": 173,
+      "rank": 3,
+      "score": 0.0302
+     },
+     {
+      "id": "book-ml-co-ban|p162|01",
+      "page": 162,
+      "rank": 4,
+      "score": 0.0301
+     },
+     {
+      "id": "book-ml-co-ban|p163|01",
+      "page": 163,
+      "rank": 5,
+      "score": 0.0301
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p162|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p192|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p173|00",
+     "book-ml-co-ban|p163|01"
+    ],
+    "context_chars": 3989
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2427,
+    "completion_tokens": 31,
+    "cost_usd": null,
+    "latency_s": 0.92,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.3 loss function 0.4 1.1",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 77.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 1,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 2,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p191|00",
+      "page": 191,
+      "rank": 3,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p114|00",
+      "page": 114,
+      "rank": 4,
+      "score": 0.0267
+     },
+     {
+      "id": "book-ml-co-ban|p394|02",
+      "page": 394,
+      "rank": 5,
+      "score": 0.0164
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p398|00",
+     "book-ml-co-ban|p192|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p191|00",
+     "book-ml-co-ban|p114|00",
+     "book-ml-co-ban|p394|02"
+    ],
+    "context_chars": 3989
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2584,
+    "completion_tokens": 24,
+    "cost_usd": null,
+    "latency_s": 0.98,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 14.3 loss function b",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 60.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 1,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p398|00",
+      "page": 398,
+      "rank": 2,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p114|00",
+      "page": 114,
+      "rank": 3,
+      "score": 0.028
+     },
+     {
+      "id": "book-ml-co-ban|p375|00",
+      "page": 375,
+      "rank": 4,
+      "score": 0.0269
+     },
+     {
+      "id": "book-ml-co-ban|p371|00",
+      "page": 371,
+      "rank": 5,
+      "score": 0.0164
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p398|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p114|00",
+     "book-ml-co-ban|p375|00",
+     "book-ml-co-ban|p371|00"
+    ],
+    "context_chars": 3989
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2727,
+    "completion_tokens": 251,
+    "cost_usd": null,
+    "latency_s": 1.71,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": "Dựa trên đồ thị hàm mất mát qua các vòng lặp trong bài toán hồi quy logistic (Hình 14.3b):\n* Mất mát bắt đầu từ khoảng **1.1** [book-ml-co-ban|p192|00].\n* Sau các vòng lặp, hàm mất mát giảm nhanh, hội tụ sớm [book-ml-co-ban|p192|00] và dao động quanh giá trị khoảng **0.4** [book-ml-co-ban|p192|00].\n"
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p192|00",
+   "book-ml-co-ban|p186|01",
+   "book-ml-co-ban|p190|00",
+   "book-ml-co-ban|p398|00",
+   "book-ml-co-ban|p162|01"
+  ],
+  "context": "[book-ml-co-ban|p192|00 | trang 192 | Hồi quy logistic]\n0 1 2 3 4 5 6 studying hours −0.50 −0.25 0.00 0.25 0.50 0.75 1.00 1.25 1.50 predicted probability of pass (a) 0 100 200 300 400 500 number of iterations 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 loss function (b) Hình 14.3. Nghiệm của hồi quy logistic cho bài toán dự đoán kết quả thi dựa trên thời gian học. (a) Đường nét liền thể hiện xác suất thi đỗ dựa trên thời gian học. Điểm tam giác thể hiện ngưỡng ra quyết định đỗ/trượt. Điểm này có thể thay đổi tuỳ vào bài toán. (b) Giá trị của hàm mất mát qua các vòng lặp. Hàm mất mát giảm nhanh và hội tụ sớm. x1 x2 (a) Dữ liệu cho bài toán phân loại trong không gian hai chiều. (b) Đồ thị hàm sigmoid trong không gian hai chiều (xem ảnh màu trong Hình B.6). Hình 14.4. Ví dụ về dữ liệu và hàm sigmoid trong không gian hai chiều. 14.3.2. Ví dụ với dữ liệu hai chiều Giả sử có hai tập dữ liệu vuông và tròn phân bố trên mặt phẳng như trong Hình 14.4a.\n\n[book-ml-co-ban|p186|01 | trang 186 | Hồi quy logistic]\nTuy nhiên, thay vì dự đoán chính xác hai giá trị đỗ/trượt, ta có thể dự đoán xác suất để một sinh viên thi đỗ dựa trên thời gian ôn thi. 14.1.3. Mô hình hồi quy logistic Quan sát Hình 14.2 với các hàm kích hoạt f(s) khác nhau. • Đường nét đứt biểu diễn một hàm kích hoạt tuyến tính không phù hợp vì đầu ra không bị chặn. Có một cách đơn giản để đưa đầu ra về dạng bị chặn: nếu đầu ra nhỏ hơn không thì thay bằng không, nếu đầu ra lớn hơn một thì thay bằng một. Điểm phân chia, còn gọi là ngưỡng, được chọn là điểm có tung độ 0.5 trên đường thằng này. Đây cũng không phải là một lựa chọn tốt. Giả sử có thêm một bạn sinh viên tiêu biểu ôn tập đến 20 giờ hoặc hơn thi đỗ. Lúc này ngưỡng tương ứng với mốc tung độ bằng 0.5 sẽ dịch nhiều về phía phải. Kéo theo đó, rất nhiều sinh viên thi đỗ được dự đoán là trượt. Rõ ràng đây là một mô hình không tốt.\n\n[book-ml-co-ban|p190|00 | trang 190 | Hồi quy logistic]\nTừ đó, công thức cập nhật nghiệm cho hồi quy logistic sử dụng SGD là w ← w − η(ai − yi)xi = w − η(σ(xT i w) − yi)xi (14.16) với η là tốc độ học. 14.2.3. Hồi quy logistic với suy giảm trọng số Một trong các kỹ thuật phổ biến giúp tránh overfitting cho các mạng neuron là sử dụng suy giảm trọng số (weight decay). Đây là một kỹ thuật kiểm soát, trong đó một đại lượng tỉ lệ với bình phương chuẩn ℓ2 của vector trọng số w được cộng vào hàm mất mát để kiểm soát độ lớn của các hệ số. Hàm mất mát trở thành ¯J(w) = 1 N N X i=1 −yi log ai − (1 − yi) log(1 − ai) + λ 2 ∥w∥2 2 . (14.17) Công thức cập nhật w bằng SGD trong hồi quy logistic với suy giảm trọng số là: w ← w − η (σ(xT i w) − yi)xi + λw (14.18) 14.3. Triển khai thuật toán trên Python Hàm ước lượng xác suất đầu ra cho mỗi điểm dữ liệu và hàm tính giá trị hàm mất mát với weight decay có thể được thực hiện như sau trong Python. def prob(w, X):\n\n[book-ml-co-ban|p398|00 | trang 398 | Máy vector hỗ trợ đa lớp]\n0 500 1000 1500 2000 2500 number of iterations 4 5 6 7 8 9 loss function Hình 29.6. Lịch sử giá trị hàm mất mát qua các vòng lặp. Ta thấy rằng mất mát có xu hướng giảm và hội tụ khá nhanh. d, C = X_train.shape[1], 10 reg = .1 W = 0.00001*np.random.randn(d, C) W, loss_history = multiclass_svm_GD(X_train, y_train, W, reg, lr = 1e-8, num_iters = 50, print_every = 5) Kết quả: epoch 5/50, loss = 5.482782 epoch 10/50, loss = 5.204365 epoch 15/50, loss = 4.885159 epoch 20/50, loss = 5.051539 epoch 25/50, loss = 5.060423 epoch 30/50, loss = 4.691241 epoch 35/50, loss = 4.841132 epoch 40/50, loss = 4.643097 epoch 45/50, loss = 4.691177 Ta thấy rằng giá trị hàm mất mát có xu hướng giảm và hội tụ nhanh. Giá trị hàm mất mát sau mỗi vòng lặp được minh hoạ trong Hình 29.6.\n\n[book-ml-co-ban|p162|01 | trang 162 | Gradient descent]\nTa quan sát thấy hai điều: • Với tốc độ học nhỏ η = 0.01 (Hình 12.4), tốc độ hội tụ rất chậm. Trong ví dụ này ta chọn tối đa 100 vòng lặp nên thuật toán dừng lại trước khi tới đích, mặc dù đã rất gần. Trong thực tế, khi việc tính toán trở nên phức tạp, tốc độ 162 Machine Learning cơ bản",
+  "context_chars": 3989,
+  "n_llm_calls": 5,
+  "n_book_searches": 4,
+  "n_external_calls": 0,
+  "prompt_tokens": 10197,
+  "completion_tokens": 368,
+  "cost_usd": null,
+  "latency_s": 5.7,
+  "group": "chart"
+ },
+ {
+  "query_id": "ad10",
+  "question": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm, bộ phân loại dùng hàm hạt nhân nào với gamma bao nhiêu, công thức của hàm đó theo bảng hàm hạt nhân thông dụng là gì, và đạt độ chính xác bao nhiêu?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm:\n- Bộ phân loại sử dụng hàm hạt nhân **rbf** (hạt nhân RBF hay hạt nhân Gauss) với tham số **$\\gamma = 0.1$** [book-ml-co-ban|p386|00].\n- Công thức của hàm hạt nhân RBF theo bảng hàm hạt nhân thông dụng là: \n  $$k(x, z) = \\exp(-\\gamma \\|x - z\\|_2^2), \\quad \\gamma > 0$$ [book-ml-co-ban|p383|00]\n- Mô hình đạt độ chính xác là **94.22%** [book-ml-co-ban|p386|00].",
+  "citations": [
+   "book-ml-co-ban|p383|00",
+   "book-ml-co-ban|p386|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 712,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 1.25,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "SVM hạt nhân 29000 gamma hạt nhân",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 64.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p386|00",
+      "page": 386,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p384|00",
+      "page": 384,
+      "rank": 3,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p379|01",
+      "page": 379,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p386|01",
+      "page": 386,
+      "rank": 5,
+      "score": 0.0308
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p386|00",
+     "book-ml-co-ban|p378|01",
+     "book-ml-co-ban|p384|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p379|01",
+     "book-ml-co-ban|p386|01"
+    ],
+    "context_chars": 2818
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1664,
+    "completion_tokens": 26,
+    "cost_usd": null,
+    "latency_s": 1.16,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hạt nhân RBF bảng hàm hạt nhân thông dụng",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 76.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p383|00",
+      "page": 383,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p383|01",
+      "page": 383,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p384|00",
+      "page": 384,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p385|00",
+      "page": 385,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p385|01",
+      "page": 385,
+      "rank": 5,
+      "score": 0.0301
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p383|00"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p384|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p383|01",
+     "book-ml-co-ban|p385|00",
+     "book-ml-co-ban|p385|01"
+    ],
+    "context_chars": 3782
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2105,
+    "completion_tokens": 243,
+    "cost_usd": null,
+    "latency_s": 1.48,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p386|00",
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p384|00",
+   "book-ml-co-ban|p383|00"
+  ],
+  "context": "[book-ml-co-ban|p386|00 | trang 386 | Máy vector hỗ trợ hạt nhân]\nKết quả: Number of samples = 28911 Như vậy, tổng cộng có khoảng 29000 điểm dữ liệu. Chúng ta lấy ra 24000 điểm làm tập kiểm tra, còn lại là dữ liệu huấn luyện. Sử dụng bộ phân loại SVM hạt nhân: from sklearn.model_selection import train_test_split from sklearn.metrics import accuracy_score X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 24000) model = svm.SVC(kernel=’rbf’, gamma=.1, coef0 = 0) model.fit(X_train, y_train) y_pred = model.predict(X_test) print(\"Accuracy: %.2f %%\" %(100*accuracy_score(y_test, y_pred))) Kết quả: Accuracy: 94.22 % Kết quả thu được là khoảng 94%. Nếu chọn nhiều điểm dữ liệu huấn luyện hơn và thay đổi các tham số gamma, coef0, bạn đọc có thể sẽ thu được kết quả tốt hơn. Đây là một bài toán phân loại đa lớp, và kỹ thuật giải quyết của thư viện này là one-vs-rest.\n\n[book-ml-co-ban|p378|01 | trang 378 | Máy vector hỗ trợ hạt nhân]\nSự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic SVM lề mềm Hai lớp gần tách biệt tuyến tính Hồi quy softmax SVM đa lớp Nhiều lớp dữ liệu, ranh giới tuyến tính Mạng neuron đa tầng SVM hạt nhân Bài toán phân loại hai lớp không tách biệt tuyến tính Trong chương này, chúng ta cùng thảo luận về SVM hạt nhân (kernel SVM) cho bài toán phân loại dữ liệu không tách biệt tuyến tính. Bài toán phân loại đa lớp sử dụng ý tưởng SVM sẽ được thảo luận trong chương tiếp theo. Ý tưởng cơ bản của SVM hạt nhân và các mô hình hạt nhân (kernel model) nói chung là tìm một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Nếu có thể thực hiện điều này, bài toán phân loại sẽ được giải quyết bằng SVM lề cứng/mềm. 378 Machine Learning cơ bản\n\n[book-ml-co-ban|p384|00 | trang 384 | Máy vector hỗ trợ hạt nhân]\nsigmoid (a) hạt nhân sigmoid poly (b) hạt nhân đa thức rbf (c) hạt nhân rbf Hình 28.2. Sử dụng SVM hạt nhân để giải quyết bài toán XOR: (a) hạt nhân sigmoid, (b) hạt nhân đa thức, (c) hạt nhân RBF. Các đường nét liền là các đường phân loại, ứng với giá trị của biểu thức (28.6) bằng 0. Các đường nét đứt là các đường đồng mức ứng với giá trị của biểu thức (28.6) bằng ±0.5. Các vùng có nền màu xám tương ứng với lớp các điểm đen hình tròn, các vùng có nền trắng tương ứng với lớp các điểm trắng hình vuông. Trong ba hạt nhân, RBF cho kết quả đối xứng, hợp lý với dữ liệu bài toán. 28.4. Ví dụ minh họa 28.4.1. Bài toán XOR Chúng ta biết rằng bài toán XOR không thể giải quyết nếu chỉ dùng một bộ phân loại tuyến tính. Trong mục này, chúng ta sẽ thử ba hàm hạt nhân khác nhau và sử dụng SVM. Kết quả được minh hoạ trong Hình 28.2. Dưới đây là đoạn mã tìm các mô hình tương ứng:\n\n[book-ml-co-ban|p383|00 | trang 383 | Máy vector hỗ trợ hạt nhân]\nĐa thức Hàm hạt nhân đa thức có dạng k(x, z) = (r + γxT z)d (28.9) Với d là một số thực dương. Khi d là một số tự nhiên, hạt nhân đa thức có thể mô tả hầu hết các đa thức có bậc không vượt quá d. Khi sử dụng thư viện sklearn, hạt nhân này được chọn bằng cách gán kernel = ’poly’. Bạn đọc có thể tìm thấy tài liệu chính thức trong scikit-learn tại https://goo.gl/QvtFc9. Hàm cơ sở radial Hàm cơ sở radial (radial basic function, RBF hay hạt nhân Gauss) là lựa chọn mặc định trong sklearn, được sử dụng nhiều nhất trong thực tế. Hàm số này được định nghĩa bởi k(x, z) = exp(−γ∥x − z∥2 2), γ > 0 (28.10) Sigmoid Hàm dạng sigmoid cũng được sử dụng làm hạt nhân: k(x, z) = tanh(γxT z + r) (28.11) Trong sklearn, hạt nhân này được lựa chọn bằng cách gán kernel = ’sigmoid’. Bảng tóm tắt các hàm hạt nhân thông dụng Bảng 28.2 tóm tắt các hàm hạt nhân thông dụng và cách sử dụng trong sklearn. Bảng 28.2:",
+  "context_chars": 3782,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 4481,
+  "completion_tokens": 296,
+  "cost_usd": null,
+  "latency_s": 4.03,
+  "group": "multihop"
+ },
+ {
+  "query_id": "ad11",
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, có bao nhiêu sinh viên ôn dưới 2 giờ mà vẫn thi đỗ, và trong đồ thị kết quả thi theo số giờ ôn tập các sinh viên đỗ được biểu diễn bằng ký hiệu gì?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Dựa trên bảng dữ liệu về 20 sinh viên trong sách:\n- Có **1** sinh viên ôn dưới 2 giờ (cụ thể là 1.75 giờ) mà vẫn thi đỗ (đạt giá trị 1) [book-ml-co-ban|p185|01].\n- Trong đồ thị kết quả thi theo số giờ ôn tập (Hình 14.1), các sinh viên đỗ (giá trị 1/pass) được biểu diễn bằng **các điểm hình vuông** [book-ml-co-ban|p186|00].",
+  "citations": [
+   "book-ml-co-ban|p185|01",
+   "book-ml-co-ban|p186|00"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 709,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 1.1,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "thời gian ôn thi sinh viên đỗ biểu diễn ký hiệu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 83.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p186|00",
+      "page": 186,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p185|01",
+      "page": 185,
+      "rank": 3,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p186|02",
+      "page": 186,
+      "rank": 4,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p191|01",
+      "page": 191,
+      "rank": 5,
+      "score": 0.0301
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p186|00",
+     "book-ml-co-ban|p186|01",
+     "book-ml-co-ban|p185|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p186|02",
+     "book-ml-co-ban|p191|01"
+    ],
+    "context_chars": 2328
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1652,
+    "completion_tokens": 36,
+    "cost_usd": null,
+    "latency_s": 1.19,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 14.1 Thời gian ôn thi và kết quả thi của 20 sinh viên",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 77.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p185|01",
+      "page": 185,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p186|00",
+      "page": 186,
+      "rank": 2,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 3,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 4,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p192|00"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p185|01",
+     "book-ml-co-ban|p186|00",
+     "book-ml-co-ban|p186|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p185|00"
+    ],
+    "context_chars": 3274
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2193,
+    "completion_tokens": 66,
+    "cost_usd": null,
+    "latency_s": 1.07,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 14.1 0.5 0 0.75 0 1 0 1.25 0 1.5 0 1.75 0 1.75 1",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 66.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p396|00",
+      "page": 396,
+      "rank": 1,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p249|01",
+      "page": 249,
+      "rank": 2,
+      "score": 0.0302
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 3,
+      "score": 0.0296
+     },
+     {
+      "id": "book-ml-co-ban|p186|00",
+      "page": 186,
+      "rank": 4,
+      "score": 0.0292
+     },
+     {
+      "id": "book-ml-co-ban|p389|01",
+      "page": 389,
+      "rank": 5,
+      "score": 0.0286
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p186|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p396|00",
+     "book-ml-co-ban|p249|01",
+     "book-ml-co-ban|p389|01"
+    ],
+    "context_chars": 3274
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2420,
+    "completion_tokens": 89,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "2 0 2.25 1 2.5 0 2.75 1 4 0 3.25 1 3.5 0 4 1 4.25 1 4.5 1 4.75 1 5 1 5.5 1",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 68.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p249|01",
+      "page": 249,
+      "rank": 1,
+      "score": 0.0304
+     },
+     {
+      "id": "book-ml-co-ban|p192|00",
+      "page": 192,
+      "rank": 2,
+      "score": 0.03
+     },
+     {
+      "id": "book-ml-co-ban|p249|00",
+      "page": 249,
+      "rank": 3,
+      "score": 0.0277
+     },
+     {
+      "id": "book-ml-co-ban|p185|01",
+      "page": 185,
+      "rank": 4,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p394|01",
+      "page": 394,
+      "rank": 5,
+      "score": 0.0164
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p249|00"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p192|00",
+     "book-ml-co-ban|p185|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p249|01",
+     "book-ml-co-ban|p394|01"
+    ],
+    "context_chars": 3505
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2808,
+    "completion_tokens": 26,
+    "cost_usd": null,
+    "latency_s": 1.01,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 14.1 Số giờ Đậu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 60.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p185|01",
+      "page": 185,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p186|00",
+      "page": 186,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p186|01",
+      "page": 186,
+      "rank": 3,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p185|00",
+      "page": 185,
+      "rank": 4,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p189|01",
+      "page": 189,
+      "rank": 5,
+      "score": 0.026
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p185|01",
+     "book-ml-co-ban|p186|00",
+     "book-ml-co-ban|p186|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p185|00",
+     "book-ml-co-ban|p189|01"
+    ],
+    "context_chars": 3505
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2971,
+    "completion_tokens": 39,
+    "cost_usd": null,
+    "latency_s": 1.01,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "trục tung gồm hai giá trị 0/fail các điểm hình tròn và 1/pass các điểm hình vuông"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 3044,
+    "completion_tokens": 196,
+    "cost_usd": null,
+    "latency_s": 1.19,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p186|00",
+   "book-ml-co-ban|p186|01",
+   "book-ml-co-ban|p185|01",
+   "book-ml-co-ban|p192|00",
+   "book-ml-co-ban|p249|00"
+  ],
+  "context": "[book-ml-co-ban|p186|00 | trang 186 | Hồi quy logistic]\n0 1 2 3 4 5 6 hours studying 0 1 fail(0) / pass(1) Hình 14.1. Ví dụ về kết quả thi dựa trên số giờ ôn tập. Trục hoành thể hiện thời gian ôn tập của mỗi sinh viên, trục tung gồm hai giá trị 0/fail (các điểm hình tròn) và 1/pass (các điểm hình vuông). 0 1 hard threshold f(s) = 1 1+e−s f(s) = es es+e−s linear Hình 14.2. Một vài ví dụ về các hàm kích hoạt khác nhau. Xét một ví dụ về quan hệ giữa thời gian ôn thi và kết quả của 20 sinh viên trong Bảng 14.1. Bài toán đặt ra là từ dữ liệu này hãy xây dựng mô hình đánh giá khả năng đỗ của một sinh viên dựa trên thời gian ôn tập. Dữ liệu trong Bảng 14.1 được mô tả trên Hình 14.1. Nhìn chung, thời gian học càng nhiều thì khả năng đỗ càng cao. Tuy nhiên, không có một ngưỡng thời gian học nào giúp phân biệt rạch ròi việc đỗ/trượt . Nói cách khác, dữ liệu của hai tập này là không tách biệt tuyến tính, và vì vậy PLA sẽ không hữu ích.\n\n[book-ml-co-ban|p186|01 | trang 186 | Hồi quy logistic]\nTuy nhiên, thay vì dự đoán chính xác hai giá trị đỗ/trượt, ta có thể dự đoán xác suất để một sinh viên thi đỗ dựa trên thời gian ôn thi. 14.1.3. Mô hình hồi quy logistic Quan sát Hình 14.2 với các hàm kích hoạt f(s) khác nhau. • Đường nét đứt biểu diễn một hàm kích hoạt tuyến tính không phù hợp vì đầu ra không bị chặn. Có một cách đơn giản để đưa đầu ra về dạng bị chặn: nếu đầu ra nhỏ hơn không thì thay bằng không, nếu đầu ra lớn hơn một thì thay bằng một. Điểm phân chia, còn gọi là ngưỡng, được chọn là điểm có tung độ 0.5 trên đường thằng này. Đây cũng không phải là một lựa chọn tốt. Giả sử có thêm một bạn sinh viên tiêu biểu ôn tập đến 20 giờ hoặc hơn thi đỗ. Lúc này ngưỡng tương ứng với mốc tung độ bằng 0.5 sẽ dịch nhiều về phía phải. Kéo theo đó, rất nhiều sinh viên thi đỗ được dự đoán là trượt. Rõ ràng đây là một mô hình không tốt.\n\n[book-ml-co-ban|p185|01 | trang 185 | Hồi quy logistic]\nMô hình này có tên là hồi quy logistic. Mặc dù trong tên có chứa từ hồi quy, phương pháp này thường được sử dụng nhiều hơn cho các bài toán phân loại. 14.1.2. Một ví dụ nhỏ Bảng 14.1: Thời gian ôn thi và kết quả thi của 20 sinh viên. Số giờ Đậu? Số giờ Đậu? Số giờ Đậu? Số giờ Đậu? 0.5 0 0.75 0 1 0 1.25 0 1.5 0 1.75 0 1.75 1 2 0 2.25 1 2.5 0 2.75 1 4 0 3.25 1 3.5 0 4 1 4.25 1 4.5 1 4.75 1 5 1 5.5 1 Machine Learning cơ bản\n\n[book-ml-co-ban|p192|00 | trang 192 | Hồi quy logistic]\n0 1 2 3 4 5 6 studying hours −0.50 −0.25 0.00 0.25 0.50 0.75 1.00 1.25 1.50 predicted probability of pass (a) 0 100 200 300 400 500 number of iterations 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 loss function (b) Hình 14.3. Nghiệm của hồi quy logistic cho bài toán dự đoán kết quả thi dựa trên thời gian học. (a) Đường nét liền thể hiện xác suất thi đỗ dựa trên thời gian học. Điểm tam giác thể hiện ngưỡng ra quyết định đỗ/trượt. Điểm này có thể thay đổi tuỳ vào bài toán. (b) Giá trị của hàm mất mát qua các vòng lặp. Hàm mất mát giảm nhanh và hội tụ sớm. x1 x2 (a) Dữ liệu cho bài toán phân loại trong không gian hai chiều. (b) Đồ thị hàm sigmoid trong không gian hai chiều (xem ảnh màu trong Hình B.6). Hình 14.4. Ví dụ về dữ liệu và hàm sigmoid trong không gian hai chiều. 14.3.2. Ví dụ với dữ liệu hai chiều Giả sử có hai tập dữ liệu vuông và tròn phân bố trên mặt phẳng như trong Hình 14.4a.\n\n[book-ml-co-ban|p249|00 | trang 249 | Lọc cộng tác lân cận]\na) Ma trận tiện ích ban đầu Y và trung bình độ quan tâm của người dùng ↓ ↓ ↓ ↓ ↓ ↓ ↓ u0 5 4 ? 2 2 u1 5 ? 4 2 0 u2 2 ? 1 3 4 u3 0 0 ? 4 ? u4 1 ? ? 4 ? u5 ? 2 1 ? ? u6 ? ?",
+  "context_chars": 3505,
+  "n_llm_calls": 7,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 15797,
+  "completion_tokens": 480,
+  "cost_usd": null,
+  "latency_s": 7.87,
+  "group": "multihop"
+ },
+ {
+  "query_id": "ad12",
+  "question": "Theo bảng so sánh mạng neuron và SVM, SVM lề cứng tương đồng với thuật toán nào, và hình minh hoạ ở đầu chương SVM cho thấy điều kiện gì của dữ liệu cùng với bao nhiêu đường phân chia được vẽ?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Theo bảng so sánh giữa mạng neuron và máy vector hỗ trợ (SVM), SVM lề cứng tương đồng với thuật toán **PLA** (Perceptron Learning Algorithm) trong trường hợp hai lớp tách biệt tuyến tính [book-ml-co-ban|p378|01]. \n\nTuy nhiên, sách không cung cấp đủ chi tiết về hình minh hoạ ở đầu chương SVM (ngoài thông tin về bài toán tìm đường phân chia với lề rộng nhất và các đường biên) để xác định chính xác điều kiện dữ liệu cụ thể và số lượng đường phân chia được vẽ [book-ml-co-ban|p351|02].",
+  "citations": [
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p351|02"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 702,
+    "completion_tokens": 33,
+    "cost_usd": null,
+    "latency_s": 1.17,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "bảng so sánh mạng neuron và SVM SVM lề cứng hình minh hoạ đầu chương",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 67.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p376|00",
+      "page": 376,
+      "rank": 2,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p362|00",
+      "page": 362,
+      "rank": 3,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p379|02",
+      "page": 379,
+      "rank": 4,
+      "score": 0.0303
+     },
+     {
+      "id": "book-ml-co-ban|p378|00",
+      "page": 378,
+      "rank": 5,
+      "score": 0.0289
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p378|01",
+     "book-ml-co-ban|p376|00",
+     "book-ml-co-ban|p362|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p379|02",
+     "book-ml-co-ban|p378|00"
+    ],
+    "context_chars": 2791
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1639,
+    "completion_tokens": 26,
+    "cost_usd": null,
+    "latency_s": 0.6,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "đầu chương SVM hình minh hoạ đường phân chia",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 61.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p351|02",
+      "page": 351,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p379|00",
+      "page": 379,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p359|00",
+      "page": 359,
+      "rank": 3,
+      "score": 0.0304
+     },
+     {
+      "id": "book-ml-co-ban|p384|00",
+      "page": 384,
+      "rank": 4,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p358|02",
+      "page": 358,
+      "rank": 5,
+      "score": 0.0298
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p351|02",
+     "book-ml-co-ban|p358|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p379|00",
+     "book-ml-co-ban|p359|00",
+     "book-ml-co-ban|p384|00"
+    ],
+    "context_chars": 3645
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1992,
+    "completion_tokens": 32,
+    "cost_usd": null,
+    "latency_s": 1.03,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 26.1 Hình 26.2 chương Máy vector hỗ trợ",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 84.2,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p350|00",
+      "page": 350,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p356|01",
+      "page": 356,
+      "rank": 2,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p387|00",
+      "page": 387,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p378|00",
+      "page": 378,
+      "rank": 4,
+      "score": 0.0312
+     },
+     {
+      "id": "book-ml-co-ban|p361|00",
+      "page": 361,
+      "rank": 5,
+      "score": 0.0311
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p350|00",
+     "book-ml-co-ban|p356|01",
+     "book-ml-co-ban|p387|00",
+     "book-ml-co-ban|p378|00",
+     "book-ml-co-ban|p361|00"
+    ],
+    "context_chars": 3645
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2111,
+    "completion_tokens": 30,
+    "cost_usd": null,
+    "latency_s": 0.94,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "trang 350 trang 351 Máy vector hỗ trợ",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 60.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p350|00",
+      "page": 350,
+      "rank": 1,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p361|00",
+      "page": 361,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p378|00",
+      "page": 378,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p387|00",
+      "page": 387,
+      "rank": 4,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 5,
+      "score": 0.0303
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p378|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p350|00",
+     "book-ml-co-ban|p361|00",
+     "book-ml-co-ban|p378|00",
+     "book-ml-co-ban|p387|00"
+    ],
+    "context_chars": 3645
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2250,
+    "completion_tokens": 30,
+    "cost_usd": null,
+    "latency_s": 1.14,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "trang 349 trang 350 Machine Learning cơ bản",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 84.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p016|00",
+      "page": 16,
+      "rank": 1,
+      "score": 0.0286
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 2,
+      "score": 0.0286
+     },
+     {
+      "id": "book-ml-co-ban|p087|01",
+      "page": 87,
+      "rank": 3,
+      "score": 0.0278
+     },
+     {
+      "id": "book-ml-co-ban|p244|01",
+      "page": 244,
+      "rank": 4,
+      "score": 0.0277
+     },
+     {
+      "id": "book-ml-co-ban|p154|02",
+      "page": 154,
+      "rank": 5,
+      "score": 0.0272
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p244|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p016|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p087|01",
+     "book-ml-co-ban|p154|02"
+    ],
+    "context_chars": 3975
+   },
+   {
+    "event": "llm",
+    "step": 5,
+    "retries": 0,
+    "prompt_tokens": 2459,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 1.07,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search_limit",
+    "tool": "search_book",
+    "query": "bài toán phân loại hai lớp tách biệt tuyến tính PLA"
+   },
+   {
+    "event": "llm",
+    "step": 6,
+    "retries": 0,
+    "prompt_tokens": 2520,
+    "completion_tokens": 202,
+    "cost_usd": null,
+    "latency_s": 1.46,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p378|01",
+   "book-ml-co-ban|p376|00",
+   "book-ml-co-ban|p362|00",
+   "book-ml-co-ban|p351|02",
+   "book-ml-co-ban|p358|02",
+   "book-ml-co-ban|p244|01"
+  ],
+  "context": "[book-ml-co-ban|p378|01 | trang 378 | Máy vector hỗ trợ hạt nhân]\nSự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic SVM lề mềm Hai lớp gần tách biệt tuyến tính Hồi quy softmax SVM đa lớp Nhiều lớp dữ liệu, ranh giới tuyến tính Mạng neuron đa tầng SVM hạt nhân Bài toán phân loại hai lớp không tách biệt tuyến tính Trong chương này, chúng ta cùng thảo luận về SVM hạt nhân (kernel SVM) cho bài toán phân loại dữ liệu không tách biệt tuyến tính. Bài toán phân loại đa lớp sử dụng ý tưởng SVM sẽ được thảo luận trong chương tiếp theo. Ý tưởng cơ bản của SVM hạt nhân và các mô hình hạt nhân (kernel model) nói chung là tìm một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Nếu có thể thực hiện điều này, bài toán phân loại sẽ được giải quyết bằng SVM lề cứng/mềm. 378 Machine Learning cơ bản\n\n[book-ml-co-ban|p376|00 | trang 376 | Máy vector hỗ trợ lề mềm]\nx1 x2 C = 0.100000 x1 x2 C = 1.000000 x1 x2 C = 10.000000 x1 x2 C = 0.100000 Hình 27.5. Ảnh hưởng của C lên nghiệm của SVM lề mềm. C càng lớn thì biên càng nhỏ và ngược lại. được bằng cả ba phương pháp. Ta thấy rằng các nghiệm tìm được gần như giống nhau. 27.5.4. Ảnh hưởng của C lên nghiệm Hình 27.5 minh hoạ nghiệm tìm được bằng sklearn với các giá trị C khác nhau. Quan sát thấy khi C càng lớn, biên càng nhỏ đi. Điều này phù hợp với các suy luận ở đầu chương. 27.6. Tóm tắt và thảo luận • SVM thuần (SVM lề cứng) hoạt động không hiệu quả khi có nhiễu ở gần ranh giới hoặc khi dữ liệu giữa hai lớp gần tách biệt tuyến tính. SVM lề mềm có thể giúp khắc phục điểm này. • Trong SVM lề mềm, chúng ta chấp nhận lỗi xảy ra ở một vài điểm dữ liệu. Lỗi này được xác định bằng khoảng cách từ điểm đó tới đường hỗ trợ tương ứng. Bài toán tối ưu sẽ tối thiểu lỗi này bằng cách sử dụng thêm các biến lỏng lẻo.\n\n[book-ml-co-ban|p362|00 | trang 362 | Máy vector hỗ trợ lề mềm]\nnoise (a) Khi có nhiễu nhỏ. almost linearly separable (b) Khi dữ liệu gần linearly separable. Hình 27.1. Hai trường hơp khi SVM thuần làm việc không hiệu quả. (a) Hai lớp vẫn tách biệt tuyến tính nhưng một điểm thuộc lớp này quá gần lớp kia, điểm này có thể là nhiễu. (b) Dữ liệu hai lớp gần tách biệt tuyến tính. Trong cả hai trường hợp trên, lề tạo bởi đường phân chia và đường nét đứt mảnh được gọi là lề mềm (soft-margin). Từ mềm thể hiện sự linh hoạt, có thể chấp nhận việc một vài điểm bị phân loại sai để mô hình hoạt động tốt hơn trên toàn bộ dữ liệu. SVM tạo ra các lề mềm được gọi là SVM lề mềm (soft-margin SVM). Để phân biệt, SVM thuần trong chương trước được gọi là SVM lề cứng (hard-margin SVM). Có hai cách xây dựng và giải quyết bài toán tối ưu SVM lề mềm.\n\n[book-ml-co-ban|p351|02 | trang 351 | Máy vector hỗ trợ]\nTa cần tìm một đường phân chia sao cho lề của hai lớp là như nhau đối với đường phân chia đó. Hơn nữa, độ rộng của lề càng lớn thì khả năng xảy ra phân loại lỗi càng thấp. Bài toán tối ưu trong SVM chính là bài toán đi tìm đường phân chia sao cho lề rộng nhất. Đây cũng là lý do SVM còn được gọi là bộ phân loại lề lớn nhất (maximum margin classifier). Nguồn gốc tên gọi máy vector hỗ trợ sẽ sớm được làm sáng tỏ. Machine Learning cơ bản\n\n[book-ml-co-ban|p358|02 | trang 358 | Máy vector hỗ trợ]\nBa điểm này giúp tính w và b. Đường thẳng phân chia tìm được có màu đen đậm và được minh hoạ trong Hình 26.4. Hai đường đen mảnh thể hiện đường thẳng tựa lên các vector hỗ trợ được khoanh tròn. Hình vẽ và mã nguồn trong bài có thể được tìm thấy tại https://goo.gl/VKBgVG. 358 Machine Learning cơ bản\n\n[book-ml-co-ban|p244|01 | trang 244 | Hệ thống gợi ý dựa trên nội dung]\nRecommendation Systems – Stanford InfoLab (https://goo.gl/P1pesC). b. Recommendation systems – Machine Learning, Andrew Ng (https://goo.gl/ jdFvej). c. Content Based Recommendations – Stanford University (https://goo.gl/3wnbZ4). 244 Machine Learning cơ bản",
+  "context_chars": 3975,
+  "n_llm_calls": 7,
+  "n_book_searches": 5,
+  "n_external_calls": 0,
+  "prompt_tokens": 13673,
+  "completion_tokens": 380,
+  "cost_usd": null,
+  "latency_s": 7.78,
+  "group": "multihop"
+ },
+ {
+  "query_id": "ad13",
+  "question": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là gì và ví dụ cặp dữ liệu nhiễu nào được dùng để minh hoạ?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise) [book-ml-co-ban|p106|01]. \n\nCặp dữ liệu nhiễu được dùng để minh hoạ trong ví dụ về mối quan hệ giữa chiều cao và cân nặng là: (150 cm, 90kg) [book-ml-co-ban|p106|01].",
+  "citations": [
+   "book-ml-co-ban|p106|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 686,
+    "completion_tokens": 32,
+    "cost_usd": null,
+    "latency_s": 0.89,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hạn chế đầu tiên hồi quy tuyến tính ví dụ cặp dữ liệu nhiễu",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 63.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p106|01",
+      "page": 106,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p107|00",
+      "page": 107,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p106|00",
+      "page": 106,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p194|00",
+      "page": 194,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p164|01",
+      "page": 164,
+      "rank": 5,
+      "score": 0.0301
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p106|01",
+     "book-ml-co-ban|p107|00",
+     "book-ml-co-ban|p106|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p194|00",
+     "book-ml-co-ban|p164|01"
+    ],
+    "context_chars": 2559
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1685,
+    "completion_tokens": 148,
+    "cost_usd": null,
+    "latency_s": 1.13,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p106|01",
+   "book-ml-co-ban|p107|00",
+   "book-ml-co-ban|p106|00"
+  ],
+  "context": "[book-ml-co-ban|p106|01 | trang 106 | Hồi quy tuyến tính]\nMột ví dụ về hồi quy đa thức bậc 3 được thể hiện trong Hình 7.2a. 7.4.2. Hạn chế của hồi quy tuyến tính Hạn chế đầu tiên của hồi quy tuyến tính là nó rất nhạy cảm với nhiễu (sensitive to noise). Trong ví dụ về mối quan hệ giữa chiều cao và cân nặng bên trên, nếu có chỉ một cặp dữ liệu nhiễu (150 cm, 90kg) thì kết quả sẽ sai khác đi rất nhiều (xem Hình 7.2b). Một kỹ thuật giúp tránh hiện tượng này là loại bỏ các nhiễu trong quá trình tìm nghiệm. Việc làm này có thể phức tạp và tương đối tốn thời gian. Có một cách khác giúp tránh công việc loại bỏ nhiễu là sử dụng mất mát Huber 22. Hồi 22 Huber loss (https://goo.gl/TBUWzg) 106 Machine Learning cơ bản\n\n[book-ml-co-ban|p107|00 | trang 107 | Hồi quy tuyến tính]\nquy tuyến tính với mất mát Huber được gọi là hồi quy Huber, được khẳng định là có khả năng kháng nhiễu tốt hơn. Xem thêm Huber Regressor, scikit learn (https://goo.gl/h2rKu5). Hạn chế thứ hai của hồi quy tuyến tính là nó không biễu diễn được các mô hình phức tạp. Mặc dù phương pháp này có thể được áp dụng nếu quan hệ giữa đầu ra và đầu vào là phi tuyến, mối quan hệ này vẫn đơn giản hơn nhiều so với các mô hình thực tế. Hơn nữa, việc tìm ra các đặc trưng x2 1, sin(x2), x1x2 như trên là không khả thi khi số chiều dữ liệu lớn lên. 7.4.3. Hồi quy ridge Có một kỹ thuật nhỏ giúp tránh trường hợp XXT không khả nghịch là biến nó thành A = XXT + λI với λ là một số dương nhỏ và I là ma trận đơn vị với bậc phù hợp. Ma trận A là khả nghịch vì nó là một ma trận xác định dương. Thật vậy, với mọi w̸ = 0, wT Aw = wT (XXT + λI)w = wT XXT w + λwT w = ∥XT w∥2 2 + λ∥w∥2 2 > 0.\n\n[book-ml-co-ban|p106|00 | trang 106 | Hồi quy tuyến tính]\n(a) (b) Hình 7.2. (a) Hồi quy đa thức bậc ba (b) Hồi quy tuyến tính nhạy cảm với nhiễu. 7.4. Thảo luận 7.4.1. Các bài toán có thể giải bằng hồi quy tuyến tính Hàm số y ≈ f(x) = xT w + b là một hàm tuyến tính theo cả w và x. Hồi quy tuyến tính có thể áp dụng cho các mô hình chỉ cần tuyến tính theo w. Ví dụ y ≈ w1x1 + w2x2 + w3x2 1 + w4 sin(x2) + w5x1x2 + w0 (7.13) là một hàm tuyến tính theo w nhưng không tuyến tính theo x. Bài toán này vẫn có thể được giải bằng hồi quy tuyến tính. Với mỗi vector đặc trưng x = [x1, x2]T , ta tính vector đặc trưng mới ˜x = [x1, x2, x2 1, sin(x2), x1x2]T rồi áp dụng hồi quy tuyến tính với dữ liệu mới này. Tuy nhiên, việc tìm ra các hàm số sin(x2) hay x1x2 là tương đối không tự nhiên. Hồi quy đa thức (polynomial regression) thường được sử dụng nhiều hơn với các vector đặc trưng mới có dạng [1, x1, x2 1, . . . ]T .",
+  "context_chars": 2559,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 2371,
+  "completion_tokens": 180,
+  "cost_usd": null,
+  "latency_s": 2.09,
+  "group": "text"
+ },
+ {
+  "query_id": "ad14",
+  "question": "Trong phân cụm theo tầng kiểu agglomerative dựa trên K-means, ban đầu K được chọn như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Trong phương pháp phân cụm theo tầng kiểu agglomerative (đi từ dưới lên) dựa trên K-means, ban đầu ta chọn $K$ là một số lớn gần bằng số điểm dữ liệu [book-ml-co-ban|p138|01].",
+  "citations": [
+   "book-ml-co-ban|p138|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 679,
+    "completion_tokens": 29,
+    "cost_usd": null,
+    "latency_s": 0.59,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "agglomerative K-means phân cụm theo tầng ban đầu K",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 79.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p138|01",
+      "page": 138,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p141|01",
+      "page": 141,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p128|00",
+      "page": 128,
+      "rank": 3,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p132|00",
+      "page": 132,
+      "rank": 4,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p129|01",
+      "page": 129,
+      "rank": 5,
+      "score": 0.0303
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p138|01",
+     "book-ml-co-ban|p141|01",
+     "book-ml-co-ban|p128|00"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p132|00",
+     "book-ml-co-ban|p129|01"
+    ],
+    "context_chars": 1819
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1328,
+    "completion_tokens": 58,
+    "cost_usd": null,
+    "latency_s": 1.07,
+    "tool_calls": [],
+    "text": "Trong phương pháp phân cụm theo tầng kiểu agglomerative (đi từ dưới lên) dựa trên K-means, ban đầu người ta chọn $K$ là một số lớn gần bằng số điểm dữ liệu [book-ml-co-ban|p138|01]."
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1403,
+    "completion_tokens": 103,
+    "cost_usd": null,
+    "latency_s": 0.97,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p138|01",
+   "book-ml-co-ban|p141|01",
+   "book-ml-co-ban|p128|00"
+  ],
+  "context": "[book-ml-co-ban|p138|01 | trang 138 | Phân cụm K-means]\nMột kỹ thuật phân cụm thường được sử dụng là phân cụm theo tầng (hierarchical clustering [Ble08]). Có hai loại phân cụm theo tầng: • Agglomerative tức “đi từ dưới lên”. Ban đầu ta chọn K là một số lớn gần bằng số điểm dữ liệu. Sau khi thực hiện phân cụm K-means lần đầu, các cụm gần nhau được ghép lại thành một cụm. Khoảng cách giữa các cụm có thể được xác định bằng khoảng cách giữa các tâm cụm. Sau bước này, ta thu được một số lượng cụm nhỏ hơn. Tiếp tục phân cụm K-means với điểm khởi tạo là tâm của cụm lớn vừa thu được. Lặp lại quá trình này đến khi nhận được kết quả chấp nhận được. 138 Machine Learning cơ bản\n\n[book-ml-co-ban|p141|01 | trang 141 | Phân cụm K-means]\nThuật toán phân cụm K-means không đảm bảo tìm được nghiệm tối ưu toàn cục, nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu. Machine Learning cơ bản\n\n[book-ml-co-ban|p128|00 | trang 128 | Phân cụm K-means]\nChương 10 Phân cụm K -means 10.1. Giới thiệu Trong Chương 7 và, 9, chúng ta đã làm quen các thuật toán học có giám sát. Trong chương này, một thuật toán đơn giản của học không giám sát sẽ được trình bày. Thuật toán này có tên là phân cụm K-means (K-means clustering). Trong phân cụm K-means, ta không biết nhãn của từng điểm dữ liệu. Mục đích là làm thể nào để phân dữ liệu thành các cụm (cluster) khác nhau sao cho dữ liệu trong cùng một cụm có những tính chất giống nhau. Ví dụ: Một công ty muốn tạo ra một chính sách ưu đãi cho những nhóm khách hàng khác nhau dựa trên sự tương tác giữa mỗi khách hàng với công ty đó (số năm là khách hàng, số tiền khách hàng đã chi trả cho công ty, độ tuổi, giới tính, thành phố, nghề nghiệp,...). Giả sử công ty có dữ liệu của khách hàng nhưng phân cụm. Phân cụm K-means là một thuật toán có thể giúp thực hiện công việc này.",
+  "context_chars": 1819,
+  "n_llm_calls": 3,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 3410,
+  "completion_tokens": 190,
+  "cost_usd": null,
+  "latency_s": 2.7,
+  "group": "text"
+ },
+ {
+  "query_id": "ad15",
+  "question": "Theo phần tóm tắt chương ước lượng tham số, MAP có thể được coi như phương pháp giúp ích trong trường hợp nào?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "answered",
+  "answer": "Theo phần tóm tắt của chương ước lượng tham số, MAP (ước lượng hậu nghiệm cực đại) có thể được coi như một phương pháp giúp tránh thiên lệch khi có ít dữ liệu huấn luyện [book-ml-co-ban|p077|01].",
+  "citations": [
+   "book-ml-co-ban|p077|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 681,
+    "completion_tokens": 24,
+    "cost_usd": null,
+    "latency_s": 1.27,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "MAP tóm tắt chương ước lượng tham số",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 75.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p067|00",
+      "page": 67,
+      "rank": 1,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p077|00",
+      "page": 77,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p067|01",
+      "page": 67,
+      "rank": 3,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p073|01",
+      "page": 73,
+      "rank": 4,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p075|01",
+      "page": 75,
+      "rank": 5,
+      "score": 0.0303
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p067|00",
+     "book-ml-co-ban|p077|00",
+     "book-ml-co-ban|p067|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p073|01",
+     "book-ml-co-ban|p075|01"
+    ],
+    "context_chars": 2781
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1579,
+    "completion_tokens": 28,
+    "cost_usd": null,
+    "latency_s": 1.28,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "MAP tóm tắt chương 4 ước lượng tham số trường hợp",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 71.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p067|00",
+      "page": 67,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p077|00",
+      "page": 77,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p076|01",
+      "page": 76,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p073|01",
+      "page": 73,
+      "rank": 4,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p067|01",
+      "page": 67,
+      "rank": 5,
+      "score": 0.0306
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p076|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p067|00",
+     "book-ml-co-ban|p077|00",
+     "book-ml-co-ban|p067|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p073|01"
+    ],
+    "context_chars": 3452
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1996,
+    "completion_tokens": 19,
+    "cost_usd": null,
+    "latency_s": 0.66,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "MAP MLE overfitting regularization",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 59.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p076|01",
+      "page": 76,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p077|00",
+      "page": 77,
+      "rank": 2,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p145|01",
+      "page": 145,
+      "rank": 3,
+      "score": 0.0305
+     },
+     {
+      "id": "book-ml-co-ban|p394|01",
+      "page": 394,
+      "rank": 4,
+      "score": 0.0299
+     },
+     {
+      "id": "book-ml-co-ban|p075|01",
+      "page": 75,
+      "rank": 5,
+      "score": 0.0295
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p076|01",
+     "book-ml-co-ban|p077|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p145|01",
+     "book-ml-co-ban|p394|01",
+     "book-ml-co-ban|p075|01"
+    ],
+    "context_chars": 3452
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2129,
+    "completion_tokens": 24,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hậu nghiệm cực đại MAP regularization tránh overfitting",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 63.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p073|01",
+      "page": 73,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p077|00",
+      "page": 77,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p074|00",
+      "page": 74,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p077|01",
+      "page": 77,
+      "rank": 4,
+      "score": 0.0295
+     },
+     {
+      "id": "book-ml-co-ban|p145|01",
+      "page": 145,
+      "rank": 5,
+      "score": 0.0291
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p077|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p077|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p073|01",
+     "book-ml-co-ban|p074|00",
+     "book-ml-co-ban|p145|01"
+    ],
+    "context_chars": 3785
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2340,
+    "completion_tokens": 103,
+    "cost_usd": null,
+    "latency_s": 0.72,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p067|00",
+   "book-ml-co-ban|p077|00",
+   "book-ml-co-ban|p067|01",
+   "book-ml-co-ban|p076|01",
+   "book-ml-co-ban|p077|01"
+  ],
+  "context": "[book-ml-co-ban|p067|00 | trang 67 | Ước lượng tham số mô hình]\nChương 4 Ước lượng tham số mô hình 4.1. Giới thiệu Có rất nhiều mô hình machine learning được xây dựng dựa trên các mô hình thống kê. Các mô hình thống kê thường dựa trên các phân phối xác suất đã được đề cập trong Chương 3. Với một mô hình thông kê bất kỳ, ký hiệu θ là tập hợp tất cả các tham số của mô hình đó. Với phân phối Bernoulli, tham số là biến λ. Với phân phối chuẩn nhiều chiều, các tham số là vector kỳ vọng µ và ma trận hiệp phương sai Σ. “Learning” chính là quá trình ước lượng bộ tham số θ sao cho mô hình tìm được khớp với phân phối của dữ liệu nhất. Quá trình này còn được gọi là ước lượng tham số (parameter estimation). Có hai cách ước lượng tham số thường được dùng trong các mô hình machine learning thống kê. Cách thứ nhất chỉ dựa trên dữ liệu đã biết trong tập huấn luyện, được gọi là ước lượng hợp lý cực đại(maximum likelihood estimation hay ML estimation hoặc MLE).\n\n[book-ml-co-ban|p077|00 | trang 77 | Ước lượng tham số mô hình]\n4.4. Tóm tắt • Khi sử dụng các mô hình thống kê machine learning, chúng ta thường xuyên phải ước lượng các tham số của mô hình θ. Có hai phương pháp phổ biến được sử dụng để ước lượng θ là ước lượng hợp lý cực đại (MLE) và ước lượng hậu nghiệ cực đại (MAP). • Với MLE, việc xác định tham số θ được thực hiện bằng cách đi tìm các tham số sao cho xác suất của tập huấn luyện, được xác định bằng hàm hợp lý, là lớn nhất: θ = argmax θ p(x1, . . . , xN|θ). (4.41) • Để giải bài toán tối ưu này, giả thiết các dữ liệu xi độc lập thường được sử dụng. Và bài toán MLE trở thành θ = argmax θ N Y i=1 p(xi|θ). (4.42) • Với MAP, các tham số được đánh giá bằng cách tối đa hậu nghiệm: θ = argmax θ p(θ|x1, . . . , xN) (4.43) • Quy tắc Bayes và giả thiết về sự độc lập của dữ liệu thường được sử dụng: θ = argmax θ \" N Y i=1 p(xi|θ)p(θ) # (4.44) Hàm mục tiêu ở đây chính là tích của hàm hợp lý và tiên nghiệm.\n\n[book-ml-co-ban|p067|01 | trang 67 | Ước lượng tham số mô hình]\nCách thứ hai không những dựa trên tập huấn luyện mà còn dựa trên những thông tin biết trước của các tham số. Những thông tin này có thể có được bằng cảm quan của người xây dựng mô hình. Cảm quan càng rõ ràng, càng hợp lý thì khả năng thu được bộ tham số tốt càng cao. Chẳng hạn, thông tin biết trước của λ trong phân phối Bernoulli là việc nó là một số trong đoạn [0, 1]. Với bài toán tung đồng xu, với λ là xác suất có được mặt xấp, ta dự đoán được rằng giá trị này là một số gần với 0.5. Cách ước lượng tham số thứ hai này được gọi là ước lượng hậu nghiệm cực đại (maximum a posteriori estimation hay MAP estimation). Trong chương này, chúng ta cùng tìm hiểu ý tưởng và cách giải quyết bài toán ước lượng tham số mô hình theo MLE hoặc MAP. 4.2. Ước lượng hợp lý cực đại Machine Learning cơ bản\n\n[book-ml-co-ban|p076|01 | trang 76 | Ước lượng tham số mô hình]\nThực chất, nếu ta thay α = β = 1 vào (4.40) ta sẽ thu được λ = n/N, đây chính là ước lượng thu được bằng MLE. MLE là một trường hợp đặc biệt của MAP khi prior là một phân phối đều. Nếu ta chọn α = β = 2, ta sẽ thu được: λ = n + 1 N + 2. Chẳng hạn khi N = 5, n = 1 như trong ví dụ. MLE cho kết quả λ = 1/5, MAP sẽ cho kết quả λ = 2/7, gần với 1/2 hơn. Nếu chọn α = β = 10 ta sẽ có λ = (1 + 9)/(5 + 18) = 10/23. Ta thấy rằng khi α = β và càng lớn thì ta sẽ thu được λ càng gần 1/2. Điều này có thể dễ nhận thấy vì prior nhận giá trị rất cao tại 0.5 khi các siêu tham số α = β lớn. 76 Machine Learning cơ bản\n\n[book-ml-co-ban|p077|01 | trang 77 | Ước lượng tham số mô hình]\n• Tiên nghiệm thường được chọn dựa trên các thông tin biết trước của tham số, và phân phối được chọn thường là các phân phối liên hợp của likelihood. • MAP có thể được coi như một phương pháp giúp tránh thiên lệch khi có ít dữ liệu huấn luyện. Machine Learning cơ bản",
+  "context_chars": 3785,
+  "n_llm_calls": 5,
+  "n_book_searches": 4,
+  "n_external_calls": 0,
+  "prompt_tokens": 8725,
+  "completion_tokens": 198,
+  "cost_usd": null,
+  "latency_s": 5.16,
+  "group": "text"
+ },
+ {
+  "query_id": "ad16",
+  "question": "Theo bảng dữ liệu chiều cao và cân nặng của 15 người, tuổi trung bình của nhóm người này là bao nhiêu?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "abstain",
+  "answer": "Sách chỉ cung cấp bảng dữ liệu về chiều cao và cân nặng của 15 người [book-ml-co-ban|p104|00] chứ không đề cập đến thông tin về độ tuổi hay tuổi trung bình của nhóm người này.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 681,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 0.93,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "tuổi trung bình chiều cao cân nặng 15 người",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 80.1,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p103|01",
+      "page": 103,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p284|01",
+      "page": 284,
+      "rank": 3,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p290|01",
+      "page": 290,
+      "rank": 4,
+      "score": 0.0289
+     },
+     {
+      "id": "book-ml-co-ban|p357|02",
+      "page": 357,
+      "rank": 5,
+      "score": 0.0286
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p104|00",
+     "book-ml-co-ban|p103|01",
+     "book-ml-co-ban|p284|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p290|01",
+     "book-ml-co-ban|p357|02"
+    ],
+    "context_chars": 2726
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1831,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 0.95,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Tuổi trung bình nhóm người Bảng 7.1",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 83.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p104|00",
+      "page": 104,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p290|01",
+      "page": 290,
+      "rank": 2,
+      "score": 0.0294
+     },
+     {
+      "id": "book-ml-co-ban|p291|00",
+      "page": 291,
+      "rank": 3,
+      "score": 0.0294
+     },
+     {
+      "id": "book-ml-co-ban|p249|00",
+      "page": 249,
+      "rank": 4,
+      "score": 0.0277
+     },
+     {
+      "id": "book-ml-co-ban|p082|02",
+      "page": 82,
+      "rank": 5,
+      "score": 0.0161
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p290|01",
+     "book-ml-co-ban|p249|00"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p104|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p291|00",
+     "book-ml-co-ban|p082|02"
+    ],
+    "context_chars": 3846
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2326,
+    "completion_tokens": 17,
+    "cost_usd": null,
+    "latency_s": 1.02,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "tuổi",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 63.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p082|02",
+      "page": 82,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p240|01",
+      "page": 240,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p082|01",
+      "page": 82,
+      "rank": 3,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p240|02",
+      "page": 240,
+      "rank": 4,
+      "score": 0.0159
+     },
+     {
+      "id": "book-ml-co-ban|p083|02",
+      "page": 83,
+      "rank": 5,
+      "score": 0.0156
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p082|02",
+     "book-ml-co-ban|p240|01",
+     "book-ml-co-ban|p082|01",
+     "book-ml-co-ban|p240|02",
+     "book-ml-co-ban|p083|02"
+    ],
+    "context_chars": 3846
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2415,
+    "completion_tokens": 102,
+    "cost_usd": null,
+    "latency_s": 1.35,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p104|00",
+   "book-ml-co-ban|p103|01",
+   "book-ml-co-ban|p284|01",
+   "book-ml-co-ban|p290|01",
+   "book-ml-co-ban|p249|00"
+  ],
+  "context": "[book-ml-co-ban|p104|00 | trang 104 | Hồi quy tuyến tính]\nBảng 7.1: Bảng dữ liệu về chiều cao và cân nặng của 15 người Chiều cao (cm) Cân nặng (kg) Chiều cao (cm) Cân nặng (kg) 147 49 168 60 150 50 170 72 153 51 173 63 155 52 175 64 158 54 178 66 160 56 180 67 163 58 183 68 165 59 7.3.2. Hiển thị dữ liệu trên đồ thị Trước tiên, ta khai báo dữ liệu huấn luyện. from __future__ import print_function import numpy as np import matplotlib.pyplot as plt X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]]).T # height (cm), input data, each row is a data point # weight (kg) y = np.array([ 49, 50, 51, 54, 58, 59, 60, 62, 63, 64, 66, 67, 68]) Các điểm dữ liệu được minh hoạ bởi các điểm hình tròn trong Hình 7.1. Ta thấy rằng dữ liệu được sắp xếp gần như theo một đường thẳng, vậy mô hình hồi quy tuyến tính sau đây có khả năng cho kết quả tốt, với w_0 là hệ số điều chỉnh b: (cân nặng) = w_1*(chiều cao) + w_0 7.3.3.\n\n[book-ml-co-ban|p103|01 | trang 103 | Hồi quy tuyến tính]\n, ¯xN], ta có nghiệm của bài toán tối thiểu hàm mất mát ¯w = argmin w 1 2N ∥y − ¯XT ¯w∥2 2 = ( ¯X ¯XT )† ¯Xy (7.12) Kỹ thuật thêm một đặc trưng x0 = 1 vào vector đặc trưng và ghép hệ số điều chỉnh b vào vector trọng số w như trên còn được gọi là thủ thuật gộp hệ số điều chỉnh (bias trick). Chúng ta sẽ gặp lại kỹ thuật đó nhiều lần trong cuốn sách này. 7.3. Ví dụ trên Python 7.3.1. Bài toán Xét một ví dụ đơn giản có thể áp dụng hồi quy tuyến tính. Chúng ta sẽ so sánh nghiệm của bài toán khi giải theo phương trình (7.12) và nghiệm tìm được khi dùng thư viện scikit-learn của Python. Giả sử có dữ liệu cân nặng và chiều cao của 15 người trong Bảng 7.1. Dữ liệu của hai người có chiều cao 155 cm và 160 cm được tách ra làm tập kiểm tra, phần còn lại tạo thành tập huấn luyện. Bài toán đặt ra là liệu có thể dự đoán cân nặng của một người dựa vào chiều cao của họ không? Có thể thấy là cân nặng thường tỉ lệ thuận với chiều cao, vì vậy hồi quy tuyến tính là một mô hình phù hợp. Machine Learning cơ bản\n\n[book-ml-co-ban|p284|01 | trang 284 | Phân tích thành phần chính]\nCó tất cả 15 người khác nhau, mỗi người có 11 bức ảnh được chụp ở các điều kiện ánh sáng và cảm xúc khác nhau, bao gồm ’centerlight’, ’glasses’, ’happy’, ’leftlight’, ’noglasses’, ’normal’ , ’rightlight’,’sad’, ’sleepy’, ’surprised’, và ’wink’. Hình 21.5 minh hoạ các bức ảnh của người có id là 10. Ta thấy rằng số chiều dữ liệu 116 × 98 = 11368 là một số khá lớn. Tuy nhiên, vì chỉ có tổng cộng 15 × 11 = 165 bức ảnh nên ta có thể nén các bức ảnh này về dữ liệu mới có chiều nhỏ hơn 165. Trong ví dụ này, chúng ta chọn K = 100. Dưới đây là đoạn code thực hiện PCA cho toàn bộ dữ liệu. Ở đây, A trong sklearn được sử dụng: 284 Machine Learning cơ bản\n\n[book-ml-co-ban|p290|01 | trang 290 | Phân tích biệt thức tuyến tính]\nHình 22.2b thể hiện trường hợp độ lệch chuẩn của hai lớp đều nhỏ, tức dữ liệu trong mỗi lớp tập trung hơn. Tuy nhiên, khoảng cách giữa hai lớp, được đo bằng khoảng cách giữa hai trung bình m1 và m2 là quá nhỏ. Việc này khiến phần chồng lấn chiếm một tỉ lệ lớn, không tốt cho việc phân loại. Hình 22.2c thể hiện trường hợp cả hai độ lệch chuẩn nhỏ và khoảng cách giữa hai trung bình lớn, phần chồng lấn nhỏ không đáng kể. Vậy, độ lệch chuẩn và khoảng cách giữa hai trung bình cụ thể đại diện cho các tiêu chí gì? • Độ lệch chuẩn nhỏ thể hiện việc dữ liệu ít phân tán, tức dữ liệu trong mỗi lớp có xu hướng giống nhau. Hai phương sai s2 1, s2 2 còn được gọi là các phương sai nội lớp (within-class variance). • Khoảng cách giữa các trung bình lớn chứng tỏ hai lớp cách xa nhau, tức dữ liệu giữa hai lớp khác nhau nhiều.\n\n[book-ml-co-ban|p249|00 | trang 249 | Lọc cộng tác lân cận]\na) Ma trận tiện ích ban đầu Y và trung bình độ quan tâm của người dùng ↓ ↓ ↓ ↓ ↓ ↓ ↓ u0 5 4 ? 2 2 u1 5 ? 4 2 0 u2 2 ? 1 3 4 u3 0 0 ? 4 ? u4 1 ? ? 4 ? u5 ? 2 1 ? ? u6 ? ?",
+  "context_chars": 3846,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 7253,
+  "completion_tokens": 173,
+  "cost_usd": null,
+  "latency_s": 4.48,
+  "group": "unanswerable"
+ },
+ {
+  "query_id": "ad17",
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số kiểm tra khi bậc đa thức bằng 10 là bao nhiêu?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến giá trị cụ thể của sai số kiểm tra khi bậc đa thức bằng 10 trong Hình 8.2 (sách chỉ mô tả bậc của đa thức tăng từ một đến tám) [book-ml-co-ban|p111|03].",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 684,
+    "completion_tokens": 30,
+    "cost_usd": null,
+    "latency_s": 1.02,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "sai số kiểm tra bậc đa thức bằng 10 lựa chọn mô hình",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 87.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p112|00",
+      "page": 112,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p111|00",
+      "page": 111,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p111|03",
+      "page": 111,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p111|02",
+      "page": 111,
+      "rank": 4,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p110|02",
+      "page": 110,
+      "rank": 5,
+      "score": 0.0312
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p112|00",
+     "book-ml-co-ban|p111|00",
+     "book-ml-co-ban|p111|03"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p111|02",
+     "book-ml-co-ban|p110|02"
+    ],
+    "context_chars": 2197
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1424,
+    "completion_tokens": 29,
+    "cost_usd": null,
+    "latency_s": 1.17,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 8.2 bậc bằng 10 sai số kiểm tra",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 72.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p112|00",
+      "page": 112,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p111|03",
+      "page": 111,
+      "rank": 2,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p111|00",
+      "page": 111,
+      "rank": 3,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p114|00",
+      "page": 114,
+      "rank": 4,
+      "score": 0.0286
+     },
+     {
+      "id": "book-ml-co-ban|p149|01",
+      "page": 149,
+      "rank": 5,
+      "score": 0.0257
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p114|00",
+     "book-ml-co-ban|p149|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p112|00",
+     "book-ml-co-ban|p111|03",
+     "book-ml-co-ban|p111|00"
+    ],
+    "skipped": [],
+    "context_chars": 3897
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 2177,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 1.03,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 8.2 bậc đa thức tăng từ một đến",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 74.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p111|03",
+      "page": 111,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p112|00",
+      "page": 112,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p110|00",
+      "page": 110,
+      "rank": 3,
+      "score": 0.0312
+     },
+     {
+      "id": "book-ml-co-ban|p108|01",
+      "page": 108,
+      "rank": 4,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p109|00",
+      "page": 109,
+      "rank": 5,
+      "score": 0.0304
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p111|03",
+     "book-ml-co-ban|p112|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p110|00",
+     "book-ml-co-ban|p108|01",
+     "book-ml-co-ban|p109|00"
+    ],
+    "context_chars": 3897
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2326,
+    "completion_tokens": 24,
+    "cost_usd": null,
+    "latency_s": 1.09,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Hình 8.2 bậc của đa thức",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 84.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p111|03",
+      "page": 111,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p112|00",
+      "page": 112,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p109|00",
+      "page": 109,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p108|01",
+      "page": 108,
+      "rank": 4,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p110|00",
+      "page": 110,
+      "rank": 5,
+      "score": 0.0308
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p111|03",
+     "book-ml-co-ban|p112|00"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p109|00",
+     "book-ml-co-ban|p108|01",
+     "book-ml-co-ban|p110|00"
+    ],
+    "context_chars": 3897
+   },
+   {
+    "event": "llm",
+    "step": 4,
+    "retries": 0,
+    "prompt_tokens": 2469,
+    "completion_tokens": 109,
+    "cost_usd": null,
+    "latency_s": 1.27,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p112|00",
+   "book-ml-co-ban|p111|00",
+   "book-ml-co-ban|p111|03",
+   "book-ml-co-ban|p114|00",
+   "book-ml-co-ban|p149|01"
+  ],
+  "context": "[book-ml-co-ban|p112|00 | trang 112 | Quá khớp]\nHình 8.2. Lựa chọn mô hình dựa trên sai số xác thực xu hướng giảm. Điều này dễ hiểu vì đa thức bậc càng cao, việc xấp xỉ càng chính xác. Quan sát đường nét đứt, khi bậc của đa thức là ba hoặc bốn thì sai số xác thực thấp, sau đó nó tăng dần lên. Dựa vào sai số xác thực, ta có thể xác định được bậc cần chọn là ba hoặc bốn. Quan sát tiếp đường nét chấm gạch, tương ứng với sai số kiểm tra. Thật trùng hợp, sai số kiểm tra cũng đạt giá trị nhỏ nhất tại bậc bằng ba hoặc bốn và tăng lên khi bậc tăng lên. Ở đây, kỹ thuật này đã tỏ ra hiệu quả. Mô hình phù hợp là mô hình có bậc bằng ba hoặc bốn. Trong ví dụ này, tập xác thực đóng vai trò tìm ra bậc của đa thức, tập huấn luyện đóng vai trò tìm các hệ số của đa thức với bậc đã biết. Các hệ số của đa thức chính là các tham số mô hình, trong khi bậc của đa thức có thể được coi là siêu tham số.\n\n[book-ml-co-ban|p111|00 | trang 111 | Quá khớp]\nMột mô hình được coi là tốt nếu cả sai số huấn luyện và test error đều thấp. Nếu sai số huấn luyện thấp nhưng sai số kiểm tra cao, ta nói mô hình bị quá khớp. Nếu sai số huấn luyện cao và sai số kiểm tra cao, ta nói mô hình bị chưa khớp. Xác suất để xảy ra việc sai số huấn luyện cao nhưng sai số kiểm tra thấp là rất nhỏ. Trong chương này, chúng ta sẽ làm quen với hai kỹ thuật phổ biến giúp tránh quá khớp là xác thực và cơ chế kiểm soát. 8.2. Xác thực 8.2.1. Xác thực Một mô hình được coi là tốt nếu cả sai số huấn luyện và sai số kiểm tra đều nhỏ. Tuy nhiên, nếu xây dựng một mô hình chỉ dựa trên tập huấn luyện, làm thế nào để biết được chất lượng của nó trên tập kiểm tra? Phương pháp đơn giản nhất là trích từ tập huấn luyện ra một tập con nhỏ và thực hiện việc đánh giá mô hình trên tập dữ liệu này. Tập dữ liệu này được gọi là tập xác thực (validation set).\n\n[book-ml-co-ban|p111|03 | trang 111 | Quá khớp]\nHình 8.2 mô tả ví dụ ở đầu chương với bậc của đa thức tăng từ một đến tám. Tập xác thực là 10 điểm được lấy ra ngẫu nhiên từ tập huấn luyện 30 điểm ban đầu. Chúng ta hãy tạm chỉ xét hai đường nét liền và nét đứt, tương ứng với sai số huấn luyện và sai số xác thực. Khi bậc của đa thức tăng lên, sai số huấn luyện có Machine Learning cơ bản\n\n[book-ml-co-ban|p114|00 | trang 114 | Quá khớp]\nHình 8.3. Kết thúc sớm. Thuật toán huấn luyện dừng lại tại vòng lặp mà sai số xác thực đạt giá trị nhỏ nhất. mô hình có thể được coi là số vòng lặp cần chạy. Số vòng lặp càng cao thì sai số huấn luyện càng nhỏ nhưng sai số xác thức có thể tăng lên, tức mô hình có khả năng bị quá khớp. 8.3.2. Thêm số hạng vào hàm mất mát Kỹ thuật phổ biến hơn là thêm vào hàm mất mát một số hạng giúp kiểm soát độ phức tạp mô hình. Số hạng này thường dùng để đánh giá độ phức tạp của mô hình với giá trị lớn thể hiện mô hình phức tạp. Hàm mất mát mới được gọi là hàm mất mát được kiểm soát (regularized loss function), thường được định nghĩa như sau: Lreg(θ) = L(θ) + λR(θ) Nhắc lại rằng θ được dùng để ký hiệu các tham số trong mô hình. L(θ) là hàm mất mát phụ thuộc vào tập huấn luyện và θ, R(θ) là số hạng kiểm soát chỉ phụ thuộc vào θ.\n\n[book-ml-co-ban|p149|01 | trang 149 | Bộ phân loại naive Bayes]\nChú ý, hai giá trị tìm được 1.5 × 10−4 và 1.75 × 10−5 không phải là hai xác suất cần tìm mà là hai đại lượng tỉ lệ thuận với hai xác suất đó. Để tính cụ thể, ta có thể làm như sau: p(B|d5) = 1.5 × 10−4 1.5 × 10−4 + 1.75 × 10−5 ≈ 0.8955, p(N|d5) = 1−p(B|d5) ≈ 0.1045. Như vậy xác suất để d5 có nhãn B là 89.55%, có nhãn N là 10.45%. Bạn đọc có thể tự tính với ví dụ khác: d6 = pho hutiu banhbo. Nếu tính toán đúng, ta sẽ thu được p(B|d6) ≈ 0.29, p(N|d6) ≈ 0.71, và suy ra d6 thuộc vào class N. 11.3.2. Bộ phân loại naive Bayes với thư viện scikit-learn Để kiểm tra lại các phép tính phía trên, chúng ta cùng giải quyết bài toán này bằng scikit-learn. Ở đây, dữ liệu huấn luyện và kiểm tra đã được đưa về dạng vector đặc trưng sử dụng BoW. Machine Learning cơ bản",
+  "context_chars": 3897,
+  "n_llm_calls": 5,
+  "n_book_searches": 4,
+  "n_external_calls": 0,
+  "prompt_tokens": 9080,
+  "completion_tokens": 219,
+  "cost_usd": null,
+  "latency_s": 5.9,
+  "group": "unanswerable"
+ },
+ {
+  "query_id": "ad18",
+  "question": "Theo bảng các hàm hạt nhân thông dụng, công thức của hạt nhân Laplacian là gì?",
+  "filter": null,
+  "config": {
+   "name": "text_hybrid",
+   "retriever": "text_hybrid",
+   "top_k": 5,
+   "budget_chars": 4000,
+   "max_new_per_search": 3,
+   "max_book_searches": 5,
+   "max_steps": 10,
+   "external_tools": false,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "status": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến công thức của hạt nhân Laplacian trong bảng các hàm hạt nhân thông dụng [book-ml-co-ban|p383|01].",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 673,
+    "completion_tokens": 26,
+    "cost_usd": null,
+    "latency_s": 0.89,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "hạt nhân Laplacian công thức hàm hạt nhân thông dụng",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 75.5,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p383|01",
+      "page": 383,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p383|00",
+      "page": 383,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p382|01",
+      "page": 382,
+      "rank": 3,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p379|02",
+      "page": 379,
+      "rank": 4,
+      "score": 0.0301
+     },
+     {
+      "id": "book-ml-co-ban|p386|01",
+      "page": 386,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p383|01",
+     "book-ml-co-ban|p383|00",
+     "book-ml-co-ban|p382|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p379|02",
+     "book-ml-co-ban|p386|01"
+    ],
+    "context_chars": 2569
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1597,
+    "completion_tokens": 21,
+    "cost_usd": null,
+    "latency_s": 0.87,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Laplacian kernel hạt nhân Laplacian",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 87.9,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 1,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p382|01",
+      "page": 382,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p384|01",
+      "page": 384,
+      "rank": 3,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p379|01",
+      "page": 379,
+      "rank": 4,
+      "score": 0.0297
+     },
+     {
+      "id": "book-ml-co-ban|p382|00",
+      "page": 382,
+      "rank": 5,
+      "score": 0.0291
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p378|01"
+    ],
+    "duplicate": [
+     "book-ml-co-ban|p382|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p384|01",
+     "book-ml-co-ban|p379|01",
+     "book-ml-co-ban|p382|00"
+    ],
+    "context_chars": 3556
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1963,
+    "completion_tokens": 27,
+    "cost_usd": null,
+    "latency_s": 1.0,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "text_hybrid",
+    "query": "Bảng 28.2 hàm hạt nhân thông dụng",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 83.0,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p383|00",
+      "page": 383,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p383|01",
+      "page": 383,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p382|01",
+      "page": 382,
+      "rank": 3,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p386|01",
+      "page": 386,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p384|00",
+      "page": 384,
+      "rank": 5,
+      "score": 0.0308
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p383|00",
+     "book-ml-co-ban|p383|01",
+     "book-ml-co-ban|p382|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p386|01",
+     "book-ml-co-ban|p384|00"
+    ],
+    "context_chars": 3556
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 2128,
+    "completion_tokens": 90,
+    "cost_usd": null,
+    "latency_s": 1.25,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p383|01",
+   "book-ml-co-ban|p383|00",
+   "book-ml-co-ban|p382|01",
+   "book-ml-co-ban|p378|01"
+  ],
+  "context": "[book-ml-co-ban|p383|01 | trang 383 | Máy vector hỗ trợ hạt nhân]\nBảng các hàm hạt nhân thông dụng Tên Công thức Thiết lập hệ số ’linear’ xT z không có hệ số ’poly’ (r + γxT z)d d: degree, γ: gamma, r: coef0 ’sigmoid’ tanh(γxT z + r) γ: gamma, r: coef0 ’rbf’ exp(−γ&x − z&2 2) γ > 0: gamma Nếu muốn sử dụng các thư viện cho C/C++, các bạn có thể tham khảo LIBSVM (https://goo.gl/Dt7o7r) và LIBLINEAR (https://goo.gl/ctD7a3). Hàm tự định nghĩa Ngoài các hàm hạt nhân thông dụng như trên, chúng ta cũng có thể tự định nghĩa các hàm hạt nhân theo hướng dẫn tại https://goo.gl/A9ajzp. Machine Learning cơ bản\n\n[book-ml-co-ban|p383|00 | trang 383 | Máy vector hỗ trợ hạt nhân]\nĐa thức Hàm hạt nhân đa thức có dạng k(x, z) = (r + γxT z)d (28.9) Với d là một số thực dương. Khi d là một số tự nhiên, hạt nhân đa thức có thể mô tả hầu hết các đa thức có bậc không vượt quá d. Khi sử dụng thư viện sklearn, hạt nhân này được chọn bằng cách gán kernel = ’poly’. Bạn đọc có thể tìm thấy tài liệu chính thức trong scikit-learn tại https://goo.gl/QvtFc9. Hàm cơ sở radial Hàm cơ sở radial (radial basic function, RBF hay hạt nhân Gauss) là lựa chọn mặc định trong sklearn, được sử dụng nhiều nhất trong thực tế. Hàm số này được định nghĩa bởi k(x, z) = exp(−γ∥x − z∥2 2), γ > 0 (28.10) Sigmoid Hàm dạng sigmoid cũng được sử dụng làm hạt nhân: k(x, z) = tanh(γxT z + r) (28.11) Trong sklearn, hạt nhân này được lựa chọn bằng cách gán kernel = ’sigmoid’. Bảng tóm tắt các hàm hạt nhân thông dụng Bảng 28.2 tóm tắt các hàm hạt nhân thông dụng và cách sử dụng trong sklearn. Bảng 28.2:\n\n[book-ml-co-ban|p382|01 | trang 382 | Máy vector hỗ trợ hạt nhân]\nĐiều kiện này giúp bài toán được giải một cách hiệu quả. • Trong thực hành, một vài hàm số k() không thỏa mãn điều kiện Mercer vẫn cho kết quả chấp nhận được. Những hàm số này vẫn được gọi là hạt nhân. Trong chương này, chúng ta chỉ quan tâm tới các hàm hạt nhân thông dụng có sẵn trong các thư viện. Việc giải quyết bài toán (28.5) hoàn toàn tương tự như bài toán đối ngẫu trong SVM lề mềm. Chúng ta sẽ không đi sâu vào việc tính nghiệm này. Thay vào đó, chúng ta sẽ thảo luận các hàm hạt nhân thông dụng và hiệu năng của chúng trong các bài toán. 28.3.2. Một số hàm hạt nhân thông dụng Tuyến tính Đây là trường hợp đơn giản với hàm hạt nhân chính là tích vô hướng của hai vector: k(x, z) = xT z. Như đã chứng minh trong Chương 26, hàm số thỏa mãn điều kiện (28.7). Khi sử dụng sklearn.svm.SVC, hàm này được chọn bằng cách gán kernel = ’linear’. 69 Xem Kernel method – Wikipedia (https://goo.gl/YXct7F) 382 Machine Learning cơ bản\n\n[book-ml-co-ban|p378|01 | trang 378 | Máy vector hỗ trợ hạt nhân]\nSự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic SVM lề mềm Hai lớp gần tách biệt tuyến tính Hồi quy softmax SVM đa lớp Nhiều lớp dữ liệu, ranh giới tuyến tính Mạng neuron đa tầng SVM hạt nhân Bài toán phân loại hai lớp không tách biệt tuyến tính Trong chương này, chúng ta cùng thảo luận về SVM hạt nhân (kernel SVM) cho bài toán phân loại dữ liệu không tách biệt tuyến tính. Bài toán phân loại đa lớp sử dụng ý tưởng SVM sẽ được thảo luận trong chương tiếp theo. Ý tưởng cơ bản của SVM hạt nhân và các mô hình hạt nhân (kernel model) nói chung là tìm một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Nếu có thể thực hiện điều này, bài toán phân loại sẽ được giải quyết bằng SVM lề cứng/mềm. 378 Machine Learning cơ bản",
+  "context_chars": 3556,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 6361,
+  "completion_tokens": 164,
+  "cost_usd": null,
+  "latency_s": 4.26,
+  "group": "unanswerable"
+ }
+]

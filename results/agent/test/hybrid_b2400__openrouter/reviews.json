@@ -1,0 +1,69 @@
+[
+ {
+  "query_id": "t01",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng; p338|01 chứa evidence gold.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t02",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Không nêu định nghĩa k(x,z) = Φ(x)ᵀΦ(z); chỉ nêu ý biến đổi không gian và hạt nhân tuyến tính xᵀz (p382|01 hỗ trợ ý này). Chunk gold p381 không được truy xuất.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 0,
+  "context_grade": 0
+ },
+ {
+  "query_id": "t03",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "reason": "Nêu đúng 'mất mát giảm rất nhanh sau vài epoch' (p220|00) + ý phụ có trong p219|01/02.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t04",
+  "citation_support": [
+   true
+  ],
+  "reason": "GD + gradient theo W(l), b(l); p220|01.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t05",
+  "citation_support": [
+   true
+  ],
+  "reason": "Thiên lệch + xác thực chéo; p112|02.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t06",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "abstention_correct": true
+ },
+ {
+  "query_id": "t07",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "abstention_correct": true
+ }
+]

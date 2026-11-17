@@ -1,0 +1,62 @@
+[
+ {
+  "query_id": "t01",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng hai điều kiện; p402|01 (Phụ lục A) nêu lại đúng điều kiện — evidence thay thế hợp lệ (gold chỉ ghi tr.338).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t02",
+  "citation_support": [],
+  "reason": "Từ chối nhầm; context rỗng (hai lần tìm không thêm được chunk do budget 800).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 0,
+  "context_grade": 0
+ },
+ {
+  "query_id": "t03",
+  "citation_support": [
+   true
+  ],
+  "reason": "p219|02 hỗ trợ 'huấn luyện nhanh hơn rất nhiều' nhưng thiếu ý 'mất mát giảm rất nhanh sau vài epoch' (tr.220); thêm ý vanishing gradient không có trong context.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 1,
+  "context_grade": 1
+ },
+ {
+  "query_id": "t04",
+  "citation_support": [],
+  "reason": "Từ chối nhầm; context chỉ có p388|01 (không liên quan).",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 0,
+  "context_grade": 0
+ },
+ {
+  "query_id": "t05",
+  "citation_support": [
+   true
+  ],
+  "reason": "Thiên lệch + xác thực chéo; p112|02.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "answer_grade": 2,
+  "context_grade": 2
+ },
+ {
+  "query_id": "t06",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "abstention_correct": true
+ },
+ {
+  "query_id": "t07",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định.",
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận",
+  "abstention_correct": true
+ }
+]

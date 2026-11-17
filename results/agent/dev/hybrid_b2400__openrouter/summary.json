@@ -1,0 +1,87 @@
+{
+  "split": "dev",
+  "config": {
+    "name": "hybrid_b2400",
+    "retriever": "hybrid_2gram",
+    "top_k": 5,
+    "budget_chars": 2400,
+    "max_new_per_search": 3,
+    "max_book_searches": 3,
+    "max_steps": 6,
+    "external_tools": true,
+    "max_external_per_tool": 2,
+    "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "cases": 17,
+  "ran": 17,
+  "provider_errors": 0,
+  "errors": {},
+  "status": {
+    "answered": 14,
+    "abstain": 3
+  },
+  "tool_use": {
+    "n": 17,
+    "N": 17
+  },
+  "book_searches_distribution": {
+    "1": 14,
+    "2": 2,
+    "3": 1
+  },
+  "llm_calls_distribution": {
+    "2": 5,
+    "3": 11,
+    "4": 1
+  },
+  "context_evidence_rate": {
+    "n": 9,
+    "N": 15
+  },
+  "cited_gold_proxy": {
+    "n": 9,
+    "N": 15
+  },
+  "answer_with_citation": {
+    "n": 14,
+    "N": 14
+  },
+  "citations_in_answer_text": {
+    "n": 12,
+    "N": 14
+  },
+  "invalid_citations_dropped": 0,
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 1,
+    "N": 15
+  },
+  "external_calls": 0,
+  "avg_context_chars": 1928.9,
+  "latency_s": {
+    "median": 5.93,
+    "max": 17.55
+  },
+  "tokens": {
+    "prompt": 57458,
+    "completion": 4849
+  },
+  "cost_usd_total": 0.01043,
+  "misses_context": [
+    "d02",
+    "d04",
+    "d07",
+    "d11",
+    "d12",
+    "d14"
+  ],
+  "false_abstain_ids": [
+    "d11"
+  ],
+  "answered_unanswerable_ids": []
+}

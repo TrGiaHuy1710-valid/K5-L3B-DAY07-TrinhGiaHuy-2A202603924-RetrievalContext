@@ -1,0 +1,39 @@
+{
+  "split": "dev",
+  "config": "mm_hybrid",
+  "pass": 16,
+  "total": 18,
+  "rate": 88.89,
+  "meets_90": false,
+  "by_group": {
+    "table": {
+      "pass": 3,
+      "total": 3
+    },
+    "image": {
+      "pass": 2,
+      "total": 3
+    },
+    "chart": {
+      "pass": 3,
+      "total": 3
+    },
+    "multihop": {
+      "pass": 2,
+      "total": 3
+    },
+    "text": {
+      "pass": 3,
+      "total": 3
+    },
+    "unanswerable": {
+      "pass": 3,
+      "total": 3
+    }
+  },
+  "system_errors": [],
+  "failed": [
+    "ad06",
+    "ad12"
+  ]
+}

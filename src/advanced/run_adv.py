@@ -141,7 +141,7 @@ def main(argv=None) -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("cmd", choices=("run", "score"))
-    ap.add_argument("--split", required=True, choices=("dev", "test"))
+    ap.add_argument("--split", required=True, choices=("dev", "test", "test2"))
     ap.add_argument("--config", default="mm_hybrid")
     ap.add_argument("--provider", default="gemini")
     ap.add_argument("--model", default=None)

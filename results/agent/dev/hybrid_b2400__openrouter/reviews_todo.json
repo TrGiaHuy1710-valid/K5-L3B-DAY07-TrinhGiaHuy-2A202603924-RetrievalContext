@@ -1,0 +1,280 @@
+[
+ {
+  "query_id": "d01",
+  "answerable": true,
+  "status": "answered",
+  "question": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa như thế nào?",
+  "answer": "Hàm mất mát của mô hình hồi quy tuyến tính được định nghĩa như sau: L(w) = 1/(2N) * Σ(yi - xTi w)², với N là số lượng dữ liệu trong tập huấn luyện. Mục tiêu là tìm tham số w sao cho hàm mất mát này đạt giá trị nhỏ nhất, tức là w* = argmin w L(w). [book-ml-co-ban|p101|01]",
+  "citations": [
+   "book-ml-co-ban|p101|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d02",
+  "answerable": true,
+  "status": "answered",
+  "question": "Trong chương 9, khi huấn luyện thuật toán K lân cận (KNN) làm gì với dữ liệu huấn luyện?",
+  "answer": "Trong thuật toán K lân cận (KNN), dữ liệu huấn luyện được sử dụng để xác định nhãn cho các điểm dữ liệu mới. Cụ thể, nhãn của một điểm bất kỳ được xác định dựa trên nhãn của điểm gần nó nhất trong tập huấn luyện. Điều này có nghĩa là mọi điểm trong tập huấn luyện đều được mô hình mô tả một cách chính xác, nhưng cũng làm cho KNN dễ bị overfitting. Đặc biệt, độ phức tạp tính toán của quá trình huấn luyện gần như bằng 0, vì việc tính bình phương ℓ2 norm của mỗi điểm dữ liệu huấn luyện có thể được thực hiện trước trong bước này. Tuy nhiên, phần lớn tính toán nằm ở pha kiểm tra, khi cần tính khoảng cách tới từng điểm dữ liệu huấn luyện, điều này có thể tốn nhiều thời gian, đặc biệt với các cơ sở dữ liệu lớn và nhiều chiều.",
+  "citations": [
+   "book-ml-co-ban|p127|00",
+   "book-ml-co-ban|p118|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d03",
+  "answerable": true,
+  "status": "answered",
+  "question": "Mục đích của phân cụm K-means là gì?",
+  "answer": "Mục đích của phân cụm K-means là phân chia dữ liệu thành các cụm khác nhau sao cho các điểm dữ liệu trong cùng một cụm có những tính chất giống nhau. Điều này giúp tổ chức và phân tích dữ liệu mà không cần biết nhãn của từng điểm dữ liệu. Ví dụ, một công ty có thể sử dụng phân cụm K-means để tạo ra các chính sách ưu đãi cho các nhóm khách hàng khác nhau dựa trên các đặc điểm như số năm là khách hàng, số tiền đã chi trả, độ tuổi, giới tính, thành phố, nghề nghiệp, v.v. [book-ml-co-ban|p128|00]. Ngoài ra, thuật toán này không đảm bảo tìm được nghiệm tối ưu toàn cục, mà kết quả phụ thuộc vào các tâm cụm được khởi tạo ban đầu [book-ml-co-ban|p141|01].",
+  "citations": [
+   "book-ml-co-ban|p128|00",
+   "book-ml-co-ban|p141|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d04",
+  "answerable": true,
+  "status": "answered",
+  "question": "Trong naive Bayes, khi tập huấn luyện lớn thì xác suất p(c) của một nhãn được ước lượng như thế nào?",
+  "answer": "Trong bộ phân loại naive Bayes, xác suất p(c) của một nhãn c được ước lượng bằng cách tính tần suất xuất hiện của nhãn đó trong tập huấn luyện. Cụ thể, p(c) có thể được hiểu là xác suất để một điểm bất kỳ rơi vào nhãn c, và nó được tính bằng cách đếm số lượng điểm dữ liệu thuộc nhãn c chia cho tổng số điểm dữ liệu trong tập huấn luyện. Điều này có nghĩa là khi tập huấn luyện lớn, ước lượng này sẽ trở nên chính xác hơn do có nhiều dữ liệu để tham khảo [book-ml-co-ban|p145|00].",
+  "citations": [
+   "book-ml-co-ban|p145|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d05",
+  "answerable": true,
+  "status": "answered",
+  "question": "Thế nào là hai tập dữ liệu tách biệt tuyến tính?",
+  "answer": "Hai tập dữ liệu tách biệt tuyến tính là hai tập dữ liệu có thể được phân chia hoàn toàn bằng một siêu phẳng. Điều này có nghĩa là tồn tại một đường thẳng (trong không gian hai chiều) hoặc một siêu phẳng (trong không gian nhiều chiều) mà có thể phân chia các điểm dữ liệu của hai tập này mà không có điểm nào của tập này nằm trong vùng của tập kia [book-ml-co-ban|p175|02]. Nếu hai tập dữ liệu tách biệt tuyến tính, thì có thể có vô số đường ranh giới khác nhau để phân chia chúng, nhưng thuật toán Perceptron (PLA) yêu cầu điều kiện này để hoạt động hiệu quả [book-ml-co-ban|p183|00]. Tuy nhiên, hồi quy logistic không yêu cầu giả thiết tách biệt tuyến tính, mặc dù ranh giới tìm được vẫn có dạng tuyến tính [book-ml-co-ban|p194|00].",
+  "citations": [
+   "book-ml-co-ban|p175|02",
+   "book-ml-co-ban|p183|00",
+   "book-ml-co-ban|p194|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d06",
+  "answerable": true,
+  "status": "answered",
+  "question": "Hàm sigmoid nhận giá trị trong khoảng nào?",
+  "answer": "Hàm sigmoid nhận giá trị trong khoảng (0, 1). Cụ thể, khi \\( s \\) tiến tới âm vô cùng, hàm sigmoid sẽ tiến tới 0, và khi \\( s \\) tiến tới dương vô cùng, hàm sigmoid sẽ tiến tới 1.",
+  "citations": [
+   "book-ml-co-ban|p187|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d07",
+  "answerable": true,
+  "status": "answered",
+  "question": "Các đầu ra của mô hình hồi quy softmax có tính chất gì?",
+  "answer": "Đầu ra của mô hình hồi quy softmax có những tính chất sau:\n\n1. Các giá trị đầu ra \\( a_i \\) đều lớn hơn 0: Điều này có nghĩa là mỗi xác suất được tính toán từ hàm softmax sẽ không bao giờ âm, đảm bảo rằng chúng có thể được diễn giải như xác suất [book-ml-co-ban|p203|00].\n\n2. Tổng các giá trị đầu ra bằng 1: Tức là, tổng của tất cả các xác suất \\( a_i \\) cho các lớp khác nhau sẽ bằng 1, điều này cho phép chúng được coi là phân phối xác suất [book-ml-co-ban|p203|00].\n\nNhư vậy, mô hình hồi quy softmax được sử dụng trong các bài toán phân loại, với đầu ra là xác suất cho từng lớp [book-ml-co-ban|p213|00].",
+  "citations": [
+   "book-ml-co-ban|p203|00",
+   "book-ml-co-ban|p213|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d08",
+  "answerable": true,
+  "status": "answered",
+  "question": "Ước lượng hợp lý cực đại (MLE) đi tìm điều gì?",
+  "answer": "Ước lượng hợp lý cực đại (MLE) đi tìm các tham số mô hình θ sao cho xác suất của tập huấn luyện là lớn nhất. Cụ thể, MLE xác định tham số θ bằng cách tối đa hóa hàm hợp lý, tức là tìm θ = argmax θ p(x1, . . . , xN|θ), với giả thiết rằng các dữ liệu xi độc lập. Bài toán MLE trở thành θ = argmax θ ∏_{i=1}^{N} p(xi|θ) khi áp dụng giả thiết này [book-ml-co-ban|p077|00].",
+  "citations": [
+   "book-ml-co-ban|p077|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d09",
+  "answerable": true,
+  "status": "answered",
+  "question": "Xác thực chéo (cross-validation) chia tập huấn luyện như thế nào?",
+  "answer": "Xác thực chéo (cross-validation) là một phương pháp đánh giá mô hình trong đó tập huấn luyện được chia thành k tập con có kích thước gần bằng nhau và không giao nhau. Cụ thể, tại mỗi lần thử, một trong k tập con được lấy ra làm tập xác thực, trong khi k − 1 tập con còn lại được sử dụng làm tập huấn luyện. Như vậy, với mỗi bộ tham số của mô hình, ta sẽ có k mô hình khác nhau. Sai số huấn luyện và sai số xác thực được tính là trung bình cộng của các giá trị tương ứng trong k mô hình đó. Phương pháp này được gọi là xác thực chéo k-fold (k-fold cross validation). Nếu k bằng với số lượng phần tử trong tập huấn luyện ban đầu, tức mỗi tập con có đúng một phần tử, thì kỹ thuật này được gọi là leave-one-out [book-ml-co-ban|p113|00]. Phương pháp xác thực chéo giúp giảm thiểu hiện tượng thiên lệch khi đánh giá mô hình, đặc biệt khi lượng dữ liệu để xây dựng mô hình là hạn chế [book-ml-co-ban|p112|02].",
+  "citations": [
+   "book-ml-co-ban|p113|00",
+   "book-ml-co-ban|p112|02"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d10",
+  "answerable": true,
+  "status": "answered",
+  "question": "Kết thúc sớm (early stopping) giúp giảm quá khớp bằng cách nào?",
+  "answer": "Kết thúc sớm (early stopping) giúp giảm quá khớp bằng cách dừng quá trình huấn luyện trước khi mô hình hội tụ hoàn toàn. Cụ thể, trong quá trình huấn luyện, nếu sai số trên tập huấn luyện tiếp tục giảm nhưng sai số trên tập xác thực bắt đầu tăng lên, điều này cho thấy mô hình đang bắt đầu quá khớp với dữ liệu huấn luyện. Khi đó, ta sẽ dừng thuật toán để tránh việc mô hình học quá nhiều chi tiết không cần thiết từ dữ liệu huấn luyện, từ đó cải thiện khả năng tổng quát của mô hình [book-ml-co-ban|p113|02]. Ngoài ra, trong quá trình chạy, mô hình cũng được kiểm tra thường xuyên trên tập xác thực và nếu thấy chất lượng mô hình giảm, thuật toán sẽ dừng lại [book-ml-co-ban|p174|00].",
+  "citations": [
+   "book-ml-co-ban|p113|02",
+   "book-ml-co-ban|p174|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d11",
+  "answerable": true,
+  "status": "abstain",
+  "question": "Hồi quy tuyến tính có thêm số hạng chính quy hoá L2 theo chuẩn của w còn được gọi là gì?",
+  "answer": "Sách không đề cập đến tên gọi của hồi quy tuyến tính có thêm số hạng chính quy hoá L2.",
+  "citations": [],
+  "answer_grade": null,
+  "citation_support": [],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d12",
+  "answerable": true,
+  "status": "answered",
+  "question": "Vì sao khi vector đặc trưng rất lớn người ta dùng gradient descent thay vì giải trực tiếp nghiệm của hồi quy tuyến tính?",
+  "answer": "Khi vector đặc trưng rất lớn, việc sử dụng gradient descent (GD) thay vì giải trực tiếp nghiệm của hồi quy tuyến tính là do GD có thể xử lý hiệu quả hơn trong các bài toán có kích thước lớn. Cụ thể, GD cho phép cập nhật các tham số một cách dần dần, giúp tiết kiệm bộ nhớ và thời gian tính toán. Trong khi đó, việc giải trực tiếp có thể yêu cầu tính toán ma trận lớn, dẫn đến chi phí tính toán cao và khó khăn trong việc xử lý. GD cũng có thể hội tụ nhanh hơn trong một số trường hợp, đặc biệt là với các biến nhiều chiều, nơi mà việc tính toán gradient là cần thiết để tối ưu hóa hàm mất mát [book-ml-co-ban|p164|01].",
+  "citations": [
+   "book-ml-co-ban|p164|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d13",
+  "answerable": true,
+  "status": "answered",
+  "question": "Phân tích thành phần chính (PCA) là phương pháp gì?",
+  "answer": "Phân tích thành phần chính (PCA) là một phương pháp giảm chiều dữ liệu, nhằm tìm một phép xoay trục tọa độ mới sao cho thông tin của dữ liệu chủ yếu tập trung ở một vài thành phần. Phần còn lại chứa ít thông tin hơn có thể được lược bỏ. PCA là một thuật toán học không giám sát, chỉ sử dụng các vector dữ liệu mà không cần tới nhãn. Mục tiêu của PCA là giữ lại lượng thông tin về dữ liệu nhiều nhất có thể, thể hiện ở tổng phương sai của các thành phần giữ lại [book-ml-co-ban|p275|01], [book-ml-co-ban|p288|00].",
+  "citations": [
+   "book-ml-co-ban|p275|01",
+   "book-ml-co-ban|p288|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d14",
+  "answerable": true,
+  "status": "answered",
+  "question": "Trong phân tích giá trị suy biến (SVD), số phần tử khác không trên đường chéo của Σ bằng gì?",
+  "answer": "Trong phân tích giá trị suy biến (SVD), số phần tử khác không trên đường chéo của ma trận Σ là các giá trị suy biến (singular values) của ma trận A. Các giá trị này giảm dần và không âm, và các ô màu trắng trên ma trận Σ thể hiện giá trị bằng không [book-ml-co-ban|p268|00].",
+  "citations": [
+   "book-ml-co-ban|p268|00"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d15",
+  "answerable": true,
+  "status": "answered",
+  "question": "Mất mát không-một (zero-one loss) trả về giá trị nào cho một điểm dữ liệu?",
+  "answer": "Mất mát không-một (zero-one loss) trả về giá trị 0 nếu một điểm dữ liệu được phân loại đúng và trả về giá trị 1 nếu điểm đó bị phân loại sai. Điều này có nghĩa là hàm mất mát không-một thực chất là đếm số điểm bị phân loại sai trong tập huấn luyện [book-ml-co-ban|p369|01]. Ngoài ra, với mất mát không-một, các điểm dữ liệu có điểm số ngược dấu với đầu ra mong muốn sẽ gây ra mất mát bằng 1, bất kể chúng ở gần hay xa đường ranh giới [book-ml-co-ban|p369|02].",
+  "citations": [
+   "book-ml-co-ban|p369|01",
+   "book-ml-co-ban|p369|02"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "d16",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Thuật toán gradient boosting (ví dụ XGBoost) xây dựng các mô hình yếu tuần tự như thế nào?",
+  "answer": "Sách không đề cập đến cách xây dựng mô hình yếu tuần tự của thuật toán gradient boosting như XGBoost.",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ },
+ {
+  "query_id": "d17",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Mạng LSTM giải quyết vấn đề biến mất gradient trong mạng hồi tiếp (RNN) như thế nào?",
+  "answer": "Sách không đề cập đến cách mà mạng LSTM giải quyết vấn đề biến mất gradient trong mạng hồi tiếp (RNN).",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ }
+]

@@ -1,0 +1,1152 @@
+[
+ {
+  "query_id": "t01",
+  "question": "Với bài toán tối ưu có một ràng buộc đẳng thức, điểm tối ưu thoả mãn điều kiện nào theo phương pháp nhân tử Lagrange?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Theo phương pháp nhân tử Lagrange, điểm tối ưu của bài toán tối ưu có một ràng buộc đẳng thức thoả mãn điều kiện sau:\n\n1. **Điều kiện gradient bằng không**: \\(\\nabla_x L(x, \\lambda) = \\nabla_{x} f_0(x) + \\lambda \\nabla_{x} f_1(x) = 0\\) [book-ml-co-ban|p338|01].\n2. **Điều kiện ràng buộc**: \\(f_1(x) = 0\\) [book-ml-co-ban|p338|01].\n\nĐiều này có nghĩa là bạn cần giải hệ phương trình này để tìm điểm tối ưu trong bài toán có ràng buộc.",
+  "citations": [
+   "book-ml-co-ban|p338|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 3,
+    "prompt_tokens": 733,
+    "completion_tokens": 21,
+    "cost_usd": 0.00012255,
+    "latency_s": 25.08,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "phương pháp nhân tử Lagrange",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 576.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p338|01",
+      "page": 338,
+      "rank": 1,
+      "score": 0.032
+     },
+     {
+      "id": "book-ml-co-ban|p402|00",
+      "page": 402,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p346|01",
+      "page": 346,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p338|00",
+      "page": 338,
+      "rank": 4,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p402|01",
+      "page": 402,
+      "rank": 5,
+      "score": 0.0309
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p338|01",
+     "book-ml-co-ban|p402|00",
+     "book-ml-co-ban|p402|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p346|01",
+     "book-ml-co-ban|p338|00"
+    ],
+    "context_chars": 2094
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1550,
+    "completion_tokens": 167,
+    "cost_usd": 0.0003327,
+    "latency_s": 2.84,
+    "tool_calls": [],
+    "text": "Theo phương pháp nhân tử Lagrange, điểm tối ưu của bài toán tối ưu có một ràng buộc đẳng thức thoả mãn điều kiện sau:\n\n1. **Điều kiện gradient bằng không**: \\(\\nabla_x L(x, \\lambda) = \\nabla_{x} f_0(x) + \\lambda \\nabla_{x} f_1(x) = 0\\) [book-ml-co-ban|p338|01].\n2. **Điều kiện ràng buộc**: \\(f_1(x) ="
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1739,
+    "completion_tokens": 201,
+    "cost_usd": 0.00025665,
+    "latency_s": 3.34,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p338|01",
+   "book-ml-co-ban|p402|00",
+   "book-ml-co-ban|p402|01"
+  ],
+  "context": "[book-ml-co-ban|p338|01 | trang 338 | Đối ngẫu]\nNgười ta đã chứng minh được rằng, điểm tối ưu của bài toán (25.1) thoả mãn điều kiện ∇x,λL(x, λ) = 0. Tức là: ∇xL(x, λ) = ∇xf0(x) + λ∇xf1(x) = 0 (25.3) ∇λL(x, λ) = f1(x) = 0 (25.4) Để ý rằng điều kiện thứ hai chính là phương trình ràng buộc trong bài toán (25.1). Trong nhiều trường hợp, việc giải hệ phương trình (25.3) - (25.4) đơn giản hơn việc trực tiếp đi tìm optimal value của bài toán (25.1). Một số ví dụ về phương pháp nhân tử Lagrange có thể được tìm thấy tại Phụ Lục A. 338 Machine Learning cơ bản\n\n[book-ml-co-ban|p402|00 | trang 402 | Phương pháp nhân tử Lagrange]\nPhụ lục A Phương pháp nhân tử Lagrange Việc tối ưu hàm số một biến liên tục và khả vi trên miền xác định là một tập mở1 thường được thực hiện dựa trên việc giải phương trình đạo hàm bằng không. Gọi hàm mục tiêu là f(x) : R → R, cực trị toàn cục nếu có thường được tìm bằng cách giải phương trình f ′(x) = 0. Chú ý rằng điều ngược lại không đúng, tức một điểm thoả mãn đạo hàm bằng không chưa chắc đã là cực trị của hàm số. Ví dụ hàm f(x) = x3 có đạo hàm bằng không tại x = 0 nhưng điểm này không là một điểm cực trị. Với hàm nhiều biến, ta cũng có thể áp dụng quan sát này: giải phương trình gradient bằng không. Cách làm trên đây được áp dụng vào các bài toán tối ưu không ràng buộc. Các bài toán có ràng buộc là một phương trình: x = arg minx f0(x) thoả mãn: f1(x) = 0, (A.1) cũng có thể được đưa về bài toán không ràng buộc bằng phương pháp nhân tử Lagrange.\n\n[book-ml-co-ban|p402|01 | trang 402 | Phương pháp nhân tử Lagrange]\nXét hàm số L(x, λ) = f0(x) + λf1(x) với biến λ được gọi là nhân tử Lagrange (Lagrange multiplier). Hàm số L(x, λ) được gọi là hàm Lagrange của bài toán. Người ta đã chứng minh được rằng, điểm tối ưu của bài toán (A.1) thoả mãn điều kiện ∇x,λL(x, λ) = 0. Điều này tương đương với: ∇xL(x, λ) = ∇xf0(x) + λ∇xf1(x) = 0 (A.2) ∇λL(x, λ) = f1(x) = 0 (A.3) Để ý rằng điều kiện thứ hai chính là ràng buộc trong bài toán (A.1). 1 Xem thêm: Open sets, closed sets and sequences of real numbers (https://goo.gl/AgKhCn). 402 Machine Learning cơ bản",
+  "context_chars": 2094,
+  "n_llm_calls": 3,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 4022,
+  "completion_tokens": 389,
+  "cost_usd": 0.000712,
+  "latency_s": 31.84,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "t02",
+  "question": "Hàm hạt nhân (kernel) k(x, z) trong SVM được định nghĩa như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Hàm hạt nhân (kernel) trong SVM được định nghĩa là một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Một ví dụ cụ thể là hàm hạt nhân tuyến tính, được định nghĩa là tích vô hướng của hai vector: k(x, z) = x^T z. Điều này cho phép giải quyết bài toán phân loại bằng SVM lề cứng hoặc mềm. Các hàm hạt nhân khác cũng có thể được sử dụng, nhưng không phải tất cả đều thỏa mãn điều kiện Mercer [book-ml-co-ban|p382|01][book-ml-co-ban|p378|01].",
+  "citations": [
+   "book-ml-co-ban|p382|01",
+   "book-ml-co-ban|p378|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 721,
+    "completion_tokens": 21,
+    "cost_usd": 0.00012075,
+    "latency_s": 1.01,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "hàm hạt nhân kernel SVM",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 69.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p382|01",
+      "page": 382,
+      "rank": 1,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p386|01",
+      "page": 386,
+      "rank": 3,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p379|01",
+      "page": 379,
+      "rank": 4,
+      "score": 0.0309
+     },
+     {
+      "id": "book-ml-co-ban|p384|01",
+      "page": 384,
+      "rank": 5,
+      "score": 0.0308
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p382|01",
+     "book-ml-co-ban|p378|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p386|01",
+     "book-ml-co-ban|p379|01",
+     "book-ml-co-ban|p384|01"
+    ],
+    "context_chars": 1986
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1375,
+    "completion_tokens": 18,
+    "cost_usd": 0.00021705,
+    "latency_s": 0.99,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "kernel function definition SVM",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 59.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p379|01",
+      "page": 379,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p378|01",
+      "page": 378,
+      "rank": 2,
+      "score": 0.0318
+     },
+     {
+      "id": "book-ml-co-ban|p384|01",
+      "page": 384,
+      "rank": 3,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p385|00",
+      "page": 385,
+      "rank": 4,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p359|00",
+      "page": 359,
+      "rank": 5,
+      "score": 0.0295
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p378|01"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p379|01",
+     "book-ml-co-ban|p384|01",
+     "book-ml-co-ban|p385|00",
+     "book-ml-co-ban|p359|00"
+    ],
+    "context_chars": 1986
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1477,
+    "completion_tokens": 198,
+    "cost_usd": 0.00024435,
+    "latency_s": 3.83,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p382|01",
+   "book-ml-co-ban|p378|01"
+  ],
+  "context": "[book-ml-co-ban|p382|01 | trang 382 | Máy vector hỗ trợ hạt nhân]\nĐiều kiện này giúp bài toán được giải một cách hiệu quả. • Trong thực hành, một vài hàm số k() không thỏa mãn điều kiện Mercer vẫn cho kết quả chấp nhận được. Những hàm số này vẫn được gọi là hạt nhân. Trong chương này, chúng ta chỉ quan tâm tới các hàm hạt nhân thông dụng có sẵn trong các thư viện. Việc giải quyết bài toán (28.5) hoàn toàn tương tự như bài toán đối ngẫu trong SVM lề mềm. Chúng ta sẽ không đi sâu vào việc tính nghiệm này. Thay vào đó, chúng ta sẽ thảo luận các hàm hạt nhân thông dụng và hiệu năng của chúng trong các bài toán. 28.3.2. Một số hàm hạt nhân thông dụng Tuyến tính Đây là trường hợp đơn giản với hàm hạt nhân chính là tích vô hướng của hai vector: k(x, z) = xT z. Như đã chứng minh trong Chương 26, hàm số thỏa mãn điều kiện (28.7). Khi sử dụng sklearn.svm.SVC, hàm này được chọn bằng cách gán kernel = ’linear’. 69 Xem Kernel method – Wikipedia (https://goo.gl/YXct7F) 382 Machine Learning cơ bản\n\n[book-ml-co-ban|p378|01 | trang 378 | Máy vector hỗ trợ hạt nhân]\nSự tương đồng giữa mạng neuron và máy vector hỗ trợ Mạng neuron Máy vector hỗ trợ Tính chất chung PLA SVM lề cứng Hai lớp tách biệt tuyến tính Hồi quy logistic SVM lề mềm Hai lớp gần tách biệt tuyến tính Hồi quy softmax SVM đa lớp Nhiều lớp dữ liệu, ranh giới tuyến tính Mạng neuron đa tầng SVM hạt nhân Bài toán phân loại hai lớp không tách biệt tuyến tính Trong chương này, chúng ta cùng thảo luận về SVM hạt nhân (kernel SVM) cho bài toán phân loại dữ liệu không tách biệt tuyến tính. Bài toán phân loại đa lớp sử dụng ý tưởng SVM sẽ được thảo luận trong chương tiếp theo. Ý tưởng cơ bản của SVM hạt nhân và các mô hình hạt nhân (kernel model) nói chung là tìm một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Nếu có thể thực hiện điều này, bài toán phân loại sẽ được giải quyết bằng SVM lề cứng/mềm. 378 Machine Learning cơ bản",
+  "context_chars": 1986,
+  "n_llm_calls": 3,
+  "n_book_searches": 2,
+  "n_external_calls": 0,
+  "prompt_tokens": 3573,
+  "completion_tokens": 237,
+  "cost_usd": 0.000582,
+  "latency_s": 5.96,
+  "auto": {
+   "context_has_gold": false,
+   "cites_gold": false
+  }
+ },
+ {
+  "query_id": "t03",
+  "question": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Hàm kích hoạt ReLU (Rectified Linear Unit) cải thiện việc huấn luyện so với hàm tanh nhờ vào một số lý do sau:\n\n1. **Tốc độ hội tụ nhanh hơn**: Các mạng sử dụng hàm kích hoạt ReLU cho thấy hàm mất mát giảm rất nhanh sau vài epoch đầu tiên, điều này cho thấy ReLU giúp việc huấn luyện nhanh hơn so với tanh [book-ml-co-ban|p220|00].\n\n2. **Đơn giản trong tính toán**: Hàm ReLU có công thức toán học đơn giản (f(z) = max(0, z)), giúp giảm thiểu độ phức tạp tính toán trong quá trình huấn luyện [book-ml-co-ban|p219|02].\n\n3. **Giảm vấn đề gradient vanishing**: Trong khi tanh có đạo hàm gần bằng 0 khi đầu vào lớn, điều này làm cho việc cập nhật trọng số trở nên kém hiệu quả, ReLU có đạo hàm bằng 0 chỉ tại các điểm âm, giúp duy trì gradient tốt hơn trong quá trình huấn luyện [book-ml-co-ban|p219|01].\n\nVì những lý do này, ReLU thường được khuyến nghị sử dụng đầu tiên khi xây dựng mạng neuron đa tầng [book-ml-co-ban|p220|00].",
+  "citations": [
+   "book-ml-co-ban|p220|00",
+   "book-ml-co-ban|p219|02",
+   "book-ml-co-ban|p219|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 718,
+    "completion_tokens": 17,
+    "cost_usd": 0.0001179,
+    "latency_s": 5.52,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "ReLU tanh",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 65.3,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p220|00",
+      "page": 220,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p219|02",
+      "page": 219,
+      "rank": 2,
+      "score": 0.0317
+     },
+     {
+      "id": "book-ml-co-ban|p219|01",
+      "page": 219,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p220|01",
+      "page": 220,
+      "rank": 4,
+      "score": 0.0311
+     },
+     {
+      "id": "book-ml-co-ban|p225|01",
+      "page": 225,
+      "rank": 5,
+      "score": 0.0299
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p220|00",
+     "book-ml-co-ban|p219|02",
+     "book-ml-co-ban|p219|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p220|01",
+     "book-ml-co-ban|p225|01"
+    ],
+    "context_chars": 2255
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1487,
+    "completion_tokens": 289,
+    "cost_usd": 0.00039645,
+    "latency_s": 4.96,
+    "tool_calls": [],
+    "text": "Hàm kích hoạt ReLU (Rectified Linear Unit) cải thiện việc huấn luyện so với hàm tanh nhờ vào một số lý do sau:\n\n1. **Tốc độ hội tụ nhanh hơn**: Các mạng sử dụng hàm kích hoạt ReLU cho thấy hàm mất mát giảm rất nhanh sau vài epoch đầu tiên, điều này cho thấy ReLU giúp việc huấn luyện nhanh hơn so với"
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1798,
+    "completion_tokens": 348,
+    "cost_usd": 0.0003537,
+    "latency_s": 5.52,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p220|00",
+   "book-ml-co-ban|p219|02",
+   "book-ml-co-ban|p219|01"
+  ],
+  "context": "[book-ml-co-ban|p220|00 | trang 220 | Mạng neuron đa tầng và lan truyền ngược]\n−3 −2 −1 0 1 2 3 z 0.0 0.5 1.0 1.5 2.0 2.5 3.0 a = max(z, 0) ReLU function (a) (b) Hình 16.6. Hàm ReLU và tốc độ hội tụ khi so sánh với hàm tanh. so với hàm tanh [KSH12]. Hình 16.6b so sánh sự hội tụ của hàm mất mát khi sử dụng hai hàm kích ReLU hoặc tanh. Ta thấy rằng với các mạng sử dụng hàm kích hoạt ReLU, hàm mất mát giảm rất nhanh sau một vài epoch đầu tiên. Mặc dù cũng có nhược điểm đạo hàm bằng 0 với các giá trị đầu vào âm, ReLU được chứng minh bằng thực nghiệm rằng có thể khắc phục việc này bằng việc tăng số nút ẩn46. Khi xây dựng một mạng neuron đa tầng, hàm kích hoạt ReLU nên được thử đầu tiên vì nó nhanh cho kết quả và thường hiệu quả trong nhiều trường hợp. Hầu hết các mạng neuron sâu đều có hàm kích hoạt là ReLU trong các tầng ẩn, trừ hàm kích hoạt ở tầng đầu ra vì nó phụ thuộc vào từng bài toán.\n\n[book-ml-co-ban|p219|02 | trang 219 | Mạng neuron đa tầng và lan truyền ngược]\nĐồ thị của hàm ReLU được minh họa trên Hình 16.6a. Hàm ReLU có công thức toán học f(z) = max(0, z) – rất đơn giản trong tính toán. Đạo hàm của nó bằng không tại các điểm âm, bằng một tại các điểm dương. ReLU được chứng minh giúp việc huấn luyện các mạng neuron đa tầng nhanh hơn rất nhiều Machine Learning cơ bản\n\n[book-ml-co-ban|p219|01 | trang 219 | Mạng neuron đa tầng và lan truyền ngược]\nHàm số này có tính chất đầu ra chạy từ -1 đến 1, khiến cho nó có tính chất tâm không (zero-centered) thay vì chỉ dương như hàm sigmoid. Gần đây, hàm sigmoid chỉ được sử dụng ở tầng đầu ra khi đầu ra là các giá trị nhị phân hoặc biểu diễn các xác suất. Một nhược điểm dễ nhận thấy là khi đầu vào có trị tuyệt đối lớn, đạo hàm của cả sigmoid và tanh rất gần với không. Điều này đồng nghĩa với việc các hệ số tương ứng với nút đang xét sẽ gần như không được cập nhật khi sử dụng công thức cập nhật gradient desent. Thêm nữa, khi khởi tạo các hệ số cho mạng neuron đa tầng với hàm kích hoạt sigmoid, chúng cần tránh trường hợp đầu vào một tầng ẩn nào đó quá lớn, vì khi đó đầu ra của tầng đó rất gần không hoặc một, dẫn đến đạo hàm bằng không và gradient desent hoạt động không hiệu quả. 16.3.3. ReLU ReLU (Rectified Linear Unit) gần đây được sử dụng rộng rãi vì tính đơn giản của nó.",
+  "context_chars": 2255,
+  "n_llm_calls": 3,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 4003,
+  "completion_tokens": 654,
+  "cost_usd": 0.000868,
+  "latency_s": 16.07,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "t04",
+  "question": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gì?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gradient descent (GD). Để áp dụng GD, cần tính gradient của hàm mất mát theo từng ma trận trọng số và vector điều chỉnh. Cụ thể, nếu J(W, b, X, Y) là hàm mất mát, thì cần tính các ∇W(l)J và ∇b(l)J cho mọi tầng l = 1, 2, ..., L [book-ml-co-ban|p220|01].",
+  "citations": [
+   "book-ml-co-ban|p220|01"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 714,
+    "completion_tokens": 20,
+    "cost_usd": 0.0001191,
+    "latency_s": 1.15,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "tối ưu mạng neuron đa tầng",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 92.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p216|01",
+      "page": 216,
+      "rank": 1,
+      "score": 0.0328
+     },
+     {
+      "id": "book-ml-co-ban|p220|01",
+      "page": 220,
+      "rank": 2,
+      "score": 0.0315
+     },
+     {
+      "id": "book-ml-co-ban|p230|00",
+      "page": 230,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p218|01",
+      "page": 218,
+      "rank": 4,
+      "score": 0.0308
+     },
+     {
+      "id": "book-ml-co-ban|p217|00",
+      "page": 217,
+      "rank": 5,
+      "score": 0.0308
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p216|01",
+     "book-ml-co-ban|p220|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p230|00",
+     "book-ml-co-ban|p218|01",
+     "book-ml-co-ban|p217|00"
+    ],
+    "context_chars": 1838
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1373,
+    "completion_tokens": 114,
+    "cost_usd": 0.00027435,
+    "latency_s": 2.37,
+    "tool_calls": [],
+    "text": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gradient descent (GD). Để áp dụng GD, cần tính gradient của hàm mất mát theo từng ma trận trọng số và vector điều chỉnh. Cụ thể, nếu J(W, b, X, Y) là hàm mất mát, thì cần tính các ∇W(l)J và ∇b(l)J cho mọi tầng l = 1, 2, ..., L [book-ml-co-ba"
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1509,
+    "completion_tokens": 140,
+    "cost_usd": 0.00020475,
+    "latency_s": 3.08,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p216|01",
+   "book-ml-co-ban|p220|01"
+  ],
+  "context": "[book-ml-co-ban|p216|01 | trang 216 | Mạng neuron đa tầng và lan truyền ngược]\nMột mạng neuron với nhiều hơn hai tầng còn được gọi là mạng neuron đa tầng (multi-layer neural network) hoặc perceptron đa tầng(multilayer perceptron – MLP). Tên gọi perceptron ở đây có thể gây nhầm lẫn44, vì cụm từ này để chỉ mạng neuron nhiều tầng và mỗi tầng không nhất thiết là một hoặc nhiều percep- tron. Thực chất, perceptron rất hiếm khi được sử dụng trong các mạng neuron đa tầng. Hàm kích hoạt thường là các hàm phi tuyến khác thay vì hàm sgn. Một mạng neuron đa tầng có thể xấp xỉ mối quan hệ giữa các cặp quan hệ (x, y) trong tập huấn luyện bằng một hàm số có dạng y ≈ g(L) g(L−1) . . . (g(2)(g(1)(x))) . (16.1) Trong đó, tầng thứ nhất đóng vai trò như hàm a(1) ≜ g(1)(x); tầng thứ hai đóng vai trò như hàm a(2) ≜ g(2)(g(1)(x)) = f (2)(a(1)),...\n\n[book-ml-co-ban|p220|01 | trang 220 | Mạng neuron đa tầng và lan truyền ngược]\nNgoài ra, các biến thể của ReLU như leaky rectified linear unit (Leaky ReLU), parametric rectified linear unit (PReLU) và randomized leaky rectified linear units (RReLU) [XWCL15] cũng được sử dụng và cho kết quả tốt. 16.4. Lan truyền ngược Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng chính là gradient descent (GD). Để áp dụng GD, chúng ta cần tính được gradient của hàm mất mát theo từng ma trận trọng số W(l) và vector điều chỉnh b(l). Giả sử J(W, b, X, Y) là một hàm mất mát của bài toán, trong đó W, b là tập hợp tất cả các ma trận trọng số và vector điều chỉnh. X, Y là cặp dữ liệu huấn luyện với mỗi cột tương ứng với một điểm dữ liệu. Để có thể áp dụng các phương pháp gradient descent, chúng ta cần tính được các ∇W(l)J; ∇b(l)J, ∀l = 1, 2, . . . , L. Nhắc lại quá trình lan truyền thuận: 46 Neural Networks and Deep Learning – Activation function (https://goo.gl/QGjKmU). 220 Machine Learning cơ bản",
+  "context_chars": 1838,
+  "n_llm_calls": 3,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 3596,
+  "completion_tokens": 274,
+  "cost_usd": 0.000598,
+  "latency_s": 6.69,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "t05",
+  "question": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra vấn đề gì?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "answered",
+  "answer": "Việc đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Điều này có nghĩa là kết quả đánh giá có thể không phản ánh chính xác khả năng của mô hình trên dữ liệu thực tế, dẫn đến việc lựa chọn mô hình không tối ưu. Để khắc phục tình trạng này, một giải pháp được đề xuất là sử dụng xác thực chéo (cross-validation) để có được đánh giá chính xác hơn về hiệu suất của mô hình [book-ml-co-ban|p112|02].",
+  "citations": [
+   "book-ml-co-ban|p112|02"
+  ],
+  "external_refs": [],
+  "validation": {
+   "model_status": "answered",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 718,
+    "completion_tokens": 24,
+    "cost_usd": 0.0001221,
+    "latency_s": 1.46,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "đánh giá mô hình trên tập xác thực quá nhỏ",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 81.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p111|00",
+      "page": 111,
+      "rank": 1,
+      "score": 0.0325
+     },
+     {
+      "id": "book-ml-co-ban|p112|02",
+      "page": 112,
+      "rank": 2,
+      "score": 0.0323
+     },
+     {
+      "id": "book-ml-co-ban|p081|02",
+      "page": 81,
+      "rank": 3,
+      "score": 0.0313
+     },
+     {
+      "id": "book-ml-co-ban|p112|01",
+      "page": 112,
+      "rank": 4,
+      "score": 0.0306
+     },
+     {
+      "id": "book-ml-co-ban|p111|02",
+      "page": 111,
+      "rank": 5,
+      "score": 0.0304
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p111|00",
+     "book-ml-co-ban|p112|02",
+     "book-ml-co-ban|p081|02"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p112|01",
+     "book-ml-co-ban|p111|02"
+    ],
+    "context_chars": 2084
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1393,
+    "completion_tokens": 119,
+    "cost_usd": 0.00028035,
+    "latency_s": 2.2,
+    "tool_calls": [],
+    "text": "Việc đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Điều này có nghĩa là kết quả đánh giá có thể không phản ánh chính xác khả năng của mô hình trên dữ liệu thực tế, dẫn đến việc lựa chọn mô hình không tối ưu. Để khắc phục tình trạng này, một giải pháp được đề xuấ"
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1534,
+    "completion_tokens": 145,
+    "cost_usd": 0.0002115,
+    "latency_s": 2.69,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p111|00",
+   "book-ml-co-ban|p112|02",
+   "book-ml-co-ban|p081|02"
+  ],
+  "context": "[book-ml-co-ban|p111|00 | trang 111 | Quá khớp]\nMột mô hình được coi là tốt nếu cả sai số huấn luyện và test error đều thấp. Nếu sai số huấn luyện thấp nhưng sai số kiểm tra cao, ta nói mô hình bị quá khớp. Nếu sai số huấn luyện cao và sai số kiểm tra cao, ta nói mô hình bị chưa khớp. Xác suất để xảy ra việc sai số huấn luyện cao nhưng sai số kiểm tra thấp là rất nhỏ. Trong chương này, chúng ta sẽ làm quen với hai kỹ thuật phổ biến giúp tránh quá khớp là xác thực và cơ chế kiểm soát. 8.2. Xác thực 8.2.1. Xác thực Một mô hình được coi là tốt nếu cả sai số huấn luyện và sai số kiểm tra đều nhỏ. Tuy nhiên, nếu xây dựng một mô hình chỉ dựa trên tập huấn luyện, làm thế nào để biết được chất lượng của nó trên tập kiểm tra? Phương pháp đơn giản nhất là trích từ tập huấn luyện ra một tập con nhỏ và thực hiện việc đánh giá mô hình trên tập dữ liệu này. Tập dữ liệu này được gọi là tập xác thực (validation set).\n\n[book-ml-co-ban|p112|02 | trang 112 | Quá khớp]\nViệc đánh giá trên tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Có giải pháp nào cho tình huống này không? Câu trả lời là xác thực chéo (cross-validation). 112 Machine Learning cơ bản\n\n[book-ml-co-ban|p081|02 | trang 81 | Các khái niệm cơ bản]\nTập kiểm tra đại diện cho dữ liệu mà mô hình chưa từng thấy, có thể xuất hiện trong quá trình vận hành mô hình trên thực tế. Một mô hình hoạt động hiệu quả trên tập huấn luyện chưa chắc đã hoạt động hiệu quả trên tập kiểm tra. Để tăng hiệu quả của mô hình trên dữ liệu kiểm tra, người ta thường sử dụng một tập dữ liệu nữa được gọi là tập xác thực (validation set). Tập xác thực này được sử dụng trong việc lựa chọn các siêu tham số mô hình. Các khái niệm này sẽ được làm rõ hơn trong Chương 8. Lưu ý: Ranh giới giữa tập huấn luyện, tập xác thực, và tập kiểm tra đôi khi không rõ ràng. Dữ liệu thực tế thường không cố định mà thường xuyên được cập nhật. Khi có thêm dữ liệu, dữ liệu kiểm thử ở mô hình cũ có thể trở thành dữ liệu huấn luyện trong mô hình mới. Trong phạm vi cuốn sách, chúng ta chỉ xem xét các mô hình có dữ liệu cố định. Machine Learning cơ bản",
+  "context_chars": 2084,
+  "n_llm_calls": 3,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 3645,
+  "completion_tokens": 288,
+  "cost_usd": 0.000614,
+  "latency_s": 6.44,
+  "auto": {
+   "context_has_gold": true,
+   "cites_gold": true
+  }
+ },
+ {
+  "query_id": "t06",
+  "question": "Cơ chế self-attention trong kiến trúc Transformer/BERT tính trọng số chú ý giữa các từ như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cơ chế self-attention trong kiến trúc Transformer/BERT.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 723,
+    "completion_tokens": 19,
+    "cost_usd": 0.00011985,
+    "latency_s": 2.47,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "self-attention Transformer BERT",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 71.8,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p262|01",
+      "page": 262,
+      "rank": 1,
+      "score": 0.031
+     },
+     {
+      "id": "book-ml-co-ban|p262|00",
+      "page": 262,
+      "rank": 2,
+      "score": 0.0304
+     },
+     {
+      "id": "book-ml-co-ban|p254|01",
+      "page": 254,
+      "rank": 3,
+      "score": 0.0289
+     },
+     {
+      "id": "book-ml-co-ban|p261|02",
+      "page": 261,
+      "rank": 4,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p399|01",
+      "page": 399,
+      "rank": 5,
+      "score": 0.0164
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p262|01",
+     "book-ml-co-ban|p262|00",
+     "book-ml-co-ban|p254|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p261|02",
+     "book-ml-co-ban|p399|01"
+    ],
+    "context_chars": 2386
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1574,
+    "completion_tokens": 45,
+    "cost_usd": 0.0002631,
+    "latency_s": 9.7,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p262|01",
+   "book-ml-co-ban|p262|00",
+   "book-ml-co-ban|p254|01"
+  ],
+  "context": "[book-ml-co-ban|p262|01 | trang 262 | Lọc cộng tác phân tích ma trận]\n# 30 iteration for each sub problem xm = self.X[m] error = xm.dot(Wm) + self.b[m] + dm - ratings grad_xm = error.dot(Wm.T)/self.n_ratings + self.lam*xm grad_bm = np.sum(error)/self.n_ratings # gradient descent self.X[m] -= self.learning_rate*grad_xm.reshape(-1) self.b[m] -= self.learning_rate*grad_bm def updateWd(self): # and d for n in range(self.n_users): # get all items rated by user n, and the corresponding ratings ids = np.where(self.Y[:,0] == n)[0] #indexes of items rated by n item_ids,ratings=self.Y[ids, 1].astype(np.int32), self.Y[ids, 2] Xn, bn = self.X[item_ids], self.b[item_ids] for i in range(30):\n\n[book-ml-co-ban|p262|00 | trang 262 | Lọc cộng tác phân tích ma trận]\nTiếp theo, chúng ta viết các phương thức loss, updateXb, updateWd cho class MF. def loss(self): L = 0 for i in range(self.n_ratings): # user_id, item_id, rating n, m, rating = int(self.Y[i,0]), int(self.Y[i,1]), self.Y[i,2] L += 0.5*(self.X[m].dot(self.W[:, n])\\ + self.b[m] + self.d[n] - rating)**2 L /= self.n_ratings # regularization, don’t ever forget this return L + 0.5*self.lam*(np.sum(self.X**2) + np.sum(self.W**2)) def updateXb(self): for m in range(self.n_items): # get all users who rated item m and corresponding ratings ids = np.where(self.Y[:, 1] == m)[0] # row indices of items m user_ids, ratings=self.Y[ids, 0].astype(np.int32),self.Y[ids, 2] Wm, dm = self.W[:, user_ids], self.d[user_ids] for i in range(30):\n\n[book-ml-co-ban|p254|01 | trang 254 | Lọc cộng tác lân cận]\n# row indices of ratings made by user n ids = np.where(users == n)[0].astype(np.int32) # indices of all items rated by user n item_ids = self.Y_data[ids, 1] # ratings made by user n ratings = self.Y_data[ids, 2] # avoid zero division self.mu[n] = np.mean(ratings) if ids.size > 0 else 0 self.Ybar[ids, 2] = ratings - self.mu[n] # form the rating matrix as a sparse matrix. # see more: https://goo.gl/i2mmT2 self.Ybar = sparse.coo_matrix((self.Ybar[:, 2], (self.Ybar[:, 1], self.Ybar[:, 0])), (self.n_items, self.n_users)).tocsr() self.S = self.sim_func(self.Ybar.T, self.Ybar.T) def pred(self, u, i): \"\"\" predict the rating of user u for item i\"\"\" # find item i ids = np.where(self.Y_data[:, 1] == i)[0].astype(np.int32) # all users who rated i users_rated_i = (self.Y_data[ids, 0]).astype(np.int32) sim = self.S[u, users_rated_i] # sim.",
+  "context_chars": 2386,
+  "n_llm_calls": 2,
+  "n_book_searches": 1,
+  "n_external_calls": 0,
+  "prompt_tokens": 2297,
+  "completion_tokens": 64,
+  "cost_usd": 0.000383,
+  "latency_s": 12.24
+ },
+ {
+  "query_id": "t07",
+  "question": "Thuật toán cây quyết định ID3 chọn thuộc tính để chia nút dựa trên information gain như thế nào?",
+  "filter": null,
+  "config": {
+   "name": "hybrid_b2400",
+   "retriever": "hybrid_2gram",
+   "top_k": 5,
+   "budget_chars": 2400,
+   "max_new_per_search": 3,
+   "max_book_searches": 3,
+   "max_steps": 6,
+   "external_tools": true,
+   "max_external_per_tool": 2,
+   "temperature": 0.0
+  },
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "status": "abstain",
+  "answer": "Sách không đề cập đến cách chọn thuộc tính để chia nút trong thuật toán cây quyết định ID3 dựa trên information gain.",
+  "citations": [],
+  "external_refs": [],
+  "validation": {
+   "model_status": "abstain",
+   "invalid_citations": [],
+   "dropped_refs": [],
+   "citations_in_text": true
+  },
+  "events": [
+   {
+    "event": "llm",
+    "step": 0,
+    "retries": 0,
+    "prompt_tokens": 722,
+    "completion_tokens": 23,
+    "cost_usd": 0.0001221,
+    "latency_s": 1.32,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "thuật toán cây quyết định ID3 information gain",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 66.7,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p085|02",
+      "page": 85,
+      "rank": 1,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p395|01",
+      "page": 395,
+      "rank": 2,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p086|01",
+      "page": 86,
+      "rank": 3,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p162|00",
+      "page": 162,
+      "rank": 4,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p128|01",
+      "page": 128,
+      "rank": 5,
+      "score": 0.0159
+     }
+    ],
+    "added": [
+     "book-ml-co-ban|p085|02",
+     "book-ml-co-ban|p395|01"
+    ],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p086|01",
+     "book-ml-co-ban|p162|00",
+     "book-ml-co-ban|p128|01"
+    ],
+    "context_chars": 1957
+   },
+   {
+    "event": "llm",
+    "step": 1,
+    "retries": 0,
+    "prompt_tokens": 1400,
+    "completion_tokens": 19,
+    "cost_usd": 0.0002214,
+    "latency_s": 1.19,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "ID3 decision tree information gain",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 72.4,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p083|02",
+      "page": 83,
+      "rank": 1,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p254|01",
+      "page": 254,
+      "rank": 2,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 3,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p210|01",
+      "page": 210,
+      "rank": 4,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p262|01",
+      "page": 262,
+      "rank": 5,
+      "score": 0.0159
+     }
+    ],
+    "added": [],
+    "duplicate": [],
+    "skipped": [
+     "book-ml-co-ban|p083|02",
+     "book-ml-co-ban|p254|01",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p210|01",
+     "book-ml-co-ban|p262|01"
+    ],
+    "context_chars": 1957
+   },
+   {
+    "event": "llm",
+    "step": 2,
+    "retries": 0,
+    "prompt_tokens": 1485,
+    "completion_tokens": 19,
+    "cost_usd": 0.00013815,
+    "latency_s": 5.94,
+    "tool_calls": [
+     "search_book"
+    ],
+    "text": ""
+   },
+   {
+    "event": "search",
+    "tool": "search_book",
+    "retriever": "hybrid_2gram",
+    "query": "cây quyết định ID3",
+    "filter": null,
+    "top_k": 5,
+    "elapsed_ms": 89.6,
+    "results": [
+     {
+      "id": "book-ml-co-ban|p194|01",
+      "page": 194,
+      "rank": 1,
+      "score": 0.029
+     },
+     {
+      "id": "book-ml-co-ban|p015|00",
+      "page": 15,
+      "rank": 2,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p085|02",
+      "page": 85,
+      "rank": 3,
+      "score": 0.0164
+     },
+     {
+      "id": "book-ml-co-ban|p021|02",
+      "page": 21,
+      "rank": 4,
+      "score": 0.0161
+     },
+     {
+      "id": "book-ml-co-ban|p119|00",
+      "page": 119,
+      "rank": 5,
+      "score": 0.0161
+     }
+    ],
+    "added": [],
+    "duplicate": [
+     "book-ml-co-ban|p085|02"
+    ],
+    "skipped": [
+     "book-ml-co-ban|p194|01",
+     "book-ml-co-ban|p015|00",
+     "book-ml-co-ban|p021|02",
+     "book-ml-co-ban|p119|00"
+    ],
+    "context_chars": 1957
+   },
+   {
+    "event": "llm",
+    "step": 3,
+    "retries": 0,
+    "prompt_tokens": 1589,
+    "completion_tokens": 54,
+    "cost_usd": 0.00016515,
+    "latency_s": 1.47,
+    "tool_calls": [
+     "final_answer"
+    ],
+    "text": ""
+   },
+   {
+    "event": "abstain"
+   }
+  ],
+  "context_ids": [
+   "book-ml-co-ban|p085|02",
+   "book-ml-co-ban|p395|01"
+  ],
+  "context": "[book-ml-co-ban|p085|02 | trang 85 | Các khái niệm cơ bản]\nHọc củng cố Có một nhóm các thuật toán machine learning khác có thể không yêu cầu dữ liệu huấn luyện mà mô hình học cách ra quyết định bằng cách giao tiếp với môi trường xung quanh. Các thuật toán thuộc nhóm này liên tục ra quyết định và nhận phản hồi từ môi trường để tự củng cố hành vi. Nhóm các thuật toán này có tên học củng cố (reinforcement learning). Ví dụ 1 : Gần đây, AlphaGo trở nên nổi tiếng với việc chơi cờ vây thắng cả con người (https://goo.gl/PzKcvP). Cờ vây được xem là trò chơi có độ phức tạp cực kỳ cao11 với tổng số thế cờ xấp xỉ 10761, con số này ở cờ vua là 10120 và tổng số nguyên tử trong toàn vũ trụ là khoảng 1080!! Hệ thống phải chọn ra một chiến thuật tối ưu trong số hàng nhiều tỉ tỉ lựa chọn, và tất nhiên việc thử tất cả các lựa chọn là không khả thi. Về cơ bản, AlphaGo bao gồm các thuật toán thuộc cả học có giảm sát và học củng cố. Trong phần học có giám sát, dữ liệu từ các 11 Google DeepMind’s AlphaGo: How it works (https://goo.gl/nDNcCy). Machine Learning cơ bản\n\n[book-ml-co-ban|p395|01 | trang 395 | Máy vector hỗ trợ đa lớp]\nKhi tính chính xác của gradient đã được đảm bảo, ta cần một cách hiệu quả để tính gradient. 29.3.2. Tính hiệu quả Cách tính toán hiệu quả thường không chứa các vòng for mà được viết gọn lại sử dụng các kỹ thuật vector hóa. Để dễ hình dung, chúng ta cùng quan sát Hình 29.5. Ở đây, chúng ta tạm quên thành phần kiểm soát vì giá trị và gradient của thành phần này đều được tính một cách đơn giản. Chúng ta cũng bỏ qua hệ số 1 N cho các phép tính đơn giản hơn. Giả sử có bốn lớp dữ liệu và mini-batch X gồm ba điểm dữ liệu X = x1 x2 x3 lần lượt thuộc các lớp 1, 3, 2 (vector y). Các ô có nền màu xám ở mỗi cột tương ứng với nhãn thực sự của điểm dữ liệu. Các bước tính giá trị và gradient của hàm mất mát có thể được hình dung như sau: • Bước 1: Tính ma trận điểm số Z = WT X. • Bước 2: Với mỗi ô, tính max(0, 1 − wT ynxn + wT j xn).",
+  "context_chars": 1957,
+  "n_llm_calls": 4,
+  "n_book_searches": 3,
+  "n_external_calls": 0,
+  "prompt_tokens": 5196,
+  "completion_tokens": 115,
+  "cost_usd": 0.000647,
+  "latency_s": 10.16
+ }
+]

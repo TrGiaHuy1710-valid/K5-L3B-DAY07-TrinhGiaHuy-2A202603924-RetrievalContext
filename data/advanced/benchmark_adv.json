@@ -1,0 +1,1762 @@
+[
+ {
+  "id": "ad01",
+  "split": "dev",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng các thuật ngữ trong bài toán tối ưu (chương 24), ký hiệu nào biểu diễn đẳng thức ràng buộc và thuật ngữ tiếng Anh tương ứng là gì?",
+  "expected_answer": "Ký hiệu h_j(x) = 0; tiếng Anh: equality constraint.",
+  "evidence": [
+   {
+    "page": 325,
+    "kind": "table",
+    "ref": "Bảng 24.1",
+    "detail": "hàng 'h_j(x) = 0 | equality constraint | đẳng thức ràng buộc'",
+    "region": "p325|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra một hàng của bảng"
+ },
+ {
+  "id": "ad02",
+  "split": "dev",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng quy ước ký hiệu của sách, ký hiệu ⊙ có nghĩa là gì?",
+  "expected_answer": "Hadamard product (elementwise product): phép nhân từng phần tử của hai vector hoặc ma trận cùng kích thước.",
+  "evidence": [
+   {
+    "page": 22,
+    "kind": "table",
+    "ref": "Bảng 0.1",
+    "detail": "hàng ký hiệu ⊙",
+    "region": "p022|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra một hàng của bảng ký hiệu"
+ },
+ {
+  "id": "ad03",
+  "split": "dev",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng ở chương hồi quy tuyến tính, có bao nhiêu người cao từ 170 cm trở lên?",
+  "expected_answer": "6 người (170, 173, 175, 178, 180, 183 cm).",
+  "evidence": [
+   {
+    "page": 104,
+    "kind": "table",
+    "ref": "Bảng 7.1",
+    "detail": "cột chiều cao: 170, 173, 175, 178, 180, 183 ≥ 170",
+    "region": "p104|v00"
+   }
+  ],
+  "calc": "đếm các ô ≥ 170",
+  "tolerance": "",
+  "reason": "Đếm theo điều kiện trên một cột"
+ },
+ {
+  "id": "ad04",
+  "split": "dev",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình minh hoạ bài toán phân loại nhị phân ở đầu chương perceptron, điểm tam giác được phân vào tập nào?",
+  "expected_answer": "Được phân vào tập các điểm hình tròn (Hình 13.1b).",
+  "evidence": [
+   {
+    "page": 176,
+    "kind": "figure",
+    "ref": "Hình 13.1",
+    "detail": "(b): đường thẳng phân chia, tam giác nằm phía các điểm tròn; chú thích xác nhận",
+    "region": "p176|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc sơ đồ + chú thích"
+ },
+ {
+  "id": "ad05",
+  "split": "dev",
+  "group": "image",
+  "answerable": true,
+  "question": "Theo chú giải của hình so sánh các hàm kích hoạt ở chương hồi quy logistic, những hàm nào được vẽ?",
+  "expected_answer": "4 hàm: hard threshold, f(s) = 1/(1+e^{-s}) (sigmoid), f(s) = e^s/(e^s + e^{-s}), và linear.",
+  "evidence": [
+   {
+    "page": 186,
+    "kind": "figure",
+    "ref": "Hình 14.2",
+    "detail": "chú giải 4 đường: hard threshold, 1/(1+e^-s), e^s/(e^s+e^-s), linear",
+    "region": "p186|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc chú giải trong hình"
+ },
+ {
+  "id": "ad06",
+  "split": "dev",
+  "group": "image",
+  "answerable": true,
+  "question": "Ảnh khuôn mặt sau khi phân cụm K-means trong chương 10 được chia thành bao nhiêu cụm màu, là những màu nào?",
+  "expected_answer": "3 cụm, tương ứng ba màu đỏ, hồng, đen (ảnh màu ở Hình B.4).",
+  "evidence": [
+   {
+    "page": 140,
+    "kind": "figure",
+    "ref": "Hình 10.8",
+    "detail": "ảnh 3 mức xám; chú thích: ba cụm đỏ, hồng, đen",
+    "region": "p140|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Ảnh + chú thích"
+ },
+ {
+  "id": "ad07",
+  "split": "dev",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong đồ thị lịch sử hàm mất mát của SVM đa lớp, giá trị mất mát ban đầu khoảng bao nhiêu và trục hoành kéo dài tới khoảng bao nhiêu vòng lặp?",
+  "expected_answer": "Bắt đầu khoảng 9; trục số vòng lặp tới khoảng 2500 (mất mát giảm về khoảng 4.5–5).",
+  "evidence": [
+   {
+    "page": 398,
+    "kind": "chart",
+    "ref": "Hình 29.6",
+    "detail": "trục tung loss function 4–9, đường bắt đầu ≈9; trục hoành number of iterations 0–2500",
+    "region": "p398|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "ban đầu 8.5–9.2; trục ~2500",
+  "reason": "Đọc trục và giá trị đầu"
+ },
+ {
+  "id": "ad08",
+  "split": "dev",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong đồ thị hàm mất mát của ví dụ hồi quy softmax năm lớp, giá trị mất mát ở epoch đầu khoảng bao nhiêu và huấn luyện bao nhiêu epoch?",
+  "expected_answer": "Khoảng 15–16 ở epoch đầu, giảm gần 0 rất nhanh; trục epoch tới 100.",
+  "evidence": [
+   {
+    "page": 211,
+    "kind": "chart",
+    "ref": "Hình 15.5",
+    "detail": "(a) loss vs number of epochs: bắt đầu ≈15.5, trục 0–100",
+    "region": "p211|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "14.5–16",
+  "reason": "Đọc trục biểu đồ"
+ },
+ {
+  "id": "ad09",
+  "split": "dev",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong đồ thị giá trị hàm mất mát của hồi quy logistic (bài toán dự đoán đỗ/trượt), mất mát bắt đầu khoảng bao nhiêu và hội tụ quanh giá trị nào?",
+  "expected_answer": "Bắt đầu khoảng 1.1, hội tụ quanh khoảng 0.4 (trước khoảng 100 vòng lặp; trục tới 500).",
+  "evidence": [
+   {
+    "page": 192,
+    "kind": "chart",
+    "ref": "Hình 14.3",
+    "detail": "(b) loss function vs number of iterations: ≈1.1 → ≈0.4",
+    "region": "p192|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "1.0–1.15; 0.38–0.42",
+  "reason": "Đọc biểu đồ"
+ },
+ {
+  "id": "ad10",
+  "split": "dev",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Trong ví dụ cuối chương SVM hạt nhân với tập dữ liệu khoảng 29000 điểm, bộ phân loại dùng hàm hạt nhân nào với gamma bao nhiêu, công thức của hàm đó theo bảng hàm hạt nhân thông dụng là gì, và đạt độ chính xác bao nhiêu?",
+  "expected_answer": "Hạt nhân rbf, gamma = 0.1 (coef0 = 0); công thức exp(−γ‖x − z‖²₂); độ chính xác 94.22%.",
+  "evidence": [
+   {
+    "page": 386,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "gamma=.1, coef0 = 0"
+   },
+   {
+    "page": 386,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Accuracy: 94.22 %"
+   },
+   {
+    "page": 383,
+    "kind": "table",
+    "ref": "Bảng 28.2",
+    "detail": "hàng 'rbf': exp(−γ‖x−z‖²₂), γ > 0: gamma (PDF in ký tự & thay cho ‖)",
+    "region": "p383|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Kết hợp code/kết quả trang 386 với bảng trang 383",
+  "revision": "v2: câu v1 mơ hồ (cuối chương có 2 ví dụ: XOR tr.384 và ví dụ 29000 điểm tr.386); thêm điều kiện phân biệt, không đổi đáp án"
+ },
+ {
+  "id": "ad11",
+  "split": "dev",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, có bao nhiêu sinh viên ôn dưới 2 giờ mà vẫn thi đỗ, và trong đồ thị kết quả thi theo số giờ ôn tập các sinh viên đỗ được biểu diễn bằng ký hiệu gì?",
+  "expected_answer": "1 sinh viên (1.75 giờ); sinh viên đỗ được biểu diễn bằng hình vuông.",
+  "evidence": [
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "các ô <2 giờ: 0.5,0.75,1,1.25,1.5,1.75(0),1.75(1) → chỉ một ô 1.75 có Đậu=1",
+    "region": "p185|v00"
+   },
+   {
+    "page": 186,
+    "kind": "figure",
+    "ref": "Hình 14.1",
+    "detail": "chú thích: 1/pass là các điểm hình vuông",
+    "region": "p186|v00"
+   }
+  ],
+  "calc": "đếm",
+  "tolerance": "",
+  "reason": "Bảng + hình"
+ },
+ {
+  "id": "ad12",
+  "split": "dev",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo bảng so sánh mạng neuron và SVM, SVM lề cứng tương đồng với thuật toán nào, và hình minh hoạ ở đầu chương SVM cho thấy điều kiện gì của dữ liệu cùng với bao nhiêu đường phân chia được vẽ?",
+  "expected_answer": "Tương đồng với PLA (perceptron); dữ liệu hai lớp tách biệt tuyến tính, có vô số đường thẳng phân chia; hình vẽ 3 đường.",
+  "evidence": [
+   {
+    "page": 378,
+    "kind": "table",
+    "ref": "Bảng 28.1",
+    "detail": "hàng PLA | SVM lề cứng | Hai lớp tách biệt tuyến tính",
+    "region": "p378|v00"
+   },
+   {
+    "page": 351,
+    "kind": "figure",
+    "ref": "Hình 26.1",
+    "detail": "3 đường thẳng phân chia hai lớp vuông/tròn",
+    "region": "p351|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Bảng + sơ đồ"
+ },
+ {
+  "id": "ad13",
+  "split": "dev",
+  "group": "text",
+  "answerable": true,
+  "question": "Theo sách, hạn chế đầu tiên của hồi quy tuyến tính là gì và ví dụ cặp dữ liệu nhiễu nào được dùng để minh hoạ?",
+  "expected_answer": "Rất nhạy cảm với nhiễu; ví dụ chỉ một cặp nhiễu (150 cm, 90 kg) làm kết quả sai khác rất nhiều.",
+  "evidence": [
+   {
+    "page": 106,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "nếu có chỉ một cặp dữ liệu nhiễu (150 cm, 90kg) thì kết quả sẽ sai khác đi rất nhiều"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra đoạn văn"
+ },
+ {
+  "id": "ad14",
+  "split": "dev",
+  "group": "text",
+  "answerable": true,
+  "question": "Trong phân cụm theo tầng kiểu agglomerative dựa trên K-means, ban đầu K được chọn như thế nào?",
+  "expected_answer": "Chọn K là một số lớn gần bằng số điểm dữ liệu, sau đó ghép các cụm gần nhau.",
+  "evidence": [
+   {
+    "page": 138,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Ban đầu ta chọn K là một số lớn gần bằng số điểm dữ liệu."
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra đoạn văn có điều kiện"
+ },
+ {
+  "id": "ad15",
+  "split": "dev",
+  "group": "text",
+  "answerable": true,
+  "question": "Theo phần tóm tắt chương ước lượng tham số, MAP có thể được coi như phương pháp giúp ích trong trường hợp nào?",
+  "expected_answer": "Giúp tránh thiên lệch khi có ít dữ liệu huấn luyện.",
+  "evidence": [
+   {
+    "page": 77,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "MAP có thể được coi như một phương pháp giúp tránh thiên lệch khi có ít dữ liệu huấn luyện."
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra đoạn văn"
+ },
+ {
+  "id": "ad16",
+  "split": "dev",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Theo bảng dữ liệu chiều cao và cân nặng của 15 người, tuổi trung bình của nhóm người này là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Bảng 7.1 chỉ có chiều cao và cân nặng, không có tuổi.",
+  "absence_check": [
+   {
+    "pattern": "tuổi|\\bage\\b",
+    "pages": [
+     103,
+     104,
+     105,
+     106
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Bảng 7.1: chỉ hai cột chiều cao/cân nặng."
+ },
+ {
+  "id": "ad17",
+  "split": "dev",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số kiểm tra khi bậc đa thức bằng 10 là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Hình 8.2 chỉ vẽ bậc 1–8; text không nêu bậc 10.",
+  "absence_check": [
+   {
+    "pattern": "bậc\\s*(=\\s*)?10\\b|bậc mười",
+    "pages": [
+     110,
+     111,
+     112,
+     113
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 8.2: trục 'bậc' từ 1 đến 8."
+ },
+ {
+  "id": "ad18",
+  "split": "dev",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Theo bảng các hàm hạt nhân thông dụng, công thức của hạt nhân Laplacian là gì?",
+  "expected_behavior": "abstain",
+  "reason": "Bảng 28.2 chỉ có linear, poly, sigmoid, rbf; sách không có hạt nhân Laplacian (chỉ có 'làm mềm Laplace' trong naive Bayes, tr.147/149/155 — bẫy gần chủ đề).",
+  "absence_check": [
+   {
+    "pattern": "laplacian|hạt nhân laplace|laplace kernel",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Bảng 28.2: 4 hàng."
+ },
+ {
+  "id": "ad19",
+  "split": "dev",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của những người cao không quá 155 cm là bao nhiêu?",
+  "expected_answer": "50.5 kg (147→49, 150→50, 153→51, 155→52; (49+50+51+52)/4).",
+  "evidence": [
+   {
+    "page": 104,
+    "kind": "table",
+    "ref": "Bảng 7.1",
+    "detail": "4 hàng đầu cột trái",
+    "region": "p104|v00"
+   }
+  ],
+  "calc": "(49+50+51+52)/4 = 50.5",
+  "tolerance": "",
+  "reason": "Lọc theo điều kiện + trung bình"
+ },
+ {
+  "id": "ad20",
+  "split": "dev",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo công thức xác suất thi đỗ tìm được bằng hồi quy logistic ở chương 14, xác suất đỗ dự đoán cho sinh viên ôn 1.75 giờ là bao nhiêu, và trong bảng thời gian ôn thi các sinh viên ôn 1.75 giờ có kết quả thế nào?",
+  "expected_answer": "≈ 0.20 (sigmoid(1.54×1.75 − 4.06) = sigmoid(−1.365)); trong Bảng 14.1 có hai sinh viên ôn 1.75 giờ: một trượt (0), một đỗ (1).",
+  "evidence": [
+   {
+    "page": 191,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "probability_of_pass ≈ sigmoid(1.54 * hours_of_studying - 4.06)"
+   },
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "hai ô 1.75: Đậu 0 và 1",
+    "region": "p185|v00"
+   }
+  ],
+  "calc": "1/(1+e^1.365) ≈ 0.203",
+  "tolerance": "0.19–0.21",
+  "reason": "Công thức + bảng + tính"
+ },
+ {
+  "id": "at01",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên thi đỗ?",
+  "expected_answer": "10 sinh viên đỗ (và 10 trượt).",
+  "evidence": [
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "cột Đậu?: 3 + 1 + 4 + 2 giá trị 1 theo bốn cặp cột",
+    "region": "p185|v00"
+   }
+  ],
+  "calc": "3+1+4+2 = 10",
+  "tolerance": "",
+  "reason": "Đếm trên toàn bảng"
+ },
+ {
+  "id": "at02",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng của người cao nhất hơn người thấp nhất bao nhiêu kg?",
+  "expected_answer": "19 kg (183 cm nặng 68 kg; 147 cm nặng 49 kg).",
+  "evidence": [
+   {
+    "page": 104,
+    "kind": "table",
+    "ref": "Bảng 7.1",
+    "detail": "147 cm → 49 kg; 183 cm → 68 kg",
+    "region": "p104|v00"
+   }
+  ],
+  "calc": "68 − 49 = 19 kg",
+  "tolerance": "",
+  "reason": "Tra hai ô + phép trừ"
+ },
+ {
+  "id": "at03",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'poly' có công thức gì và cần thiết lập những hệ số nào (tên tham số)?",
+  "expected_answer": "(r + γ xᵀz)^d; hệ số d: degree, γ: gamma, r: coef0.",
+  "evidence": [
+   {
+    "page": 383,
+    "kind": "table",
+    "ref": "Bảng 28.2",
+    "detail": "hàng 'poly'",
+    "region": "p383|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra một hàng nhiều cột"
+ },
+ {
+  "id": "at04",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng các gradient cơ bản, gradient theo x của hàm f(x) = ‖Ax − b‖²₂ là gì?",
+  "expected_answer": "2Aᵀ(Ax − b).",
+  "evidence": [
+   {
+    "page": 49,
+    "kind": "table",
+    "ref": "Bảng 2.1",
+    "detail": "hàng ‖Ax − b‖²₂ → 2Aᵀ(Ax − b)",
+    "region": "p049|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra ô bảng"
+ },
+ {
+  "id": "at05",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng ví dụ văn bản của bài toán phân loại Bắc hay Nam, văn bản kiểm tra có nội dung gì và tập huấn luyện có bao nhiêu văn bản mỗi nhãn?",
+  "expected_answer": "d5: 'hanoi hanoi buncha hutiu'; huấn luyện có 3 văn bản nhãn B (d1, d2, d3) và 1 văn bản nhãn N (d4).",
+  "evidence": [
+   {
+    "page": 148,
+    "kind": "table",
+    "ref": "Bảng 11.1",
+    "detail": "hàng d5 (Dữ liệu kiểm tra) và cột Nhãn của d1–d4",
+    "region": "p148|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra ô + đếm"
+ },
+ {
+  "id": "at06",
+  "split": "test",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng sự tương đồng giữa mạng neuron và SVM, hồi quy softmax tương ứng với loại SVM nào và tính chất chung là gì?",
+  "expected_answer": "SVM đa lớp; tính chất chung: nhiều lớp dữ liệu, ranh giới tuyến tính.",
+  "evidence": [
+   {
+    "page": 378,
+    "kind": "table",
+    "ref": "Bảng 28.1",
+    "detail": "hàng Hồi quy softmax | SVM đa lớp | Nhiều lớp dữ liệu, ranh giới tuyến tính",
+    "region": "p378|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra một hàng"
+ },
+ {
+  "id": "at07",
+  "split": "test",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình kết quả với số lượng nút ẩn khác nhau (chương mạng neuron đa tầng), độ chính xác khi tầng ẩn có 2, 5, 15 và 30 nút lần lượt là bao nhiêu?",
+  "expected_answer": "≈59.67% (2 nút), 74.0% (5 nút), ≈94.33% (15 nút), ≈95.33% (30 nút).",
+  "evidence": [
+   {
+    "page": 229,
+    "kind": "figure",
+    "ref": "Hình 16.10",
+    "detail": "tiêu đề 4 hình con: '#hidden units = 2, accuracy = 59.666…%', '= 5, 74.0%', '= 15, 94.333…%', '= 30, 95.333…%'",
+    "region": "p229|v00 + p229|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "làm tròn 2 chữ số",
+  "reason": "Đọc chữ trong ảnh (4 hình con)"
+ },
+ {
+  "id": "at08",
+  "split": "test",
+  "group": "image",
+  "answerable": true,
+  "question": "Mạng MLP với hai tầng ẩn trong chương mạng neuron đa tầng có bao nhiêu nút ở tầng vào, mỗi tầng ẩn và tầng ra?",
+  "expected_answer": "Tầng vào 3 nút, tầng ẩn thứ nhất 4 nút, tầng ẩn thứ hai 2 nút, tầng ra 3 nút (ma trận W(1), W(2), W(3)).",
+  "evidence": [
+   {
+    "page": 217,
+    "kind": "figure",
+    "ref": "Hình 16.3",
+    "detail": "đếm vòng tròn: 3 | 4 | 2 | 3",
+    "region": "p217|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đếm thành phần sơ đồ"
+ },
+ {
+  "id": "at09",
+  "split": "test",
+  "group": "image",
+  "answerable": true,
+  "question": "Ảnh ví dụ về giá trị pixel trong chương phân cụm K-means là chữ số mấy, và giá trị pixel lớn nhất xuất hiện trong ma trận là bao nhiêu?",
+  "expected_answer": "Chữ số 7; giá trị lớn nhất 254.",
+  "evidence": [
+   {
+    "page": 136,
+    "kind": "figure",
+    "ref": "Hình 10.4",
+    "detail": "ma trận pixel: giá trị lớn nhất 254 (hàng 5 và các hàng sau)",
+    "region": "p136|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc ảnh + số trong ảnh"
+ },
+ {
+  "id": "at10",
+  "split": "test",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong ví dụ SVD cho ảnh, sai số khi xấp xỉ ảnh với k = 5, k = 50 và k = 100 lần lượt là bao nhiêu?",
+  "expected_answer": "0.0448 (k = 5), 0.0059 (k = 50), 0.0026 (k = 100).",
+  "evidence": [
+   {
+    "page": 272,
+    "kind": "figure",
+    "ref": "Hình 20.3",
+    "detail": "tiêu đề các ảnh (d), (e), (f): 'k = 5: error = 0.0448', 'k = 50: error = 0.0059', 'k = 100: error = 0.0026'",
+    "region": "p272|v02"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc chữ trên ảnh"
+ },
+ {
+  "id": "at11",
+  "split": "test",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình mối quan hệ giữa AI, ML và DL ở lời nói đầu, Deep Learning bắt đầu ở khoảng thập niên nào và câu mô tả kèm theo là gì?",
+  "expected_answer": "Khoảng thập niên 2010 (2010's); 'Deep learning breakthroughs drive AI boom.'",
+  "evidence": [
+   {
+    "page": 16,
+    "kind": "figure",
+    "ref": "Hình 0.1",
+    "detail": "khối DEEP LEARNING bắt đầu tại mốc 2010's, dòng chữ 'Deep learning breakthroughs drive AI boom.'",
+    "region": "p016|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc sơ đồ dòng thời gian"
+ },
+ {
+  "id": "at12",
+  "split": "test",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong đồ thị hàm mật độ phân phối beta với α = β, đường nét liền ứng với cặp tham số nào và đỉnh của nó nằm tại λ bằng bao nhiêu?",
+  "expected_answer": "Cặp (10, 10); đỉnh tại λ = 0.5.",
+  "evidence": [
+   {
+    "page": 76,
+    "kind": "chart",
+    "ref": "Hình 4.1",
+    "detail": "chú giải: nét liền = (10, 10); đỉnh tại 0.50",
+    "region": "p076|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "0.5",
+  "reason": "Đọc chú giải + trục"
+ },
+ {
+  "id": "at13",
+  "split": "test",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình so sánh hàm ReLU với tanh (b), đường nét liền đạt training error rate 0.25 sau khoảng bao nhiêu epoch và đường nét đứt sau khoảng bao nhiêu epoch?",
+  "expected_answer": "Nét liền khoảng 6 epoch; nét đứt khoảng 35–36 epoch (nhanh hơn khoảng 6 lần).",
+  "evidence": [
+   {
+    "page": 220,
+    "kind": "chart",
+    "ref": "Hình 16.6",
+    "detail": "(b) Training error rate vs Epochs, ngưỡng 0.25: nét liền ≈6, nét đứt ≈35",
+    "region": "p220|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "nét liền 5–7; nét đứt 33–37",
+  "reason": "Đọc giá trị trên trục"
+ },
+ {
+  "id": "at14",
+  "split": "test",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình so sánh hàm entropy chéo và hàm bình phương khoảng cách, ở trường hợp p = 0.1, điểm cực tiểu toàn cục của hai hàm nằm tại q bằng bao nhiêu và đường nét liền là hàm nào?",
+  "expected_answer": "Cả hai đạt cực tiểu tại q = 0.1; đường nét liền là hàm entropy chéo.",
+  "evidence": [
+   {
+    "page": 206,
+    "kind": "chart",
+    "ref": "Hình 15.4",
+    "detail": "(b) p = 0.1: hai dấu x tại q = 0.1; chú thích: nét liền = entropy chéo",
+    "region": "p206|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc biểu đồ + chú thích"
+ },
+ {
+  "id": "at15",
+  "split": "test",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình kết quả gradient descent với x0 = −5 và η = 0.5, gradient ở vòng lặp cuối cùng hiển thị (100/100) bằng bao nhiêu và thuật toán có hội tụ không?",
+  "expected_answer": "grad = 4.761 tại iter 100/100; không hội tụ (nghiệm dao động quanh điểm cực tiểu do η quá lớn).",
+  "evidence": [
+   {
+    "page": 163,
+    "kind": "chart",
+    "ref": "Hình 12.5",
+    "detail": "hình con 'iter 100/100, grad = 4.761'; các hình con gradient đổi dấu liên tục",
+    "region": "p163|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc chữ trong biểu đồ"
+ },
+ {
+  "id": "at16",
+  "split": "test",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số xác thực nhỏ nhất ở bậc nào và sai số kiểm tra ở bậc 8 khoảng bao nhiêu?",
+  "expected_answer": "Nhỏ nhất ở bậc 3 (≈ 7.8, bậc 4 gần bằng); sai số kiểm tra ở bậc 8 khoảng 14.",
+  "evidence": [
+   {
+    "page": 112,
+    "kind": "chart",
+    "ref": "Hình 8.2",
+    "detail": "đường xác thực thấp nhất ở bậc 3–4 (≈7.8); đường kiểm tra tại bậc 8 ≈ 13.9",
+    "region": "p112|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "bậc 3 (chấp nhận 3 hoặc 4); 13.5–14.2",
+  "reason": "Đọc giá trị trên trục"
+ },
+ {
+  "id": "at17",
+  "split": "test",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Trong ví dụ hồi quy tuyến tính chiều cao–cân nặng, bảng có 15 người nhưng dữ liệu huấn luyện dùng ít hơn; hai người nào không dùng để huấn luyện và mô hình dự đoán sai lệch bao nhiêu kg với mỗi người?",
+  "expected_answer": "Hai người 155 cm và 160 cm (dữ liệu huấn luyện có 13 điểm). 155 cm: thật 52 kg, dự đoán 52.94 kg → lệch 0.94 kg; 160 cm: thật 56 kg, dự đoán 55.74 kg → lệch 0.26 kg.",
+  "evidence": [
+   {
+    "page": 104,
+    "kind": "table",
+    "ref": "Bảng 7.1",
+    "detail": "15 người, có 155 cm → 52 kg, 160 cm → 56 kg",
+    "region": "p104|v00"
+   },
+   {
+    "page": 104,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "X = np.array([[147, 150, 153, 158, 163, 165, 168, 170, 173, 175, 178, 180, 183]]).T"
+   },
+   {
+    "page": 105,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Input 155cm, true output 52kg, predicted output 52.94kg."
+   },
+   {
+    "page": 105,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Input 160cm, true output 56kg, predicted output 55.74kg."
+   }
+  ],
+  "calc": "|52.94 − 52| = 0.94; |55.74 − 56| = 0.26",
+  "tolerance": "",
+  "reason": "Bảng + code + kết quả trên hai trang"
+ },
+ {
+  "id": "at18",
+  "split": "test",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo bảng thời gian ôn thi, sinh viên ôn 4.25 giờ có kết quả gì, và theo công thức xác suất thi đỗ tìm được bằng hồi quy logistic, xác suất đỗ dự đoán cho 4.25 giờ khoảng bao nhiêu?",
+  "expected_answer": "Thi đỗ (Đậu = 1); xác suất ≈ sigmoid(1.54 × 4.25 − 4.06) = sigmoid(2.485) ≈ 0.92.",
+  "evidence": [
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "ô 4.25 → 1",
+    "region": "p185|v00"
+   },
+   {
+    "page": 191,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "probability_of_pass ≈ sigmoid(1.54 * hours_of_studying - 4.06)"
+   }
+  ],
+  "calc": "1.54·4.25 − 4.06 = 2.485; 1/(1+e^−2.485) ≈ 0.923",
+  "tolerance": "0.91–0.93",
+  "reason": "Bảng + công thức + tính toán"
+ },
+ {
+  "id": "at19",
+  "split": "test",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Trong ví dụ phân loại Bắc hay Nam, văn bản kiểm tra có nội dung gì và mô hình MultinomialNB dự đoán nó thuộc nhãn nào?",
+  "expected_answer": "d5 = 'hanoi hanoi buncha hutiu'; MultinomialNB dự đoán nhãn B.",
+  "evidence": [
+   {
+    "page": 148,
+    "kind": "table",
+    "ref": "Bảng 11.1",
+    "detail": "hàng d5",
+    "region": "p148|v00"
+   },
+   {
+    "page": 150,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Predicting class of d5: B"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Bảng + kết quả code ở trang khác"
+ },
+ {
+  "id": "at20",
+  "split": "test",
+  "group": "multihop",
+  "answerable": true,
+  "question": "So sánh hai hình gradient descent với η = 0.1: khi x0 = −5 và khi x0 = 5, mỗi trường hợp chạy bao nhiêu vòng lặp và gradient ở vòng cuối bằng bao nhiêu?",
+  "expected_answer": "x0 = −5: 11 vòng lặp, grad cuối = −0.001; x0 = 5: 29 vòng lặp, grad cuối = 0.001 (cả hai hội tụ, x0 = 5 chậm hơn).",
+  "evidence": [
+   {
+    "page": 162,
+    "kind": "chart",
+    "ref": "Hình 12.2",
+    "detail": "hình con 'iter 11/11, grad = -0.001'",
+    "region": "p162|v00"
+   },
+   {
+    "page": 162,
+    "kind": "chart",
+    "ref": "Hình 12.3",
+    "detail": "hình con 'iter 29/29, grad = 0.001'",
+    "region": "p162|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Kết hợp hai hình"
+ },
+ {
+  "id": "at21",
+  "split": "test",
+  "group": "text",
+  "answerable": true,
+  "question": "Trong mini-batch gradient descent, nếu N không chia hết cho k thì mini-batch cuối thế nào, một epoch gồm khoảng bao nhiêu vòng lặp, và k thường được chọn trong khoảng nào?",
+  "expected_answer": "Mini-batch cuối có thể ít hơn k điểm; một epoch gồm xấp xỉ N/k vòng lặp; k từ vài chục đến vài trăm.",
+  "evidence": [
+   {
+    "page": 173,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "trừ mini-batch cuối có thể có ít hơn nếu N không chia hết cho k"
+   },
+   {
+    "page": 173,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "một epoch bao gồm xấp xỉ N/k vòng lặp"
+   },
+   {
+    "page": 173,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "được chọn trong khoảng khoảng từ vài chục đến vài trăm"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tổng hợp điều kiện từ đoạn văn"
+ },
+ {
+  "id": "at22",
+  "split": "test",
+  "group": "text",
+  "answerable": true,
+  "question": "Trong SVM lề mềm, nếu hệ số C nhỏ thì thuật toán ưu tiên điều gì và tổng các biến ξ thay đổi thế nào; còn khi C rất lớn và dữ liệu tách biệt tuyến tính thì nghiệm thu được là gì?",
+  "expected_answer": "C nhỏ: ưu tiên ‖w‖ nhỏ nhất (lề lớn nhất) nên tổng ξ lớn lên; C rất lớn và dữ liệu tách biệt tuyến tính: tổng ξ = 0, nghiệm trùng với SVM lề cứng.",
+  "evidence": [
+   {
+    "page": 364,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Nếu C nhỏ, việc sự hy sinh cao hay thấp không gây ảnh hưởng nhiều tới giá trị của hàm mục tiêu"
+   },
+   {
+    "page": 364,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "nghiệm thu được cũng chính là nghiệm của SVM lề cứng"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Điều kiện → kết quả"
+ },
+ {
+  "id": "at23",
+  "split": "test",
+  "group": "text",
+  "answerable": true,
+  "question": "Khi dùng PCA, nếu muốn giữ lại 99% thông tin thì chọn số chiều K như thế nào?",
+  "expected_answer": "Chọn K là số tự nhiên nhỏ nhất sao cho r_K = (Σ_{i=1..K} λ_i)/(Σ_{j=1..D} λ_j) ≥ 0.99.",
+  "evidence": [
+   {
+    "page": 282,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "ta chỉ cần chọn K là số tự nhiên nhỏ nhất sao cho rK ≥ 0.99"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra điều kiện"
+ },
+ {
+  "id": "at24",
+  "split": "test",
+  "group": "text",
+  "answerable": true,
+  "question": "Khi áp dụng lan truyền ngược, trong trường hợp nào mini-batch GD được dùng nhiều nhất và trường hợp nào dùng batch GD trực tiếp?",
+  "expected_answer": "Mini-batch GD với bài toán có tập huấn luyện lớn; dữ liệu nhỏ thì dùng batch GD trực tiếp.",
+  "evidence": [
+   {
+    "page": 224,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Trong thực tế, mini-batch GD được sử dụng nhiều nhất với các bài toán mà tập huấn luyện lớn. Nếu lượng dữ liệu nhỏ, batch GD trực tiếp được sử dụng."
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Điều kiện từ đoạn văn"
+ },
+ {
+  "id": "at25",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, điểm thi (thang 10) trung bình của các sinh viên thi đỗ là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Bảng 14.1 chỉ có số giờ và Đậu? (0/1), không có điểm số.",
+  "absence_check": [
+   {
+    "pattern": "thang (điểm|10)|điểm thi|điểm số",
+    "pages": [
+     184,
+     185,
+     186,
+     187,
+     191,
+     192
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Bảng 14.1: chỉ cột Số giờ/Đậu?."
+ },
+ {
+  "id": "at26",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong hình kết quả với số lượng nút ẩn khác nhau, độ chính xác khi tầng ẩn có 100 nút là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Hình 16.10 chỉ có 2, 5, 15, 30 nút ẩn.",
+  "absence_check": [
+   {
+    "pattern": "hidden units = 100|100 nút",
+    "pages": [
+     226,
+     227,
+     228,
+     229,
+     230,
+     231
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 16.10: 4 hình con 2/5/15/30."
+ },
+ {
+  "id": "at27",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong ví dụ SVD cho ảnh, sai số của ảnh xấp xỉ khi chọn k = 200 là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Chỉ có ảnh xấp xỉ k = 5, 50, 100; k = 200 chỉ được nhắc về giá trị suy biến/lượng thông tin, không có sai số.",
+  "absence_check": [
+   {
+    "pattern": "200\\s*:\\s*error|k\\s*=\\s*200\\s*:",
+    "pages": [
+     270,
+     271,
+     272,
+     273
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 20.3: ảnh (d)(e)(f) với k = 5, 50, 100."
+ },
+ {
+  "id": "at28",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Huấn luyện SVM đa lớp trong hình lịch sử giá trị hàm mất mát mất bao nhiêu giây?",
+  "expected_behavior": "abstain",
+  "reason": "Sách không báo thời gian chạy (giây) cho ví dụ này.",
+  "absence_check": [
+   {
+    "pattern": "giây|seconds|\\bsec\\b|thời gian chạy",
+    "pages": [
+     395,
+     396,
+     397,
+     398,
+     399,
+     400
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 29.6: chỉ loss theo số vòng lặp."
+ },
+ {
+  "id": "at29",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong đồ thị phân phối beta ở chương ước lượng tham số, đường ứng với cặp tham số (5, 1) có dạng như thế nào?",
+  "expected_behavior": "abstain",
+  "reason": "Hình 4.1 chỉ có α = β: (2,2), (0.5,0.5), (10,10), (0.1,0.1), (1,1); không có (5, 1).",
+  "absence_check": [
+   {
+    "pattern": "\\(\\s*5\\s*,\\s*1\\s*\\)",
+    "pages": [
+     74,
+     75,
+     76,
+     77
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem chú giải Hình 4.1."
+ },
+ {
+  "id": "at30",
+  "split": "test",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong các hình minh hoạ gradient descent cho hàm một biến ở chương 12, với η = 0.05 thì cần bao nhiêu vòng lặp để hội tụ?",
+  "expected_behavior": "abstain",
+  "reason": "Chỉ có η = 0.1 (x0 = ±5), 0.01 và 0.5; không có η = 0.05 cho ví dụ này (lr = 0.05 chỉ xuất hiện ở ví dụ logistic chương 14).",
+  "absence_check": [
+   {
+    "pattern": "η\\s*=\\s*0\\.05",
+    "pages": [
+     158,
+     159,
+     160,
+     161,
+     162,
+     163,
+     164,
+     165,
+     166,
+     167,
+     168,
+     169,
+     170,
+     171,
+     172,
+     173,
+     174,
+     175
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 12.2–12.5."
+ },
+ {
+  "id": "n01",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong ma trận tiện ích của ví dụ hệ thống gợi ý bài hát (đánh giá 0–5 sao), có bao nhiêu ô còn thiếu dữ liệu (dấu '?') và người dùng E đánh giá bài 'Con cò bé bé' mấy sao?",
+  "expected_answer": "12 ô còn thiếu (1 + 4 + 3 + 1 + 3 theo năm bài hát); người dùng E đánh giá 'Con cò bé bé' 4 sao.",
+  "evidence": [
+   {
+    "page": 236,
+    "kind": "table",
+    "ref": "Hình 17.1",
+    "detail": "ma trận 5 bài × 6 người dùng A–F; đếm ô '?' theo hàng: 1, 4, 3, 1, 3; hàng 'Con cò bé bé' cột E = 4",
+    "region": "p236|v00"
+   }
+  ],
+  "calc": "1+4+3+1+3 = 12",
+  "tolerance": "",
+  "reason": "Đếm ô + tra ô"
+ },
+ {
+  "id": "n02",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong ma trận tiện ích dựa trên số sao người dùng đánh giá sản phẩm (chương lọc cộng tác lân cận), người dùng u3 đánh giá sản phẩm i3 mấy sao và hàng của sản phẩm i4 có bao nhiêu ô còn thiếu?",
+  "expected_answer": "u3 đánh giá i3 = 4 sao; hàng i4 có 3 ô còn thiếu (u3, u4, u5).",
+  "evidence": [
+   {
+    "page": 247,
+    "kind": "table",
+    "ref": "Hình 18.1",
+    "detail": "hàng i3: 2 2 3 4 4 ? 4 (u3 = 4); hàng i4: 2 0 4 ? ? ? 5",
+    "region": "p247|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra ô + đếm"
+ },
+ {
+  "id": "n03",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên ôn từ 4 giờ trở lên và trong số đó bao nhiêu người trượt?",
+  "expected_answer": "7 sinh viên ôn từ 4 giờ trở lên (4, 4, 4.25, 4.5, 4.75, 5, 5.5); 1 người trượt (một sinh viên ôn 4 giờ).",
+  "evidence": [
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "các ô >= 4: 4.5->1, 4.75->1, 4->1, 5->1, 4->0, 4.25->1, 5.5->1",
+    "region": "p185|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Lọc theo điều kiện + đếm"
+ },
+ {
+  "id": "n04",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng trung bình của 3 người cao nhất là bao nhiêu?",
+  "expected_answer": "67 kg (178 cm -> 66, 180 cm -> 67, 183 cm -> 68; (66 + 67 + 68)/3).",
+  "evidence": [
+   {
+    "page": 104,
+    "kind": "table",
+    "ref": "Bảng 7.1",
+    "detail": "ba hàng cuối cột phải",
+    "region": "p104|v00"
+   }
+  ],
+  "calc": "(66+67+68)/3 = 67",
+  "tolerance": "",
+  "reason": "Sắp xếp + trung bình"
+ },
+ {
+  "id": "n05",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng các gradient cơ bản, gradient theo ma trận X của hàm trace(AᵀXB) là gì?",
+  "expected_answer": "ABᵀ.",
+  "evidence": [
+   {
+    "page": 49,
+    "kind": "table",
+    "ref": "Bảng 2.1",
+    "detail": "hàng trace(AᵀXB) -> ABᵀ",
+    "region": "p049|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra ô bảng"
+ },
+ {
+  "id": "n06",
+  "split": "test2",
+  "group": "table",
+  "answerable": true,
+  "question": "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'sigmoid' có công thức gì và những hệ số nào cần thiết lập?",
+  "expected_answer": "tanh(γ xᵀz + r); hệ số γ: gamma, r: coef0.",
+  "evidence": [
+   {
+    "page": 383,
+    "kind": "table",
+    "ref": "Bảng 28.2",
+    "detail": "hàng 'sigmoid'",
+    "region": "p383|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra một hàng"
+ },
+ {
+  "id": "n07",
+  "split": "test2",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình ví dụ cách tính vector điểm số của SVM đa lớp (ảnh con mèo đầu vào), điểm số của các lớp cat, frog, dog là bao nhiêu và ảnh được gán nhãn lớp nào?",
+  "expected_answer": "cat 285.3, frog −154.5, dog 248.8; nhãn là cat (điểm cao nhất).",
+  "evidence": [
+   {
+    "page": 391,
+    "kind": "figure",
+    "ref": "Hình 29.3",
+    "detail": "vector điểm số z: 285.3 (cat), −154.5 (frog), 248.8 (dog)",
+    "region": "p391|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc số trong sơ đồ + so sánh"
+ },
+ {
+  "id": "n08",
+  "split": "test2",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình mô phỏng cách tính hàm mất mát và gradient trong SVM đa lớp, vector nhãn y là gì và L_data bằng bao nhiêu (gồm các thành phần nào)?",
+  "expected_answer": "y = [1, 3, 2]; L_data = 0.5 + 0.7 + 0.3 + 1.5 = 3.0.",
+  "evidence": [
+   {
+    "page": 396,
+    "kind": "figure",
+    "ref": "Hình 29.5",
+    "detail": "dòng 'y = [1, 3, 2]' và 'L_data = 0.5 + 0.7 + 0.3 + 1.5 = 3.0'",
+    "region": "p396|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc sơ đồ có số"
+ },
+ {
+  "id": "n09",
+  "split": "test2",
+  "group": "image",
+  "answerable": true,
+  "question": "Mạng neuron đa tầng dùng cho ví dụ dữ liệu giả hai chiều (một tầng ẩn ReLU) được vẽ với bao nhiêu nút ở tầng đầu vào, tầng ẩn và tầng đầu ra, và tầng đầu ra là mô hình gì?",
+  "expected_answer": "Tầng vào 2 nút, tầng ẩn vẽ 4 nút (số nút ẩn tuỳ ý), tầng ra 3 nút là hồi quy softmax (ba lớp).",
+  "evidence": [
+   {
+    "page": 225,
+    "kind": "figure",
+    "ref": "Hình 16.9",
+    "detail": "đếm vòng tròn 2 | 4 | 3; nhãn 'Tầng đầu ra Hồi quy softmax'; chú thích 'ba phần tử đại diện cho ba lớp'",
+    "region": "p225|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đếm thành phần sơ đồ"
+ },
+ {
+  "id": "n10",
+  "split": "test2",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình chất lượng nén ảnh với số lượng cluster khác nhau (K-means), những giá trị K nào được so sánh?",
+  "expected_answer": "K = 5, 10, 15 và 20.",
+  "evidence": [
+   {
+    "page": 141,
+    "kind": "figure",
+    "ref": "Hình 10.9",
+    "detail": "4 ảnh với nhãn k = 5, K = 10, K = 15, K = 20",
+    "region": "p141|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc nhãn ảnh"
+ },
+ {
+  "id": "n11",
+  "split": "test2",
+  "group": "image",
+  "answerable": true,
+  "question": "Trong hình dữ liệu giả trong không gian hai chiều và ví dụ về các ranh giới tốt, ranh giới ở hình (b) dùng bao nhiêu nút ẩn và đạt độ chính xác bao nhiêu?",
+  "expected_answer": "100 nút ẩn; độ chính xác ≈ 99.33% (99.333…%).",
+  "evidence": [
+   {
+    "page": 225,
+    "kind": "figure",
+    "ref": "Hình 16.8",
+    "detail": "(b) tiêu đề '#hidden units = 100, accuracy = 99.33333333333333%'",
+    "region": "p225|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc chữ trên ảnh"
+ },
+ {
+  "id": "n12",
+  "split": "test2",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình kết quả gradient descent với x0 = −5 và η = 0.01, gradient tại vòng lặp 50/100 và 100/100 bằng bao nhiêu?",
+  "expected_answer": "iter 50/100: grad = −1.476; iter 100/100: grad = −0.049.",
+  "evidence": [
+   {
+    "page": 163,
+    "kind": "chart",
+    "ref": "Hình 12.4",
+    "detail": "tiêu đề hình con 'iter 50/100, grad = -1.476' và 'iter 100/100, grad = -0.049'",
+    "region": "p163|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc chữ trên biểu đồ"
+ },
+ {
+  "id": "n13",
+  "split": "test2",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình minh hoạ chưa khớp và quá khớp trong hồi quy đa thức, bốn hình con dùng những bậc đa thức nào và mỗi bậc được nhận xét thế nào?",
+  "expected_answer": "Bậc 2: chưa khớp; bậc 4: mô hình tốt; bậc 8: quá khớp; bậc 16: quá khớp.",
+  "evidence": [
+   {
+    "page": 109,
+    "kind": "chart",
+    "ref": "Hình 8.1",
+    "detail": "tiêu đề (a) 'Bậc = 2: Chưa khớp', (b) 'Bậc = 4: Mô hình tốt', (c) 'Bậc = 8: Quá khớp', (d) 'Bậc = 16: Quá khớp'",
+    "region": "p109|v00 + p109|v01"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc tiêu đề các biểu đồ con"
+ },
+ {
+  "id": "n14",
+  "split": "test2",
+  "group": "chart",
+  "answerable": true,
+  "question": "Theo đồ thị ví dụ của hàm sigmoid và tanh trong chương mạng neuron đa tầng, mỗi hàm nhận giá trị trong khoảng nào và giá trị tại z = 0 là bao nhiêu?",
+  "expected_answer": "sigmoid: (0, 1), tại z = 0 bằng 0.5; tanh: (−1, 1), tại z = 0 bằng 0.",
+  "evidence": [
+   {
+    "page": 219,
+    "kind": "chart",
+    "ref": "Hình 16.5",
+    "detail": "(a) tiệm cận 0 và 1, tại z = 0 bằng 0.5; (b) tiệm cận −1 và 1, đi qua 0",
+    "region": "p219|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc trục và giá trị"
+ },
+ {
+  "id": "n15",
+  "split": "test2",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong đồ thị hàm mật độ của phân phối chuẩn một chiều ở chương ôn tập xác suất, đường có đỉnh cao nhất ứng với tham số nào và đỉnh cao khoảng bao nhiêu?",
+  "expected_answer": "μ = 0.5, σ² = 0.5; đỉnh khoảng 0.56.",
+  "evidence": [
+   {
+    "page": 64,
+    "kind": "chart",
+    "ref": "Hình 3.3",
+    "detail": "(a) ba đường: (μ=.5, σ²=.5) đỉnh ≈0.56; (μ=0, σ²=1) ≈0.40; (μ=−1, σ²=2) ≈0.28",
+    "region": "p064|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "0.53–0.58",
+  "reason": "Đọc nhãn + trục"
+ },
+ {
+  "id": "n16",
+  "split": "test2",
+  "group": "chart",
+  "answerable": true,
+  "question": "Trong hình ảnh hưởng của C lên nghiệm của SVM lề mềm, ba hình con đầu tiên (hàng trên trái, hàng trên phải, hàng dưới trái) dùng giá trị C nào, và theo chú thích C càng lớn thì biên thế nào?",
+  "expected_answer": "C = 0.1, C = 1, C = 10; C càng lớn thì biên càng nhỏ (và ngược lại).",
+  "evidence": [
+   {
+    "page": 376,
+    "kind": "chart",
+    "ref": "Hình 27.5",
+    "detail": "tiêu đề 'C = 0.100000', 'C = 1.000000', 'C = 10.000000'; chú thích",
+    "region": "p376|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Đọc tiêu đề + chú thích"
+ },
+ {
+  "id": "n17",
+  "split": "test2",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Trong ví dụ phân loại Bắc hay Nam, từ xuất hiện nhiều lần nhất trong văn bản kiểm tra là từ nào, và theo hình minh hoạ NBC với Multinomial naive Bayes, ước lượng λ̂ của từ đó cho nhãn B và nhãn N là bao nhiêu?",
+  "expected_answer": "'hanoi' (2 lần trong d5); λ̂_B = 4/20, λ̂_N = 1/13.",
+  "evidence": [
+   {
+    "page": 148,
+    "kind": "table",
+    "ref": "Bảng 11.1",
+    "detail": "d5 = 'hanoi hanoi buncha hutiu'",
+    "region": "p148|v00"
+   },
+   {
+    "page": 149,
+    "kind": "figure",
+    "ref": "Hình 11.1",
+    "detail": "cột 'hanoi': λ̂_B = 4/20, λ̂_N = 1/13",
+    "region": "p149|v00"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Bảng + hình"
+ },
+ {
+  "id": "n18",
+  "split": "test2",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Độ chính xác của mạng có 100 nút ẩn trong ví dụ ranh giới tốt cao hơn mạng có 30 nút ẩn trong hình so sánh số nút ẩn bao nhiêu điểm phần trăm?",
+  "expected_answer": "99.33% − 95.33% = 4.0 điểm phần trăm.",
+  "evidence": [
+   {
+    "page": 225,
+    "kind": "figure",
+    "ref": "Hình 16.8",
+    "detail": "(b) 100 nút: 99.333…%",
+    "region": "p225|v00"
+   },
+   {
+    "page": 229,
+    "kind": "figure",
+    "ref": "Hình 16.10",
+    "detail": "(d) 30 nút: 95.333…%",
+    "region": "p229|v01"
+   }
+  ],
+  "calc": "99.3333 − 95.3333 = 4.0",
+  "tolerance": "",
+  "reason": "Hai hình ở hai trang + phép trừ"
+ },
+ {
+  "id": "n19",
+  "split": "test2",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo công thức xác suất thi đỗ của hồi quy logistic ở chương 14, số giờ ôn mà tại đó xác suất đỗ bằng 0.5 là khoảng bao nhiêu, và theo bảng thời gian ôn thi có bao nhiêu sinh viên ôn nhiều hơn mức đó nhưng vẫn trượt?",
+  "expected_answer": "≈ 2.64 giờ (1.54·h − 4.06 = 0 ⇒ h = 4.06/1.54); có 2 sinh viên trượt dù ôn nhiều hơn (3.5 giờ và 4 giờ).",
+  "evidence": [
+   {
+    "page": 191,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "probability_of_pass ≈ sigmoid(1.54 * hours_of_studying - 4.06)"
+   },
+   {
+    "page": 185,
+    "kind": "table",
+    "ref": "Bảng 14.1",
+    "detail": "ô > 2.64 có Đậu = 0: 3.5 và 4",
+    "region": "p185|v00"
+   }
+  ],
+  "calc": "4.06/1.54 ≈ 2.636",
+  "tolerance": "2.6–2.7",
+  "reason": "Công thức + bảng + tính"
+ },
+ {
+  "id": "n20",
+  "split": "test2",
+  "group": "multihop",
+  "answerable": true,
+  "question": "Theo bảng sự tương đồng giữa mạng neuron và SVM, mạng neuron đa tầng tương ứng với loại SVM nào, và theo sách hàm hạt nhân nào được dùng nhiều nhất và là lựa chọn mặc định trong sklearn.svm.SVC?",
+  "expected_answer": "SVM hạt nhân (bài toán phân loại hai lớp không tách biệt tuyến tính); hạt nhân rbf.",
+  "evidence": [
+   {
+    "page": 378,
+    "kind": "table",
+    "ref": "Bảng 28.1",
+    "detail": "hàng Mạng neuron đa tầng | SVM hạt nhân",
+    "region": "p378|v00"
+   },
+   {
+    "page": 385,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "các rbf kernel được sử dụng nhiều nhất và cũng là lựa chọn mặc định trong sklearn.svm.SVC"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Bảng + đoạn văn trang khác"
+ },
+ {
+  "id": "n21",
+  "split": "test2",
+  "group": "text",
+  "answerable": true,
+  "question": "Trong stochastic gradient descent, sau mỗi epoch cần làm gì với thứ tự dữ liệu, và đó là lý do gì cho chữ 'stochastic' trong tên thuật toán?",
+  "expected_answer": "Xáo trộn thứ tự lấy dữ liệu sau mỗi epoch để đảm bảo tính ngẫu nhiên; chính sự ngẫu nhiên này là lý do có từ 'stochastic' (cũng ảnh hưởng tới hiệu năng SGD).",
+  "evidence": [
+   {
+    "page": 172,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "sau mỗi epoch, thứ tự lấy các dữ liệu cần được xáo trộn để đảm bảo tính ngẫu nhiên"
+   },
+   {
+    "page": 172,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Đây cũng chính là lý do thuật toán này có chứa từ stochastic"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra đoạn văn"
+ },
+ {
+  "id": "n22",
+  "split": "test2",
+  "group": "text",
+  "answerable": true,
+  "question": "Vì sao thuật toán phân cụm K-means được đảm bảo hội tụ sau một số hữu hạn vòng lặp?",
+  "expected_answer": "Giá trị hàm mất mát sau mỗi bước là dãy không tăng và bị chặn dưới nên hội tụ; thêm nữa số cách phân cụm toàn bộ dữ liệu là hữu hạn (khi K cố định).",
+  "evidence": [
+   {
+    "page": 132,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Thuật toán này sẽ hội tụ sau một số hữu hạn vòng lặp."
+   },
+   {
+    "page": 132,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "là một đại lượng không tăng và bị chặn dưới"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Lập luận từ đoạn văn"
+ },
+ {
+  "id": "n23",
+  "split": "test2",
+  "group": "text",
+  "answerable": true,
+  "question": "Theo phần thảo luận hạn chế của K-means, nếu không biết trước số cụm K thì sách gợi ý tham khảo phương pháp nào, và nghiệm cuối cùng phụ thuộc vào yếu tố gì?",
+  "expected_answer": "Phương pháp elbow; nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu.",
+  "evidence": [
+   {
+    "page": 141,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Bạn đọc có thể tham khảo phương pháp elbow giúp xác định giá trị K này"
+   },
+   {
+    "page": 141,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Nghiệm cuối cùng phụ thuộc vào các tâm cụm được khởi tạo ban đầu."
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tra điều kiện"
+ },
+ {
+  "id": "n24",
+  "split": "test2",
+  "group": "text",
+  "answerable": true,
+  "question": "Vì sao hàm mất mát của hồi quy tuyến tính lấy trung bình trên N điểm dữ liệu thay vì lấy tổng?",
+  "expected_answer": "Số điểm dữ liệu trong tập huấn luyện có thể thay đổi nên mất mát trên từng điểm hữu ích hơn để đánh giá mô hình; lấy trung bình cũng tránh tràn số khi số điểm dữ liệu lớn.",
+  "evidence": [
+   {
+    "page": 102,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "Việc tính toán mất mát trên từng điểm dữ liệu sẽ hữu ích hơn trong việc đánh giá chất lượng mô hình."
+   },
+   {
+    "page": 102,
+    "kind": "text",
+    "ref": "đoạn văn",
+    "detail": "việc lấy trung bình cũng giúp tránh hiện tượng tràn số khi số lượng điểm dữ liệu lớn"
+   }
+  ],
+  "calc": "",
+  "tolerance": "",
+  "reason": "Tổng hợp lý do"
+ },
+ {
+  "id": "n25",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong ví dụ ma trận tiện ích của hệ thống gợi ý bài hát, ca sĩ thể hiện bài 'Mưa nửa đêm' là ai?",
+  "expected_behavior": "abstain",
+  "reason": "Sách chỉ nêu tên bài hát và điểm đánh giá; 'ca sĩ' chỉ xuất hiện ở ví dụ chung (Bích Phương, tr.235) không gắn với bài nào trong ma trận.",
+  "absence_check": [
+   {
+    "pattern": "Mưa nửa đêm.{0,300}ca sĩ|ca sĩ.{0,300}Mưa nửa đêm",
+    "scope": "all",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 17.1/17.2: chỉ tên bài và số sao."
+ },
+ {
+  "id": "n26",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, các sinh viên này học ngành gì?",
+  "expected_behavior": "abstain",
+  "reason": "Bảng 14.1 chỉ có số giờ ôn và Đậu?; sách không nêu ngành học.",
+  "absence_check": [
+   {
+    "pattern": "ngành học|chuyên ngành",
+    "scope": "all",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Bảng 14.1."
+ },
+ {
+  "id": "n27",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong hình chất lượng nén ảnh K-means, dung lượng file (KB) của ảnh nén với K = 20 là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Hình 10.9 chỉ so sánh trực quan theo K; không có dung lượng file.",
+  "absence_check": [
+   {
+    "pattern": "kilobyte|dung lượng|(?-i:\\bKB\\b)",
+    "scope": "all",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 10.9: chỉ nhãn K. ('kb' trong công thức tr.353 là k·b, không phải KB)"
+ },
+ {
+  "id": "n28",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong hình ảnh hưởng của C lên nghiệm SVM lề mềm, độ chính xác phân loại khi C = 10 là bao nhiêu?",
+  "expected_behavior": "abstain",
+  "reason": "Chương 27 không báo độ chính xác cho các giá trị C; Hình 27.5 chỉ vẽ đường phân chia.",
+  "absence_check": [
+   {
+    "pattern": "accuracy|độ chính xác\\s*(là|=|đạt|bằng)",
+    "pages": [
+     360,
+     361,
+     362,
+     363,
+     364,
+     365,
+     366,
+     367,
+     368,
+     369,
+     370,
+     371,
+     372,
+     373,
+     374,
+     375,
+     376,
+     377
+    ],
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 27.5 và chương 27."
+ },
+ {
+  "id": "n29",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Trong ma trận tiện ích dựa trên số sao (chương lọc cộng tác), người dùng u0 có tên thật là gì?",
+  "expected_behavior": "abstain",
+  "reason": "Người dùng chỉ được ký hiệu u0–u6; không có tên.",
+  "absence_check": [
+   {
+    "pattern": "tên (thật|của) người dùng",
+    "scope": "all",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 18.1."
+ },
+ {
+  "id": "n30",
+  "split": "test2",
+  "group": "unanswerable",
+  "answerable": false,
+  "question": "Con mèo trong ảnh đầu vào của ví dụ tính vector điểm số SVM đa lớp thuộc giống mèo nào?",
+  "expected_behavior": "abstain",
+  "reason": "Sách không nêu giống mèo.",
+  "absence_check": [
+   {
+    "pattern": "giống mèo|Persian|Siamese|mèo Anh|mèo Ba Tư|mèo Xiêm",
+    "scope": "all",
+    "hits": []
+   }
+  ],
+  "visual_check": "Đã xem Hình 29.3."
+ }
+]

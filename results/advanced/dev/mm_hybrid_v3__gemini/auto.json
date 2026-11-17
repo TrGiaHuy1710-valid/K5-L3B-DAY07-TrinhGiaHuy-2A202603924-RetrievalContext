@@ -1,0 +1,77 @@
+{
+  "split": "dev",
+  "config": {
+    "name": "mm_hybrid_v3",
+    "retriever": "mm_hybrid",
+    "top_k": 6,
+    "budget_chars": 9000,
+    "max_new_per_search": 6,
+    "max_book_searches": 5,
+    "max_steps": 12,
+    "external_tools": false,
+    "max_external_per_tool": 2,
+    "temperature": 0.0
+  },
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "by_group": {
+    "table": {
+      "N": 4,
+      "error": 0,
+      "abstain": 0,
+      "context_has_gold": 4,
+      "cites_gold": 4,
+      "inspect_calls": 3
+    },
+    "image": {
+      "N": 3,
+      "error": 0,
+      "abstain": 0,
+      "context_has_gold": 3,
+      "cites_gold": 3,
+      "inspect_calls": 3
+    },
+    "chart": {
+      "N": 3,
+      "error": 0,
+      "abstain": 0,
+      "context_has_gold": 3,
+      "cites_gold": 3,
+      "inspect_calls": 2
+    },
+    "multihop": {
+      "N": 4,
+      "error": 0,
+      "abstain": 0,
+      "context_has_gold": 4,
+      "cites_gold": 3,
+      "inspect_calls": 2
+    },
+    "text": {
+      "N": 3,
+      "error": 0,
+      "abstain": 0,
+      "context_has_gold": 3,
+      "cites_gold": 3,
+      "inspect_calls": 0
+    },
+    "unanswerable": {
+      "N": 3,
+      "error": 0,
+      "abstain": 2,
+      "inspect_calls": 1
+    }
+  },
+  "cases": 20,
+  "errors": [],
+  "latency_s": {
+    "median": 6.7,
+    "max": 43.95
+  },
+  "llm_tokens": {
+    "prompt": 275219,
+    "completion": 7194
+  },
+  "inspect_visual_tokens": 14839,
+  "cost_usd": null
+}

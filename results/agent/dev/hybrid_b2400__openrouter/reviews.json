@@ -1,0 +1,158 @@
+[
+ {
+  "query_id": "d01",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng, cite p101|01.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d02",
+  "citation_support": [
+   false,
+   true
+  ],
+  "reason": "Không nêu 'gần như không học gì'; p127|00 (ưu điểm KNN) không hỗ trợ nội dung được viết.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d03",
+  "citation_support": [
+   true,
+   false
+  ],
+  "reason": "Đúng; p141|01 (hạn chế K-means) không hỗ trợ câu được trích.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d04",
+  "citation_support": [
+   false
+  ],
+  "reason": "Đáp án đúng ý nhưng p145|00 không chứa câu 'tỉ lệ số điểm thuộc nhãn c'; evidence p145|01 không có trong context.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d05",
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "reason": "Đúng; các ý phụ có ở p183/p194.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d06",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng, p187|00.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d07",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Dương và tổng bằng 1; p203|00.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d08",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng, evidence thay thế p77.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d09",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Đúng.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d10",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Đúng; p174|00 hỗ trợ ý kiểm tra trên tập xác thực.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d11",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d12",
+  "citation_support": [
+   false
+  ],
+  "reason": "Không có evidence (p107) trong context; p164|01 không nói chi phí nghịch đảo.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d13",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Đúng; p288|00 hỗ trợ 'học không giám sát'.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d14",
+  "citation_support": [
+   true
+  ],
+  "reason": "Sai ý: không nêu 'bằng hạng của ma trận A'.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d15",
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "Đúng.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d16",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định (sách không có boosting / LSTM).",
+  "abstention_correct": true,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d17",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định (sách không có boosting / LSTM).",
+  "abstention_correct": true,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ }
+]

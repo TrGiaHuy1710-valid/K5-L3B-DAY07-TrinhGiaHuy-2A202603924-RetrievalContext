@@ -1,0 +1,41 @@
+{
+  "split": "dev",
+  "config": "text_hybrid",
+  "pass": 14,
+  "total": 18,
+  "rate": 77.78,
+  "meets_90": false,
+  "by_group": {
+    "table": {
+      "pass": 3,
+      "total": 3
+    },
+    "image": {
+      "pass": 1,
+      "total": 3
+    },
+    "chart": {
+      "pass": 2,
+      "total": 3
+    },
+    "multihop": {
+      "pass": 2,
+      "total": 3
+    },
+    "text": {
+      "pass": 3,
+      "total": 3
+    },
+    "unanswerable": {
+      "pass": 3,
+      "total": 3
+    }
+  },
+  "system_errors": [],
+  "failed": [
+    "ad05",
+    "ad06",
+    "ad08",
+    "ad12"
+  ]
+}

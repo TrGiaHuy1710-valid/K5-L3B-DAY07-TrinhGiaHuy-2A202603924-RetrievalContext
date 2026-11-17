@@ -1,0 +1,112 @@
+[
+ {
+  "query_id": "t01",
+  "answerable": true,
+  "status": "answered",
+  "question": "Với bài toán tối ưu có một ràng buộc đẳng thức, điểm tối ưu thoả mãn điều kiện nào theo phương pháp nhân tử Lagrange?",
+  "answer": "Theo phương pháp nhân tử Lagrange, điểm tối ưu của bài toán tối ưu có một ràng buộc đẳng thức thoả mãn điều kiện sau:\n\n1. **Điều kiện gradient bằng không**: \\(\\nabla_x L(x, \\lambda) = \\nabla_{x} f_0(x) + \\lambda \\nabla_{x} f_1(x) = 0\\) [book-ml-co-ban|p338|01].\n2. **Điều kiện ràng buộc**: \\(f_1(x) = 0\\) [book-ml-co-ban|p338|01].\n\nĐiều này có nghĩa là bạn cần giải hệ phương trình này để tìm điểm tối ưu trong bài toán có ràng buộc.",
+  "citations": [
+   "book-ml-co-ban|p338|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t02",
+  "answerable": true,
+  "status": "answered",
+  "question": "Hàm hạt nhân (kernel) k(x, z) trong SVM được định nghĩa như thế nào?",
+  "answer": "Hàm hạt nhân (kernel) trong SVM được định nghĩa là một phép biến đổi dữ liệu không tách biệt tuyến tính ở một không gian thành dữ liệu (gần) tách biệt tuyến tính trong một không gian mới. Một ví dụ cụ thể là hàm hạt nhân tuyến tính, được định nghĩa là tích vô hướng của hai vector: k(x, z) = x^T z. Điều này cho phép giải quyết bài toán phân loại bằng SVM lề cứng hoặc mềm. Các hàm hạt nhân khác cũng có thể được sử dụng, nhưng không phải tất cả đều thỏa mãn điều kiện Mercer [book-ml-co-ban|p382|01][book-ml-co-ban|p378|01].",
+  "citations": [
+   "book-ml-co-ban|p382|01",
+   "book-ml-co-ban|p378|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t03",
+  "answerable": true,
+  "status": "answered",
+  "question": "Hàm kích hoạt ReLU cải thiện việc huấn luyện so với tanh như thế nào?",
+  "answer": "Hàm kích hoạt ReLU (Rectified Linear Unit) cải thiện việc huấn luyện so với hàm tanh nhờ vào một số lý do sau:\n\n1. **Tốc độ hội tụ nhanh hơn**: Các mạng sử dụng hàm kích hoạt ReLU cho thấy hàm mất mát giảm rất nhanh sau vài epoch đầu tiên, điều này cho thấy ReLU giúp việc huấn luyện nhanh hơn so với tanh [book-ml-co-ban|p220|00].\n\n2. **Đơn giản trong tính toán**: Hàm ReLU có công thức toán học đơn giản (f(z) = max(0, z)), giúp giảm thiểu độ phức tạp tính toán trong quá trình huấn luyện [book-ml-co-ban|p219|02].\n\n3. **Giảm vấn đề gradient vanishing**: Trong khi tanh có đạo hàm gần bằng 0 khi đầu vào lớn, điều này làm cho việc cập nhật trọng số trở nên kém hiệu quả, ReLU có đạo hàm bằng 0 chỉ tại các điểm âm, giúp duy trì gradient tốt hơn trong quá trình huấn luyện [book-ml-co-ban|p219|01].\n\nVì những lý do này, ReLU thường được khuyến nghị sử dụng đầu tiên khi xây dựng mạng neuron đa tầng [book-ml-co-ban|p220|00].",
+  "citations": [
+   "book-ml-co-ban|p220|00",
+   "book-ml-co-ban|p219|02",
+   "book-ml-co-ban|p219|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null,
+   null,
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t04",
+  "answerable": true,
+  "status": "answered",
+  "question": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gì?",
+  "answer": "Phương pháp phổ biến nhất để tối ưu mạng neuron đa tầng là gradient descent (GD). Để áp dụng GD, cần tính gradient của hàm mất mát theo từng ma trận trọng số và vector điều chỉnh. Cụ thể, nếu J(W, b, X, Y) là hàm mất mát, thì cần tính các ∇W(l)J và ∇b(l)J cho mọi tầng l = 1, 2, ..., L [book-ml-co-ban|p220|01].",
+  "citations": [
+   "book-ml-co-ban|p220|01"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t05",
+  "answerable": true,
+  "status": "answered",
+  "question": "Đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra vấn đề gì?",
+  "answer": "Việc đánh giá mô hình trên một tập xác thực quá nhỏ có thể gây ra hiện tượng thiên lệch. Điều này có nghĩa là kết quả đánh giá có thể không phản ánh chính xác khả năng của mô hình trên dữ liệu thực tế, dẫn đến việc lựa chọn mô hình không tối ưu. Để khắc phục tình trạng này, một giải pháp được đề xuất là sử dụng xác thực chéo (cross-validation) để có được đánh giá chính xác hơn về hiệu suất của mô hình [book-ml-co-ban|p112|02].",
+  "citations": [
+   "book-ml-co-ban|p112|02"
+  ],
+  "answer_grade": null,
+  "citation_support": [
+   null
+  ],
+  "abstention_correct": "n/a",
+  "notes": ""
+ },
+ {
+  "query_id": "t06",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Cơ chế self-attention trong kiến trúc Transformer/BERT tính trọng số chú ý giữa các từ như thế nào?",
+  "answer": "Sách không đề cập đến cơ chế self-attention trong kiến trúc Transformer/BERT.",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ },
+ {
+  "query_id": "t07",
+  "answerable": false,
+  "status": "abstain",
+  "question": "Thuật toán cây quyết định ID3 chọn thuộc tính để chia nút dựa trên information gain như thế nào?",
+  "answer": "Sách không đề cập đến cách chọn thuộc tính để chia nút trong thuật toán cây quyết định ID3 dựa trên information gain.",
+  "citations": [],
+  "answer_grade": "n/a",
+  "citation_support": [],
+  "abstention_correct": null,
+  "notes": ""
+ }
+]

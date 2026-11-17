@@ -1,0 +1,135 @@
+[
+ {
+  "query_id": "d01",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng công thức L(w), cite p101|01 chứa evidence.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d02",
+  "citation_support": [
+   true
+  ],
+  "reason": "Không nêu ý chính 'gần như không học gì, ghi nhớ dữ liệu'; chunk p118|01 hỗ trợ phần mô tả 1NN.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d03",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d04",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d05",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng; p175|02 chứa định nghĩa.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d06",
+  "citation_support": [
+   false
+  ],
+  "reason": "Đáp án (0,1) đúng nhưng chunk p187|01 chỉ nói tanh ∈ (−1,1): thiếu evidence.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d07",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d08",
+  "citation_support": [
+   false
+  ],
+  "reason": "Sai: nhầm MLE với ước lượng p(c) của naive Bayes.",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d09",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d10",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d11",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d12",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d13",
+  "citation_support": [
+   true
+  ],
+  "reason": "Đúng; p275|01.",
+  "answer_grade": 2,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d14",
+  "citation_support": [],
+  "reason": "Từ chối nhầm trên câu có đáp án (context không chứa evidence).",
+  "answer_grade": 0,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d15",
+  "citation_support": [
+   true
+  ],
+  "reason": "Chỉ nêu trả 1 khi sai, không nêu 0 khi đúng/đếm số điểm sai.",
+  "answer_grade": 1,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d16",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định (sách không có boosting / LSTM).",
+  "abstention_correct": true,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ },
+ {
+  "query_id": "d17",
+  "citation_support": [],
+  "reason": "Từ chối, không thêm khẳng định (sách không có boosting / LSTM).",
+  "abstention_correct": true,
+  "labeled_by": "assistant (Claude) pre-label, cần người chấm xác nhận"
+ }
+]

@@ -1,0 +1,426 @@
+[
+ {
+  "id": "at01",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi và kết quả thi của 20 sinh viên, có bao nhiêu sinh viên thi đỗ?",
+  "expected": "10 sinh viên đỗ (và 10 trượt).",
+  "answer": "Theo Bảng 14.1 về thời gian ôn thi và kết quả thi của 20 sinh viên, có tổng cộng **10** sinh viên thi đỗ (ứng với giá trị \"Đậu?\" bằng 1) [book-ml-co-ban|p185|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at02",
+  "group": "table",
+  "status": "abstain",
+  "question": "Trong bảng dữ liệu chiều cao và cân nặng của 15 người, cân nặng của người cao nhất hơn người thấp nhất bao nhiêu kg?",
+  "expected": "19 kg (183 cm nặng 68 kg; 147 cm nặng 49 kg).",
+  "answer": "Không đủ bằng chứng trong sách để trả lời câu hỏi này.",
+  "citations": [],
+  "pass": false,
+  "reason": "Model không gọi tool final_answer (viết khối giả XML vào text 2 lần) -> agent abstain; nội dung trong đó vẫn sai (72 − 49 = 23 kg thay vì 68 − 49 = 19 kg).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at03",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các hàm hạt nhân thông dụng, hạt nhân 'poly' có công thức gì và cần thiết lập những hệ số nào (tên tham số)?",
+  "expected": "(r + γ xᵀz)^d; hệ số d: degree, γ: gamma, r: coef0.",
+  "answer": "Theo bảng các hàm hạt nhân thông dụng trong sách, hạt nhân 'poly' có các thông tin sau:\n\n- **Công thức:** $(r + \\gamma \\mathbf{x}^T\\mathbf{z})^d$ [book-ml-co-ban|p383|01]\n- **Thiết lập hệ số (tên tham số):** \n  - $d$: `degree` [book-ml-co-ban|p383|01]\n  - $\\gamma$: `gamma` [book-ml-co-ban|p383|01]\n  - $r$: `coef0` [book-ml-co-ban|p383|01]",
+  "citations": [
+   "book-ml-co-ban|p383|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at04",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng các gradient cơ bản, gradient theo x của hàm f(x) = ‖Ax − b‖²₂ là gì?",
+  "expected": "2Aᵀ(Ax − b).",
+  "answer": "Theo bảng các gradient cơ bản trong sách, gradient theo $x$ của hàm số $f(x) = \\|Ax - b\\|_2^2$ là $2A^T(Ax - b)$ [book-ml-co-ban|p047|01, book-ml-co-ban|p049|01].",
+  "citations": [
+   "book-ml-co-ban|p047|01",
+   "book-ml-co-ban|p049|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at05",
+  "group": "table",
+  "status": "answered",
+  "question": "Trong bảng ví dụ văn bản của bài toán phân loại Bắc hay Nam, văn bản kiểm tra có nội dung gì và tập huấn luyện có bao nhiêu văn bản mỗi nhãn?",
+  "expected": "d5: 'hanoi hanoi buncha hutiu'; huấn luyện có 3 văn bản nhãn B (d1, d2, d3) và 1 văn bản nhãn N (d4).",
+  "answer": "Trong bảng ví dụ văn bản của bài toán phân loại Bắc hay Nam (Bảng 11.1):\n- Văn bản kiểm tra ($d_5$) có nội dung là: `hanoi hanoi buncha hutiu` [book-ml-co-ban|p148|v00].\n- Tập huấn luyện có tổng cộng 4 văn bản, trong đó nhãn **B** (Bắc) có **3** văn bản ($d_1, d_2, d_3$) và nhãn **N** (Nam) có **1** văn bản ($d_4$) [book-ml-co-ban|p148|v00, book-ml-co-ban|p148|01].",
+  "citations": [
+   "book-ml-co-ban|p148|v00",
+   "book-ml-co-ban|p148|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at06",
+  "group": "table",
+  "status": "answered",
+  "question": "Theo bảng sự tương đồng giữa mạng neuron và SVM, hồi quy softmax tương ứng với loại SVM nào và tính chất chung là gì?",
+  "expected": "SVM đa lớp; tính chất chung: nhiều lớp dữ liệu, ranh giới tuyến tính.",
+  "answer": "Theo bảng sự tương đồng giữa mạng neuron và máy vector hỗ trợ (Bảng 28.1), hồi quy softmax tương ứng với **SVM đa lớp**, và tính chất chung của chúng là: **Nhiều lớp dữ liệu, ranh giới tuyến tính** [book-ml-co-ban|p378|01].",
+  "citations": [
+   "book-ml-co-ban|p378|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at07",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình kết quả với số lượng nút ẩn khác nhau (chương mạng neuron đa tầng), độ chính xác khi tầng ẩn có 2, 5, 15 và 30 nút lần lượt là bao nhiêu?",
+  "expected": "≈59.67% (2 nút), 74.0% (5 nút), ≈94.33% (15 nút), ≈95.33% (30 nút).",
+  "answer": "Trong chương mạng neuron đa tầng, độ chính xác khi tầng ẩn có 2, 5, 15 và 30 nút lần lượt là:\n- 2 nút: 59.66666666666667% [book-ml-co-ban|p229|00]\n- 5 nút: 74.0% [book-ml-co-ban|p229|00]\n- 15 nút: 94.33333333333334% [book-ml-co-ban|p229|00]\n- 30 nút: 95.33333333333334% [book-ml-co-ban|p229|00]",
+  "citations": [
+   "book-ml-co-ban|p229|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at08",
+  "group": "image",
+  "status": "answered",
+  "question": "Mạng MLP với hai tầng ẩn trong chương mạng neuron đa tầng có bao nhiêu nút ở tầng vào, mỗi tầng ẩn và tầng ra?",
+  "expected": "Tầng vào 3 nút, tầng ẩn thứ nhất 4 nút, tầng ẩn thứ hai 2 nút, tầng ra 3 nút (ma trận W(1), W(2), W(3)).",
+  "answer": "Dựa vào sơ đồ minh họa mạng MLP với hai tầng ẩn (Hình 16.3) trong chương Mạng neuron đa tầng và lan truyền ngược, số lượng nút ở từng tầng như sau:\n- **Tầng vào:** 3 nút [book-ml-co-ban|p217|v00]\n- **Tầng ẩn thứ nhất:** 4 nút [book-ml-co-ban|p217|v00]\n- **Tầng ẩn thứ hai:** 2 nút [book-ml-co-ban|p217|v00]\n- **Tầng ra:** 3 nút [book-ml-co-ban|p217|v00]",
+  "citations": [
+   "book-ml-co-ban|p217|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at09",
+  "group": "image",
+  "status": "answered",
+  "question": "Ảnh ví dụ về giá trị pixel trong chương phân cụm K-means là chữ số mấy, và giá trị pixel lớn nhất xuất hiện trong ma trận là bao nhiêu?",
+  "expected": "Chữ số 7; giá trị lớn nhất 254.",
+  "answer": "Ảnh ví dụ về giá trị pixel trong chương phân cụm K-means (Hình 10.4) là chữ số **7** [book-ml-co-ban|p136|v01]. Giá trị pixel lớn nhất xuất hiện trong ma trận là **254** [book-ml-co-ban|p136|v01].",
+  "citations": [
+   "book-ml-co-ban|p136|v01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at10",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong ví dụ SVD cho ảnh, sai số khi xấp xỉ ảnh với k = 5, k = 50 và k = 100 lần lượt là bao nhiêu?",
+  "expected": "0.0448 (k = 5), 0.0059 (k = 50), 0.0026 (k = 100).",
+  "answer": "Trong ví dụ SVD cho ảnh (Hình 20.3), sai số khi xấp xỉ ảnh với các giá trị $k$ lần lượt là:\n- $k = 5$: sai số $\\text{error} = 0.0448$ [book-ml-co-ban|p272|00]\n- $k = 50$: sai số $\\text{error} = 0.0059$ [book-ml-co-ban|p272|00]\n- $k = 100$: sai số $\\text{error} = 0.0026$ [book-ml-co-ban|p272|00]",
+  "citations": [
+   "book-ml-co-ban|p272|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at11",
+  "group": "image",
+  "status": "answered",
+  "question": "Trong hình mối quan hệ giữa AI, ML và DL ở lời nói đầu, Deep Learning bắt đầu ở khoảng thập niên nào và câu mô tả kèm theo là gì?",
+  "expected": "Khoảng thập niên 2010 (2010's); 'Deep learning breakthroughs drive AI boom.'",
+  "answer": "Trong hình mối quan hệ giữa AI, ML và DL (Hình 0.1) ở lời nói đầu:\n- Deep Learning bắt đầu ở khoảng thập niên **2010's** [book-ml-co-ban|p016|v00].\n- Câu mô tả kèm theo là: **\"Deep learning breakthroughs drive AI boom.\"** [book-ml-co-ban|p016|v00]",
+  "citations": [
+   "book-ml-co-ban|p016|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at12",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong đồ thị hàm mật độ phân phối beta với α = β, đường nét liền ứng với cặp tham số nào và đỉnh của nó nằm tại λ bằng bao nhiêu?",
+  "expected": "Cặp (10, 10); đỉnh tại λ = 0.5.",
+  "answer": "Trong đồ thị hàm mật độ phân phối beta với $\\alpha = \\beta$, đường nét liền ứng với cặp tham số $(\\alpha, \\beta) = (10, 10)$ [book-ml-co-ban|p076|v00]. Đỉnh của đường nét liền này nằm tại $\\lambda = 0.5$ [book-ml-co-ban|p076|00].",
+  "citations": [
+   "book-ml-co-ban|p076|00",
+   "book-ml-co-ban|p076|v00"
+  ],
+  "pass": true,
+  "reason": "(10,10), đỉnh 0.5; lần này cite đúng Hình 4.1 (p076|v00).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at13",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình so sánh hàm ReLU với tanh (b), đường nét liền đạt training error rate 0.25 sau khoảng bao nhiêu epoch và đường nét đứt sau khoảng bao nhiêu epoch?",
+  "expected": "Nét liền khoảng 6 epoch; nét đứt khoảng 35–36 epoch (nhanh hơn khoảng 6 lần).",
+  "answer": "Trong hình so sánh hàm ReLU với tanh (Hình 16.6b):\n- **Đường nét liền** (ReLU) đạt training error rate 0.25 sau khoảng **6** epoch [book-ml-co-ban|p220|v00].\n- **Đường nét đứt** (tanh) đạt training error rate 0.25 sau khoảng **35** epoch [book-ml-co-ban|p220|v00].",
+  "citations": [
+   "book-ml-co-ban|p220|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at14",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình so sánh hàm entropy chéo và hàm bình phương khoảng cách, ở trường hợp p = 0.1, điểm cực tiểu toàn cục của hai hàm nằm tại q bằng bao nhiêu và đường nét liền là hàm nào?",
+  "expected": "Cả hai đạt cực tiểu tại q = 0.1; đường nét liền là hàm entropy chéo.",
+  "answer": "Trong hình so sánh ở trường hợp $p = 0.1$:\n- **Đường nét liền** biểu diễn **hàm entropy chéo** [book-ml-co-ban|p206|00], cụ thể là hàm $-(0.1\\log(q) + 0.9\\log(1-q))$ [book-ml-co-ban|p206|v00].\n- **Điểm cực tiểu toàn cục** của hai hàm nằm tại **$q = 0.1$** (tại $q = p$) [book-ml-co-ban|p206|00, book-ml-co-ban|p206|v00].",
+  "citations": [
+   "book-ml-co-ban|p206|00",
+   "book-ml-co-ban|p206|v00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at15",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình kết quả gradient descent với x0 = −5 và η = 0.5, gradient ở vòng lặp cuối cùng hiển thị (100/100) bằng bao nhiêu và thuật toán có hội tụ không?",
+  "expected": "grad = 4.761 tại iter 100/100; không hội tụ (nghiệm dao động quanh điểm cực tiểu do η quá lớn).",
+  "answer": "Trong hình kết quả gradient descent với $x_0 = -5$ và $\\eta = 0.5$ (Hình 12.5):\n- Gradient ở vòng lặp cuối cùng (100/100) hiển thị là $\\text{grad} = 4.761$ [book-ml-co-ban|p163|v01].\n- Thuật toán **không** hội tụ vì sự thay đổi vị trí của $x_t$ sau mỗi vòng lặp quá lớn, khiến $x_t$ dao động quanh đích nhưng không tới được đích [book-ml-co-ban|p163|01].",
+  "citations": [
+   "book-ml-co-ban|p163|v01",
+   "book-ml-co-ban|p163|01"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at16",
+  "group": "chart",
+  "status": "answered",
+  "question": "Trong hình lựa chọn mô hình dựa trên sai số xác thực, sai số xác thực nhỏ nhất ở bậc nào và sai số kiểm tra ở bậc 8 khoảng bao nhiêu?",
+  "expected": "Nhỏ nhất ở bậc 3 (≈ 7.8, bậc 4 gần bằng); sai số kiểm tra ở bậc 8 khoảng 14.",
+  "answer": "Dựa vào hình lựa chọn mô hình dựa trên sai số xác thực (Hình 8.2):\n- Sai số xác thực nhỏ nhất ở bậc **3** (hoặc bậc 4) [book-ml-co-ban|p112|00].\n- Sai số kiểm tra ở bậc 8 khoảng **14** (xấp xỉ 13.9) [book-ml-co-ban|p112|v00].",
+  "citations": [
+   "book-ml-co-ban|p112|00",
+   "book-ml-co-ban|p112|v00"
+  ],
+  "pass": true,
+  "reason": "Bậc 3 (hoặc 4); kiểm tra bậc 8 ≈ 14 (13.9) — trong dung sai.",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at17",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Trong ví dụ hồi quy tuyến tính chiều cao–cân nặng, bảng có 15 người nhưng dữ liệu huấn luyện dùng ít hơn; hai người nào không dùng để huấn luyện và mô hình dự đoán sai lệch bao nhiêu kg với mỗi người?",
+  "expected": "Hai người 155 cm và 160 cm (dữ liệu huấn luyện có 13 điểm). 155 cm: thật 52 kg, dự đoán 52.94 kg → lệch 0.94 kg; 160 cm: thật 56 kg, dự đoán 55.74 kg → lệch 0.26 kg.",
+  "answer": "Trong ví dụ hồi quy tuyến tính chiều cao–cân nặng từ 15 người trong Bảng 7.1 [book-ml-co-ban|p103|01]:\n- **Hai người không dùng để huấn luyện** (được tách ra làm tập kiểm tra) là hai người có chiều cao **155 cm** (cân nặng thực sự 52 kg) và **160 cm** (cân nặng thực sự 56 kg) [book-ml-co-ban|p103|01, book-ml-co-ban|p105|00].\n- **Mức độ dự đoán sai lệch** của mô hình cho từng người như sau:\n  - Người cao 155 cm (thực tế 52 kg): mô hình dự đoán là **52.94 kg**, sai lệch khoảng **0.94 kg** (tăng 0.94 kg so với thực tế) [book-ml-co-ban|p105|00].\n  - Người cao 160 cm (thực tế 56 kg): mô hình dự đoán là **55.74 kg**, sai lệch khoảng **0.26 kg** (giảm 0.26 kg so với thực tế) [book-ml-co-ban|p105|00].",
+  "citations": [
+   "book-ml-co-ban|p103|01",
+   "book-ml-co-ban|p105|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at18",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi, sinh viên ôn 4.25 giờ có kết quả gì, và theo công thức xác suất thi đỗ tìm được bằng hồi quy logistic, xác suất đỗ dự đoán cho 4.25 giờ khoảng bao nhiêu?",
+  "expected": "Thi đỗ (Đậu = 1); xác suất ≈ sigmoid(1.54 × 4.25 − 4.06) = sigmoid(2.485) ≈ 0.92.",
+  "answer": "Theo Bảng 14.1 (thời gian ôn thi và kết quả thi), sinh viên ôn **4.25** giờ có kết quả Đậu (**1**) [book-ml-co-ban|p185|01, book-ml-co-ban|p185|v00]. \n\nTheo công thức xác suất thi đỗ tìm được bằng hồi quy logistic:\n$$\\text{probability\\_of\\_pass} \\approx \\text{sigmoid}(1.54 \\times \\text{hours\\_of\\_studying} - 4.06)$$ [book-ml-co-ban|p191|01]\n\nThay giá trị 4.25 giờ vào công thức:\n$$\\text{probability\\_of\\_pass} \\approx \\text{sigmoid}(1.54 \\times 4.25 - 4.06) = \\text{sigmoid}(2.485) \\approx 0.923$$ [book-ml-co-ban|p191|01]\n\nXác suất đỗ dự đoán cho 4.25 giờ là khoảng **0.923** (hay khoảng **92.3%**; trên Hình 14.3a, giá trị xác suất đỗ tương ứng trên đường cong cũng nằm trong khoảng xấp xỉ **0.9**) [book-ml-co-ban|p191|01, book-ml-co-ban|p192|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|01",
+   "book-ml-co-ban|p185|v00",
+   "book-ml-co-ban|p191|01",
+   "book-ml-co-ban|p192|v00"
+  ],
+  "pass": true,
+  "reason": "Đỗ; tính sigmoid(2.485) ≈ 0.923 — trong dung sai.",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at19",
+  "group": "multihop",
+  "status": "answered",
+  "question": "Trong ví dụ phân loại Bắc hay Nam, văn bản kiểm tra có nội dung gì và mô hình MultinomialNB dự đoán nó thuộc nhãn nào?",
+  "expected": "d5 = 'hanoi hanoi buncha hutiu'; MultinomialNB dự đoán nhãn B.",
+  "answer": "Trong ví dụ phân loại Bắc hay Nam, văn bản kiểm tra $d_5$ có nội dung là \"hanoi hanoi buncha hutiu\" [book-ml-co-ban|p148|v00]. \n\nMô hình MultinomialNB dự đoán văn bản kiểm tra này thuộc nhãn **B** (nhãn Bắc) vì xác suất hậu nghiệm tính toán được cho nhãn Bắc lớn hơn nhãn Nam ($p(\\mathbf{x}_5|\\text{B}) > p(\\mathbf{x}_5|\\text{N})$) [book-ml-co-ban|p149|00].",
+  "citations": [
+   "book-ml-co-ban|p148|v00",
+   "book-ml-co-ban|p149|00"
+  ],
+  "pass": true,
+  "reason": "B; cite p149|00 (lớp text của Hình 11.1: p(x5|B) > p(x5|N)).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at20",
+  "group": "multihop",
+  "status": "answered",
+  "question": "So sánh hai hình gradient descent với η = 0.1: khi x0 = −5 và khi x0 = 5, mỗi trường hợp chạy bao nhiêu vòng lặp và gradient ở vòng cuối bằng bao nhiêu?",
+  "expected": "x0 = −5: 11 vòng lặp, grad cuối = −0.001; x0 = 5: 29 vòng lặp, grad cuối = 0.001 (cả hai hội tụ, x0 = 5 chậm hơn).",
+  "answer": "Dựa trên sách \"Machine Learning cơ bản\", khi tốc độ học $\\eta = 0.1$:\n\n1. **Trường hợp $x_0 = -5$** (Hình 12.2):\n   - Số vòng lặp: Chạy tổng cộng **11 vòng lặp** (iter 11/11) [book-ml-co-ban|p162|00].\n   - Gradient ở vòng cuối: **$\\text{grad} = -0.001$** [book-ml-co-ban|p162|00].\n\n2. **Trường hợp $x_0 = 5$** (Hình 12.3):\n   - Số vòng lặp: Chạy tổng cộng **29 vòng lặp** (iter 29/29) [book-ml-co-ban|p162|00].\n   - Gradient ở vòng cuối: **$\\text{grad} = 0.001$** [book-ml-co-ban|p162|00].",
+  "citations": [
+   "book-ml-co-ban|p162|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at21",
+  "group": "text",
+  "status": "answered",
+  "question": "Trong mini-batch gradient descent, nếu N không chia hết cho k thì mini-batch cuối thế nào, một epoch gồm khoảng bao nhiêu vòng lặp, và k thường được chọn trong khoảng nào?",
+  "expected": "Mini-batch cuối có thể ít hơn k điểm; một epoch gồm xấp xỉ N/k vòng lặp; k từ vài chục đến vài trăm.",
+  "answer": "Trong mini-batch gradient descent, nếu $N$ không chia hết cho $k$ thì mini-batch cuối cùng có thể có ít điểm dữ liệu hơn [book-ml-co-ban|p173|00]. Một epoch bao gồm xấp xỉ $N/k$ vòng lặp [book-ml-co-ban|p173|00]. Kích thước batch $k$ thường được chọn trong khoảng từ vài chục đến vài trăm [book-ml-co-ban|p173|00].",
+  "citations": [
+   "book-ml-co-ban|p173|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at22",
+  "group": "text",
+  "status": "answered",
+  "question": "Trong SVM lề mềm, nếu hệ số C nhỏ thì thuật toán ưu tiên điều gì và tổng các biến ξ thay đổi thế nào; còn khi C rất lớn và dữ liệu tách biệt tuyến tính thì nghiệm thu được là gì?",
+  "expected": "C nhỏ: ưu tiên ‖w‖ nhỏ nhất (lề lớn nhất) nên tổng ξ lớn lên; C rất lớn và dữ liệu tách biệt tuyến tính: tổng ξ = 0, nghiệm trùng với SVM lề cứng.",
+  "answer": "Trong SVM lề mềm:\n- Khi hệ số $C$ nhỏ, thuật toán ưu tiên làm cho $\\|w\\|_2^2$ nhỏ nhất (tức là lề lớn nhất), điều này dẫn tới tổng các biến $\\xi$ ($\\sum_{n=1}^{N} \\xi_n$) sẽ lớn theo vì vùng an toàn bị nhỏ đi [book-ml-co-ban|p364|00].\n- Khi $C$ rất lớn và dữ liệu tách biệt tuyến tính, thuật toán tập trung giảm tổng các biến $\\xi$ đến mức $\\sum_{n=1}^{N} \\xi_n = 0$ (không có điểm nào phải hy sinh), và nghiệm thu được chính là nghiệm của SVM lề cứng [book-ml-co-ban|p364|00].",
+  "citations": [
+   "book-ml-co-ban|p364|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at23",
+  "group": "text",
+  "status": "answered",
+  "question": "Khi dùng PCA, nếu muốn giữ lại 99% thông tin thì chọn số chiều K như thế nào?",
+  "expected": "Chọn K là số tự nhiên nhỏ nhất sao cho r_K = (Σ_{i=1..K} λ_i)/(Σ_{j=1..D} λ_j) ≥ 0.99.",
+  "answer": "Khi sử dụng PCA, tỉ lệ thông tin được giữ lại khi số chiều dữ liệu mới là $K$ được tính bằng công thức tỉ lệ phương sai:\n$$r_K = \\frac{\\sum_{i=1}^{K} \\lambda_i}{\\sum_{j=1}^{D} \\lambda_j}$$\ntrong đó $\\lambda_i$ là các trị riêng của ma trận hiệp phương sai, và $D$ là số chiều ban đầu của dữ liệu [book-ml-co-ban|p282|00].\n\nNếu muốn giữ lại 99% thông tin, ta sẽ chọn **$K$ là số tự nhiên nhỏ nhất sao cho $r_K \\ge 0.99$** [book-ml-co-ban|p282|00].",
+  "citations": [
+   "book-ml-co-ban|p282|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at24",
+  "group": "text",
+  "status": "answered",
+  "question": "Khi áp dụng lan truyền ngược, trong trường hợp nào mini-batch GD được dùng nhiều nhất và trường hợp nào dùng batch GD trực tiếp?",
+  "expected": "Mini-batch GD với bài toán có tập huấn luyện lớn; dữ liệu nhỏ thì dùng batch GD trực tiếp.",
+  "answer": "Trong thực tế khi áp dụng lan truyền ngược:\n- **Mini-batch GD** được sử dụng nhiều nhất với các bài toán có **tập huấn luyện lớn** [book-ml-co-ban|p224|00].\n- **Batch GD** trực tiếp được sử dụng khi **lượng dữ liệu nhỏ** [book-ml-co-ban|p224|00].",
+  "citations": [
+   "book-ml-co-ban|p224|00"
+  ],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at25",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Theo bảng thời gian ôn thi của 20 sinh viên, điểm thi (thang 10) trung bình của các sinh viên thi đỗ là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến điểm thi (thang 10) của các sinh viên, mà chỉ cung cấp dữ liệu về thời gian ôn thi (số giờ) và kết quả đỗ/trượt (0 hoặc 1) trong Bảng 14.1 [book-ml-co-ban|p185|00]. Do đó, không có dữ liệu về điểm thi để tính điểm trung bình của sinh viên thi đỗ [book-ml-co-ban|p185|v00].",
+  "citations": [
+   "book-ml-co-ban|p185|v00"
+  ],
+  "pass": true,
+  "reason": "Nội dung từ chối rõ ràng (status=answered nhưng không khẳng định gì ngoài nguồn).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at26",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Trong hình kết quả với số lượng nút ẩn khác nhau, độ chính xác khi tầng ẩn có 100 nút là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Trong hình kết quả với số lượng nút ẩn là 100, độ chính xác (accuracy) đạt được là 99.33333333333333% (hoặc xấp xỉ 99.33%) [book-ml-co-ban|p225|00, book-ml-co-ban|p228|01].",
+  "citations": [
+   "book-ml-co-ban|p225|00",
+   "book-ml-co-ban|p228|01"
+  ],
+  "pass": false,
+  "reason": "Theo gold đã công bố (abstain) -> không đạt; agent trả lời 99.33% đúng theo Hình 16.8 tr.225 (lỗi gold, xem run chính thức).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at27",
+  "group": "unanswerable",
+  "status": "answered",
+  "question": "Trong ví dụ SVD cho ảnh, sai số của ảnh xấp xỉ khi chọn k = 200 là bao nhiêu?",
+  "expected": "abstain",
+  "answer": "Trong ví dụ SVD cho ảnh (Hình 20.3), sách không cung cấp con số sai số cụ thể khi $k = 200$, mà chỉ nêu rằng từ khoảng $k = 200$, lượng thông tin giữ lại gần bằng $1$ [book-ml-co-ban|p272|v02]. Các giá trị sai số cụ thể chỉ được liệt kê cho các trường hợp $k = 5$ ($\\text{error} = 0.0448$), $k = 50$ ($\\text{error} = 0.0059$) và $k = 100$ ($\\text{error} = 0.0026$) [book-ml-co-ban|p272|v02].",
+  "citations": [
+   "book-ml-co-ban|p272|v02"
+  ],
+  "pass": true,
+  "reason": "Nêu rõ không có sai số k = 200.",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at28",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Huấn luyện SVM đa lớp trong hình lịch sử giá trị hàm mất mát mất bao nhiêu giây?",
+  "expected": "abstain",
+  "answer": "Sách không đề cập đến thời gian (số giây) mất bao lâu để huấn luyện SVM đa lớp [book-ml-co-ban|p398|00].",
+  "citations": [],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at29",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong đồ thị phân phối beta ở chương ước lượng tham số, đường ứng với cặp tham số (5, 1) có dạng như thế nào?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến đồ thị phân phối beta ứng với cặp tham số (5, 1).",
+  "citations": [],
+  "pass": true,
+  "reason": "Khớp gold, citation đúng trang/vùng (đã đọc đối chiếu).",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ },
+ {
+  "id": "at30",
+  "group": "unanswerable",
+  "status": "abstain",
+  "question": "Trong các hình minh hoạ gradient descent cho hàm một biến ở chương 12, với η = 0.05 thì cần bao nhiêu vòng lặp để hội tụ?",
+  "expected": "abstain",
+  "answer": "Sách \"Machine Learning cơ bản\" không đề cập đến số vòng lặp hội tụ với $\\eta = 0.05$ cho hàm một biến trong chương 12. Sách chỉ xét ví dụ minh họa gradient descent cho hàm một biến với tốc độ học $\\eta = 0.1$ (ví dụ tại trang 161–162 với $\\eta = 0.1$ cần 11 vòng lặp khi $x_0 = -5$ và 29 vòng lặp khi $x_0 = 5$).",
+  "citations": [],
+  "pass": false,
+  "reason": "Từ chối đúng nhưng thêm khẳng định sai 'sách chỉ xét ví dụ với η = 0.1' (sách còn η = 0.01 và 0.5, Hình 12.4–12.5) -> khẳng định thiếu căn cứ.",
+  "labeled_by": "assistant (Claude) pre-label; lần chạy lặp trên test ĐÃ XEM -> không phải đánh giá độc lập"
+ }
+]
