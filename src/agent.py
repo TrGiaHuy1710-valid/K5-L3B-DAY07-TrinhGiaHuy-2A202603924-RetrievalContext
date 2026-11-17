@@ -77,6 +77,27 @@ FINAL_ONLY = [t for t in TOOLS if t["function"]["name"] == "final_answer"]
 ABSTAIN_TEXT = "Không đủ bằng chứng trong sách để trả lời câu hỏi này."
 
 
+def parse_text_final_answer(text: str) -> dict[str, Any] | None:
+    """Recover a final_answer that the model wrote as text: <final_answer><status>..</status><answer>..</answer>
+    <citation>..</citation></final_answer> or a JSON object with status/answer/citations. None if not found."""
+    import re
+    if "final_answer" not in text and '"status"' not in text:
+        return None
+    m = re.search(r"<status>\s*(answered|abstain)\s*</status>.*?<answer>(.*?)</answer>", text, re.S)
+    if m:
+        cites = re.findall(r"<citation>\s*([^<]+?)\s*</citation>", text)
+        return {"status": m.group(1), "answer": m.group(2).strip(), "citations": cites}
+    m = re.search(r"\{.*\"status\"\s*:\s*\"(answered|abstain)\".*\}", text, re.S)
+    if m:
+        try:
+            obj = json.loads(m.group(0))
+            if isinstance(obj, dict) and "answer" in obj:
+                return {"status": obj["status"], "answer": str(obj["answer"]), "citations": list(obj.get("citations") or [])}
+        except json.JSONDecodeError:
+            pass
+    return None
+
+
 @dataclass
 class AgentConfig:
     name: str = "base"
@@ -123,9 +144,15 @@ class ContextWindow:
 
 
 class BookAgent:
-    def __init__(self, llm: LLMClient, retriever, config: AgentConfig) -> None:
+    def __init__(self, llm: LLMClient, retriever, config: AgentConfig, *, system_prompt: str = SYSTEM_PROMPT,
+                 extra_tools: dict[str, tuple[dict, Any]] | None = None) -> None:
+        """extra_tools: name -> (OpenAI tool schema, handler(args, ctx) -> (tool_message, trace_event)).
+        Used by the advanced pipeline (inspect_visual) without changing this loop."""
         self.llm, self.retriever, self.cfg = llm, retriever, config
-        self.tools = TOOLS if config.external_tools else [t for t in TOOLS if t["function"]["name"] in ("search_book", "final_answer")]
+        self.system_prompt = system_prompt
+        self.extra = extra_tools or {}
+        base = TOOLS if config.external_tools else [t for t in TOOLS if t["function"]["name"] in ("search_book", "final_answer")]
+        self.tools = base[:-1] + [schema for schema, _ in self.extra.values()] + base[-1:]
 
     # ------------------------------------------------------------------ tools
     def _search_book(self, args, ctx: ContextWindow, filters, n_done: int) -> tuple[str, dict]:
@@ -185,7 +212,7 @@ class BookAgent:
         cfg = self.cfg
         ctx = ContextWindow(cfg.budget_chars, cfg.max_new_per_search)
         user = question if not filters else f"{question}\n\n(Người dùng giới hạn phạm vi tìm kiếm: {json.dumps(filters, ensure_ascii=False)})"
-        messages: list[dict[str, Any]] = [{"role": "system", "content": SYSTEM_PROMPT}, {"role": "user", "content": user}]
+        messages: list[dict[str, Any]] = [{"role": "system", "content": self.system_prompt}, {"role": "user", "content": user}]
         events: list[dict[str, Any]] = []
         known_urls: set[str] = set()
         n_search = 0
@@ -205,6 +232,14 @@ class BookAgent:
                                "latency_s": round(res.latency_s, 2), "tool_calls": [c.name for c in res.tool_calls],
                                "text": (res.text or "")[:300]})
                 if not res.tool_calls:
+                    # Some models write the final_answer call as text (pseudo-XML/JSON) instead of a real tool call.
+                    # Parse it and run the SAME validation as a real call (citations must be in context).
+                    parsed = parse_text_final_answer(res.text or "")
+                    if parsed is not None:
+                        final = self._validate(parsed, ctx, known_urls)
+                        final["recovered_from_text"] = True
+                        events.append({"event": "final_answer_from_text"})
+                        break
                     if nudged:
                         final = {"status": "abstain", "reason": "no_final_answer_tool", "model_text": res.text}
                         break
@@ -228,6 +263,12 @@ class BookAgent:
                         n_ext = sum(e["event"] == "external_search" and e["tool"] == call.name for e in events)
                         content, ev, urls = self._external(call.name, call.args, n_ext)
                         known_urls.update(urls)
+                        events.append(ev)
+                    elif call.name in self.extra:
+                        try:
+                            content, ev = self.extra[call.name][1](call.args, ctx)
+                        except Exception as exc:  # tool failure is evidence, the loop continues
+                            content, ev = f"Lỗi khi chạy {call.name}: {type(exc).__name__}", {"event": "tool_error", "tool": call.name, "error": f"{type(exc).__name__}: {exc}"[:300]}
                         events.append(ev)
                     else:
                         content = f"Lỗi: tool {call.name} không tồn tại."
